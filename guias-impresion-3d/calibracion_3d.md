@@ -41,6 +41,8 @@ Una parte crítica en una impresora 3D es el control del filamento extruido.
 Este proceso no es en un eje de movimiento si no de extrusión así que se aconseja que el test se realice extruyendo filamento por el nozzle.  
 El proceso básicamente es calentar el Nozzle a temperatura que aconseja el fabricante y a partir de un punto de referencia, normalmente a la entrada del filamento en el extrusor, realizar dos marcas... una a 100mm y otra a 120mm.
 
+![](../.gitbook/assets/image%20%281%29.png)
+
 Una vez realizadas estas marcas extruimos 100mm de filamento utilizando los menus de Movimiento en pantalla o mediante Pronterface.  
 Al finalizar la extrusión mediremos desde el ounto de referencia hasta la marca de 120mm y ese valor lo usaremos en la calculadora del siguiente link.
 
