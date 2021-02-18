@@ -1,0 +1,347 @@
+---
+description: >-
+  By JJR @ https://3dwork.io/ - Invitame a un cafe si te fue de ayuda
+  paypal.me/alienboyxp
+---
+
+# Calibración inicial impresora 3D
+
+![](../.gitbook/assets/image.png)
+
+La puesta en marcha de una impresora así como el calibrado preventivo es muy importante para un correcto funcionamiento y precisión de nuestra impresora.
+
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
+
+Aconsejamos el uso de SuperSlicer \(un fork de PrusaSlicer donde integran opciones avanzadas antes de incorporarlas\) ya que tiene unas estupendas opciones para generar los tests de calibración.
+
+Se puede descargar desde aqui [https://github.com/supermerill/SuperSlicer/releases](https://github.com/supermerill/SuperSlicer/releases).
+
+PrusaSlicer desde aqui [https://github.com/prusa3d/PrusaSlicer/releases](https://github.com/prusa3d/PrusaSlicer/releases)
+
+En esta guía vamos a tratar los siguientes puntos de calibración:
+
+* Ajuste de la extrusión
+* Ajuste de los pasos de los motores
+* Ajuste del PID del hotend y cama
+* Nivelación de la cama
+* Torre temperatura
+* Ajuste de Flujo/Flow
+* Retracciones
+* Ajuste tolerancia horizontal
+* Ajuste de voladizos/puentes
+* Soportes
+* Linear Advance
+* Aceleraciones/Jerk
+* Prueba de stress
+* Perfiles de impresión para las impresoras/slicers más comunes
+
+### 1. Extrusión <a id="1.-Extrusi&#xF3;n"></a>
+
+Una parte crítica en una impresora 3D es el control del filamento extruido.  
+Este proceso no es en un eje de movimiento si no de extrusión así que se aconseja que el test se realice extruyendo filamento por el nozzle.  
+El proceso básicamente es calentar el Nozzle a temperatura que aconseja el fabricante y a partir de un punto de referencia, normalmente a la entrada del filamento en el extrusor, realizar dos marcas... una a 100mm y otra a 120mm.
+
+Una vez realizadas estas marcas extruimos 100mm de filamento utilizando los menus de Movimiento en pantalla o mediante Pronterface.  
+Al finalizar la extrusión mediremos desde el ounto de referencia hasta la marca de 120mm y ese valor lo usaremos en la calculadora del siguiente link.
+
+[https://docs.google.com/spreadsheets/d/11upBCJkprqZASurKaLHrECy6sttyQK6xYzohi2u45dE/edit\#gid=0](https://docs.google.com/spreadsheets/d/11upBCJkprqZASurKaLHrECy6sttyQK6xYzohi2u45dE/edit#gid=0)
+
+Tambien teneis este vídeo del Sr. Ferrete donde explica el proceso de forma sencilla.  
+https://youtu.be/VA\_jvXyGvhU
+
+El ajuste de los pasos los puedes realizar desde la pantalla en modo Marlin en Configuración/Avanzado/Steps o mediante gcode desde un terminal como Pronterface con M92 Exxx \(donde xxx serían los pasos calculados previamente\).  
+Recuerda, si tienes un Marlin cocinado por ti anotar estos valores, y si modificaste por pantalla ir a Configuración/Salvar EEPROM o si lo hiciste por terminal lanzar un M500.
+
+### 2. Ajuste de los pasos de los motores/ejes <a id="2.-Ajuste-de-los-pasos-de-los-motores/ejes"></a>
+
+Los cubos de calibración son simples objetos geométricos \(cubos normalmente\) que ayudan en la calibracion fina de tu impresora 3D permitiendo conseguir la mayor precisión en tus impresiones.
+
+Una vez tu extrusor está calibrado, hay diferentes cosas que puedes comprobar mediante un cubo de calibración.  
+En este paso lo usaremos principalmente para calibrar los pasos de nuestros motores.  
+Al finalizar el resto de pasos de ests guía es aconsejable volver s realizar este test para verificar o corregir cualquier desviación.
+
+Puedes generar estos cubos de forma sencilla desde SuperSlicer en su menú de calibración.  
+En todo caso te adjuntamos algunos otros de ejemplo: [https://www.thingiverse.com/thing:3911284](https://www.thingiverse.com/thing:3911284)  
+https://www.thingiverse.com/thing:1545913
+
+Puedes usar calculadoras de pasos para proceso de cálculo o verificado de pasos:  
+https://docs.google.com/spreadsheets/d/11upBCJkprqZASurKaLHrECy6sttyQK6xYzohi2u45dE/edit\#gid=0  
+https://blog.prusaprinters.org/calculator\_3416/\#steppermotors
+
+El ajuste de los pasos los puedes realizar desde la pantalla en modo Marlin en Configuración/Avanzado/Steps o mediante gcode desde un terminal como Pronterface con M92 Xxxx Yxxx Zxxx \(donde xxx serían los pasos calculados previamente\).  
+Recuerda si tienes un Marlin cocinado por ti anotar estos valores, y si modificaste por pantalla ir a Configuración/Salvar EEPROM o si lo hiciste por terminal lanzar un M500.
+
+### 4. Ajuste PID <a id="4.-Ajuste-PID"></a>
+
+Esta calibración es independiente del resto, dado que no requiere que se hayan reslizado otros tests previamenteEjemplo de impresora con los valores PID ajustados incorrectamente
+
+Antes de meternos en lo que es la calibración en sí, sería bueno entender que es el PID, lo cual básicamente es un algoritmo que ayuda a la máquina a mantener los valores de temperatura deseados tanto en el Nozzle como en la Cama caliente, para ello tiene una serie de valores que ajustan la cantidad de corriente que llega a los calentadores de estos y la varía en función de las lecturas recogidas por los termistores \(sensores de temperatura\).
+
+Para realizar este ajuste podemos realizarlo de dos formas distintas:
+
+\* Desde el LCD dentro del menú Temperatura o Configuración/Avanzado
+
+> Recordar habilitar en Marlin las siguientes opciones:  
+> \#define PID\_EDIT\_MENU  
+> \#define PID\_AUTOTUNE\_MENU
+
+\* Desde terminal como Pronterface  
+M303 E0 S200 C8 - hotend  
+M303 E-1 S60 C8 - cama caliente  
+donde Sxxx es la temperatura  
+Cxx es el número de ciclos de test
+
+> En el caso que no deje realizar el PID de la cama \(M303 E-1\) es muy probable que no esté habilitado en Marlin:  
+> \#define PIDTEMPBED
+
+Idealmente realizar el PID con la temperatura normal de impresión y ventilación de capa activada al 100%, la cama a la temperatura normal de impresion y la algura de Z a 5mm.
+
+Recordar que los valores obtenidos deberían de ser anotados en tu Marlin cocinado o desde gcodes  
+M301 P19.56 I0.71 D134.26 - hotend  
+M304 P1 I2 D3 - cama
+
+Y recordar siempre un M500 para almacenar los valores en la EEPROM.
+
+En caso que por protección térmica no permita hacer el autoPID deshabilitar momentáneamente:
+
+\#define THERMAL\_PROTECTION\_HOTENDS  
+\#define THERMAL\_PROTECTION\_BED
+
+En el caso de alarmas por protección de temperaturas que no se solucione con un PID se tendrán que variar los parámetros de tiempo e histéresis de dicha protección.
+
+https://3dprinting.stackexchange.com/questions/8466/what-is-thermal-runaway-protection
+
+### 5. Nivelación de la cama <a id="5.-Nivelaci&#xF3;n-de-la-cama"></a>
+
+El nivelado de cama es crítico para poder disponer de una buena base para nuestras impresiones.
+
+Podemos usar este test de nivelación o uno similar [https://www.thingiverse.com/thing:34558](https://www.thingiverse.com/thing:34558) y usando babystepping ajustar correctamente el nivelado de la cama para una correcta primera capa.
+
+De nuevo desde SuperSlicer y su menú de calibración podemos generar este test de forma sencilla o desde https://teachingtechyt.github.io/calibration.html\#firstlayer
+
+En el caso de ser necesario ajustar el ZOffset a partir del valor obtenido \(en el caso de disponer de sensor de nivelación o MESH como sistema de nivelación\) sumaremos el vslor de babbystepping a nuestro ZOffset.
+
+Podéis ver una explicación en forma de video aqui [https://youtu.be/1V6TZ7fDiU4](https://youtu.be/1V6TZ7fDiU4)
+
+### 6. Torre de temperatura <a id="6.-Torre-de-temperatura"></a>
+
+Las torres de temperaturas nos permiten encontrar la temperatura óptima para un determinado filamento.  
+Es importante hacer este test con cada bobina que usemos para ajustar o verificar que los valores son los correctos.
+
+Es aconsejable utilizar/generar el test de Temperatura de SuperSlicer o desde el generador de Teaching Tech https://teachingtechyt.github.io/calibration.html\#temp  
+Otros ejemplos de torres de temperaturas:  
+[https://www.thingiverse.com/apps/customizer/run?thing\_id=2491884](https://www.thingiverse.com/apps/customizer/run?thing_id=2491884)  
+[https://www.thingiverse.com/thing:2729076/files](https://www.thingiverse.com/thing:2729076/files)  
+ajustar con el customizer de Thinkiverse o manualmente en el slicer
+
+Para interpretar las torres de temperaturas deberemos fijarnos en:
+
+* Acabado de los puentes, que no queden descolgados
+* Definición de los números de la temperatura, estos deben quedar lo mas legibles posible además del efecto "olas" alrededor de los mismos
+* Figuras cónicas que esten bien definidas sin restos de material o deformaciones
+
+### 7. Ajuste Flujo/Flow <a id="7.-Ajuste-Flujo/Flow"></a>
+
+El ajuste de flujo permite ajusta la cantidad de plástico extruído por la impresora. Una correcta calibración del flujo/flow permite solucionar problemas de falta o sobre extrusión además de mejorar los valores de retracción, ayudar a mejorar las esquinas y el efecto costura en nuestras impresiones.
+
+Como paso previo al ajuste de flujo/flow es imprescindible que previamente tengamos correctamente ajustasdos los pasos de nuestros motores, encontrada la temperatura adecuada para nuestro filamento y el PID.
+
+Para realizar este ajuste podemos realizarlo mediante un cubo de calibración de flujo/flow en este caso necesitaremos un calibre digital a ser posible o podemos usar el test de flujo/flow de SuperSlicer que no es tan exacto pero sirve perfectamente para realizar este ajuste normalmente.
+
+Un paso previo muy importante para una correcta calibración es realizar una comprobación del diámetro de nuestro filamento. Aunque el filamento que compramos normalmente indique 1,75mm en la realidad depende de la calidad del fabricante que este sea así cuando lo normal seria una desviación de 0.02mm en buenas marcas nos podemos encontrar con desviaciones de hasta/o más del 0.05mm.  
+Para realizar esta comprobación mediremos 5 secciones de filametos con una distancia de unos 10cm en cada una y realizaremos una media.
+
+Una vez tengamos este valor medio para este filamento lo ajustaremos en nuestro perfil de filamento en nuestro fileteador/slicer.  
+**PrusaSlicer/SuperSlicer: Filament Settings -&gt; Filament -&gt; Diameter  
+Cura: Preferences -&gt; Printers -&gt;** _**your printer**_ **-&gt; Machine Settings -&gt; Extruder 1**
+
+El siguiente paso es imprimir un cubo "hollow" \(hueco\), os sugerimos usar este [https://www.thingiverse.com/thing:3397997](https://www.thingiverse.com/thing:3397997) ya que cuenta con ejemplos de practicamente todas las medidas de nozzle que hay y es muy rápido de hacer.
+
+1- Escogeremos de la los diferentes modelos el que coincida con el diámetro de nuestro nozzle  
+2- Configuraremos los siguientes valores básicos de la impresión:  
+Altura capa - 0.2mm \(para un nozzle de 0.4\)  
+Perimetros - 2  
+Capas superiores - 0  
+Capas inferiores - 1  
+Relleno - 0%  
+Velocidad - 50 mm/s \(puedes adaptarlo a tu maquina\)  
+Flow/Flujo/Multiplicador Extrusion - 1 o 100% dependiendo del fileteador/slicer  
+
+
+Una vez impreso mediremos el grosor de las paredes del cubo.
+
+Estas deberían medir lo más cercano al doble de la medida del nozzle que tengamos o seleccionamos al hacer el cubo. Es importante no aplicar mucha presión al calibre y realizar la medida en diferentes partes del cubo y en la parte alta del cubo realizando una media de todas las medidas.
+
+Con estos valores realizaremos la siguente formula:  
+\(A/B\)\*F= Nuevo valore de flujo/flow  
+A= Medida deseada, para el caso nozzle 0.4 debería de ser 0.8  
+B= Medida real, media de las diferentes medidas  
+F= Valor de flujo/flow aplicado en el test... en el caso de % si el valor era 100% usaremos 1, 98% seria 0.98...
+
+Una vez tenemos el valor nuevo volvemos a repetir el test con el nuevo valor de flujo/flow y volvemos a medir hasta conseguir las medidas más exactas posible.
+
+El valor de flujo/flow en nuestro fileteador/slicer lo podemos encontrar en...  
+**PrusaSlicer/SuperSlicer - Extrusion Multiplier  
+Cura - Flow**
+
+Ultimas recomendaciones sobre el flujo/flow...
+
+* A veces es muy difícil obtener unas correctas dimensiones de los muros, dada la naturaleza de la impresión FDM es complicado obtener unos valores exactos y repetibles
+* El test de flujo no es necesario en cada bobina de un mismo tipo/color de filamento pero si seria aconsejable realizarlo en cada tipo y color de filamento para tenerlo como referencia ya que los valores de flow pueden cambiar significativamente sobretodo por tipo de filamento \(PLA/PLA+/SPLA/PETG/TPU/ABS/etc...\)
+
+### 8. Retracciones <a id="8.-Retracciones"></a>
+
+La retracción es el movimiento de retroceso del filamento necesario para evitar goteos de material durante los movimientos y desplazamientos que realiza el extrusor en vacío durante la impresión 3D.
+
+Los parámetros que configuran a la retracción son:
+
+\* Distancia de retracción: Longitud de material que retrocede en el proceso de retracción. Varía en función del tipo de material, el tipo de sistema de extrusión \(Directo o Bowden\) y del tipo de HotEnd. Para materiales flexibles, sobre todo para los tipo TPE \(Filaflex\), se debe desactivar la retracción para evitar que el filamento se enrolle en el piñón del extrusor.  
+\* Velocidad de retracción: Velocidad a la que el motor del extrusor hace retroceder al filamento. Con este parámetro hay que tener mucho cuidado si se utilizan velocidades altas \(mayores a 70 mm/s\) porque puede mellar \(marcar\) el filamento de tal modo que quede inservible para continuar la impresión 3D.  
+\* Desplazamiento mínimo: Longitud mínima a partir de la cual se quiere que se realice la retracción.  
+\* Enable combing: Al activar este parámetro, que se encuentra en apartado de opciones avanzadas de retracción del programa de laminación que se utilice \(PrusaSlicer/SuperSlicer,Cura, Simplify3D, etc.\), aparte de realizar la retracción, se evita que el HotEnd se mueva por encima de orificios o huecos. Con esto se evitan restos de material en las caras vistas de partes internas de las piezas.  
+\* Elevación del eje Z al retraerse \(Lift z\): A la vez que se produce la retracción, el HotEnd se mueve en el eje z a la distancia indicada. Esta elevación solo es necesaria en caso de realizar piezas con muchos detalles y con zonas pequeñas de mucho detalle para evitar que queden restos de material justo en esa zona. En caso de necesitar utilizar este parámetro recomendamos utilizar la misma distancia que la altura de capa.  
+Con el ajuste apropiado de los parámetros anteriores se consigue la retracción ideal para tu impresora 3D.  
+\* Humedad en el filamento, algo crítico para este parámetro ya que es muy importante para el acabado final que nuestro filamento esté a 10% de humedad. Esto lo podemos conseguir con un correcto almacenado del filamento y el uso de una deshidratadora de alimentos por ejemplo.
+
+Desgraciadamente no existe una fórmula para encontrar el valor exacto, si no que cada impresora 3D y cada extrusor necesita un valor particular. La siguiente tabla contiene unos valores aconsejados de longitud y velocidad de retracción para la impresora 3D en función del tipo de extrusor que se utilice, los cuales son un buen punto de partida para ajustarlos a vuestro caso particular:
+
+Puedes utilizar el generador online [https://teachingtechyt.github.io/calibration.html\#retraction](https://teachingtechyt.github.io/calibration.html#retraction) o desde SuperSlicer añadieron en sus últimas versiones el test de retracciones que facilita mucho el proceso ademss de simplificar el ajuste de parámetros a la distancia de retracción y temperatura ya que la velocidad de retracción tiene un menor impacto en el resultado final.
+
+Si quieres generar el tuyo propio a mano puedes usar [https://www.thingiverse.com/thing:3542985](https://www.thingiverse.com/thing:3542985)
+
+### 9. Test de tolerancia horizontal <a id="9.-Test-de-tolerancia-horizontal"></a>
+
+El test de tolerancia horizontal permite ajustar el valor de compensación para minimizar la expansión del material y que las piezas que son encajables lo hagan correctamente sin necesidad de rehacer el diseño o modificar las dimensiones de las piezas y su tolerancia.
+
+Puedes utilizar este test muy rápido para encontrar los valores adecuados de tu filamento.  
+[https://www.thingiverse.com/thing:1662342](https://www.thingiverse.com/thing:1662342)
+
+Dependiendo del slicer este ajuste se llama Expansión horizontal o Compensación XY.  
+También slicers como PrusaSlicer/SuperSlicer o Cura disponen de opciones avanzadas de ajustes para que esta compensación se aplique al contorno \(outer\) o en partes internas \(inner/hole\). Para no afectar a la precisión en medidas de la pieza, si nuestro ajustes de pasos/ejes están correctos, es mas aconsejable ajustar solamente ls compensación interna \(inner/hole\).
+
+### 10. Ajuste de voladizos/puentes <a id="10.-Ajuste-de-voladizos/puentes"></a>
+
+Este ajuste es doblemente importante, por una lado nos permite obtener unos mejores resultados en el aspecto de nuestras impresiones y por otro el ahorro de tiempo minimizando el uso de soportes.
+
+Es aconsejable tener correctamente ajustados todos los pasos previos de esta guía ya que algunos de ellos afectan considerablemente al resultado del mismo.
+
+Como comentabamos los voladizos permiten reducir el numero de soportes, para ello deberemos encontrar el valor del ángulo que nuestra impresora puede imprimir sin que se produzcan aberraciones o caídas en las capas.  
+Para ello a parte del test específico es bueno recordar dos puntos importantes...  
+... reducir el ancho de línea mejora el resultado final por lo que nozzles de tamaño standard/pequeño 0.4-0.2 darán un mejor resultado que aquellos más grandes  
+... ventilación de capa es otro punto muy importante, no solo el flujo de aire que podamos lanzar sobre la creación de voladizos si no que la tobera que dirige dicho flujo lo haga orientada al punto exacto y desde al menos 2 o más direcciones  
+... optimizar las piezas en el diseño si el objetivo es la impresión FDM, esto es el uso de chaflanes 45 grados en lugar de angulos rectos  
+... en situaciones más extremas el cortal la pieza en varias partes puede darnos buen resultado
+
+Para realizar el test os sugerimos el uso de esta torre de voladizos [https://www.thingiverse.com/thing:2972495](https://www.thingiverse.com/thing:2972495)
+
+El valor que encontremos deberemos configurarlo en nuestro fileteador/slicer. En PrusaSlicer podrás encontrarlo en Overhang thresold.
+
+Relacionado con los voladizos es interesante ajustar los parámetros de nuestro fileteador/slicer para poder imprimir puentes sin que estos queden de forma incorrecta.
+
+El siguiente test nos puede ayudar para [https://www.thingiverse.com/thing:546688](https://www.thingiverse.com/thing:546688)
+
+Este test realiza puentes de 10mm hasta 100mm, el objetivo seria imprimirlos a diferentes velocidades para ver cual es el que mejor se adapta a las caracteristicas de nuestra impresora.  
+Entre estas caracteristicas estarian la de velocidad al realizar puentes... normalmente los valores ideales dependiendo de la impresoras estarían entre 30-80 mm/seg siendo 40mm/seg un buen punto de partida:Opciones SuperSlicer
+
+Otro valor a revisar es flujo de aire del ventilador en puentes, normalmente es aconsejable 100% pero en algún tipo de material como el PETG es aconsejable bajarlo un poco para evitar atascos.
+
+### 11. Test de Soportes <a id="11.-Test-de-Soportes"></a>
+
+Normalmente imprimimos piezas complejas las cuales por simple física requieren imprimir al "aire" capas que es imposible que puedan sustentarse.
+
+Para solventar este problema los slicers permiten la generación de soportes que ayudan a mantener estas capas impresas al aire en el sitio adecuado.
+
+Estos soportes sin una correcta configuración pueden dar dos problemas, el primero que sean tan complicados de extraer que dañen la figura y el segundo que la pieza no quede uniforme en esas partes.
+
+Que podemos hacer para mejorar estos soportes::
+
+Imprimir a una temperatura correcta es clave para que el acabado general sea óptimo y en especial el de las partes que necesiten soporte. Así que es ideal que revisemos la temperatura optima de nuestro filamento.
+
+Otro punto importante son las capas que hacen de interfaz entre las torres de los soportes y la pieza a imprimir, normalmente podemos especificar el numero de capas de la misma y tendremos que encontrar el balance perfecto para nuestra pieza donde normalmente a mas gruesa es más difícil que estas se adhieran a la pieza.
+
+También importante es la distacia de estas capas de interfaz hasta la pieza donde nos encontramos que a menor distancia entre ellas obtenemos un mejor acabado pero más complicado el poder extraerlas incluso que acaben dañando a la pieza.
+
+Como es coger los mejores valores? no podemos dar unos valores universales pero si un posible punto de partida el cual podremos acabar de identificar los valores correctos con tests específicos:
+
+* distancia de las capas interfaz de soportes 90% de altura de capa tanto superior como inferior
+* patrón rectilineo con 1.5-2.5mm de espaciado dependiendo de la pieza
+* separación XY entre 70-100% altura capa
+* número de capas de interfaz 3-5
+
+Os aconesjamos el siguitente test que podéis utilizar como referencia ya que permite comprobar de una forma rápida nuestros valores tanto de soportes en cama como aquellos que descansan sobre la propia pieza.
+
+[https://www.thingiverse.com/thing:2755063](https://www.thingiverse.com/thing:2755063)
+
+### 12.Linear Advance \(opcional\) <a id="12.Linear-Advance-(opcional)"></a>
+
+Es una característica muy interesante de Marlin, que mantiene constante la presión del filamento dentro del nozzle.
+
+Al tener una presión constante, no le afectan los cambios de velocidad durante la impresión, por lo que las zonas conflictivas salen mejor. Se nota una gran mejoría en la pieza en general, pero sobre todo en las esquinas.
+
+Otra cosa buena de esta característica, teniendo bien configurado el Linear Advance, te puedes olvidar del jerk/junction \(una característica relacionada con la aceleración\) y puedes imprimir a más velocidad sin teóricamente perder calidad.
+
+Por último, otra de las ventajas es que las dimensiones de las piezas que imprimáis teóricamente serán más exactas.
+
+Es importante recordar que esta funcionalidad, por lo menos hasta la versión 2.0.7.x donde asegurate de habilitar **\#define EXPERIMENTAL\_SCURVE**, no se lleva muy bien con S\_CURVE que son unos algoritmos que mejoran arcos y circunferencias.
+
+Activarlo es muy sencillo, sólo tenéis que ir al archivo configuration\_adv.h de vuestro Marlin y descomentar esta línea:
+
+Con la característica activa, vamos a ver como se configura el parámetro K, que es que el gestiona la presión dentro del nozzle.
+
+Para ello, en la propia página de Marlin, hay una [herramienta](http://marlinfw.org/tools/lin_advance/k-factor.html) para generar un patrón de configuración/test.
+
+Desde cualquiera de las herramientas anteriores podéis generar el Gcode correspondiente, lo bajáis y lo imprimís.
+
+Al imprimirlo obtendréis algo parecido a esto:
+
+A la derecha os aparece el valor de la K, y debéis elegir la línea que sea más constante a lo largo de toda la longitud de la misma. En mi caso elegí una K de 140, puesto que debe ser lo menor posible.
+
+Como la K cambia dependiendo del material utilizado, lo mejor es cambiar la K mediante un Gcode cuando vas a imprimir. Para ello en el slicer que uses, se añade el Gcode que la configura en el script inicial de la impresión o en el script de filamentos \(la mejor opción si tu slicer lo tiene, PrusaSlicer/SuperSlicer por ejemplo\).  
+M900 K140  
+Donde 140 es el valor elegido del test anterior.
+
+Podeis ver mas información en el siguiente vídeo [https://youtu.be/\_BiqlXPPfu4](https://youtu.be/_BiqlXPPfu4)
+
+### 13. Ajustes de Aceleración y Jerk \(opcional\) <a id="13.-Ajustes-de-Aceleraci&#xF3;n-y-Jerk-(opcional)"></a>
+
+Permiten encontrar el punto óptimo para tu impresora en aceleración y Jerk/Junction.
+
+Te aconsejamos crearlo desde este generador online [https://teachingtechyt.github.io/calibration.html\#accel](https://teachingtechyt.github.io/calibration.html#accel) o puedes usar este otro y personalizarlo [ttps://www.thingiverse.com/thing:4169896](https://www.thingiverse.com/thing:4169896)
+
+## Prueba de stress finall!!! <a id="Prueba-de-stress-finall!!!"></a>
+
+Si has llegado hasta aquí y seguiste todos los pasos sugeridos correctamente tu impresora estará probablemente ajustada.Pars hacer una verificación final podemos usar una última pieza de calibración de stress que nos ayudará a comprobar que todo este correcto.
+
+Este test ayudará a verificar;  
+- test de voladizos, donde nos indicará en wue angulos nuestra impresora piede imprimir sin soportes para configurar en tu slider y evitar/minimizar el número de soportes necesarios  
+- test de puentes, para ver los límites en distancia de puentes  
+- test retracción  
+- test definicion esquinas  
+- test de tolerancia  
+- test de escala  
+https://www.thingiverse.com/thing:2975429
+
+### Puedes encontrar más tests específicos en mi colección en Thingiverse: <a id="Puedes-encontrar-m&#xE1;s-tests-espec&#xED;ficos-en-mi-colecci&#xF3;n-en-Thingiverse:"></a>
+
+### https://www.thingiverse.com/alienboyxp/collections/calibracion <a id="https://www.thingiverse.com/alienboyxp/collections/calibracion"></a>
+
+## Perfiles de Impresión que podemos usar como referencia <a id="Perfiles-de-Impresi&#xF3;n-que-podemos-usar-como-referencia"></a>
+
+### Creality Ender <a id="Creality-Ender"></a>
+
+* PrusaSlicer/SuperSlicer: [https://www.chepclub.com/prusaslicer-profiles.html](https://www.chepclub.com/prusaslicer-profiles.html)
+* Cura: [https://www.chepclub.com/cura-profiles.html](https://www.chepclub.com/cura-profiles.html)
+* Start/End Gcodes \(Cura\): [https://www.chepclub.com/startend-gcode.html](https://www.chepclub.com/startend-gcode.html)
+
+### Creality CR10 <a id="Creality-CR10"></a>
+
+* PrusaSlicer/SuperSlicer: [https://3dprintbeginner.com/cr10s-pro-prusa-slicer-profile/](https://3dprintbeginner.com/cr10s-pro-prusa-slicer-profile/)
+
+### Artillery X1/Genius <a id="Artillery-X1/Genius"></a>
+
+* PrusaSlicer/SuperSlicer: [https://3dprintbeginner.com/prusaslicer-profiles/](https://3dprintbeginner.com/prusaslicer-profiles/)
+
+## Links Relacionados: <a id="Links-Relacionados:"></a>
+
+[https://3dprintbeginner.com/flow-rate-calibration/](https://3dprintbeginner.com/flow-rate-calibration/)
+
