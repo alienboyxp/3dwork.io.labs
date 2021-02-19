@@ -4,11 +4,13 @@ description: >-
   paypal.me/alienboyxp
 ---
 
-# SKR E3 DIP V1.1
+# SKR MINI E3 V2
 
-![](https://telegra.ph/file/5572d5c2d018e273f88fb.png)
+![](https://telegra.ph/file/25323801939901f87a3eb.png)
 
-La SKR E3 DIP V1.1 tiene unas dimensiones de placa compatible con Ender 3 además de contar con drivers intercambiables lo que le da gran versatilidad y una placa perfecta como recambio de la original.
+La SKR Mini E3 V2 incorpora grandes mejoras en comparación a su hermana SKR Mini E3 V1.2 que hace que si debemos elegir entre una u otra y la diferencia de precio está dentro de nuestro presupuesto no dudemos en coger esta nueva versión.
+
+Si queréis una [revisión de la placa os aconsejamos revisar este artículo de 3DWork.io](https://3dwork.io/btt-skr-mini-e3-v2-0/).
 
 Recordamos que todas las placas de la gama E3 están especialmente diseñadas para el uso o reemplazo de la electrónica de una impresora Creality Ender 3 aunque puede ser usada en otras impresoras sin problema atendiendo al cableado y características específicas de cada una.
 
@@ -16,46 +18,47 @@ Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
 
-**Diagramas SKR E3 DIP V1.1**
+**Diagramas de la SKR MINI E3 v2**
 
-![](https://telegra.ph/file/fb38b7e501a86c3f5f878.jpg)
+Diagrama de conexionesDiagrama del pineado
+
+![](https://telegra.ph/file/a442ee3631c6fac954611.jpg)
+
+![](https://telegra.ph/file/75390fdc49631e578cd68.jpg)
 
 **Conexiones de alimentación**Prestar atención a las polaridades
 
-![](https://telegra.ph/file/723602614e368158567c0.png)
+![](https://telegra.ph/file/ee2644c29220db7165309.jpg)
 
 Como otras placas SKR Mini E3 el conector de alimentación se encuentra en la parte izquierda de la placa y acepta alimentación de 12v o 24v.Detalle del conector de alimentación de la placa
 
-![](https://telegra.ph/file/104a3b0ebb4177606fb04.png)
+![](https://telegra.ph/file/5b2863c79f7649a218ef8.png)
 
-**Conector cama caliente**, es crítico fijarse en la polaridad del mismo si conectamos un MOSFET externo o una cama con polaridad en especial estos que disponen de un led incorporado.Conector alimentación cama caliente
+**Conector cama caliente**, esta placa cuenta con un nuevo MOSFET, un WSK220N04. Es crítico fijarse en la polaridad del mismo si conectamos un MOSFET externo o una cama con polaridad en especial estos que disponen de un led incorporado.Conector alimentación cama caliente
 
-![](https://telegra.ph/file/14883e2eb2e53f702cce3.png)
+![](https://telegra.ph/file/3d0df1eacffbc27945248.png)
 
 **Calentador hotend**, como en la cama caliente normalemente no es necesario fijarse en la polaridad por norma general ya que estos componentes no suelen tener polaridad.Conector hotend
 
-![](https://telegra.ph/file/7b8280c2ddf0008de7be4.png)
+![](https://telegra.ph/file/03cd25e32be6c6416af38.png)
 
 La orientación de los **thermistores** normalmente no es importante ya que estos no suelen tener polaridad. En este caso para esta placa contamos para un conector para la cama caliente \(TB\) y otro de hotend \(TH0\).
 
 Es aconsejable usar conectores JST-XH 2.54mm como los de la siguiente imagen ya que evitan que se produzcan desconexiones y se minimizan los falsos contactos.
 
-![](https://telegra.ph/file/31f3e80b13d2cc8462db6.png)
+![](https://telegra.ph/file/cbf7c119d75c4264d4015.png)
 
-**UART TMC-2208 & TMC-2209’s**
+Esta placa cuenta con cinco **drivers** TMC2209 integrados y pre-configurados en el firmware que lleva instalado por defecto \(recordemos que para una Ender 3\) en modo UART.
 
-UART TMC2208 y TMC2209, al igual que sus hermanas mayores poner esros drivers wn wl modo avanzado llamado UART es muy sencillo.  
-Basta con quitar todos los jumpers y dejar solo uno como en la siguiente captura.
+Al disponer estos drivers podemos aprovechar la funcionalidad de **Sensorless/Stallguard** que nos permite eliminar los sensores de final de carrera físicos, es aconsejable su uso solamente en los ejes X e Y.
 
-![](https://telegra.ph/file/566a23c20993513d2cb34.jpg)
+Normalmente en otras placas para usar esta funcionalidad es necesario el pin DIAG siendo necesario quitarlo/doblarlo para usar finales de carrera físicos. En esta placa como en la SKR Mini E3 v2 o SKR 1.3 cuenta con unos pines para poder hacer esta función de una forma cómoda.Jumpers DIAG para la gestión de sensorless o finales de carreras físicos
 
-Es importante asegurarte que los drivers que instales estén preparados para trabajar en modo UART ya que algunos drivers necesitan una soldadura/puente para habilitarlo.
+![](https://telegra.ph/file/f48fff411ced894ef0e3a.png)
 
-También recuerda que si vas a utilizar finales de carrera físicos con TMC2209 deberas cortar/doblar/desoldar el pin DIAG.
+**Conectores de final de carrera** están preparados para ser usados en una Ender 3 por lo que si lo usamos para otra impresora deberemos fijarnos, sobretodo si disponemos finales de carrera de 3 cables, en conectar en el orden correcto GND y SGN.Conector final de carrera
 
-![](https://telegra.ph/file/325f38ffabb2fa73bdd08.jpg)
-
-![](https://telegra.ph/file/f9b87f77a5a487188de94.jpg)
+![](https://telegra.ph/file/5b288b4e8235368a7bf1c.png)
 
 **Conector LCD**, al estar preparado para impresoras Ender 3 la placa cuenta con un solo conector de 10 pines para el LCD que irá conectado entre el EXP1 de la placa y el EXP3 del LCD.
 
@@ -65,52 +68,71 @@ En este aspecto esta placa estará limitado el número de pantallas compatibles 
 
 **Conector TFT**, este tipo de pantallas normalmente táctiles son un "ente" externo a Marlin que es el sistema operativo que gestiona nuestra placa y se comunica con el mediante una conexión serial a través del conector TFT.
 
-Las pantallas SKR están preparadas con el correcto orden en el cableado \(RESET-RX-TX-GND-+5V\) pero podemos usar cualquier otra pantalla serial prestando atención al pineado de la misma y el de nuestra placa para adaptarlo.Conexión TFTConexión TFT en pantalla SKR TFT35 E3
+Las pantallas SKR están preparadas con el correcto orden en el cableado \(RESET-RX-TX-GND-+5V\) pero podemos usar cualquier otra pantalla serial prestando atención al pineado de la misma y el de nuestra placa para adaptarlo.Conector TFT
 
-![](https://telegra.ph/file/cdcf651278d9552678c0f.png)
-
-![](https://telegra.ph/file/ab36faf8fdf7966e18c3a.png)
+![](https://telegra.ph/file/d7a2abcf90433ed052f1f.png)
 
 **Ventiladores**, en este caso contaremos con FAN0 que será la salida de ventilador de capa para el primer hotend y FAN1 por defecto está destinado para la refrigeración de la electrónica y drivers.
 
 Recordar de nuevo que en este caso es muy muy importante la polaridad al conectar los ventiladores a la placa.Conector ventilador de capa \(FAN0\)Conector ventilador electrónica \(FAN1\)
 
-![](https://telegra.ph/file/1de070be45a189c117327.png)
+![](https://telegra.ph/file/8aaccace19399620ebf6e.png)
 
-![](https://telegra.ph/file/934fb2ec0b1d8b9cd2e26.png)
+![](https://telegra.ph/file/35434ad14bf5b21e6b164.png)
 
 También disponemos de otra salida de corriente para conectar ventiladores extra o cualquier otro dispositivo que necesitemos, recordando que este no es controlable como los anteriores y estarán constantemente recibiendo corriente.Salida extra de alimentación
 
-![](https://telegra.ph/file/f370dfa686465bcfad5a5.png)
+![](https://telegra.ph/file/b0c1e2378a840ccc31628.png)
 
 **Sensor de nivelación automática BLTouch o similares**, esta placa cuenta con un conector dedicado para este tipo de sensor de nivelación de los más versátiles y fiables que podemos instalar hoy en día.Conector sensor BLTouch o similar
 
-![](https://telegra.ph/file/2c61a68058d97c7befcc0.png)
+![](https://telegra.ph/file/882954dd7bae09b6852f3.png)
 
 Dependiendo de la configuración que realicemos en Marlin la parte de final de carrera del sensor \(cables negro y blanco normalmente\) pueden ser instalados tanto en el puerto dedicado del Z-PROBE o en el final de carrera Z-STOP.Conexión alternativa del sensor de nivelación dependiendo de nuestra configuración de Marlin
 
 ![](https://telegra.ph/file/a9e62cda6abd7d7f66e17.png)
 
-**Instalación del firmware**, como ya hemos comentado esta placa está por defecto pensada para usar en una Ender 3 y el firmware preinstalado acorde a esta máquina.  
-Si es vuestro caso y no os queréis complicar compilando vuestra propia versión podréis obtener las últimas versiones actualizadas en el Github de BigtreeTech en el siguiente link
+**Conector Neopixel** dedicado, contamos con una guía dedicada a este tema en Mejoras así que solamente comentar que disponemos de un conector dedicado para estos menesteres.
 
-[https://github.com/bigtreetech/BIGTREETECH-SKR-E3-DIP-V1.0/tree/master/Firmware](https://github.com/bigtreetech/BIGTREETECH-SKR-E3-DIP-V1.0/tree/master/Firmware)
+> En cualquier caso algunas versiones de Marlin indican que el procesador de esta placa no los soporta por lo que si queremos habilitarnos deberemos comentar la linea NEOPIXEL\_LED del Sanity\_check de Marlin para HAL/STM32F1 que es el procesador que usa esta placa.
 
-En la siguiente captura podéis ver los ficheros que podéis descargar para directamente ponerlo en la SD y actualizar.![](https://telegra.ph/file/6b241698d0d35972a061a.png)
+**Instalación del firmware**, como ya hemos comentado esta placa está por defecto pensada para usar en una Ender 3 y el firmware preinstalado acorde a esta máquina.
 
-Estos firmwares preconfigurados a elegir dependiendo del driver que se instale en la placa.
+Si es vuestro caso y no os queréis complicar compilando vuestra propia versión podréis obtener las últimas versiones actualizadas en el Github de BigtreeTech en el siguiente link [https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V2.0](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V2.0) .
 
-> Descarga el correspondiente a tu instalación y renombra de "firmware-\[stepper driver\].bin" a "firmware.bin".
+En la siguiente captura podéis ver los ficheros que podéis descargar para directamente ponerlo en la SD y actualizar.![](https://telegra.ph/file/be6613558f221183b2a31.png)
 
-#### Configuración de Marlin para SKR E3 DIP <a id="Configuraci&#xF3;n-de-Marlin-para-SKR-E3-DIP"></a>
+> NOTA: Los nombres de los firmware tal como se descargan tienen que ser renombrados a firmware.bin si no tiene ya ese nombre antes de ser copiadas a la SD para actualizar
 
-![](https://telegra.ph/file/aad013310d24b9f351048.png)
+firmware.bin: Firmware original para Ender 3, no soporta BLTouch
+
+firmware-ender5.bin: Firmware preconfigurado para Ender 5 Pro, no soporta BLTouch
+
+firmware-bltouch.bin: Firmware para Ender 3 con soporte para conexión normal a BLTouch
+
+firmware-bltouch-ender5.bin: Firmware para Ender 5 Pro con soporte para conexión normal a BLTouch
+
+![](https://telegra.ph/file/8ffa90ee6e3a9ea74e20c.png)
+
+firmware-bltouch-for-z-homing.bin: Firmware para Ender 3 con soporte BLTouch usado para Z-homming.
+
+firmware-bltouch-for-z-homing-ender5.bin: Firmware para Ender 5 Pro con soporte BLTouch usado para Z-homming.
+
+![](https://telegra.ph/file/d37292b5fb40f62985f39.png)
+
+En el caso que queráis usarla para otra máquina diferente os aconsejamos pasar por la sección Marlin para poder "cocinar" vuestro propio Marlin ya sea usando como base los preconfigurados de vuestra impresora o quizás mejor usando los preconfigurados para una Ender 3 con esta placa y adaptando las características de nuestra máquina.
+
+De todas formas a continuación haremos un repaso específico para estos casos.
+
+#### Configuración de Marlin para SKR MINI E3 V2 <a id="Configuraci&#xF3;n-de-Marlin-para-SKR-MINI-E3-V2"></a>
+
+![](https://telegra.ph/file/5f6dd3283d3407bec02f8.png)
 
 Tal como comentábamos en el punto anterior os aconsejamos seguir nuestra guía para "cocinar" vuestro propio Marlin que tenemos en la seccion /Marlin de nuestro bot de ayuda en Telegram @ThreeDWorkHelpBot
 
  **platformio.ini**
 
-![](https://telegra.ph/file/c612fc64669e352c39630.png)
+![](https://telegra.ph/file/528137aaf29181e86917c.png)
 
 En este fichero deberemos indicar el chipset que tiene nuestra placa por lo que deveremos buscar en el inicio del fichero el valor "env\_default" y cambiarlo por el siguiente:
 
@@ -133,7 +155,7 @@ Comenzaremos por configurar correctamente los **SERIAL** para esta máquina algo
 
 Ahora definiremos nuestro MOTHERBOARD el cual al igual que hicimos el platformio.ini nos indica el tipo de chipset que lleva nuestra placa y que permite a Marlin usar una configuración de pines u otra.
 
-> \#define MOTHERBOARD BOARD\_BTT\_SKR\_E3\_DIP
+> \#define MOTHERBOARD BOARD\_BTT\_SKR\_MINI\_E3\_V2\_0
 
 Definiremos el tipo de filamento que usa nuestra impresora que básicamente indica el diámetro del mismo. Normalmente impresoras normales usan filamento del 1.75 aunque otra medida más o menos estándard es 3.
 
@@ -165,26 +187,26 @@ En este ejemplo y dado que vamos a montar nuestra placa con BLTouch necesitaremo
 
 > \#define Z\_MIN\_PROBE\_ENDSTOP\_INVERTING true
 
-Drivers, en nuestro ejemplo usaremos unos drivers TMC2209 en UART los cuales definiremos en Marlin de la siguiente forma:
+Drivers, tal como hemos comentado en el inicio de la guía esta placa lleva integrados unos drivers TMC2209 los cuales definiremos en Marlin de la siguiente forma:
 
-> \#define X\_DRIVER\_TYPE TMC2209  
-> \#define Y\_DRIVER\_TYPE TMC2209  
-> \#define Z\_DRIVER\_TYPE TMC2209  
-> //\#define X2\_DRIVER\_TYPE TMC2209  
-> //\#define Y2\_DRIVER\_TYPE A4988  
-> //\#define Z2\_DRIVER\_TYPE A4988  
-> //\#define Z3\_DRIVER\_TYPE A4988  
-> //\#define Z4\_DRIVER\_TYPE A4988  
-> \#define E0\_DRIVER\_TYPE TMC2209  
-> //\#define E1\_DRIVER\_TYPE A4988  
-> ...
+\#define X\_DRIVER\_TYPE TMC2209  
+\#define Y\_DRIVER\_TYPE TMC2209  
+\#define Z\_DRIVER\_TYPE TMC2209  
+//\#define X2\_DRIVER\_TYPE TMC2209  
+//\#define Y2\_DRIVER\_TYPE A4988  
+//\#define Z2\_DRIVER\_TYPE A4988  
+//\#define Z3\_DRIVER\_TYPE A4988  
+//\#define Z4\_DRIVER\_TYPE A4988  
+\#define E0\_DRIVER\_TYPE TMC2209  
+//\#define E1\_DRIVER\_TYPE A4988  
+...
 
 **STEPS o pasos de motor**, tos valores indicaremos a Marlin los pasos de motor para realizar movimientos. En este ejemplo usaremos los que una impresora Ender lleva por defecto, en todo caso de nuevo os remitimos a la seccion /Calibracion/Calibracion Inicial de nuestro bot de ayuda en Telegram @ThreeDWorkHelpBot para ver el para calibrar estos pasos para nuestro extrusor y ejes de movimiento.
 
 > \#define DEFAULT\_AXIS\_STEPS\_PER\_UNIT { 80.00, 80.00, 400.00, 93 }  
 > \#pasos para Ender3 ejes X, Y, Z,Extrusor
 
-**S\_CURVE\_ACCELERATION**, esta funcionalidad ofrece una gran mejora en la calidad de impresion ya que suaviza la aceleración o deceleracion cuando el cabezal de impresión está en movimiento.
+S\_CURVE\_ACCELERATION, esta funcionalidad ofrece una gran mejora en la calidad de impresion ya que suaviza la aceleración o deceleracion cuando el cabezal de impresión está en movimiento.
 
 Nota importate es que dependiendo de nuestra versión de Marlin y si usamos Linear Advance no son compatibles. En la seccion /Calibracion/Calibracion Inicial de nuestro bot de ayuda en Telegram @ThreeDWorkHelpBot podréis encontrar más información detallada de Linear Advanced.
 
@@ -249,11 +271,23 @@ También definiremos el tamaño de nuestro eje Z:
 
 > \#define Z\_MAX\_POS 250
 
-**Sensor de filamentos**, te aconsejamos revisar en la seccion /Mejoras/Sensor de filamentos de nuestro bot de ayuda en Telegram @ThreeDWorkHelpBot podréis encontrar más información detallada acerca de como instalar y configurar un sensor de filamentos.
+**Sensor de filamentos**, te aconsejamos revisar en la seccion /Mejoras/Sensor de filamentos de nuestro bot de ayuda en Telegram @ThreeDWorkHelpBot podréis encontrar más información detallada acerca de como instalar y configurar un sensor de filamentos
 
 > \#define FILAMENT\_RUNOUT\_SENSOR
 
-Autonivelación, tal como os comentábamos anteriormente en la sección /Nivelacion de nuestro bot tenés más información detallade de como activar autonivelación UBL \(la más avanzada y aconsejable para camas de cierto tamaño o con problemas\) y MESH que permite tener una malla sin sensor haciendo el proceso manualmente.
+Al igual que con los finales de carrera es aconsejable revisar con un M119 el estado del sensor de filamentos el cual tiene que aparecer TRIGGERED con filamento y OPEN sin. En el caso que parezca invertido deberemos de jugar con el valor de \(LOW/HIGH\):
+
+> \#define FIL\_RUNOUT\_STATE LOW
+
+También podemos indicar la distancia de filamento que queremos desde que el sensor detecta el fallo el sensor en:
+
+> \#define FILAMENT\_RUNOUT\_DISTANCE\_MM 25
+
+También en el caso que nuestro sensor de filamento funcione por detección de flujo de filamento \(como el sensor de BigtreeTech Smart Filament Sensor\) deberemos habilitar lo siguiente:
+
+> \#define FILAMENT\_MOTION\_SENSOR
+
+**Autonivelación**, tal como os comentábamos anteriormente en la sección /Nivelacion de nuestro bot tenés más información detallade de como activar autonivelación UBL \(la más avanzada y aconsejable para camas de cierto tamaño o con problemas\) y MESH que permite tener una malla sin sensor haciendo el proceso manualmente.
 
 En todo caso para este ejemplo habilitaremos BILINEAR.
 
@@ -282,7 +316,7 @@ Otra función que por seguridad debemos de habilitar es la de que realice un hom
 
 > \#define NOZZLE\_PARK\_FEATURE
 
-SD, si queremos que nuestro Marlin pueda leer de nuestra SD ya sea el de la placa o en una pantalla que sea compatible \(ojo que las Touch no lo son\) deberemos activar el soporte de SD.
+**SD**, si queremos que nuestro Marlin pueda leer de nuestra SD ya sea el de la placa o en una pantalla que sea compatible \(ojo que las Touch no lo son\) deberemos activar el soporte de SD.
 
 > \#define SDSUPPORT
 
@@ -300,7 +334,7 @@ En el caso de ser una Ender 3 v2 deberemos habilitar una diferente aunque a tene
 
 **configuration\_adv.h**
 
-![](https://telegra.ph/file/acb7b901d3923b87f45ed.png)
+![](https://telegra.ph/file/c624a8d7ae230f71af5af.png)
 
 Ya hemos finalizado la primera parte y ahora tendremos que pasar a la configuración de las opciones avanzadas.
 
@@ -321,7 +355,7 @@ En nuestro caso usaremos la de la placa.
 
 > \#define SDCARD\_CONNECTION ONBOARD
 
-Babystepping, una función casi imprescindible tener es baby stepping. Babystepping nos permite ajustar la altura de Z durante una impresión para ajustar de forma manual esta altura a nuestro gusto.
+**Babystepping**, una función casi imprescindible tener es baby stepping. Babystepping nos permite ajustar la altura de Z durante una impresión para ajustar de forma manual esta altura a nuestro gusto.
 
 En nuestro ejemplo habilitaremos que se pueda activar con un doble click en el botón/encoder, que siempre este disponible y nos muestre mejoras gráficas en el ajuste para entender la dirección del ajuste desde la pantalla.
 
@@ -335,6 +369,18 @@ En nuestro ejemplo habilitaremos que se pueda activar con un doble click en el b
 > \#define G29\_RETRY\_AND\_RECOVER  
 > \#define G29\_MAX\_RETRIES 4
 
+**Soporte ARC**, una mejora sustancial en la calidad de nuestras impresiones y también cuando imprimimos a través de dispositivos serial como TFT, Octoprint, etc...  
+Permite simplificar los comandos gcodes minimizando el numero de movimientos y haciendolos más fluidos evitando también un gran número de retracciones.
+
+![](https://telegra.ph/file/c9fa979e6ddc3e9d6a65d.png)
+
+Para usarlo debemos de configurar nuestro fileteador/slicer para que aplique estos cambios o en el caso de Octoprint podemos usar un plugin.  
+En cuanto a los cambios en en Marlin:
+
+> \#define ARC\_SUPPORT
+
+Es importante recalcar que en el caso de habilitar ARC para su uso es aconsejable, en el caso que también lo tengamos habilitado, la compatibilidad con S\_CURVE.
+
 **Pausado avanzado**, tal como comentamos anteriormente en este ejemplo usamos un sensor de filamentos. Para que funcione correctamente tenemos que habilitar ADVANCED\_PAUSE\_FEATURE que habilita el comando gcode M600 para el cambio de filamentos.
 
 Esto puedes hacerlo con o sin sensor de nivelación y requiere NOZZLE PARK para su correcto funcionamiento.
@@ -343,9 +389,9 @@ No entraremos en la configuración detallada ya que la tienes dentro de /Mejoras
 
 > \#define ADVANCED\_PAUSE\_FEATURE
 
-**Configuración drivers TMC2209 UART**, para este ejemplo de configuración usaremos unos TMC2209 en UART y tenemos que configurar correctamente los parametros avanzados que encontraremos en la sección HAS\_TRINAMIC\_CONFIG de configuration\_adv.h
+**Configuración drivers TMC2209 UART**, nuestra placa lleva integrados unos TMC2209 y tenemos que configurar correctamente los parametros avanzados que encontraremos en la sección HAS\_TRINAMIC\_CONFIG de configuration\_adv.h
 
-**Micropasos**, aunque podemos configurar desde 16 a 256 micropasos no os aconsejamos para nada usar otro valor diferente al de 16. Con esos micropasos la definición que podríamos alcanzar mecánicamente es prácticamente imposible de alcanzar con impresoras normales además de que los drivers TMC2209 ya realizan ellos mismo la interpolación de estos para siempre ofrecer la máxima fiabilidad y precisión.
+Micropasos, aunque podemos configurar desde 16 a 256 micropasos no os aconsejamos para nada usar otro valor diferente al de 16. Con esos micropasos la definición que podríamos alcanzar mecánicamente es prácticamente imposible de alcanzar con impresoras normales además de que los drivers TMC2209 ya realizan ellos mismo la interpolación de estos para siempre ofrecer la máxima fiabilidad y precisión.
 
 Hablando de fiabilidad es otro aspecto importante a la hora de los micropasos, los motores de pasos que llevan nuestras impresoras pierden torque \(y pasos\) a altas revoluciones así que aumentar esta definición de pasos aumentará exponencialmente el porcentaje de fiabilidad y por lo tanto que nuestras piezas no salgan correctamente.
 
@@ -359,7 +405,26 @@ En el ejemplo siguiente podremos ver como tenemos 16 micropasos para nuestro eje
 > \#define X\_CHAIN\_POS -1  
 > \#endif
 
-Otro valor importante de los valores anteriores es el de **CURRENT** donde ajustaremos la corriente de nuestros motores. También puedes ajustarlos desde el LCD desde Configuración/Avanzado/TMC junto con otras opciones que explicaremos a continuación.
+Otro valor importante de los valores anteriores es el de CURRENT donde ajustaremos la corriente de nuestros motores. También puedes ajustarlos desde el LCD desde Configuración/Avanzado/TMC junto con otras opciones que explicaremos a continuación.
+
+**UART Address**, en el caso de una SKRA MINI E3 v2 debemos especificar las direcciones de cada uno de los drivers. Esto lo heremos tal como mostramos a continuación solo para los ejes que usamos en nuestra placa.
+
+> \#define X\_SLAVE\_ADDRESS 0  
+> \#define Y\_SLAVE\_ADDRESS 2  
+> \#define Z\_SLAVE\_ADDRESS 1  
+> \#define X2\_SLAVE\_ADDRESS 0  
+> \#define Y2\_SLAVE\_ADDRESS 0  
+> \#define Z2\_SLAVE\_ADDRESS 0  
+> \#define Z3\_SLAVE\_ADDRESS 0  
+> \#define Z4\_SLAVE\_ADDRESS 0  
+> \#define E0\_SLAVE\_ADDRESS 3  
+> \#define E1\_SLAVE\_ADDRESS 0  
+> \#define E2\_SLAVE\_ADDRESS 0  
+> \#define E3\_SLAVE\_ADDRESS 0  
+> \#define E4\_SLAVE\_ADDRESS 0  
+> \#define E5\_SLAVE\_ADDRESS 0  
+> \#define E6\_SLAVE\_ADDRESS 0  
+> \#define E7\_SLAVE\_ADDRESS 0
 
 **STEALTHCHOP**, es importante habilitarlo si queremos que nuestros motores sean "silenciosos" ya que si no estarán funcionando en modo SpreadCycle que es el modo pontencia.
 
@@ -392,11 +457,12 @@ En nuestro caso usamos los valores indicados para una Ender que son 100mm/s para
 
 > \#define TMC\_DEBUG
 
-**Fichero pins SKR E3 DIP**
+**Fichero pins SKR MINI E3 V2**
 
 Al igual que otras placas SKR sus pines se definen con dependencias, a continuación tienes los ficheros pins que contienen las referencias para esta placa.
 
-> Marlin/src/pins/stm32f1/pins\_BTT\_SKR\_E3\_DIP.h
+> Marlin/src/pins/stm32f1/pins\_BTT\_SKR\_MINI\_E3\_V2\_0.h  
+> Marlin/src/pins/stm32f1/pins\_BTT\_SKR\_MINI\_E3\_common.h
 
 #### Pues ya hemos terminado!!! ahora solamente queda compilar, ajustar cualquier error que nos reporte el compilado y meterlo en nuestra placa!!! <a id="Pues-ya-hemos-terminado!!!-ahora-solamente-queda-compilar,-ajustar-cualquier-error-que-nos-reporte-el-compilado-y-meterlo-en-nuestra-placa!!!"></a>
 
@@ -407,9 +473,4 @@ Como siempre os aconsejamos verificar inicialemente la impresora de la siguiente
 * revisar que nuestros thermistores reportan correctamente la temperatura
 * revisar que nuestros calentadores de cama y de hotend funcionan correctamente
 * realizar la guia de Calibración Inicial que podéis encontrar en nuestro bot en el apartado /Calibracion
-
-**Links de interés:**
-
-* [https://github.com/bigtreetech/BIGTREETECH-SKR-E3-DIP-V1.0/tree/master/Firmware](https://github.com/bigtreetech/BIGTREETECH-SKR-E3-DIP-V1.0/tree/master/Firmware)
-* [https://www.makenprint.uk/3d-printing/3d-printing-guides/skr-e3-dip-v1-1-setup-guide/](https://www.makenprint.uk/3d-printing/3d-printing-guides/skr-e3-dip-v1-1-setup-guide/)
 
