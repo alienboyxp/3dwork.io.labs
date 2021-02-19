@@ -410,7 +410,7 @@ Como siempre os aconsejamos verificar inicialemente la impresora de la siguiente
 * revisar que nuestros calentadores de cama y de hotend funcionan correctamente
 * realizar la guia de Calibración Inicial que podéis encontrar en nuestro bot en el apartado /Calibracion
 
-**Links de interés:**
+**Links de interés**
 
 * [https://github.com/bigtreetech/BIGTREETECH-SKR-E3-DIP-V1.0/tree/master/Firmware](https://github.com/bigtreetech/BIGTREETECH-SKR-E3-DIP-V1.0/tree/master/Firmware)
 * [https://www.makenprint.uk/3d-printing/3d-printing-guides/skr-e3-dip-v1-1-setup-guide/](https://www.makenprint.uk/3d-printing/3d-printing-guides/skr-e3-dip-v1-1-setup-guide/)
