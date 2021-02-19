@@ -110,7 +110,7 @@ Estos firmwares preconfigurados a elegir dependiendo del driver que se instale e
 
 Tal como comentábamos en el punto anterior os aconsejamos seguir nuestra guía para "cocinar" vuestro propio Marlin que tenemos en la seccion /Marlin de nuestro bot de ayuda en Telegram @ThreeDWorkHelpBot
 
-###  **platformio.ini**
+### **platformio.ini**
 
 ![](https://telegra.ph/file/c612fc64669e352c39630.png)
 
@@ -268,8 +268,8 @@ Es importante decirle a Marlin que habilite la autonivelación \(G29\) después 
 En el caso de BILINEAR le diremos los puntos a realizar por malla en la siguiente parte de Marlin \(por defecto lleva 3 puntos por eje, 3x3=9 puntos de comprobación\).
 
 > if EITHER\(AUTO\_BED\_LEVELING\_LINEAR, AUTO\_BED\_LEVELING\_BILINEAR\)  
->  // Set the number of grid points per dimension.  
->  \#define GRID\_MAX\_POINTS\_X 3
+> // Set the number of grid points per dimension.  
+> \#define GRID\_MAX\_POINTS\_X 3
 
 Otra función que por seguridad debemos de habilitar es la de que realice un homing en el centro de la cama, esto nos ayuda a dos cosas... la primera a asegurar que el sensor tiene una superficie donde detectar el final de carrera y el segundo verificar visualmente que nuestros Offsets están de forma correcta ya que el sensor de nivelación tiene que quedar perfectamente posicionado en el centro de nuestra cama.
 
