@@ -16,11 +16,11 @@ Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
 
-**Diagramas SKR E3 DIP V1.1**
+## **Diagramas SKR E3 DIP V1.1**
 
 ![](https://telegra.ph/file/fb38b7e501a86c3f5f878.jpg)
 
-**Conexiones de alimentación**Prestar atención a las polaridades
+## **Conexiones de alimentación**
 
 ![](https://telegra.ph/file/723602614e368158567c0.png)
 
@@ -91,7 +91,9 @@ Dependiendo de la configuración que realicemos en Marlin la parte de final de c
 
 ![](https://telegra.ph/file/a9e62cda6abd7d7f66e17.png)
 
-**Instalación del firmware**, como ya hemos comentado esta placa está por defecto pensada para usar en una Ender 3 y el firmware preinstalado acorde a esta máquina.  
+## **Instalación del firmware**
+
+Como ya hemos comentado esta placa está por defecto pensada para usar en una Ender 3 y el firmware preinstalado acorde a esta máquina.  
 Si es vuestro caso y no os queréis complicar compilando vuestra propia versión podréis obtener las últimas versiones actualizadas en el Github de BigtreeTech en el siguiente link
 
 [https://github.com/bigtreetech/BIGTREETECH-SKR-E3-DIP-V1.0/tree/master/Firmware](https://github.com/bigtreetech/BIGTREETECH-SKR-E3-DIP-V1.0/tree/master/Firmware)
@@ -102,13 +104,13 @@ Estos firmwares preconfigurados a elegir dependiendo del driver que se instale e
 
 > Descarga el correspondiente a tu instalación y renombra de "firmware-\[stepper driver\].bin" a "firmware.bin".
 
-#### Configuración de Marlin para SKR E3 DIP <a id="Configuraci&#xF3;n-de-Marlin-para-SKR-E3-DIP"></a>
+## Configuración de Marlin para SKR E3 DIP
 
 ![](https://telegra.ph/file/aad013310d24b9f351048.png)
 
 Tal como comentábamos en el punto anterior os aconsejamos seguir nuestra guía para "cocinar" vuestro propio Marlin que tenemos en la seccion /Marlin de nuestro bot de ayuda en Telegram @ThreeDWorkHelpBot
 
- **platformio.ini**
+###  **platformio.ini**
 
 ![](https://telegra.ph/file/c612fc64669e352c39630.png)
 
@@ -118,7 +120,7 @@ En este fichero deberemos indicar el chipset que tiene nuestra placa por lo que 
 > o en caso de tener problemas dado que algunas placas pueden ir con 512K o 256K se puede usar este  
 > default\_envs = STM32F103RC\_btt
 
-**configuration.h**
+### **configuration.h**
 
 ![](https://telegra.ph/file/73d2b6b2b19c27aff6b6f.png)
 
@@ -298,7 +300,7 @@ En el caso de ser una Ender 3 v2 deberemos habilitar una diferente aunque a tene
 
 > \#define DWIN\_CREALITY\_LCD
 
-**configuration\_adv.h**
+### **configuration\_adv.h**
 
 ![](https://telegra.ph/file/acb7b901d3923b87f45ed.png)
 
@@ -392,7 +394,7 @@ En nuestro caso usamos los valores indicados para una Ender que son 100mm/s para
 
 > \#define TMC\_DEBUG
 
-**Fichero pins SKR E3 DIP**
+### **Fichero pins SKR E3 DIP**
 
 Al igual que otras placas SKR sus pines se definen con dependencias, a continuación tienes los ficheros pins que contienen las referencias para esta placa.
 

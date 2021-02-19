@@ -26,7 +26,7 @@ Diagrama de conexionesDiagrama del pineado
 
 ![](https://telegra.ph/file/75390fdc49631e578cd68.jpg)
 
-### **Conexiones**
+## **Conexiones**
 
 ![](https://telegra.ph/file/ee2644c29220db7165309.jpg)
 
