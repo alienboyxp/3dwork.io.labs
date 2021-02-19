@@ -6,7 +6,7 @@ description: >-
 
 # Calibración inicial impresora 3D
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%2816%29%20%281%29.png)
 
 La puesta en marcha de una impresora así como el calibrado preventivo es muy importante para un correcto funcionamiento y precisión de nuestra impresora.
 
