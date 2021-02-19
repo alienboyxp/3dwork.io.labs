@@ -4,7 +4,7 @@
 
 ## Guías Impresión 3D
 
-* [Calibración inicial impresora 3D](guias-impresion-3d/calibracion_3d.md)
+* [3D Printer Callibration Guide](guias-impresion-3d/calibracion_3d.md)
 * [Resolución de problemas](guias-impresion-3d/resolucion-de-problemas/README.md)
   * [Problemas hardware impresora 3D](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/README.md)
     * [Problemas adhesion de impresiones](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/problemas-adhesion-de-impresiones.md)

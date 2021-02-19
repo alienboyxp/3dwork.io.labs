@@ -4,7 +4,7 @@ description: >-
   paypal.me/alienboyxp
 ---
 
-# Calibración inicial impresora 3D
+# 3D Printer Callibration Guide
 
 ![](../.gitbook/assets/image%20%2816%29%20%281%29.png)
 
