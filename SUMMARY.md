@@ -14,11 +14,11 @@
   * [Problemas impresión](guias-impresion-3d/resolucion-de-problemas/problemas-impresion.md)
   * [Problemas filamentos](guias-impresion-3d/resolucion-de-problemas/problemas-filamentos.md)
 * [Mejoras/Upgrades](guias-impresion-3d/mejoras-upgrades/README.md)
-  * [Extrusión](guias-impresion-3d/mejoras-upgrades/extrusion.md)
   * [Electrónica](guias-impresion-3d/mejoras-upgrades/electronica/README.md)
     * [SKR MINI E3 Turbo](guias-impresion-3d/mejoras-upgrades/electronica/skr_mini_e3_turbo.md)
     * [SKR MINI E3 V2](guias-impresion-3d/mejoras-upgrades/electronica/skr-mini-e3-v2.md)
     * [SKR E3 DIP V1.1](guias-impresion-3d/mejoras-upgrades/electronica/skr-e3-dip-v1.1.md)
+  * [Extrusión](guias-impresion-3d/mejoras-upgrades/extrusion.md)
 
 ## Octoprint
 
