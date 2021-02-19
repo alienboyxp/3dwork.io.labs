@@ -18,7 +18,7 @@ Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
 
-**Diagramas de la SKR MINI E3 v2**
+## **Diagramas de la SKR MINI E3 v2**
 
 Diagrama de conexionesDiagrama del pineado
 
@@ -26,7 +26,7 @@ Diagrama de conexionesDiagrama del pineado
 
 ![](https://telegra.ph/file/75390fdc49631e578cd68.jpg)
 
-**Conexiones de alimentación**Prestar atención a las polaridades
+### **Conexiones**
 
 ![](https://telegra.ph/file/ee2644c29220db7165309.jpg)
 
@@ -96,11 +96,15 @@ Dependiendo de la configuración que realicemos en Marlin la parte de final de c
 
 > En cualquier caso algunas versiones de Marlin indican que el procesador de esta placa no los soporta por lo que si queremos habilitarnos deberemos comentar la linea NEOPIXEL\_LED del Sanity\_check de Marlin para HAL/STM32F1 que es el procesador que usa esta placa.
 
-**Instalación del firmware**, como ya hemos comentado esta placa está por defecto pensada para usar en una Ender 3 y el firmware preinstalado acorde a esta máquina.
+## **Instalación del firmware**
+
+Como ya hemos comentado esta placa está por defecto pensada para usar en una Ender 3 y el firmware preinstalado acorde a esta máquina.
 
 Si es vuestro caso y no os queréis complicar compilando vuestra propia versión podréis obtener las últimas versiones actualizadas en el Github de BigtreeTech en el siguiente link [https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V2.0](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V2.0) .
 
-En la siguiente captura podéis ver los ficheros que podéis descargar para directamente ponerlo en la SD y actualizar.![](https://telegra.ph/file/be6613558f221183b2a31.png)
+En la siguiente captura podéis ver los ficheros que podéis descargar para directamente ponerlo en la SD y actualizar.
+
+![](https://telegra.ph/file/be6613558f221183b2a31.png)
 
 > NOTA: Los nombres de los firmware tal como se descargan tienen que ser renombrados a firmware.bin si no tiene ya ese nombre antes de ser copiadas a la SD para actualizar
 
@@ -124,13 +128,13 @@ En el caso que queráis usarla para otra máquina diferente os aconsejamos pasar
 
 De todas formas a continuación haremos un repaso específico para estos casos.
 
-#### Configuración de Marlin para SKR MINI E3 V2 <a id="Configuraci&#xF3;n-de-Marlin-para-SKR-MINI-E3-V2"></a>
+## Configuración de Marlin para SKR MINI E3 V2
 
 ![](https://telegra.ph/file/5f6dd3283d3407bec02f8.png)
 
 Tal como comentábamos en el punto anterior os aconsejamos seguir nuestra guía para "cocinar" vuestro propio Marlin que tenemos en la seccion /Marlin de nuestro bot de ayuda en Telegram @ThreeDWorkHelpBot
 
- **platformio.ini**
+###  **platformio.ini**
 
 ![](https://telegra.ph/file/528137aaf29181e86917c.png)
 
@@ -140,7 +144,7 @@ En este fichero deberemos indicar el chipset que tiene nuestra placa por lo que 
 > o en caso de tener problemas dado que algunas placas pueden ir con 512K o 256K se puede usar este  
 > default\_envs = STM32F103RC\_btt
 
-**configuration.h**
+### **configuration.h**
 
 ![](https://telegra.ph/file/73d2b6b2b19c27aff6b6f.png)
 
@@ -332,7 +336,7 @@ En el caso de ser una Ender 3 v2 deberemos habilitar una diferente aunque a tene
 
 > \#define DWIN\_CREALITY\_LCD
 
-**configuration\_adv.h**
+### **configuration\_adv.h**
 
 ![](https://telegra.ph/file/c624a8d7ae230f71af5af.png)
 
@@ -457,7 +461,7 @@ En nuestro caso usamos los valores indicados para una Ender que son 100mm/s para
 
 > \#define TMC\_DEBUG
 
-**Fichero pins SKR MINI E3 V2**
+### **Fichero pins SKR MINI E3 V2**
 
 Al igual que otras placas SKR sus pines se definen con dependencias, a continuación tienes los ficheros pins que contienen las referencias para esta placa.
 
