@@ -5,12 +5,24 @@
 ## Guías Impresión 3D
 
 * [Calibración inicial impresora 3D](guias-impresion-3d/calibracion_3d.md)
+* [Resolución de problemas](guias-impresion-3d/resolucion-de-problemas/README.md)
+  * [Problemas hardware impresora 3D](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/README.md)
+    * [Problemas adhesion de impresiones](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/problemas-adhesion-de-impresiones.md)
+    * [Mantenimiento del HotEnd](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/mantenimiento-del-hotend.md)
+    * [Problemas Extrusion](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/problemas-extrusion.md)
+    * [Untitled](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/untitled.md)
+  * [Problemas impresión](guias-impresion-3d/resolucion-de-problemas/problemas-impresion.md)
+  * [Problemas filamentos](guias-impresion-3d/resolucion-de-problemas/problemas-filamentos.md)
 
 ## Octoprint
 
 * [Que es y que necesito para Octoprint?](octoprint/que_es_octoprint.md)
 * [Instalando Octoprint](octoprint/instalando-octoprint.md)
 * [Telegraph](octoprint/untitled-1.md)
+
+## Software
+
+* [Untitled](software/untitled.md)
 
 ## PULSAR Cube
 
