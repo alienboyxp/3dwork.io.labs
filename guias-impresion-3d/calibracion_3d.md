@@ -18,7 +18,7 @@ Se puede descargar desde aqui [https://github.com/supermerill/SuperSlicer/releas
 
 PrusaSlicer desde aqui [https://github.com/prusa3d/PrusaSlicer/releases](https://github.com/prusa3d/PrusaSlicer/releases)
 
-### 1. Extrusión <a id="1.-Extrusi&#xF3;n"></a>
+## 1. Extrusión
 
 Una parte crítica en una impresora 3D es el control del filamento extruido.  
 Este proceso no es en un eje de movimiento si no de extrusión así que se aconseja que el test se realice extruyendo filamento por el nozzle.  
@@ -37,7 +37,7 @@ https://youtu.be/VA\_jvXyGvhU
 El ajuste de los pasos los puedes realizar desde la pantalla en modo Marlin en Configuración/Avanzado/Steps o mediante gcode desde un terminal como Pronterface con M92 Exxx \(donde xxx serían los pasos calculados previamente\).  
 Recuerda, si tienes un Marlin cocinado por ti anotar estos valores, y si modificaste por pantalla ir a Configuración/Salvar EEPROM o si lo hiciste por terminal lanzar un M500.
 
-### 2. Ajuste de los pasos de los motores/ejes <a id="2.-Ajuste-de-los-pasos-de-los-motores/ejes"></a>
+## 2. Ajuste de los pasos de los motores/ejes
 
 Los cubos de calibración son simples objetos geométricos \(cubos normalmente\) que ayudan en la calibracion fina de tu impresora 3D permitiendo conseguir la mayor precisión en tus impresiones.
 
@@ -58,7 +58,7 @@ https://blog.prusaprinters.org/calculator\_3416/\#steppermotors
 El ajuste de los pasos los puedes realizar desde la pantalla en modo Marlin en Configuración/Avanzado/Steps o mediante gcode desde un terminal como Pronterface con M92 Xxxx Yxxx Zxxx \(donde xxx serían los pasos calculados previamente\).  
 Recuerda si tienes un Marlin cocinado por ti anotar estos valores, y si modificaste por pantalla ir a Configuración/Salvar EEPROM o si lo hiciste por terminal lanzar un M500.
 
-### 4. Ajuste PID <a id="4.-Ajuste-PID"></a>
+## 4. Ajuste PID
 
 Esta calibración es independiente del resto, dado que no requiere que se hayan reslizado otros tests previamenteEjemplo de impresora con los valores PID ajustados incorrectamente.
 
@@ -98,7 +98,7 @@ En el caso de alarmas por protección de temperaturas que no se solucione con un
 
 [https://3dprinting.stackexchange.com/questions/8466/what-is-thermal-runaway-protection](https://3dprinting.stackexchange.com/questions/8466/what-is-thermal-runaway-protection)
 
-### 5. Nivelación de la cama <a id="5.-Nivelaci&#xF3;n-de-la-cama"></a>
+## 5. Nivelación de la cama
 
 El nivelado de cama es crítico para poder disponer de una buena base para nuestras impresiones.
 
@@ -114,7 +114,7 @@ En el caso de ser necesario ajustar el ZOffset a partir del valor obtenido \(en 
 
 Podéis ver una explicación en forma de video aqui [https://youtu.be/1V6TZ7fDiU4](https://youtu.be/1V6TZ7fDiU4)
 
-### 6. Torre de temperatura <a id="6.-Torre-de-temperatura"></a>
+## 6. Torre de temperatura
 
 Las torres de temperaturas nos permiten encontrar la temperatura óptima para un determinado filamento.  
 Es importante hacer este test con cada bobina que usemos para ajustar o verificar que los valores son los correctos.
@@ -135,7 +135,7 @@ Para interpretar las torres de temperaturas deberemos fijarnos en:
 * Definición de los números de la temperatura, estos deben quedar lo mas legibles posible además del efecto "olas" alrededor de los mismos
 * Figuras cónicas que esten bien definidas sin restos de material o deformaciones
 
-### 7. Ajuste Flujo/Flow <a id="7.-Ajuste-Flujo/Flow"></a>
+## 7. Ajuste Flujo/Flow
 
 El ajuste de flujo permite ajusta la cantidad de plástico extruído por la impresora. Una correcta calibración del flujo/flow permite solucionar problemas de falta o sobre extrusión además de mejorar los valores de retracción, ayudar a mejorar las esquinas y el efecto costura en nuestras impresiones.
 
@@ -191,7 +191,7 @@ Ultimas recomendaciones sobre el flujo/flow...
 * A veces es muy difícil obtener unas correctas dimensiones de los muros, dada la naturaleza de la impresión FDM es complicado obtener unos valores exactos y repetibles
 * El test de flujo no es necesario en cada bobina de un mismo tipo/color de filamento pero si seria aconsejable realizarlo en cada tipo y color de filamento para tenerlo como referencia ya que los valores de flow pueden cambiar significativamente sobretodo por tipo de filamento \(PLA/PLA+/SPLA/PETG/TPU/ABS/etc...\)
 
-### 8. Retracciones <a id="8.-Retracciones"></a>
+## 8. Retracciones
 
 La retracción es el movimiento de retroceso del filamento necesario para evitar goteos de material durante los movimientos y desplazamientos que realiza el extrusor en vacío durante la impresión 3D.
 
@@ -213,7 +213,7 @@ Puedes utilizar el generador online [https://teachingtechyt.github.io/calibratio
 
 Si quieres generar el tuyo propio a mano puedes usar [https://www.thingiverse.com/thing:3542985](https://www.thingiverse.com/thing:3542985)
 
-### 9. Test de tolerancia horizontal <a id="9.-Test-de-tolerancia-horizontal"></a>
+## 9. Test de tolerancia horizontal
 
 El test de tolerancia horizontal permite ajustar el valor de compensación para minimizar la expansión del material y que las piezas que son encajables lo hagan correctamente sin necesidad de rehacer el diseño o modificar las dimensiones de las piezas y su tolerancia.
 
@@ -225,7 +225,7 @@ Puedes utilizar este test muy rápido para encontrar los valores adecuados de tu
 Dependiendo del slicer este ajuste se llama Expansión horizontal o Compensación XY.  
 También slicers como PrusaSlicer/SuperSlicer o Cura disponen de opciones avanzadas de ajustes para que esta compensación se aplique al contorno \(outer\) o en partes internas \(inner/hole\). Para no afectar a la precisión en medidas de la pieza, si nuestro ajustes de pasos/ejes están correctos, es mas aconsejable ajustar solamente ls compensación interna \(inner/hole\).
 
-### 10. Ajuste de voladizos/puentes <a id="10.-Ajuste-de-voladizos/puentes"></a>
+## 10. Ajuste de voladizos/puentes
 
 Este ajuste es doblemente importante, por una lado nos permite obtener unos mejores resultados en el aspecto de nuestras impresiones y por otro el ahorro de tiempo minimizando el uso de soportes.
 
@@ -261,7 +261,7 @@ Entre estas caracteristicas estarian la de velocidad al realizar puentes... norm
 
 Otro valor a revisar es flujo de aire del ventilador en puentes, normalmente es aconsejable 100% pero en algún tipo de material como el PETG es aconsejable bajarlo un poco para evitar atascos.
 
-### 11. Test de Soportes <a id="11.-Test-de-Soportes"></a>
+## 11. Test de Soportes
 
 Normalmente imprimimos piezas complejas las cuales por simple física requieren imprimir al "aire" capas que es imposible que puedan sustentarse.
 
@@ -298,7 +298,7 @@ Os aconesjamos el siguitente test que podéis utilizar como referencia ya que pe
 
 ![](../.gitbook/assets/image%20%285%29.png)
 
-### 12.Linear Advance \(opcional\) <a id="12.Linear-Advance-(opcional)"></a>
+## 12.Linear Advance \(opcional\)
 
 Es una característica muy interesante de Marlin, que mantiene constante la presión del filamento dentro del nozzle.
 
@@ -334,13 +334,67 @@ Donde 140 es el valor elegido del test anterior.
 
 Podeis ver mas información en el siguiente vídeo [https://youtu.be/\_BiqlXPPfu4](https://youtu.be/_BiqlXPPfu4)
 
-### 13. Ajustes de Aceleración y Jerk \(opcional\) <a id="13.-Ajustes-de-Aceleraci&#xF3;n-y-Jerk-(opcional)"></a>
+## 13. Ajustes de Aceleración y Jerk \(opcional\)
 
 Permiten encontrar el punto óptimo para tu impresora en aceleración y Jerk/Junction.
 
 ![](../.gitbook/assets/image%20%2817%29.png)
 
 Te aconsejamos crearlo desde este generador online [https://teachingtechyt.github.io/calibration.html\#accel](https://teachingtechyt.github.io/calibration.html#accel) o puedes usar este otro y personalizarlo [ttps://www.thingiverse.com/thing:4169896](https://www.thingiverse.com/thing:4169896)
+
+##  14. Ajuste de Extrusión Volumétrica
+
+El extrusor de una impresora 3D puede fundir una cantidad finita de filamento en x tiempo. Esta velocidad de filamento máximo extruído limita las capacidades de nuestra impresora lo que a veces se traduce en que durante una impresión en determinadas partes nuestro extrusor pierde pasos y la calidad de la impresión no es la óptima.
+
+Los fileteadores/slicers actuales como PrusaSlicer/SuperSlicer permiten usar este valor junto con la máxima velocidad mecánica de la cinemática de una impresora 3D para ajustar dinámicamente la velocidad de impresión para obtener siempre el máximo rendimiento y calidad.
+
+![](https://telegra.ph/file/bd32544eefb6474392690.png)
+
+![](https://telegra.ph/file/e4af023a8bf18c6d9d9bb.png)
+
+**Procedimiento para encontrar nuestro MVS**
+
+Nos conectaremos con nuestro cliente terminal favorito como Pronterface o Octoprint para poder lanzar comandos gcode.
+
+1. Podremos el extrusor en modo relativo y ajustaremos la temperatura del nozzle a la temperatura adecuada para el filamento a usar, es aconsejable antes elevar el eje Z hasta media altura de su eje M83 M109 S200
+2. Seguidamente lanzaremos el comando para extruir 60mm de filamento a diferentes velocidades G1 E60 F300 G1 E60 F400
+3. Incrementaremos la velocidad de 100mm/min \(el valor Fxxx\) hasta que escuchemos que nuestro extrusor empieza a perder pasos
+4. Al notar que perdamos pasos bajaremos la velocidad en 50mm/min
+5. Iremos incrementando 10mm/min hasta que volvamos a escuchar perder pasos de nuevo
+6. Bajaremos 5mm/min sobre el valor anterior
+
+Una vez ya hemos obtenido el valor de máxima velocidad de extrusión sin pérdida de pasos del extrusor realizaremos un par de pruebas para verificar que es el valor correcto y no perdemos pasos.  
+Con ese valor realizaremos los siguientes cálculos:
+
+* Dividiremos la velocidad Fxxx óptima para nuestro filamento/extrusor/temperatura por 60 para convertir de mm/min a mm/seg
+* Multiplicaremos la velodidad de extrusion máxima del punto anterior por la sección de nuestro filamento, ejemplo 1.75 ya que es el más común para obtener el valor de mm3/seg
+* Por seguridad reduciremos los mm3/seg en .5 para dejar algo de márgen de hardware y de variaciones de filamento
+
+Como referencia aquí podéis consultar algunas medidas:
+
+![](https://telegra.ph/file/b89c6a19210b8e5e5331f.png)
+
+![](https://telegra.ph/file/8c789de93e68e6608ab2d.png)
+
+![](https://telegra.ph/file/ae82a823d6dd3bbb13825.png)
+
+Ajustando PrusaSlicer/SuperSlicer para usar MVS
+
+Como ya comentamos este potente ajuste es muy sencillo de aplicar a nuestro slicer/fileteador. En el caso de PrusaSlicer/SuperSlicer:
+
+* En nuestro perfil de filamentos ajustaremos Max Volumetric Speed
+
+![](https://telegra.ph/file/60e11d1db5810a6001304.png)
+
+* En nuestro perfil de impresion ajustaremos la máxima velocidad de nuestra mecánica/cinemática
+
+![](https://telegra.ph/file/085feffeac9637e524680.png)
+
+Ya está!!! ahora al realizar un fileteado podemos ver en la preview el resultado viendo el preview de velocidad y volumetríaPreview Volumetría
+
+![](https://telegra.ph/file/f226d3bf7ac3bda5b2524.png)
+
+![](https://telegra.ph/file/37bad1d77f3dd3c30af26.png)
 
 ## Prueba de stress finall!!! <a id="Prueba-de-stress-finall!!!"></a>
 
