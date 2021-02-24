@@ -23,7 +23,8 @@
 ## Octoprint
 
 * [Que es y que necesito para Octoprint?](octoprint/que_es_octoprint.md)
-* [Instalando Octoprint](octoprint/instalando-octoprint.md)
+* [Instalación](octoprint/instalacion/README.md)
+  * [Instalando Octoprint](octoprint/instalacion/instalando-octoprint.md)
 * [Telegraph](octoprint/untitled-1.md)
 
 ## Software
