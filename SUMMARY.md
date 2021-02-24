@@ -24,7 +24,11 @@
 
 * [Que es y que necesito para Octoprint?](octoprint/que_es_octoprint.md)
 * [Instalación](octoprint/instalacion/README.md)
-  * [Instalando Octoprint](octoprint/instalacion/instalando-octoprint.md)
+  * [Instalando Octoprint](octoprint/instalacion/instalando-octoprint/README.md)
+    * [Configuración de una dirección IP estática](octoprint/instalacion/instalando-octoprint/configuracion-de-una-direccion-ip-estatica.md)
+    * [Raspberry Pi 4 – Actualizar firmware](octoprint/instalacion/instalando-octoprint/raspberry-pi-4-actualizar-firmware.md)
+    * [Cambios y comprobaciones en nuestro Marlin](octoprint/instalacion/instalando-octoprint/cambios-y-comprobaciones-en-nuestro-marlin.md)
+  * [Configurando Octoprint](octoprint/instalacion/configurando-octoprint.md)
 * [Telegraph](octoprint/untitled-1.md)
 
 ## Software
