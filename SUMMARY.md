@@ -19,6 +19,7 @@
     * [SKR MINI E3 V2](guias-impresion-3d/mejoras-upgrades/electronica/skr-mini-e3-v2.md)
     * [SKR E3 DIP V1.1](guias-impresion-3d/mejoras-upgrades/electronica/skr-e3-dip-v1.1.md)
   * [Extrusión](guias-impresion-3d/mejoras-upgrades/extrusion.md)
+  * [Bltouch/3DTouch](guias-impresion-3d/mejoras-upgrades/bltouch-3dtouch.md)
 
 ## Octoprint
 
