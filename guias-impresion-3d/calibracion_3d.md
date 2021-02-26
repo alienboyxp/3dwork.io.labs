@@ -10,13 +10,21 @@ description: >-
 
 La puesta en marcha de una impresora así como el calibrado preventivo es muy importante para un correcto funcionamiento y precisión de nuestra impresora.
 
-Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [https://t.me/ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 Aconsejamos el uso de SuperSlicer \(un fork de PrusaSlicer donde integran opciones avanzadas antes de incorporarlas\) ya que tiene unas estupendas opciones para generar los tests de calibración.
 
-Se puede descargar desde aqui [https://github.com/supermerill/SuperSlicer/releases](https://github.com/supermerill/SuperSlicer/releases).
+Puedes descargar SuperSlicer desde aqui:
 
-PrusaSlicer desde aqui [https://github.com/prusa3d/PrusaSlicer/releases](https://github.com/prusa3d/PrusaSlicer/releases)
+{% embed url="https://github.com/supermerill/SuperSlicer/releases" %}
+
+PrusaSlicer desde aqui :
+
+{% embed url="https://github.com/prusa3d/PrusaSlicer/releases" %}
+
+También si usas Cura puedes instalar este plugin que te permite generar y personalizar algunoa de los tests de esta guía:
+
+{% embed url="https://marketplace.ultimaker.com/app/cura/plugins/5axes/CalibrationShapes" %}
 
 ## 1. Extrusión
 
