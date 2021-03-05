@@ -33,6 +33,7 @@
 * [Plugins/Mejoras Octoprint](octoprint/plugins-mejoras-octoprint/README.md)
   * [DisplayLayerProcess](octoprint/plugins-mejoras-octoprint/displaylayerprocess.md)
   * [PrintTimeGenious](octoprint/plugins-mejoras-octoprint/printtimegenious.md)
+  * [Cancel Objects](octoprint/plugins-mejoras-octoprint/cancel-objects.md)
 * [Telegraph](octoprint/untitled-1.md)
 
 ## Software
