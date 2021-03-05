@@ -34,6 +34,8 @@
   * [DisplayLayerProcess](octoprint/plugins-mejoras-octoprint/displaylayerprocess.md)
   * [PrintTimeGenious](octoprint/plugins-mejoras-octoprint/printtimegenious.md)
   * [Cancel Objects](octoprint/plugins-mejoras-octoprint/cancel-objects.md)
+  * [ipOnConnect](octoprint/plugins-mejoras-octoprint/iponconnect.md)
+  * [Arc-Welder](octoprint/plugins-mejoras-octoprint/arc-welder.md)
 * [Telegraph](octoprint/untitled-1.md)
 
 ## Software
@@ -43,4 +45,8 @@
 ## PULSAR Cube
 
 * [Untitled](pulsar-cube/untitled.md)
+
+---
+
+* [Invitame a un cafe :D](https://paypal.me/alienboyxp)
 
