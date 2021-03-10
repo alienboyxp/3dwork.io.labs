@@ -37,6 +37,8 @@
   * [ipOnConnect](octoprint/plugins-mejoras-octoprint/iponconnect.md)
   * [Arc-Welder](octoprint/plugins-mejoras-octoprint/arc-welder.md)
   * [Telegram](octoprint/plugins-mejoras-octoprint/telegram.md)
+* [Controlar varias impresoras](octoprint/controlar-varias-impresoras/README.md)
+  * [Multiples Webcam](octoprint/controlar-varias-impresoras/multiples-webcam.md)
 * [Telegraph](octoprint/untitled-1.md)
 
 ## Software
