@@ -23,7 +23,7 @@
 
 ## Octoprint
 
-* [Que es y que necesito para Octoprint?](octoprint/que_es_octoprint.md)
+* [Octoprint?](octoprint/que_es_octoprint.md)
 * [Instalación](octoprint/instalacion/README.md)
   * [Instalando Octoprint](octoprint/instalacion/instalando-octoprint/README.md)
     * [Configuración de una dirección IP estática](octoprint/instalacion/instalando-octoprint/configuracion-de-una-direccion-ip-estatica.md)
