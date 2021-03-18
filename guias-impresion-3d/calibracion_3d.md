@@ -59,8 +59,10 @@ Puedes generar estos cubos de forma sencilla desde SuperSlicer en su menú de ca
 En todo caso te adjuntamos algunos otros de ejemplo: [https://www.thingiverse.com/thing:3911284](https://www.thingiverse.com/thing:3911284)  
 https://www.thingiverse.com/thing:1545913
 
-Puedes usar calculadoras de pasos para proceso de cálculo o verificado de pasos:  
-https://docs.google.com/spreadsheets/d/11upBCJkprqZASurKaLHrECy6sttyQK6xYzohi2u45dE/edit\#gid=0  
+Puedes usar calculadoras de pasos para proceso de cálculo o verificado de pasos
+
+{% embed url="https://codepen.io/alienboyxp/pen/BaQeXPO" %}
+
 https://blog.prusaprinters.org/calculator\_3416/\#steppermotors
 
 El ajuste de los pasos los puedes realizar desde la pantalla en modo Marlin en Configuración/Avanzado/Steps o mediante gcode desde un terminal como Pronterface con M92 Xxxx Yxxx Zxxx \(donde xxx serían los pasos calculados previamente\).  
@@ -99,8 +101,10 @@ Y recordar siempre un M500 para almacenar los valores en la EEPROM.
 
 En caso que por protección térmica no permita hacer el autoPID deshabilitar momentáneamente:
 
-\#define THERMAL\_PROTECTION\_HOTENDS  
-\#define THERMAL\_PROTECTION\_BED
+```cpp
+#define THERMAL_PROTECTION_HOTENDS
+#define THERMAL_PROTECTION_BED
+```
 
 En el caso de alarmas por protección de temperaturas que no se solucione con un PID se tendrán que variar los parámetros de tiempo e histéresis de dicha protección.
 
@@ -120,7 +124,9 @@ De nuevo desde SuperSlicer y su menú de calibración podemos generar este test 
 
 En el caso de ser necesario ajustar el ZOffset a partir del valor obtenido \(en el caso de disponer de sensor de nivelación o MESH como sistema de nivelación\) sumaremos el vslor de babbystepping a nuestro ZOffset.
 
-Podéis ver una explicación en forma de video aqui [https://youtu.be/1V6TZ7fDiU4](https://youtu.be/1V6TZ7fDiU4)
+Podéis ver una explicación en forma de video aqui 
+
+{% embed url="https://youtu.be/1V6TZ7fDiU4" %}
 
 ## 6. Torre de temperatura
 
@@ -187,6 +193,8 @@ Con estos valores realizaremos la siguente formula:
 A= Medida deseada, para el caso nozzle 0.4 debería de ser 0.8  
 B= Medida real, media de las diferentes medidas  
 F= Valor de flujo/flow aplicado en el test... en el caso de % si el valor era 100% usaremos 1, 98% seria 0.98...
+
+{% embed url="https://codepen.io/alienboyxp/pen/bGByXXJ" %}
 
 Una vez tenemos el valor nuevo volvemos a repetir el test con el nuevo valor de flujo/flow y volvemos a medir hasta conseguir las medidas más exactas posible.
 
