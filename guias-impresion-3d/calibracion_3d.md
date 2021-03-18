@@ -35,9 +35,9 @@ El proceso básicamente es calentar el Nozzle a temperatura que aconseja el fabr
 ![](../.gitbook/assets/image%20%281%29.png)
 
 Una vez realizadas estas marcas extruimos 100mm de filamento utilizando los menus de Movimiento en pantalla o mediante Pronterface.  
-Al finalizar la extrusión mediremos desde el ounto de referencia hasta la marca de 120mm y ese valor lo usaremos en la calculadora del siguiente link.
+Al finalizar la extrusión mediremos desde el ounto de referencia hasta la marca de 120mm y ese valor lo usaremos en la calculadora \(pulsa sobre el icono Run Pen\):
 
-[https://docs.google.com/spreadsheets/d/11upBCJkprqZASurKaLHrECy6sttyQK6xYzohi2u45dE/edit\#gid=0](https://docs.google.com/spreadsheets/d/11upBCJkprqZASurKaLHrECy6sttyQK6xYzohi2u45dE/edit#gid=0)
+{% embed url="https://codepen.io/alienboyxp/embed/BaQeXPO" %}
 
 Tambien teneis este vídeo del Sr. Ferrete donde explica el proceso de forma sencilla.  
 https://youtu.be/VA\_jvXyGvhU
@@ -59,7 +59,7 @@ Puedes generar estos cubos de forma sencilla desde SuperSlicer en su menú de ca
 En todo caso te adjuntamos algunos otros de ejemplo: [https://www.thingiverse.com/thing:3911284](https://www.thingiverse.com/thing:3911284)  
 https://www.thingiverse.com/thing:1545913
 
-Puedes usar calculadoras de pasos para proceso de cálculo o verificado de pasos
+Puedes usar calculadoras de pasos para proceso de cálculo o verificado de pasos \(pulsa sobre el icono Run Pen\):
 
 {% embed url="https://codepen.io/alienboyxp/pen/BaQeXPO" %}
 
@@ -358,7 +358,7 @@ Permiten encontrar el punto óptimo para tu impresora en aceleración y Jerk/Jun
 
 Te aconsejamos crearlo desde este generador online [https://teachingtechyt.github.io/calibration.html\#accel](https://teachingtechyt.github.io/calibration.html#accel) o puedes usar este otro y personalizarlo [ttps://www.thingiverse.com/thing:4169896](https://www.thingiverse.com/thing:4169896)
 
-##  14. Ajuste de Extrusión Volumétrica
+##  14. Ajuste de Extrusión Volumétrica \(Opcional\)
 
 El extrusor de una impresora 3D puede fundir una cantidad finita de filamento en x tiempo. Esta velocidad de filamento máximo extruído limita las capacidades de nuestra impresora lo que a veces se traduce en que durante una impresión en determinadas partes nuestro extrusor pierde pasos y la calidad de la impresión no es la óptima.
 
