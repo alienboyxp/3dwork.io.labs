@@ -40,6 +40,7 @@
 * [Controlar varias impresoras](octoprint/controlar-varias-impresoras/README.md)
   * [Multiples Webcam](octoprint/controlar-varias-impresoras/multiples-webcam.md)
 * [Telegraph](octoprint/untitled-1.md)
+* [Klipper](octoprint/klipper.md)
 
 ## Software
 
