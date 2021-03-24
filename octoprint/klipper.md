@@ -6,6 +6,8 @@ Z Offset -&gt; [https://www.kevink.org/calibrate-z-offset-with-klipper/](https:/
 
 SKR RFT Firmware -&gt; [https://docs.mainsail.xyz/quicktips/slicer-upload](https://docs.mainsail.xyz/quicktips/slicer-upload)
 
+Pressure Advance -&gt; [https://www.klipper3d.org/Pressure\_Advance.html](https://www.klipper3d.org/Pressure_Advance.html)
+
 Resonance Compensation -&gt; [https://www.klipper3d.org/Measuring\_Resonances.html](https://www.klipper3d.org/Measuring_Resonances.html)
 
 
