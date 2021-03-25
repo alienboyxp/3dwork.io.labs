@@ -31,11 +31,9 @@ Este esquema depende de la versión de Marlin cargada en la impresora, normalmen
 
 Usando el conector dedicado al PROBE, ojo depende de version de Marlin o configuraciones especiales.
 
-![](https://lh6.googleusercontent.com/cSevTzP07fQJSNtLIncS2m5-sTJSQoV_-I4M6lehwNUhw0QbX7ebOTCbGZZ248XVKEWJhlvEb9Oq0RBoKobiES8UmkZYpWX5mSISs97zjz_50prJ20aG9iOU7m9kZv2tjtlewviO)
+![Usando el conector Z- , ojo depende de version de Marlin o configuraciones especiales.](../../.gitbook/assets/image%20%2834%29.png)
 
-![](https://telegra.ph/file/4e16399723c1b956acd3e.png)
-
-![](https://lh6.googleusercontent.com/feReBTffPsO7iYVG03GqBAcLFzTfFJwW-ti9Qe69hCKXB1-RPQLxsN1s7PB0q5zOzhYFAbYPLFXWNxxDjTVDfaAdRY4-uTgd3l9dAY5NE6BmbySWT6mxWiqzdVQRgI4qykJalMul)
+![Usando el conector dedicado al PROBE, ojo depende de version de Marlin o configuraciones especiales.](https://lh6.googleusercontent.com/cSevTzP07fQJSNtLIncS2m5-sTJSQoV_-I4M6lehwNUhw0QbX7ebOTCbGZZ248XVKEWJhlvEb9Oq0RBoKobiES8UmkZYpWX5mSISs97zjz_50prJ20aG9iOU7m9kZv2tjtlewviO)
 
 ### **Diagrama conexión SKR MINI E3 V2**
 
@@ -55,18 +53,18 @@ Importante actualizar el firmware a la última versión o uno custom y actualiza
 
 * En el caso que el sensor de nivelación de cama se encuentre en el conector del final de carreras Z-MIN/Z-STOP dependiendo de la placa: **`#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN`** _****_En el caso que nuestra placa disponga de un conector especial para el endstop del sensor y dependiendo de la versión de Marlin usada \(normalmente 2.0.7.x ya soporta la mayoria de placas actuales\) **`#define USE_PROBE_FOR_Z_HOMING`** Si nuestro fichero pin de nuestra placa no contempla la definicion del PROBE\_PIN deberemos definirla aqui \(XX sera el pin usado\): **`#define Z_MIN_PROBE_PIN XXX`**
 
-Ejemplo para una SKR 1.4 usando el pin PROBE para Marlin 2.0.5.3 o superior
-
-![](https://telegra.ph/file/d2448300145e90cb4943c.png)
+![Ejemplo para una SKR 1.4 usando el pin PROBE para Marlin 2.0.5.3 o superior](https://telegra.ph/file/d2448300145e90cb4943c.png)
 
 * Indicamos el tipo de sensor de nivelación **`#define BLTOUCH`**
 * Ajustamos los offsets \(localización del sensor de nivelación con respecto a la punta del nozzle\) del sensor de nivelación **`#define NOZZLE_TO_PROBE_OFFSET…`**
 
-Valores offsets dependiendo de ubicaciónQue es el offset en ZQue son los offsets en X e Y
+> Es muy importante una vez subidos los cambios veríficar que loa offsets esten correctamente cargados en la EEPROM. Esto lo podemos verificar usando el comando M503 desde Pronterface/Octoprint o desde la propia pantalla \(segun version y opciones habilitadas en Marlin\) en Configuración/Avanzado/Probe Offsets. En el caso que no estén cargados correctamente esros valores podemos refrescar los datos desde Pronterface/Octoprint usando M502 M500 o desde la pantalla de la impresora Configuración Reset Load Save Eeprom.
 
-![](https://lh6.googleusercontent.com/2pICfeL85Bf_94PrItyrp_2dNxat8Q72dytc1EBN1C1E28yD6L-7Zm5Gf3Rqnf1Cw9tTPwhQwIwRNwRdfEREayv3JCDIX7rRt-iBy1TjLkoYApA9GRefn9rr7_pnfQ0za2IheZdA)
+### Valores offsets PROBE dependiendo de ubicación del mismo
 
-![](https://lh5.googleusercontent.com/yEia6h8u7jPBSNZcz3pTZ-gnSzN0y2ZXjYT6giDQI2btWuixphnl2bFLBOWnfJ_zPvZxlsMJeAc0FIw5ks9IZkDfsdnrbiWVVNE_0oB36WjFwTVSY0WWj_F6fkg7ZYMECAR1j7rP)
+![Que son los offsets en X e Y](https://lh6.googleusercontent.com/2pICfeL85Bf_94PrItyrp_2dNxat8Q72dytc1EBN1C1E28yD6L-7Zm5Gf3Rqnf1Cw9tTPwhQwIwRNwRdfEREayv3JCDIX7rRt-iBy1TjLkoYApA9GRefn9rr7_pnfQ0za2IheZdA)
+
+![Que es el offset en Z](https://lh5.googleusercontent.com/yEia6h8u7jPBSNZcz3pTZ-gnSzN0y2ZXjYT6giDQI2btWuixphnl2bFLBOWnfJ_zPvZxlsMJeAc0FIw5ks9IZkDfsdnrbiWVVNE_0oB36WjFwTVSY0WWj_F6fkg7ZYMECAR1j7rP)
 
 ![](https://lh3.googleusercontent.com/LJVKD2x3FXgO03Pb9lZPsqnFR0J55nJIRInl-DhLDFLwkQ6nGK82BTbbNAY3KkeKR1EBlVMzHT2lOkQ1ZxFXA0yS3KEvrPe9_HEjCA4Vf86E_dU6zxTLSzX91XIYGu1vR2NI_gkv)
 
@@ -94,11 +92,11 @@ Valores offsets dependiendo de ubicaciónQue es el offset en ZQue son los offset
 
 * Es aconsejable aumentar el tiempo de respuesta para evitar problemas de comunicaciones **`#define BLTOUCH_DELAY 500`**
 * Otra funcion interesante a activar para prevenir problemas de comunicación en el caso de cables no apantallados o muy largos es forzar el modo SW que permite el enviar pulsos más largos mejorando ruido en las señales **`#define BLTOUCH_FORCE_SW_MODE`**
+* Es aconsejable activar reintentos en el proceso de generacion de malla G29 para prevenir problemas durante el proceso **`# define G29_RETRY_AND_RECOVER`**
 
 ### **Activar Babystepping**
 
-Esta funcionalidad es muy útil para un ajuste fino durante la impresión de la altura del eje Z
-
+Esta funcionalidad es muy útil para un ajuste fino durante la impresión de la altura del eje Z  
 En configuration\_adv:  
 **`#define BABYSTEPPING  
 #define DOUBLECLICK_FOR_Z_BABYSTEPPING  
@@ -106,8 +104,10 @@ En configuration\_adv:
 
 ## **Comprobaciones previas**
 
-* **Comprobación del sensor**: - **Revisar la parte servo**, la parte servo funciona con el grupo de tres cables \(rojo/amarillo/negro\). Para comprobar si funciona correctamente lo aconsejable es desde la pantalla ir a Configuración donde encontraremos un menu para gestionar el bltouch, en este caso tenemos que comprobar que podamos desplegar y recoger el pin. Si esto no funciona deberemos revisar el cableado o en el caso de placas antiguas la definición del SERVO en Marlin. Tambien se puede hacer esta parte con gcode desde un terminal: **`M280 P0 S10 ; despliega el pin M280 P0 S90 ; recoge el pin M280 P0 S120 ; Autotest – despliega y recoge el pin hasta que ponemos el dedo o lanzamos el comando posterior M280 P0 S160 ; Elimina estado ALARMA`** - **Comprobación de la parte endstop**, la parte endstop funciona como cualquier endstop y esta gestionado por el par de cables negro y blanco que normalmente colocamos en el puerto PROBE o Z-STOP/Z-MIN de la placa. Dependiendo de las versiones de Marlin debera colocarse en uno o en otro si esta soportada la placa o no completamente. Para comprobar que funcione correctamente y tal como hicimos en el paso anterior mediante el menu o comandos desplegamos y recogemos el pin y comprobamos con M119 que el enstop cambia de TRIGERED \(pin recogido\) a OPEN \(pin desplegado\) correctamente.
-* **Activar Modo Debug nivelado** _Cambios en Marlin \(configuration.h\):_ \#define DEBUG\_LEVELING\_FEATURE // Permite obtener información detallada en caso de problemas _Comandos gcode para habilitar/deshabilitar el modo Debug:_ M111 S38 ; LEVELING, ERRORS, INFO M111 S0 ; Disable debug
+* **Comprobación del sensor**:
+  * **Revisar la parte servo**, la parte servo funciona con el grupo de tres cables \(rojo/amarillo/negro\). Para comprobar si funciona correctamente lo aconsejable es desde la pantalla ir a Configuración donde encontraremos un menu para gestionar el bltouch, en este caso tenemos que comprobar que podamos desplegar y recoger el pin. Si esto no funciona deberemos revisar el cableado o en el caso de placas antiguas la definición del SERVO en Marlin. Tambien se puede hacer esta parte con gcode desde un terminal: **`M280 P0 S10 ; despliega el pin M280 P0 S90 ; recoge el pin M280 P0 S120 ; Autotest – despliega y recoge el pin hasta que ponemos el dedo o lanzamos el comando posterior M280 P0 S160 ; Elimina estado ALARMA`**
+  * **Comprobación de la parte endstop**, la parte endstop funciona como cualquier endstop y esta gestionado por el par de cables negro y blanco que normalmente colocamos en el puerto PROBE o Z-STOP/Z-MIN de la placa. Dependiendo de las versiones de Marlin debera colocarse en uno o en otro si esta soportada la placa o no completamente. Para comprobar que funcione correctamente y tal como hicimos en el paso anterior mediante el menu o comandos desplegamos y recogemos el pin y comprobamos con M119 que el enstop cambia de TRIGERED \(pin recogido\) a OPEN \(pin desplegado\) correctamente.
+* **Activar Modo Debug nivelado** _Cambios en Marlin \(configuration.h\):_ `#define DEBUG_LEVELING_FEATURE // Permite obtener información detallada en caso de problemas` _Comandos gcode para habilitar/deshabilitar el modo Debug:_ M111 S38 ; LEVELING, ERRORS, INFO M111 S0 ; Disable debug
 * **Activar Test de precisión** Permite habilitar un menú dentro del LCD para realizar tests de repetibilidad y mostrar el rango de precisión del sensor: \#define Z\_MIN\_PROBE\_REPEATABILITY\_TEST
 * **Verificar ajuste del pin para errores aleatorios en lecturas** Se pueden dar dos casos que el pin este demasiado junto al servo que imanta el mismo y evite que caiga o que el iman del pin no tenga la suficiente tracción por el estado de su imán para que el servo lo pueda imantar y retraer. En estos casos mediante el tornillo central podremos ajustar ambos problemas en la medida de lo posible. Puedes ver el siguiente video donde puedes ver como es el proceso
 
@@ -115,7 +115,7 @@ En configuration\_adv:
 
 Por otro lado en el caso que el pin este totalmente sin iman puedes extraerlo y dejarlo 24h junto con otro imán para que recupere sus propiedades... en caso que ninguna de estas soluciones funcione puedes solicitar un repuesto del pin o del propio sensor.
 
-## **Ajuste del Z-Offset - Mediante el nuevo Wizard a partir de 2.0.7**
+## **Ajuste del Z-Offset - WIZARD**
 
 Desde la version 2.0.7.2 Marlin incluye un nuevo asistente para encontrar el valor Z Offset de una forma sencilla. Para activarlo iremos a configuration\_adv y habilitaremos:
 
@@ -123,7 +123,7 @@ Desde la version 2.0.7.2 Marlin incluye un nuevo asistente para encontrar el val
 
 Con esto dispondremos de un nuevo menu en Configuración/Avanzado/Probe Offsets
 
-## **Ajuste del Z-Offset - Usando Pantalla**
+## **Ajuste del Z-Offset - LCD**
 
 * Realizaremos un Auto Home
 
@@ -153,7 +153,7 @@ Con esto dispondremos de un nuevo menu en Configuración/Avanzado/Probe Offsets
 
 ![](https://lh4.googleusercontent.com/AU5QmIzuQlype4oIRqcelIsCY9FevslqDZJaPbPmJLU_hZoJeude1epUiMTpx2-L2NNUrsyz7sjPehvXMOT90POW4lVAnJFXebxBQFxsXQoGq0nym-6jISIOYcSohFSEfSplSAFJ)
 
-**Ajuste del Z-Offset - Método Pronterface**
+## **Ajuste del Z-Offset - Pronterface**
 
 Desde un cliente terminal como Pronterface:  
   
