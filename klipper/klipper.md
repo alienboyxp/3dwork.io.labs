@@ -10,5 +10,9 @@ Pressure Advance -&gt; [https://www.klipper3d.org/Pressure\_Advance.html](https:
 
 Resonance Compensation -&gt; [https://www.klipper3d.org/Measuring\_Resonances.html](https://www.klipper3d.org/Measuring_Resonances.html)
 
+{% embed url="https://youtu.be/pH-1RWdC75E" %}
+
+
+
 
 
