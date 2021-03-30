@@ -1,12 +1,10 @@
 ---
 description: >-
-  By JJR @ https://3dwork.io/ - Invitame a un cafe si te fue de ayuda
-  paypal.me/alienboyxp
+  La puesta en marcha de una impresora así como el calibrado preventivo es muy
+  importante para un correcto funcionamiento y precisión de nuestra impresora.
 ---
 
 # Calibración inicial impresora 3D
-
-La puesta en marcha de una impresora así como el calibrado preventivo es muy importante para un correcto funcionamiento y precisión de nuestra impresora.
 
 ![](../.gitbook/assets/image%20%2816%29%20%281%29.png)
 
