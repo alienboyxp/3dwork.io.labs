@@ -35,7 +35,7 @@ El proceso básicamente es calentar el Nozzle a temperatura que aconseja el fabr
 ![](../.gitbook/assets/image%20%281%29.png)
 
 Una vez realizadas estas marcas extruimos 100mm de filamento utilizando los menus de Movimiento en pantalla o mediante Pronterface.  
-Al finalizar la extrusión mediremos desde el ounto de referencia hasta la marca de 120mm y ese valor lo usaremos en la calculadora \(pulsa sobre el icono Run Pen\):
+Al finalizar la extrusión mediremos desde el ounto de referencia hasta la marca de 120mm y ese valor lo usaremos en la calculadora \(_**pulsa sobre el icono Run Pen**_\):
 
 {% embed url="https://codepen.io/alienboyxp/embed/BaQeXPO" %}
 
@@ -59,7 +59,7 @@ Puedes generar estos cubos de forma sencilla desde SuperSlicer en su menú de ca
 En todo caso te adjuntamos algunos otros de ejemplo: [https://www.thingiverse.com/thing:3911284](https://www.thingiverse.com/thing:3911284)  
 https://www.thingiverse.com/thing:1545913
 
-Puedes usar calculadoras de pasos para proceso de cálculo o verificado de pasos \(pulsa sobre el icono Run Pen\):
+Puedes usar calculadoras de pasos para proceso de cálculo o verificado de pasos \(_**pulsa sobre el icono Run Pen**_\):
 
 {% embed url="https://codepen.io/alienboyxp/pen/BaQeXPO" %}
 
