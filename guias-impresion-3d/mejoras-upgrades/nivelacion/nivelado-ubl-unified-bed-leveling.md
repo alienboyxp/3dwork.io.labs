@@ -1,8 +1,8 @@
 ---
-description: El sistema más avanzado de nivelación de Marlin
+description: Unified Bed Leveling. El sistema más avanzado de nivelación de Marlin
 ---
 
-# Nivelado UBL - Unified Bed Leveling
+# Nivelado UBL
 
 ![](https://telegra.ph/file/ea2e1181d01693225b0cd.jpg)
 

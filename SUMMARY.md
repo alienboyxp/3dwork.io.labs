@@ -23,7 +23,7 @@
   * [Nivelación](guias-impresion-3d/mejoras-upgrades/nivelacion/README.md)
     * [Bltouch/3DTouch](guias-impresion-3d/mejoras-upgrades/nivelacion/bltouch-3dtouch.md)
     * [Nivelado manual MESH](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-manual-mesh.md)
-    * [Nivelado UBL - Unified Bed Leveling](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-ubl-unified-bed-leveling.md)
+    * [Nivelado UBL](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-ubl-unified-bed-leveling.md)
 
 ## Octoprint
 
