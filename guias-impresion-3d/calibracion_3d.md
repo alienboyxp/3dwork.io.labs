@@ -213,8 +213,8 @@ La retracción es el movimiento de retroceso del filamento necesario para evitar
 
 Los parámetros que configuran a la retracción son:
 
-\* Distancia de retracción: Longitud de material que retrocede en el proceso de retracción. Varía en función del tipo de material, el tipo de sistema de extrusión \(Directo o Bowden\) y del tipo de HotEnd. Para materiales flexibles, sobre todo para los tipo TPE \(Filaflex\), se debe desactivar la retracción para evitar que el filamento se enrolle en el piñón del extrusor.  
-\* Velocidad de retracción: Velocidad a la que el motor del extrusor hace retroceder al filamento. Con este parámetro hay que tener mucho cuidado si se utilizan velocidades altas \(mayores a 70 mm/s\) porque puede mellar \(marcar\) el filamento de tal modo que quede inservible para continuar la impresión 3D.  
+\* **Distancia de retracción**: Longitud de material que retrocede en el proceso de retracción. Varía en función del tipo de material, el tipo de sistema de extrusión \(Directo o Bowden\) y del tipo de HotEnd. Para materiales flexibles, sobre todo para los tipo TPE \(Filaflex\), se debe desactivar la retracción para evitar que el filamento se enrolle en el piñón del extrusor.  
+\* **Velocidad de retracción**: Velocidad a la que el motor del extrusor hace retroceder al filamento. Con este parámetro hay que tener mucho cuidado si se utilizan velocidades altas \(mayores a 70 mm/s\) porque puede mellar \(marcar\) el filamento de tal modo que quede inservible para continuar la impresión 3D.  
 \* Desplazamiento mínimo: Longitud mínima a partir de la cual se quiere que se realice la retracción.  
 \* Enable combing: Al activar este parámetro, que se encuentra en apartado de opciones avanzadas de retracción del programa de laminación que se utilice \(PrusaSlicer/SuperSlicer,Cura, Simplify3D, etc.\), aparte de realizar la retracción, se evita que el HotEnd se mueva por encima de orificios o huecos. Con esto se evitan restos de material en las caras vistas de partes internas de las piezas.  
 \* Elevación del eje Z al retraerse \(Lift z\): A la vez que se produce la retracción, el HotEnd se mueve en el eje z a la distancia indicada. Esta elevación solo es necesaria en caso de realizar piezas con muchos detalles y con zonas pequeñas de mucho detalle para evitar que queden restos de material justo en esa zona. En caso de necesitar utilizar este parámetro recomendamos utilizar la misma distancia que la altura de capa.  
@@ -222,6 +222,8 @@ Con el ajuste apropiado de los parámetros anteriores se consigue la retracción
 \* Humedad en el filamento, algo crítico para este parámetro ya que es muy importante para el acabado final que nuestro filamento esté a 10% de humedad. Esto lo podemos conseguir con un correcto almacenado del filamento y el uso de una deshidratadora de alimentos por ejemplo.
 
 Desgraciadamente no existe una fórmula para encontrar el valor exacto, si no que cada impresora 3D y cada extrusor necesita un valor particular. La siguiente tabla contiene unos valores aconsejados de longitud y velocidad de retracción para la impresora 3D en función del tipo de extrusor que se utilice, los cuales son un buen punto de partida para ajustarlos a vuestro caso particular:
+
+![](../.gitbook/assets/image%20%2835%29.png)
 
 Puedes utilizar el generador online [https://teachingtechyt.github.io/calibration.html\#retraction](https://teachingtechyt.github.io/calibration.html#retraction) o desde SuperSlicer añadieron en sus últimas versiones el test de retracciones que facilita mucho el proceso ademss de simplificar el ajuste de parámetros a la distancia de retracción y temperatura ya que la velocidad de retracción tiene un menor impacto en el resultado final.
 
