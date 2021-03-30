@@ -31,7 +31,7 @@ Este esquema depende de la versión de Marlin cargada en la impresora, normalmen
 
 Usando el conector dedicado al PROBE, ojo depende de version de Marlin o configuraciones especiales.
 
-![Usando el conector Z- , ojo depende de version de Marlin o configuraciones especiales.](../../.gitbook/assets/image%20%2834%29.png)
+![Usando el conector Z- , ojo depende de version de Marlin o configuraciones especiales.](../../../.gitbook/assets/image%20%2834%29.png)
 
 ![Usando el conector dedicado al PROBE, ojo depende de version de Marlin o configuraciones especiales.](https://lh6.googleusercontent.com/cSevTzP07fQJSNtLIncS2m5-sTJSQoV_-I4M6lehwNUhw0QbX7ebOTCbGZZ248XVKEWJhlvEb9Oq0RBoKobiES8UmkZYpWX5mSISs97zjz_50prJ20aG9iOU7m9kZv2tjtlewviO)
 

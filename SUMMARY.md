@@ -20,7 +20,9 @@
     * [SKR E3 DIP V1.1](guias-impresion-3d/mejoras-upgrades/electronica/skr-e3-dip-v1.1.md)
     * [Pantallas BigtreeTech/SKR](guias-impresion-3d/mejoras-upgrades/electronica/pantallas-bigtreetech-skr.md)
   * [Extrusión](guias-impresion-3d/mejoras-upgrades/extrusion.md)
-  * [Bltouch/3DTouch](guias-impresion-3d/mejoras-upgrades/bltouch-3dtouch.md)
+  * [Nivelación](guias-impresion-3d/mejoras-upgrades/nivelacion/README.md)
+    * [Bltouch/3DTouch](guias-impresion-3d/mejoras-upgrades/nivelacion/bltouch-3dtouch.md)
+    * [Nivelado manual MESH](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-manual-mesh.md)
 
 ## Octoprint
 

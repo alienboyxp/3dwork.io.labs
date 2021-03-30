@@ -14,5 +14,7 @@ Resonance Compensation -&gt; [https://www.klipper3d.org/Measuring\_Resonances.ht
 
 Telegram Integracion -&gt; [https://github.com/Raabi91/moonraker-telegram](https://github.com/Raabi91/moonraker-telegram)
 
+Endstop\_Phase -&gt; [https://github.com/KevinOConnor/klipper/blob/master/docs/Endstop\_Phase.md](https://github.com/KevinOConnor/klipper/blob/master/docs/Endstop_Phase.md)
+
 
 
