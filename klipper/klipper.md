@@ -12,7 +12,7 @@ Resonance Compensation -&gt; [https://www.klipper3d.org/Measuring\_Resonances.ht
 
 {% embed url="https://youtu.be/pH-1RWdC75E" %}
 
-
+Telegram Integracion -&gt; [https://github.com/Raabi91/moonraker-telegram](https://github.com/Raabi91/moonraker-telegram)
 
 
 
