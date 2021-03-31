@@ -20,10 +20,15 @@
     * [SKR E3 DIP V1.1](guias-impresion-3d/mejoras-upgrades/electronica/skr-e3-dip-v1.1.md)
     * [Pantallas BigtreeTech/SKR](guias-impresion-3d/mejoras-upgrades/electronica/pantallas-bigtreetech-skr.md)
   * [Extrusión](guias-impresion-3d/mejoras-upgrades/extrusion.md)
-  * [Nivelación](guias-impresion-3d/mejoras-upgrades/nivelacion/README.md)
+  * [Nivelación/Homing](guias-impresion-3d/mejoras-upgrades/nivelacion/README.md)
     * [Bltouch/3DTouch](guias-impresion-3d/mejoras-upgrades/nivelacion/bltouch-3dtouch.md)
     * [Nivelado manual MESH](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-manual-mesh.md)
     * [Nivelado UBL](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-ubl-unified-bed-leveling.md)
+    * [Sensorless Homing en Marlin](guias-impresion-3d/mejoras-upgrades/nivelacion/sensorless-homing-en-marlin.md)
+  * [Otras Mejoras](guias-impresion-3d/mejoras-upgrades/otras-mejoras/README.md)
+    * [Doble Z y autonivelado](guias-impresion-3d/mejoras-upgrades/otras-mejoras/doble-z-y-autonivelado.md)
+    * [Sensor de filamentos](guias-impresion-3d/mejoras-upgrades/otras-mejoras/sensor-de-filamentos.md)
+    * [Leds Neopixel](guias-impresion-3d/mejoras-upgrades/otras-mejoras/leds-neopixel.md)
 
 ## Octoprint
 
