@@ -21,7 +21,7 @@ Cuenta con un interfaz que te informa del estado de transformación además que 
 
 Tienes una parte de configuración que puedes personalizar a tu gusto para generar el nuevo gcode optimizado para tu máquina.
 
-![](../../.gitbook/assets/image%20%2837%29.png)
+![](../../.gitbook/assets/image%20%2838%29.png)
 
 Es importante recalcar que para que funcione correctamente el Marlin de tu impresora debe tener habilitado ARC\_SUPPORT \(configuration\_adv.h\) que desde la versión 2.0.6 ha sido mejorado enormemente. Si no sabes si lo tienes o no habilitado puedes lanzar un comando M115 desde tu cliente terminal favorito a tu impresora para ver el estado de esta opción.  
 Por supuesto es también compatible con otros firmwares pero deberás comprobar la compatibilidad en cada caso.
