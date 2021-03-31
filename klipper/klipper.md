@@ -16,5 +16,5 @@ Telegram Integracion -&gt; [https://github.com/Raabi91/moonraker-telegram](https
 
 Endstop\_Phase -&gt; [https://github.com/KevinOConnor/klipper/blob/master/docs/Endstop\_Phase.md](https://github.com/KevinOConnor/klipper/blob/master/docs/Endstop_Phase.md)
 
-
+Webcam -&gt; [https://3dp.tumbleweedlabs.com/firmware/klipper-firmware/adding-webcam-support-to-mainsail](https://3dp.tumbleweedlabs.com/firmware/klipper-firmware/adding-webcam-support-to-mainsail)
 
