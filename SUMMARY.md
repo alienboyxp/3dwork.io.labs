@@ -7,6 +7,7 @@
 * [Calibración inicial impresora 3D](guias-impresion-3d/calibracion_3d.md)
 * [Resolución de problemas](guias-impresion-3d/resolucion-de-problemas/README.md)
   * [Problemas hardware impresora 3D](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/README.md)
+    * [Control de ventiladores con MOSFET externo](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/control-de-ventiladores-con-mosfet-externo.md)
     * [Problemas adhesion de impresiones](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/problemas-adhesion-de-impresiones.md)
     * [Mantenimiento del HotEnd](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/mantenimiento-del-hotend.md)
     * [Problemas Extrusion](guias-impresion-3d/resolucion-de-problemas/problemas-hardware-impresora-3d/problemas-extrusion.md)
