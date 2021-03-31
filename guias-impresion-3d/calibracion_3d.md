@@ -415,7 +415,7 @@ Ya está!!! ahora al realizar un fileteado podemos ver en la preview el resultad
 
 ![](https://telegra.ph/file/37bad1d77f3dd3c30af26.png)
 
-## Que tests hacer al cambiar de tipo/color filamento? <a id="Prueba-de-stress-finall!!!"></a>
+## Tests en cambio filamento/color sugeridos <a id="Prueba-de-stress-finall!!!"></a>
 
 Muchas veces al cambiar de tipo de material y/o color o marca de fabricante comenzamos a imprimir sin realizar un mínimo de tests que pueden llevarnos a resultados, a veces, desastrosos.
 
