@@ -415,6 +415,24 @@ Ya está!!! ahora al realizar un fileteado podemos ver en la preview el resultad
 
 ![](https://telegra.ph/file/37bad1d77f3dd3c30af26.png)
 
+## Que tests hacer al cambiar de tipo/color filamento? <a id="Prueba-de-stress-finall!!!"></a>
+
+Muchas veces al cambiar de tipo de material y/o color o marca de fabricante comenzamos a imprimir sin realizar un mínimo de tests que pueden llevarnos a resultados, a veces, desastrosos.
+
+Para evitar este tipo de problemas os aconsejamos realizar los siguientes tests:
+
+* [Torre de temperatura](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#6-torre-de-temperatura) que nos permitirá verificar o encontrar la temperatura óptima para nuestro nuevo filamento
+* [Ajuste de flujo y comprobación de pasos](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#7-ajuste-flujo-flow), usando el test de flujo que es un test muy rápido podemos rápidamente verificar que el flujo es correcto y que nuestros pasos de ejes no variaron con el nuevo filamento. En nuestro caso el cubo de flujo usado tiene unas medidas de 35x35x15mm \(X Y Z\)
+* [Retracciones](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#8-retracciones), en muchas ocasiones este parámetro es muy subsceptible de cambiar y el test es rápido de realizar desde SuperSlicer o el generador de Teaching Tech
+* [Test de toleranzia horizontal](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#9-test-de-tolerancia-horizontal), aconsejable realizarlo sobretodo si cambiamos el tipo de filamento o marca
+
+Test **imprescindibles en caso de tener/usar estas funciones avanzadas**:
+
+* [Linear Advance](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#12-linear-advance-opcional), en el caso que usemos LA es imprescindible realizar la comprobación y ajustar el nuevo valor
+* [Extrusión Volumétrica](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#14-ajuste-de-extrusion-volumetrica-opcional), al igual que el punto anterior MVS también queda muy influenciado por el tipo de material por lo que es mas que aconsejable realizar/comprobar que no varía con el nuevo filamento
+
+Dado que la mayoría de laminadores/slicers nuevos disponen de perfiles para tipo de filamento/material lo ideal es crear uno nuevo para cada tipo de filamento y almacenar ahi cualquier cambio con respecto a otros ya sea con cambio de valores o, de permitirlo, mediante gcode especifico de filamento \(como en SuperSlicer/PrusaSlicer que le da una gran versatilidad y personalizacion\).
+
 ## Prueba de stress finall!!! <a id="Prueba-de-stress-finall!!!"></a>
 
 Si has llegado hasta aquí y seguiste todos los pasos sugeridos correctamente tu impresora estará probablemente ajustada.Pars hacer una verificación final podemos usar una última pieza de calibración de stress que nos ayudará a comprobar que todo este correcto.
