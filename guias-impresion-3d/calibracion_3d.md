@@ -422,7 +422,7 @@ Muchas veces al cambiar de tipo de material y/o color o marca de fabricante come
 Para evitar este tipo de problemas os aconsejamos realizar los siguientes tests:
 
 * [Torre de temperatura](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#6-torre-de-temperatura) que nos permitirá verificar o encontrar la temperatura óptima para nuestro nuevo filamento
-* [Ajuste de flujo y comprobación de pasos](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#7-ajuste-flujo-flow), usando el test de flujo que es un test muy rápido podemos rápidamente verificar que el flujo es correcto y que nuestros pasos de ejes no variaron con el nuevo filamento. En nuestro caso el cubo de flujo usado tiene unas medidas de 35x35x15mm \(X Y Z\)
+* [Ajuste de flujo y comprobación de pasos](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#7-ajuste-flujo-flow), usando el test de flujo que es un test muy rápido podemos rápidamente verificar que el flujo es correcto y que nuestros pasos de ejes no variaron con el nuevo filamento. En nuestro caso el cubo de flujo usado tiene unas medidas de 35x35x15mm \(X Y Z\). **`; Filament-specific start gcode  M92 X80.2586 Y80.4597 Z401.4765 ; Ajuste de pasos específico para PETG`**
 * [Retracciones](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#8-retracciones), en muchas ocasiones este parámetro es muy subsceptible de cambiar y el test es rápido de realizar desde SuperSlicer o el generador de Teaching Tech
 * [Test de toleranzia horizontal](https://3dwork.qitec.net/guias-impresion-3d/calibracion_3d#9-test-de-tolerancia-horizontal), aconsejable realizarlo sobretodo si cambiamos el tipo de filamento o marca
 
