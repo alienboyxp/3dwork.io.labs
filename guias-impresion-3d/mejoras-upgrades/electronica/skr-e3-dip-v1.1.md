@@ -20,6 +20,8 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWo
 
 ![](https://telegra.ph/file/fb38b7e501a86c3f5f878.jpg)
 
+![](../../../.gitbook/assets/image%20%2832%29.png)
+
 ## **Conexiones de alimentación**
 
 ![](https://telegra.ph/file/723602614e368158567c0.png)

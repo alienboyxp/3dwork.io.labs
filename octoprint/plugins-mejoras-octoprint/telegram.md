@@ -45,7 +45,7 @@ Ya podremos interactuar desde nuestre cliente Telegram con nuestra impresora!!! 
 
 En la configuración del plugin de Telegram tenemos una sección para configurar las notificaciones \(Messages at...\) estas están escritas en inglés pero podemos cambiarlas por lo que nos interese más.
 
-![](../../.gitbook/assets/image%20%2832%29.png)
+![](../../.gitbook/assets/image%20%2833%29.png)
 
 En la parte de iconos azules podremos ver información sobre el lenguaje markup que se utiliza, las variables y los iconos que podemos usar.
 
