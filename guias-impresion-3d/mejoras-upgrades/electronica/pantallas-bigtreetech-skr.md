@@ -99,6 +99,11 @@ Si queremos cambiar del idioma ñor defecto deberemos añadirlo a la SD y acrusl
 
 ![](https://telegra.ph/file/0b00b8c15602ff47f4fe6.jpg)
 
+> **Errores mas comunes al actualizar el firmware de la pantalla:**  
+> - la pantalla deja de responder el modo táctil, una posible solución es dejar un fichero reset.txt \(sin contenido\) en la raíz de la SD y encender/reset de la pantalla para que restaure su EEPROM  
+> - muestra errores de "Invalid App" o proglema en config.ini, puede solucionarse dejando el config.ini de la nueva version y un fichero reset.txt \(sin contenido\) en la raíz de la SD, endender/reset de la pantalla para que aplique la nueva estructura de EEPROM  
+> - iconos o textos aparezen corruptos, volver a copiar la carpeta TFTXX que coincida con nuestra pantalla debería de solucionar el problema
+
 **Cambios en Marlin**
 
 Para habilitar el modo Marlin asegúrate que tienes:
