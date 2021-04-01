@@ -40,8 +40,12 @@ Al finalizar la extrusión mediremos desde el ounto de referencia hasta la marca
 Tambien teneis este vídeo del Sr. Ferrete donde explica el proceso de forma sencilla.  
 https://youtu.be/VA\_jvXyGvhU
 
-El ajuste de los pasos los puedes realizar desde la pantalla en modo Marlin en Configuración/Avanzado/Steps o mediante gcode desde un terminal como Pronterface con M92 Exxx \(donde xxx serían los pasos calculados previamente\).  
-Recuerda, si tienes un Marlin cocinado por ti anotar estos valores, y si modificaste por pantalla ir a Configuración/Salvar EEPROM o si lo hiciste por terminal lanzar un M500.
+El ajuste de los pasos los puedes realizar de diferentes formas:
+
+* desde la pantalla en modo Marlin en Configuración/Avanzado/Steps
+* mediante gcode desde un terminal como Pronterface con M92 Exxx \(donde xxx serían los pasos calculados previamente\).
+
+> _**Recuerda, si tienes un Marlin cocinado por ti anotar estos valores, y si modificaste por pantalla ir a Configuración/Salvar EEPROM o si lo hiciste por terminal lanzar un M500.**_
 
 ## 2. Ajuste de los pasos de los motores/ejes
 
@@ -54,8 +58,11 @@ En este paso lo usaremos principalmente para calibrar los pasos de nuestros moto
 Al finalizar el resto de pasos de ests guía es aconsejable volver s realizar este test para verificar o corregir cualquier desviación.
 
 Puedes generar estos cubos de forma sencilla desde SuperSlicer en su menú de calibración.  
-En todo caso te adjuntamos algunos otros de ejemplo: [https://www.thingiverse.com/thing:3911284](https://www.thingiverse.com/thing:3911284)  
-https://www.thingiverse.com/thing:1545913
+En todo caso te adjuntamos algunos otros de ejemplo: 
+
+{% embed url="https://www.thingiverse.com/thing:3911284" %}
+
+{% embed url="https://www.thingiverse.com/thing:1545913" %}
 
 Puedes usar calculadoras de pasos para proceso de cálculo o verificado de pasos \(_**pulsa sobre el icono Run Pen**_\):
 
@@ -63,8 +70,12 @@ Puedes usar calculadoras de pasos para proceso de cálculo o verificado de pasos
 
 https://blog.prusaprinters.org/calculator\_3416/\#steppermotors
 
-El ajuste de los pasos los puedes realizar desde la pantalla en modo Marlin en Configuración/Avanzado/Steps o mediante gcode desde un terminal como Pronterface con M92 Xxxx Yxxx Zxxx \(donde xxx serían los pasos calculados previamente\).  
-Recuerda si tienes un Marlin cocinado por ti anotar estos valores, y si modificaste por pantalla ir a Configuración/Salvar EEPROM o si lo hiciste por terminal lanzar un M500.
+El ajuste de los pasos los puedes realizar de diferentes formas:
+
+* desde la pantalla en modo Marlin en Configuración/Avanzado/Steps
+* mediante gcode desde un terminal como Pronterface con M92 Xxxx Yxxx Zxxx \(donde xxx serían los pasos calculados previamente\).
+
+> **Recuerda si tienes un Marlin cocinado por ti anotar estos valores, y si modificaste por pantalla ir a Configuración/Salvar EEPROM o si lo hiciste por terminal lanzar un M500.**
 
 ## 4. Ajuste PID
 
@@ -106,7 +117,7 @@ En caso que por protección térmica no permita hacer el autoPID deshabilitar mo
 
 En el caso de alarmas por protección de temperaturas que no se solucione con un PID se tendrán que variar los parámetros de tiempo e histéresis de dicha protección.
 
-[https://3dprinting.stackexchange.com/questions/8466/what-is-thermal-runaway-protection](https://3dprinting.stackexchange.com/questions/8466/what-is-thermal-runaway-protection)
+{% embed url="https://3dprinting.stackexchange.com/questions/8466/what-is-thermal-runaway-protection" %}
 
 ## 5. Nivelación de la cama
 
@@ -134,10 +145,13 @@ Es importante hacer este test con cada bobina que usemos para ajustar o verifica
 ![](../.gitbook/assets/image%20%283%29.png)
 
 Es aconsejable utilizar/generar el test de Temperatura de SuperSlicer o desde el [generador de Teaching Tech](https://teachingtechyt.github.io/calibration.html#temp)  
-Otros ejemplos de torres de temperaturas:  
-[https://www.thingiverse.com/apps/customizer/run?thing\_id=2491884](https://www.thingiverse.com/apps/customizer/run?thing_id=2491884)  
-[https://www.thingiverse.com/thing:2729076/files](https://www.thingiverse.com/thing:2729076/files)  
-ajustar con el customizer de Thinkiverse o manualmente en el slicer
+Otros ejemplos de torres de temperaturas:
+
+{% embed url="https://www.thingiverse.com/apps/customizer/run?thing\_id=2491884" %}
+
+{% embed url="https://www.thingiverse.com/thing:2729076/files" %}
+
+Ajustar con el customizer de Thinkiverse o manualmente en el slicer
 
 ![](../.gitbook/assets/image%20%287%29.png)
 
@@ -166,19 +180,23 @@ Una vez tengamos este valor medio para este filamento lo ajustaremos en nuestro 
 **PrusaSlicer/SuperSlicer: Filament Settings -&gt; Filament -&gt; Diameter  
 Cura: Preferences -&gt; Printers -&gt;** _**your printer**_ **-&gt; Machine Settings -&gt; Extruder 1**
 
-El siguiente paso es imprimir un cubo "hollow" \(hueco\), os sugerimos usar este [https://www.thingiverse.com/thing:3397997](https://www.thingiverse.com/thing:3397997) ya que cuenta con ejemplos de practicamente todas las medidas de nozzle que hay y es muy rápido de hacer.
+El siguiente paso es imprimir un cubo "hollow" \(hueco\), os sugerimos usar este...
+
+{% embed url="https://www.thingiverse.com/thing:3397997" %}
+
+...ya que cuenta con ejemplos de practicamente todas las medidas de nozzle que hay y es muy rápido de hacer.
 
 ![](../.gitbook/assets/image%20%2815%29.png)
 
 1- Escogeremos de la los diferentes modelos el que coincida con el diámetro de nuestro nozzle  
 2- Configuraremos los siguientes valores básicos de la impresión:  
-Altura capa - 0.2mm \(para un nozzle de 0.4\)  
+`Altura capa - 0.2mm (para un nozzle de 0.4)  
 Perimetros - 2  
 Capas superiores - 0  
 Capas inferiores - 1  
 Relleno - 0%  
-Velocidad - 50 mm/s \(puedes adaptarlo a tu maquina\)  
-Flow/Flujo/Multiplicador Extrusion - 1 o 100% dependiendo del fileteador/slicer
+Velocidad - 50 mm/s (puedes adaptarlo a tu maquina)  
+Flow/Flujo/Multiplicador Extrusion - 1 o 100% dependiendo del fileteador/slicer`
 
 Una vez impreso mediremos el grosor de las paredes del cubo.
 
@@ -238,8 +256,9 @@ El test de tolerancia horizontal permite ajustar el valor de compensación para 
 
 ![](../.gitbook/assets/image%20%288%29.png)
 
-Puedes utilizar este test muy rápido para encontrar los valores adecuados de tu filamento.  
-[https://www.thingiverse.com/thing:1662342](https://www.thingiverse.com/thing:1662342)
+Puedes utilizar este test muy rápido para encontrar los valores adecuados de tu filamento.
+
+{% embed url="https://www.thingiverse.com/thing:1662342" %}
 
 Dependiendo del slicer este ajuste se llama Expansión horizontal o Compensación XY.  
 También slicers como PrusaSlicer/SuperSlicer o Cura disponen de opciones avanzadas de ajustes para que esta compensación se aplique al contorno \(outer\) o en partes internas \(inner/hole\). Para no afectar a la precisión en medidas de la pieza, si nuestro ajustes de pasos/ejes están correctos, es mas aconsejable ajustar solamente ls compensación interna \(inner/hole\).
@@ -259,9 +278,9 @@ Para ello a parte del test específico es bueno recordar dos puntos importantes.
 ... optimizar las piezas en el diseño si el objetivo es la impresión FDM, esto es el uso de chaflanes 45 grados en lugar de angulos rectos  
 ... en situaciones más extremas el cortal la pieza en varias partes puede darnos buen resultado
 
-Para realizar el test os sugerimos el uso de esta torre de voladizos [https://www.thingiverse.com/thing:2972495](https://www.thingiverse.com/thing:2972495)
+Para realizar el test os sugerimos el uso de esta torre de voladizos
 
-![](../.gitbook/assets/image%20%2818%29.png)
+{% embed url="https://www.thingiverse.com/thing:2972495" %}
 
 El valor que encontremos deberemos configurarlo en nuestro fileteador/slicer. En PrusaSlicer podrás encontrarlo en Overhang thresold.
 
@@ -269,9 +288,9 @@ El valor que encontremos deberemos configurarlo en nuestro fileteador/slicer. En
 
 Relacionado con los voladizos es interesante ajustar los parámetros de nuestro fileteador/slicer para poder imprimir puentes sin que estos queden de forma incorrecta.
 
-El siguiente test nos puede ayudar para [https://www.thingiverse.com/thing:546688](https://www.thingiverse.com/thing:546688)
+El siguiente test nos puede ayudar para 
 
-![](../.gitbook/assets/image%20%2819%29.png)
+{% embed url="https://www.thingiverse.com/thing:546688" %}
 
 Este test realiza puentes de 10mm hasta 100mm, el objetivo seria imprimirlos a diferentes velocidades para ver cual es el que mejor se adapta a las caracteristicas de nuestra impresora.  
 Entre estas caracteristicas estarian la de velocidad al realizar puentes... normalmente los valores ideales dependiendo de la impresoras estarían entre 30-80 mm/seg siendo 40mm/seg un buen punto de partida:
@@ -351,7 +370,9 @@ Como la K cambia dependiendo del material utilizado, lo mejor es cambiar la K me
 M900 K140  
 Donde 140 es el valor elegido del test anterior.
 
-Podeis ver mas información en el siguiente vídeo [https://youtu.be/\_BiqlXPPfu4](https://youtu.be/_BiqlXPPfu4)
+Podeis ver mas información en el siguiente vídeo 
+
+{% embed url="https://youtu.be/\_BiqlXPPfu4" %}
 
 ## 13. Ajustes de Aceleración y Jerk \(opcional\)
 
