@@ -58,7 +58,8 @@ Importante actualizar el firmware a la última versión o uno custom y actualiza
 * Indicamos el tipo de sensor de nivelación **`#define BLTOUCH`**
 * Ajustamos los offsets \(localización del sensor de nivelación con respecto a la punta del nozzle\) del sensor de nivelación **`#define NOZZLE_TO_PROBE_OFFSET…`**
 
-> Es muy importante una vez subidos los cambios veríficar que loa offsets esten correctamente cargados en la EEPROM. Esto lo podemos verificar usando el comando M503 desde Pronterface/Octoprint o desde la propia pantalla \(segun version y opciones habilitadas en Marlin\) en Configuración/Avanzado/Probe Offsets. En el caso que no estén cargados correctamente esros valores podemos refrescar los datos desde Pronterface/Octoprint usando M502 M500 o desde la pantalla de la impresora Configuración Reset Load Save Eeprom.
+> Es muy importante una vez subidos los cambios veríficar que loa offsets esten correctamente cargados en la EEPROM. Esto lo podemos verificar usando el comando **M503** desde Pronterface/Octoprint o desde la propia pantalla \(segun version y opciones habilitadas en Marlin\) en Configuración/Avanzado/Probe Offsets.   
+> En el caso que no estén cargados correctamente esros valores podemos refrescar los datos desde Pronterface/Octoprint usando **M502** **M500** o desde la pantalla de la impresora **Configuración Reset Load Save Eeprom**.
 
 ### Valores offsets PROBE dependiendo de ubicación del mismo
 
