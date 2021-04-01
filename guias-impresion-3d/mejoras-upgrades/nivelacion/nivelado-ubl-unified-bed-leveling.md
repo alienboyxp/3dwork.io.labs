@@ -54,67 +54,46 @@ Desde el terminal pero se puede realizar de otras formas
 
 se puede realizar desde el LCD en las herramientas UBL como desde terminal \(emplearemos el terminal para el ejemplo\)
 
- 1\) Ajuste manual de la cama 4 esquinas y folio tradicional
+1. **Ajuste manual de la cama 4 esquinas y folio tradicional**
+2. Realizaremos un **G28**
+3. Realizaremos un **pre-calentado de cama y nozzle** que normalmente usemos
+4. Realizaremos una malla usando **G29 P1** desde el terminal o desde las herramientas UBL de la pantalla
+5. Una vez finalizado podemos usar **G29 T** para visualizar los valores de la malla. Puedes usar estas herramientas web para verlo graficamente: [https://mkdev.co.uk/mesh-visualizer/](https://mkdev.co.uk/mesh-visualizer/) [http://lokspace.eu/3d-printer-auto-bed-leveling-mesh-visualizer/](http://lokspace.eu/3d-printer-auto-bed-leveling-mesh-visualizer/) [https://i.chillrain.com/index.php/3d-printer-auto-bed-leveling-mesh-visualizer/](https://i.chillrain.com/index.php/3d-printer-auto-bed-leveling-mesh-visualizer/)
+6. Por la ubicación del sensor de nivelación en muchas ocasiones Marlin no va a llegar a todos los puntos de la malla con lo que en el paso anterior veremos coordenadas sin valores solamente con un ".". Para realizar el relleno de todos los puntos que no pudieron medirse lanzaremos un **G29 P3** \(**G29 P3 T** mejor ya que calcula todos los puntos que falten\) este comando calcula extrapolando valores que si que se pudieron verificar a los que no pudieron medirse.
+7. Una vez aparezcan todos los puntos de la malla con un valor, fuera medido o extrapolado por el punto anterior, almacenaremos la malla en la posición 1 de la EEPROM con **G29 S1**
+8. Nos aseguramos de que el autonivelado quede activo con **G29 A**
+9. Ahora que ya tenemos todos los valores básicos correctos lanzaremos un **M500** para guardarlos en la EEPROM. **IMPORTANTE!!! cada vez que la EEPROM sea borrada o reseteada se tiene que volver a realizar este proceso!!**!
 
- 2\) Realizar G28
+### Descripcion del proceso en Marlin:
 
- 4\) Cama/Nozzle precalentado
-
- 5\) Realizar un Cold Mesh desde las herramientas UBL del LCD o G29 P1 desde terminal
-
- 6\) Puedes realizar un G29 T para ver los valores de la malla, desde estas web puedes ver el desfase graficamente
-
-* [https://mkdev.co.uk/mesh-visualizer/](https://mkdev.co.uk/mesh-visualizer/)
-* [http://lokspace.eu/3d-printer-auto-bed-leveling-mesh-visualizer/](http://lokspace.eu/3d-printer-auto-bed-leveling-mesh-visualizer/)
-* [https://i.chillrain.com/index.php/3d-printer-auto-bed-leveling-mesh-visualizer/](https://i.chillrain.com/index.php/3d-printer-auto-bed-leveling-mesh-visualizer/)
-
- 7\) Seguramente por la ubicación del propio PROBE le será por seguridad imposible llegar a todos los puntos de la malla con un G29 P3 calcula esos puntos por extrapolación
-
- 8\) G29 S1 almacena la malla en la memoria 1 de mallas
-
- 9\) G29 A activa el autonivelado
-
- 10\) M500 para guardar los ajustes en EEPROM
-
-Descripcion del proceso en Marlin:
-
-M502 ; Reset settings to configuration defaults...
-
-M500 ; ...and Save to EEPROM. Use this on a new install.
-
-M501 ; Read back in the saved EEPROM.
-
-M190 S65 ; Not required, but having the printer at temperature helps accuracy
-
-M104 S210 ; Not required, but having the printer at temperature helps accuracy
-
-G28 ; Home XYZ.
-
-G29 P1 ; Do automated probing of the bed.
-
-G29 P2 B T ; Manual probing of locations. USUALLY NOT NEEDED!
-
-G29 P3 T ; Repeat until all mesh points are filled in.
-
-G29 T ; View the Z compensation values.
-
-G29 S1 ; Save UBL mesh points to EEPROM.
-
-G29 F 10.0 ; Set Fade Height for correction at 10.0 mm.
-
-G29 A ; Activate the UBL System.
-
-M500 ; Save current setup. WARNING - UBL will be active at power up, before any G28.
+`M502 ; Reset settings to configuration defaults...  
+M500 ; ...and Save to EEPROM. Use this on a new install.  
+M501 ; Read back in the saved EEPROM.  
+M190 S65 ; Not required, but having the printer at temperature helps accuracy  
+M104 S210 ; Not required, but having the printer at temperature helps accuracy  
+G28 ; Home XYZ.  
+G29 P1 ; Do automated probing of the bed.  
+G29 P2 B T ; Manual probing of locations. USUALLY NOT NEEDED!  
+G29 P3 T ; Repeat until all mesh points are filled in.  
+G29 T ; View the Z compensation values.  
+G29 S1 ; Save UBL mesh points to EEPROM.  
+G29 F 10.0 ; Set Fade Height for correction at 10.0 mm.  
+G29 A ; Activate the UBL System.  
+M500 ; Save current setup. WARNING - UBL will be active at power up, before any G28.`
 
 ## **4. Modificaciones en gcode inicio\(start\) del slicer**
 
 Debes añadir los siguientes gcodes en le script de inicio de tu slicer justo después del G28 \(homing\)
 
- 1\) G29 L1 ; Carga la malla guardada en la memoria 1
+ - G29 L1 ; Carga la malla guardada en la memoria 1
 
- 2\) G29 J ; realiza un test rápido de 3 puntos para validar cualquier desviación
+ - G29 J ; realiza un test rápido de 3 puntos para validar cualquier desviación
 
-5\) Realizar un test de impresión a ser posible de un modelo de calibración de cama como [https://teachingtechyt.github.io/calibration.html\#firstlayer](https://teachingtechyt.github.io/calibration.html#firstlayer) donde puedes crearlo personalizado para tu impresora
+ - Realizar un test de impresión a ser posible de un modelo de calibración de cama como... 
+
+{% embed url="https://teachingtechyt.github.io/calibration.html\#firstlayer" %}
+
+...donde puedes crearlo personalizado para tu impresora
 
 ## **Troubleshooting**
 
