@@ -222,7 +222,7 @@ Desgraciadamente no existe una fórmula para encontrar el valor exacto, si no qu
 
 La siguiente tabla contiene unos valores aconsejados de longitud y velocidad de retracción para la impresora 3D en función del tipo de extrusor que se utilice, los cuales son un buen punto de partida para ajustarlos a vuestro caso particular:
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 Puedes utilizar el generador online [https://teachingtechyt.github.io/calibration.html\#retraction](https://teachingtechyt.github.io/calibration.html#retraction) o desde [SuperSlicer](https://github.com/supermerill/SuperSlicer/releases) añadieron en sus últimas versiones el test de retracciones que facilita mucho el proceso ademss de simplificar el ajuste de parámetros a la distancia de retracción y temperatura ya que la velocidad de retracción tiene un menor impacto en el resultado final.
 

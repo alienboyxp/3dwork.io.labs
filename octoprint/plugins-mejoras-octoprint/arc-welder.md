@@ -17,11 +17,11 @@ No es una tecnología para nada nueva pero con el procesamiento de la electróni
 Su uso es muy sencillo, puedes ponerlo en modo automático para que cuando subes un nuevo gcode automático lo transforme \(añadirá uno nuevo con .aw.gcode en su nombre\) o hacerlo manualmente desde un nuevo icono \(flechas\) en el listado de ficheros.  
 Cuenta con un interfaz que te informa del estado de transformación además que te da datos de estadísticas de las mejoras aplicadas.
 
-![](../../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image%20%2832%29.png)
 
 Tienes una parte de configuración que puedes personalizar a tu gusto para generar el nuevo gcode optimizado para tu máquina.
 
-![](../../.gitbook/assets/image%20%2838%29.png)
+![](../../.gitbook/assets/image%20%2839%29.png)
 
 Es importante recalcar que para que funcione correctamente el Marlin de tu impresora debe tener habilitado ARC\_SUPPORT \(configuration\_adv.h\) que desde la versión 2.0.6 ha sido mejorado enormemente. Si no sabes si lo tienes o no habilitado puedes lanzar un comando M115 desde tu cliente terminal favorito a tu impresora para ver el estado de esta opción.  
 Por supuesto es también compatible con otros firmwares pero deberás comprobar la compatibilidad en cada caso.
