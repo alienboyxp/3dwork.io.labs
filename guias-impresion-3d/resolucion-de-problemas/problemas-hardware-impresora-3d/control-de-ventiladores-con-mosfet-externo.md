@@ -106,11 +106,11 @@ Un cambio muy aconsejable a nivel de ventiladores es, para placas que solamente 
 
 En ese caso podemos activarlo de la siguiente forma en configuration\_adv usando el pin que previamente desactivamos de su función normal:
 
-`#define E0_AUTO_FAN_PIN P1_00 //3DWORK – Asignado pin ventilador hotend controlado`
+`#define E0_AUTO_FAN_PIN P1_00 //3DWORK – Asignado pin ventilador hotend controlado a MOSFET externo`
 
 O podemos como comentabamos anteriormente usarlo con la salida del extrusor 1 \(HE1\) si no lo estamos usando:
 
-`#define E0_AUTO_FAN_PIN P1_00 //3DWORK – Asignado pin ventilador hotend controlado`
+`#define E0_AUTO_FAN_PIN FAN1_PIN //3DWORK – Asignado pin ventilador hotend controlado a pin HE1`
 
 En este caso podemos ajustar además a partir de que temperatura queremos ponerlo en marcha y a que velocidad \(el valor 255 equivaldría al 100% de velocidad de giro\):
 
