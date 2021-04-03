@@ -47,8 +47,9 @@ Para poder ver donde están esas definiciones debemos encontrar el fichero pins 
 
 | Placa | Fichero pins |
 | :--- | :--- |
-| SKR 1.4 | Marlin/src/pins/lpc1768/pins\_BTT\_SKR\_V1\_4.h |
-| SKR MINI TURBO |  |
+| SKR 1.4 TURBO | `Marlin/src/pins/lpc1769/pins_BTT_SKR_V1_4_TURBO.h` |
+| SKR 1.4 | `Marlin/src/pins/lpc1768/pins_BTT_SKR_V1_4.h` |
+| SKR MINI TURBO | `Marlin/src/pins/lpx1769/pins_BTT_SKR_E3_TURBO.h` |
 
 En el caso de querer trasladar un ventilador de pin tenemos que usar un pin compatible PWM para poder usar de forma adecuada nuestro modulo MOSFET externo.
 
