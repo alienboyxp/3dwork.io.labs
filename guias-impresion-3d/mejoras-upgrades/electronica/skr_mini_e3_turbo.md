@@ -427,6 +427,12 @@ Al igual que otras placas SKR sus pines se definen con dependencias, a continuac
 
 > Marlin/src/pins/lpc1769/pins\_BTT\_SKR\_E3\_TURBO.h
 
+### **Error escritura en EEPROM SKR MINI E3 TURBO**
+Dependiendo de la versión de Marlin la definición de la EEPROM puede ocasionar errores en la escritura de esta. Si tú versión está afectada por este problema deberías modificar lo siguiente:
+
+Marlin/src/HAL/LPC1768/HAL.h
+//#define I2C_ADDRESS(A) uint8_t((A) << 1)
+
 #### Pues ya hemos terminado!!! ahora solamente queda compilar, ajustar cualquier error que nos reporte el compilado y meterlo en nuestra placa!!! <a id="Pues-ya-hemos-terminado!!!-ahora-solamente-queda-compilar,-ajustar-cualquier-error-que-nos-reporte-el-compilado-y-meterlo-en-nuestra-placa!!!"></a>
 
 Como siempre os aconsejamos verificar inicialemente la impresora de la siguiente manera:
