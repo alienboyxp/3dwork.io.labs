@@ -173,7 +173,7 @@ Esto es muy útil cuando acumulas muchos y no recuerdas ni si quiera que tenías
    1. **Windows**, el directorio por defecto es C:\Program Files\Ultimaker Cura \[version number\]\plugins
    2. **macOS**, botón derecho sobre Ultimaker Cura.app y Show Package Contents. El directorio por defecto es Ultimaker Cura.app -&gt; Contents -&gt; Resources -&gt; Plugins -&gt; Plugins
    3. **Linux**, el directorio por defecto es ~/.local/share/cura/\[version number\]/plugins
-5. Copia del zip descomprimido las carpetas Bigtree3DPlugin, ResolutionExtension, BigtreeRemovableDriveOutputDevice en el directorio plugins que encontraste en el punto anterior
+5. Copia del zip descomprimido las carpetas **Bigtree3DPlugin**, **ResolutionExtension**, **BigtreeRemovableDriveOutputDevice** en el directorio plugins que encontraste en el punto anterior
 6. Abrimos Cura y hacemos un fileteado de una pieza
 7. Veremos que el botón de guardar tiene un desplegable que nos permitirá guardar en el nuevo formato Bigtree3D
 
