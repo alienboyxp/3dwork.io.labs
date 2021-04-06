@@ -283,8 +283,8 @@ Es importante decirle a Marlin que habilite la autonivelación \(G29\) después 
 En el caso de BILINEAR le diremos los puntos a realizar por malla en la siguiente parte de Marlin \(por defecto lleva 3 puntos por eje, 3x3=9 puntos de comprobación\).
 
 > if EITHER\(AUTO\_BED\_LEVELING\_LINEAR, AUTO\_BED\_LEVELING\_BILINEAR\)  
->  // Set the number of grid points per dimension.  
->  \#define GRID\_MAX\_POINTS\_X 3
+> // Set the number of grid points per dimension.  
+> \#define GRID\_MAX\_POINTS\_X 3
 
 Otra función que por seguridad debemos de habilitar es la de que realice un homing en el centro de la cama, esto nos ayuda a dos cosas... la primera a asegurar que el sensor tiene una superficie donde detectar el final de carrera y el segundo verificar visualmente que nuestros Offsets están de forma correcta ya que el sensor de nivelación tiene que quedar perfectamente posicionado en el centro de nuestra cama.
 
@@ -428,10 +428,10 @@ Al igual que otras placas SKR sus pines se definen con dependencias, a continuac
 > Marlin/src/pins/lpc1769/pins\_BTT\_SKR\_E3\_TURBO.h
 
 ### **Error escritura en EEPROM SKR MINI E3 TURBO**
+
 Dependiendo de la versión de Marlin la definición de la EEPROM puede ocasionar errores en la escritura de esta. Si tú versión está afectada por este problema deberías modificar lo siguiente:
 
-Marlin/src/HAL/LPC1768/HAL.h
-//#define I2C_ADDRESS(A) uint8_t((A) << 1)
+Marlin/src/HAL/LPC1768/HAL.h //\#define I2C\_ADDRESS\(A\) uint8\_t\(\(A\) &lt;&lt; 1\)
 
 #### Pues ya hemos terminado!!! ahora solamente queda compilar, ajustar cualquier error que nos reporte el compilado y meterlo en nuestra placa!!! <a id="Pues-ya-hemos-terminado!!!-ahora-solamente-queda-compilar,-ajustar-cualquier-error-que-nos-reporte-el-compilado-y-meterlo-en-nuestra-placa!!!"></a>
 

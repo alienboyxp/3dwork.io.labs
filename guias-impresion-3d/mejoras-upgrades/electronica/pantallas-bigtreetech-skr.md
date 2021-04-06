@@ -160,11 +160,26 @@ https://raw.githubusercontent.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/ma
 
 Os explicamos en unos sencillos pasos como poder previsualizar los gcodes que tenéis en vuestras SD desde las pantallas SKR.
 
-Esto es muy útil cuando acumulas muchos y no recuerdas ni si quiera que tenías en cada :P.![](https://telegra.ph/file/9a9b67640e32520efb0b6.jpg)Captura de nuestro compañero Adrian CI
+Esto es muy útil cuando acumulas muchos y no recuerdas ni si quiera que tenías en cada :P.
 
-**Cura**, solo es descargar el zip https://github.com/bigtreetech/Bigtree3DPluginSuit/archive/master.zip, descomprimirlo en la carpeta de plugins de cura y aparecerá la opción de guardar en formato Bigtreetech.![](https://telegra.ph/file/2565071b5eb9a6c87cc98.jpg)
+![](../../../.gitbook/assets/image%20%2844%29.png)
 
-**PrusaSlicer/SuperSlicer**:
+### **Cura**
+
+1. Actualiza el firmware de tu pantalla con la última versión disponible, la compatibilidad con este se añadió a partir de Vx.x.27.
+2. Asegúrate de habilitar la previsualización **desactivando el modo List Mode**, puedes hacerlo desde **Menu -&gt; Settings -&gt; Feature -&gt; Files viewer - List Mode**
+3. Descarga el siguiente zip y lo descomprimes
+4. Encuentra el directorio de plugins de tu Ultimaker Cura:
+   1. **Windows**, el directorio por defecto es C:\Program Files\Ultimaker Cura \[version number\]\plugins
+   2. **macOS**, botón derecho sobre Ultimaker Cura.app y Show Package Contents. El directorio por defecto es Ultimaker Cura.app -&gt; Contents -&gt; Resources -&gt; Plugins -&gt; Plugins
+   3. **Linux**, el directorio por defecto es ~/.local/share/cura/\[version number\]/plugins
+5. Copia del zip descomprimido las carpetas Bigtree3DPlugin, ResolutionExtension, BigtreeRemovableDriveOutputDevice en el directorio plugins que encontraste en el punto anterior
+6. Abrimos Cura y hacemos un fileteado de una pieza
+7. Veremos que el botón de guardar tiene un desplegable que nos permitirá guardar en el nuevo formato Bigtree3D
+
+![](../../../.gitbook/assets/image%20%2843%29.png)
+
+### **PrusaSlicer/SuperSlicer**:
 
 - **Windows**, Primero descargaremos la última versión del conversor desde [https://github.com/effgarces/Biqu-Thumbnail-Generator/releases/](https://github.com/effgarces/Biqu-Thumbnail-Generator/releases/) \(recuerda al final de cada release hay un apartado Assets y desde ahí puedes descargar el .zip necesario biqu\_convert\_new.zip descomprimimos y el ejecutable que contiene lo colocaremos en la carpeta donde se encuentra el laminador PrusaSlicer
 

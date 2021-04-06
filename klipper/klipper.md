@@ -1,4 +1,4 @@
-# Klipper?
+# Bibliografia
 
 Resumen -&gt; [https://albertogrespan.com/blog/3d-printing/klipper-on-an-ender-3/\#configuration-file](https://albertogrespan.com/blog/3d-printing/klipper-on-an-ender-3/#configuration-file)
 
