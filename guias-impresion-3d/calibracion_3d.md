@@ -436,6 +436,99 @@ Ya está!!! ahora al realizar un fileteado podemos ver en la preview el resultad
 
 ![](https://telegra.ph/file/37bad1d77f3dd3c30af26.png)
 
+## 15. Configurando nuestro gcode de inicio y fin de impresion
+
+Una vez tenemos todo perfectamente calibrado es importante qeu nuestra impresora realice los pasos correctos a la hora de comenzar y finalizar nuestra impresión
+
+### Gcode de inicio de impresión
+
+Os sugerimos el siguiente gcode de inicio \(Prusa/SuperSlicer al final de la explicación encontrarás como adaptarlo a Cura\):
+
+```groovy
+; 3DWORK.IO Custom Start G-code
+M117 PRE-HEATING!!!
+M104 S[first_layer_temperature]   ; Set Extruder temperature
+M140 S[first_layer_bed_temperature] ; Set Heat Bed temperature
+M190 S{first_layer_bed_temperature[0] - 5}  ; wait for bed temperature - 5
+M109 S[first_layer_temperature]             ; wait for nozzle temperature
+M117 HEATING!!!
+G4 S120 ;wait to preheat
+
+; Printer Homing
+M117 HOMING!!!
+G28 ; Home all axes
+G29 L1 ; Autolevel UBL
+G29 J ; Autolevel UBL
+; G29 ; Autolevel BILINEAR
+; M420 S1 Z10 ; Autolevel MESH Fade 10 mm
+
+; Purge Extruder
+M117 CLEANING EXTRUDER!!!
+G92 E0 ; Reset Extruder
+G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+G1 X0.1 Y20 Z0.3 F5000.0 ; Move to start position
+G1 X0.1 Y200.0 Z0.3 F1500.0 E15 ; Draw the first line
+G1 X0.4 Y200.0 Z0.3 F5000.0 ; Move to side a little
+G1 X0.4 Y20 Z0.3 F1500.0 E30 ; Draw the second line
+G92 E0 ; Reset Extruder
+G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+```
+
+Este gcode de inicio se divide en tres bloques imprescindibles para iniciar una impresión correctamente:
+
+* **Calentado**, en este primer bloque usamos la configuración del slicer/fileteador para precalentar durante 120 segundos nuestro nozzle y cama \(puedes modificar esto modificando el G4 S120 cambiando el valor o comentando/borrando el comando\)
+* **Homing y Nivelado**, este segundo bloque realizará un homing de nuestros ejes y en el caso de tener autonivelación realizarla \(el ejemplo esta hecho para UBL pocemos descomentar o borrar las lineas que nos sean o no útiles en nuestro caso\)
+* **Purga**, aunque a mucha gente no le gusta o hacen una desde el slicer/fileteador alrededor de la pieza es preferible hacer esta linea de purga ya que permitira limpiar todo lo mas posible el nozzle para que comience el proceso de impresión en las mejores condiciones. Para ajustar el tamaño de la linea de purga, esta se realiza en la parte derecha de la cama en el eje Y, ajustaremos el valor de Y200 al tamaño de nuestra cama -10mm
+
+En el caso de Cura modificaremos el primer bloque de la siguiente forma:
+
+```groovy
+; 3DWORK.IO Custom Start G-code
+M117 PRE-HEATING!!!
+M104 S{material_print_temperature_layer_0} ; Set Extruder temperature
+M140 S{material_bed_temperature_layer_0} ; Set Heat Bed temperature
+M190 S{material_bed_temperature_layer_0} ; Wait for Heat Bed temperature
+M109 S{material_print_temperature_layer_0} ; Wait for Extruder temperature
+M117 HEATING!!!
+G4 S120 ;wait to preheat
+```
+
+### Gcode de final de impresión
+
+Tan importante como el Gcode de inicio es el de final que nos asegurará apagar de una forma correcta nuestra impresora y dejará correctamente preparada para el siguiente uso.
+
+```groovy
+; 3DWORK.IO Custom End G-code
+
+G4 ; Wait
+M220 S100 ; Reset Speed factor override percentage to default (100%)
+M221 S100 ; Reset Extrude factor override percentage to default (100%)
+G91 ; Set coordinates to relative
+
+M117 RETRACT TO AVOID OOZING!!!
+G1 F1800 E-3 ; Retract filament 3 mm to prevent oozing
+G1 F3000 Z20 ; Move Z Axis up 20 mm to allow filament ooze freely
+
+M117 My Lord, your print ready!!!
+G90 ; Set coordinates to absolute
+G1 X0 Y220 F1000 ; Move Heat Bed to the front for easy print removal
+
+M117 ENDING...
+M106 S0 ; Turn off cooling fan
+M104 S0 ; Turn off extruder
+M140 S0 ; Turn off bed
+M107 ; Turn off Fan
+M84 ; Disable stepper motors
+
+M117 That's All Folks!
+```
+
+Este gcode realiza los siguientes pasos:
+
+* **Retracción**, para evitar que en la siguiente impresion caiga filamento durante el calentamiento, podemos variar el valor de E-3 a los mm que queramos para ajustarlo
+* **Presenta la cama con la impresión finalizada**, puedes ajustar Y220 al valor máximo de tu eje Y -10 mm
+* **Apagado** ventiladores, extrusor, cama y motores
+
 ## Tests en cambio filamento/color sugeridos <a id="Prueba-de-stress-finall!!!"></a>
 
 Muchas veces al cambiar de tipo de material y/o color o marca de fabricante comenzamos a imprimir sin realizar un mínimo de tests que pueden llevarnos a resultados, a veces, desastrosos.
