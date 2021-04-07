@@ -6,6 +6,8 @@ description: Como solucionar problemas con pin de termistor dañados
 
 Un fallo muy común normalmente por mala manipulación o por un corto en un termistor es que el pin de nuestra placa quede dañado y en este caso podemos intentar ajustar nuestro Marlin para usar un pin alternativo para esa función.
 
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
+
 **Es MUY aconsejable que desechemos ese termistor para evitar que ese fallo vuelva a dañar otro pin de nuestra placa!!!**
 
 ## Cambios en Marlin

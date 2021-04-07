@@ -8,7 +8,7 @@ description: >-
 
 ![](../.gitbook/assets/image%20%2816%29%20%281%29.png)
 
-Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [https://t.me/ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 Aconsejamos el uso de SuperSlicer \(un fork de PrusaSlicer donde integran opciones avanzadas antes de incorporarlas\) ya que tiene unas estupendas opciones para generar los tests de calibración.
 

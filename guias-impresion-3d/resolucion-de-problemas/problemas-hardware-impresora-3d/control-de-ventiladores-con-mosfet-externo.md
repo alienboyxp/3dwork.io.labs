@@ -8,6 +8,8 @@ description: >-
 
 Nuestras placas usan un componente MOSFET para proveer de corriente a los diferentes perifericos que se conectan a ella. Básicamente un MOSFET es usado como un interruptor que actúa como amplificador de la señal recibida.
 
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
+
 En el caso de las impresoras 3D este tipo de puertos se usan para ajustar una señal PWM. Esta señal se envía en pulsos más rápidos o lentos para cambiar la potencia de salida del ventilador.
 
 Para poder realizar este tipo de cambios requerimos un MOSFET externo, aunque no esta enfocado al objetivo de la guía normalmente a nuestras impresoras 3D se suelen poner dos tipos de MOSFET externos

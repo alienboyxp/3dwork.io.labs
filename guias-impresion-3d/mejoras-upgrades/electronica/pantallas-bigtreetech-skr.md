@@ -14,9 +14,9 @@ Podéis ver en el siguiente video como cambiar de un modo a otro...
 
 {% embed url="https://youtu.be/Yp4\_PyfMntE" %}
 
-Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de SKR @SKR\_board\_32bits.
+Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de SKR [@SKR\_board\_32bits](https://t.me/SKR_board_32bits).
 
-Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 ## **Modo Marlin**
 

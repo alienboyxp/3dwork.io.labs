@@ -12,9 +12,9 @@ La SKR Mini E3 Turbo no ha cambiado mucho con respecto a la SKR Mini E3 v2 pero 
 
 Recordamos que todas las placas de la gama E3 están especialmente diseñadas para el uso o reemplazo de la electrónica de una impresora Creality Ender 3 aunque puede ser usada en otras impresoras sin problema atendiendo al cableado y características específicas de cada una.
 
-Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de SKR @SKR\_board\_32bits.
+Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de SKR [@SKR\_board\_32bits](https://t.me/SKR_board_32bits).‌
 
-Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 ## **Diagramas SKR E3 TURBO**
 
