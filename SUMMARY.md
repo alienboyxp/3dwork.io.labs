@@ -61,7 +61,7 @@
 
 ## Software
 
-* [PrusaSlicer/SuperSlicer](software/untitled.md)
+* [PrusaSlicer/SuperSlicer](software/prusaslicer.md)
 
 ## PULSAR Cube
 
