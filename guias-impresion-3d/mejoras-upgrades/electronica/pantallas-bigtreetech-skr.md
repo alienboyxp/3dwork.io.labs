@@ -168,7 +168,7 @@ Esto es muy útil cuando acumulas muchos y no recuerdas ni si quiera que tenías
 
 1. Actualiza el firmware de tu pantalla con la última versión disponible, la compatibilidad con este se añadió a partir de Vx.x.27.
 2. Asegúrate de habilitar la previsualización **desactivando el modo List Mode**, puedes hacerlo desde **Menu -&gt; Settings -&gt; Feature -&gt; Files viewer - List Mode**
-3. Descarga el siguiente zip y lo descomprimes
+3. Descarga el siguiente [zip](https://github.com/bigtreetech/Bigtree3DPluginSuit/archive/master.zip) y lo descomprimes
 4. Encuentra el directorio de plugins de tu Ultimaker Cura:
    1. **Windows**, el directorio por defecto es C:\Program Files\Ultimaker Cura \[version number\]\plugins
    2. **macOS**, botón derecho sobre Ultimaker Cura.app y Show Package Contents. El directorio por defecto es Ultimaker Cura.app -&gt; Contents -&gt; Resources -&gt; Plugins -&gt; Plugins
