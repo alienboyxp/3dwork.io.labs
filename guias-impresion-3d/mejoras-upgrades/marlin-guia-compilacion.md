@@ -79,7 +79,7 @@ El siguiente paso es instalar el software necesario, para ello descargue e insta
 * Colocamos la tarjeta SD con el nuevo Firmware
 * Encendemos la Impresora, tras unos segundos, veremos como esta instalando el nuevo firmware, poco después, y se iniciara con nuestro nuevo Marlin instalado.
 
-## Consejos:
+## Algunos Consejos
 
 * Si vas a actualizar una impresora y no tienes los ficheros de Marlin originales y has hecho cambios en la configuración de la pantalla te aconsejamos hacer un M503 desde un cliente de terminal como Pronterface y guardarte la información que devuelve ya que son los valores de la EEPROM muy útiles a ajustar en tu nuevo firmware
 * Recuerda que es aconsejable después de subir el firmware cargar los valores de fábrica de la EEPROM, esto lo puedes hacer por terminal con un M502 y seguido un M500 o desde la pantalla en modo Marlin en Configuración/Restaurar y seguido Configuración/Salvar EEPROM
