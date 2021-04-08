@@ -86,6 +86,8 @@ El siguiente paso es instalar el software necesario, para ello descargue e insta
 * Las placas actuales se genera un firmware.bin que se pone en la SD, en estos casos si el proceso de actualización se hizo de forma correcta este fichero queda renombrado a .CUR. Así que para comprobar si el proceso fué de forma correcta extrae la SD después de realizar el proceso de actualización y comprueba desde tu ordenador que el .BIN cambió a .CUR
 * Otras placas, normalmente antiguas de 8b, se "quema" directamente el nuevo firmware en la placa con lo que es necesario tenerlas conectadas por USB. En algunos casos puede dar problemas al programarla por USB por lo que puedes ir a la ubicación donde dejó el binario compilado... en estos casos es un fichero .hex normalmente... y subirlo desde otras herramientas especificas para tu impresora, los slicers/fileteadores como PrusaSlicer o Cura pueden realizar este paso de forma bastante sencilla también
 
+## Opciones imprescindibles conocer en Marlin
+
 {% embed url="https://3dwork.io/configurar-marlin-2-0-x-desde-cero/" %}
 
 
