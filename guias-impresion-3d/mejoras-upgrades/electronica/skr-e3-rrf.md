@@ -112,3 +112,13 @@ Las pantallas SKR están preparadas con el correcto orden en el cableado \(RESET
 
 **Ventilador de Capa**
 
+En este caso contaremos con FAN0 que será la salida de ventilador de capa para el primer hotend y FAN1 que lo hará para el segundo ventilador de capa de un segundo hotend usando la placa IDEX o como refrigeracion del HotEnd principal. 
+
+![](../../../.gitbook/assets/image%20%2865%29.png)
+
+Recordar de nuevo que en este caso es muy muy importante la polaridad al conectar los ventiladores a la placa.
+
+## **Instalación del firmware**
+
+
+
