@@ -162,7 +162,7 @@ Os explicamos en unos sencillos pasos como poder previsualizar los gcodes que te
 
 Esto es muy útil cuando acumulas muchos y no recuerdas ni si quiera que tenías en cada :P.
 
-![](../../../.gitbook/assets/image%20%2856%29.png)
+![](../../../.gitbook/assets/image%20%2861%29.png)
 
 ### **Cura**
 
