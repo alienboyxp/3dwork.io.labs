@@ -64,7 +64,7 @@ SKR E3 DIP
 En cuanto BAUDRATE podeis elegir entre estos wue son los wue suelen dar mejor resultado:  
 \#define BAUDRATE 115200  
 O  
-\#define BAUDRATE 115200
+\#define BAUDRATE 250000
 
 ## **Actualización de Firmware y Configuración**
 
@@ -162,7 +162,7 @@ Os explicamos en unos sencillos pasos como poder previsualizar los gcodes que te
 
 Esto es muy útil cuando acumulas muchos y no recuerdas ni si quiera que tenías en cada :P.
 
-![](../../../.gitbook/assets/image%20%2848%29.png)
+![](../../../.gitbook/assets/image%20%2856%29.png)
 
 ### **Cura**
 
@@ -177,7 +177,7 @@ Esto es muy útil cuando acumulas muchos y no recuerdas ni si quiera que tenías
 6. Abrimos Cura y hacemos un fileteado de una pieza
 7. Veremos que el botón de guardar tiene un desplegable que nos permitirá guardar en el nuevo formato Bigtree3D
 
-![](../../../.gitbook/assets/image%20%2843%29.png)
+![](../../../.gitbook/assets/image%20%2845%29.png)
 
 ### **PrusaSlicer/SuperSlicer**:
 
