@@ -4,7 +4,7 @@ description: >-
   con firmwares Marlin y RRF (Duet).
 ---
 
-# SKR E3 RRF
+# SKR E3 RRF \(EN PROCESO\)
 
 ![](../../../.gitbook/assets/image%20%2844%29.png)
 
