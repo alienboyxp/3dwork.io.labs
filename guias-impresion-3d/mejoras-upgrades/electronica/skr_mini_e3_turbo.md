@@ -1,7 +1,5 @@
 ---
-description: >-
-  By JJR @ https://3dwork.io/ - Invitame a un cafe si te fue de ayuda
-  paypal.me/alienboyxp
+description: Analizamos esta excelente placa la más versátil y potente de su gama.
 ---
 
 # SKR MINI E3 Turbo
@@ -15,6 +13,10 @@ Recordamos que todas las placas de la gama E3 están especialmente diseñadas pa
 Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de SKR [@SKR\_board\_32bits](https://t.me/SKR_board_32bits).‌
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
+
+{% embed url="https://s.click.aliexpress.com/e/\_A6sB9v" %}
+
+
 
 ## **Diagramas SKR E3 TURBO**
 

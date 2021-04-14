@@ -211,3 +211,13 @@ Por otro lado podemos crearnos, como buenos makers, nosotros mismos ese cable si
 
 ![](https://telegra.ph/file/109a451f6106c47d480e7.png)
 
+## Links de Compra
+
+{% embed url="https://s.click.aliexpress.com/e/\_9fMWsT" %}
+
+{% embed url="https://s.click.aliexpress.com/e/\_APXHkJ" %}
+
+{% embed url="https://s.click.aliexpress.com/e/\_AVRWDl" %}
+
+
+

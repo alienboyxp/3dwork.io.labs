@@ -1,20 +1,23 @@
 ---
 description: >-
-  By JJR @ https://3dwork.io/ - Invitame a un cafe si te fue de ayuda
-  paypal.me/alienboyxp
+  La SKR E3 DIP V1.1 tiene unas dimensiones de placa compatible con Ender 3
+  además de contar con drivers intercambiables lo que le da gran versatilidad y
+  una placa perfecta como recambio de la original.
 ---
 
 # SKR E3 DIP V1.1
 
 ![](https://telegra.ph/file/5572d5c2d018e273f88fb.png)
 
-La SKR E3 DIP V1.1 tiene unas dimensiones de placa compatible con Ender 3 además de contar con drivers intercambiables lo que le da gran versatilidad y una placa perfecta como recambio de la original.
-
 Recordamos que todas las placas de la gama E3 están especialmente diseñadas para el uso o reemplazo de la electrónica de una impresora Creality Ender 3 aunque puede ser usada en otras impresoras sin problema atendiendo al cableado y características específicas de cada una.
 
 Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de SKR [@SKR\_board\_32bits](https://t.me/SKR_board_32bits).‌
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
+
+{% embed url="https://s.click.aliexpress.com/e/\_9v6DhD" %}
+
+
 
 ## **Diagramas SKR E3 DIP V1.1**
 

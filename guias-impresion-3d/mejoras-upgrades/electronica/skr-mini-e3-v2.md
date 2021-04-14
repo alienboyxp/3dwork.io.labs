@@ -18,6 +18,10 @@ Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
+{% embed url="https://s.click.aliexpress.com/e/\_9I0Esb" %}
+
+
+
 ## **Diagramas de la SKR MINI E3 v2**
 
 Diagrama de conexionesDiagrama del pineado
