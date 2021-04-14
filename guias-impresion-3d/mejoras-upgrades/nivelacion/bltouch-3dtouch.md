@@ -15,6 +15,14 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWo
 
 Para más información visita [https://3dwork.io/configurar-bltouch-en-marlin/](https://3dwork.io/configurar-bltouch-en-marlin/)
 
+Podéis encontrar como ejemplo el sensor original de AntcLabs y un clónico 3DTouch:
+
+{% embed url="https://s.click.aliexpress.com/e/\_ASO4vz" %}
+
+{% embed url="https://s.click.aliexpress.com/e/\_ATWOTt" %}
+
+
+
 ## Esquemas de conexión
 
 ### **Diagrama conexión SKR 1.3**
