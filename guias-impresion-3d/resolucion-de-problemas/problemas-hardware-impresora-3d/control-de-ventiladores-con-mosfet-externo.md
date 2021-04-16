@@ -156,3 +156,9 @@ Simplemente deberemos intercambiar los pines asignados entre los que usemos:
 `# define FAN_PIN P1_00 // 3DWORK - nuevo pin ventilador MOSFET externo  
 # define POWER_LOSS_PIN P2_03 // 3DWORK - antiguo pin ventilador roto`
 
+{% hint style="info" %}
+En ocasiones, dependiendo del pin/mosfet/ventilador usado, es necesario ajustar Marlin para que la señal PWM se ajuste al cambio si nuestro ventilador no funciona como debiera.
+
+Para ello podemos revisar si con **\#define FAN\_SOFT\_PWM** \(y otras dos opciones relacionadas con este cambio\) podemos hacer que esta señal funcione correctamente con nuestra configurracion.
+{% endhint %}
+
