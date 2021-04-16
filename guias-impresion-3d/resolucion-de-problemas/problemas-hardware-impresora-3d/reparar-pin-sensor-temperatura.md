@@ -10,6 +10,10 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDW
 
 **Es MUY aconsejable que desechemos ese termistor para evitar que ese fallo vuelva a dañar otro pin de nuestra placa!!!**
 
+{% embed url="https://s.click.aliexpress.com/e/\_9iwUDd" %}
+
+{% embed url="https://s.click.aliexpress.com/e/\_AOHeqf" %}
+
 ## Cambios en Marlin
 
 El procedimiento es muy sencillo pero antes de nada deberemos de tener claro 3 puntos importantes:
