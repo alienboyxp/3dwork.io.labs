@@ -8,7 +8,7 @@
 
 ## **Antes de comenzar!!!**
 
-![](../.gitbook/assets/image%20%2848%29.png)
+![](../.gitbook/assets/image%20%2844%29%20%281%29.png)
 
 Por favor entiende que instalar Klipper en tu impresora require de cierta experiencia con impresoras 3d, hardware y software. Puede no ser una tarea trivial para gente que se acaba de iniciar en el mundo 3D o que no dispone de unos minimos conocimientos ya que puedes romper tu impresora o pi durante el proceso
 
@@ -70,7 +70,7 @@ Si necesitamos volver a lanzar Kiauh en el futuro podemos ir a `home/pi/kiauh y 
 
 Una vez hemos realizado el proceso completo y lanzamos Kiauh deveriamos ver un menú como este:
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2845%29.png)
 
 ### Instalando Klipper, Moonraker y Fluidd
 
@@ -80,12 +80,12 @@ Para nuestra guía vamos a usar Klipper que es el core del sistema, Moonraker qu
 
 De las opciones del menú eligiremos la opcion 1 para acceder al menú de instalación
 
-![](../.gitbook/assets/image%20%2851%29.png)
+![](../.gitbook/assets/image%20%2846%29%20%281%29.png)
 
 Volveremos a elegir la opción 1 y comenzaremos el proceso de instalación:
 
 * Eligiremos compilar nuestro firmware
 * Por ahora no elegiremos actualizar nuestra MCU
 
-![](../.gitbook/assets/image%20%2859%29.png)
+![](../.gitbook/assets/image%20%2847%29%20%281%29.png)
 

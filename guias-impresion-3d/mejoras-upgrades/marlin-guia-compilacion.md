@@ -41,6 +41,19 @@ El siguiente paso es instalar el software necesario, para ello descargue e insta
 
 ![](https://wiki.eurek.org/wp-content/uploads/2019/12/image-18-1024x769.png)
 
+{% hint style="info" %}
+**Posibles soluciones a problemas en la instalación de la extensión Platformio:**
+
+* **Instala Python antes**, tal como se sugiere en esta guía, desde su web o la App Store de Windows
+* **Ejecuta VSC como administrador**, al menos durante la instalación de las extensiones necesarias, así evitaras que en determinadas configuraciones de Windows ciertas acciones esten restringidas o bloqueadas
+* **Asegúrate que tú antivirus/firewall no está bloqueando** el proceso de VSC/instalación Platformio ya que partes del proceso requieren descargar módulos desde Internet.
+* Si no ha funcionado... empieza de cero y en el orden correcto de instalación:
+  * **Desinsta completamente VSC** y cualquier otro componente relacionado que instalaste
+  * **Lanzar un limpiador de registro** como CCleaner o similar, eliminando cualquier referencia a aplicaciones que no sean necesarias
+  * **Borrar cualquier directorio que quede** relacionado con estas tareas de compilado de Marlin
+  *  **Instalar todo de cero** siguiendo los pasos de la guía de esta guía
+{% endhint %}
+
 ## Importación y compilación de Marlin 2.0.x
 
 * Abrimos el explorador de archivos de Windows y accedemos a la carpeta donde hemos descargado y descomprimido el repositorio de Marlin .
