@@ -32,27 +32,21 @@ Con esto dispondremos de un nuevo menu en Configuración/Avanzado/Probe OffsetsD
 
 Desde el terminal pero se puede realizar de otras formas
 
- 1\) G28 para realizar un home
+1. **G28** para realizar un home
+2. **M851 Z0** ajusta el offset de Z a 0
+3. **M211 S0** desactiva los enstop de seguridad, ojo!!! al deshabilitar esto los motores pueden chocar con chasis o cama... ir con cuidado
+4. **G1 X150 Y150 Z0 F7000** para ubicar el cabezal de impresión en el centro de la cama, este ejemplo es para una cama de 300x300 para adaptarlo al tamaño de tu cama modifica X150 e Y150 por los valores adecuados a tu impresora
+5. Desde el Pronterface o LCD ir bajando Z y ajustar con un folio de la forma tradicional
+6. Una vez encontremos la altura adecuada revisar el valor Z en el LCD y ajustarlo como Z-Offset mediante el comando **M851 Z "X"** \(X es el valor mostrado en la pantalla\)
+7. Hacer un homing de todos los ejes desde el LCD o **G28**
+8. Realizar el paso 4 de nuevo y verificar que el cabezal queda correctamente ubicado y la posición de Z es la correcta obtenida anteriormente si no volver a realizar el proceso
+9. **M500** para guardar los valores en EEPROM y se aconseja guardar este valor en los Offset del Probe en Marlin para futuro. Tambien se puede hacer desde los menus del LCD en Configuracion/Salvar EEPROM
 
- 2\) M851 Z0 ajusta el offset de Z a 0
-
- 3\) M211 S0 desactiva los enstop de seguridad, ojo!!! al deshabilitar esto los motores pueden chocar con chasis o cama... ir con cuidado
-
- 4\) G1 X150 Y150 Z0 F7000 para ubicar el cabezal de impresión en el centro de la cama \(para una cama de 300x300\)
-
- 5\) Desde el Pronterface o LCD ir bajando Z y ajustar con un folio de la forma tradicional
-
- 6\) Una vez encontremos la altura adecuada revisar el valor Z en el LCD y ajustarlo como Z-Offset mediante el comando M851 Z "X" \(X es el valor mostrado en la pantalla\)
-
- 7\) Hacer un homing de todos los ejes desde el LCD o G28
-
- 8\) Realizar el paso 4 de nuevo y verificar que el cabezal queda correctamente ubicado y la posición de Z es la correcta obtenida anteriormente si no volver a realizar el proceso
-
- 9\) M500 para guardar los valores en EEPROM y se aconseja guardar este valor en los Offset del Probe en Marlin para futuro![](https://lh4.googleusercontent.com/Mce2bNax3D9-ZzPxJ1eEDM23ytPynKdZe9kqLu-QJ_yG8f9xu1l_9BsNNJe7U-M2vnE184ULljGgfe_BjbdeSOjRNLDePRR9JZaD678npKjCqQYJJpIv5hqFX74mdBpd2OR5pQOk)
+![](https://lh4.googleusercontent.com/Mce2bNax3D9-ZzPxJ1eEDM23ytPynKdZe9kqLu-QJ_yG8f9xu1l_9BsNNJe7U-M2vnE184ULljGgfe_BjbdeSOjRNLDePRR9JZaD678npKjCqQYJJpIv5hqFX74mdBpd2OR5pQOk)
 
 ## **3. Generación de malla UBL**
 
-se puede realizar desde el LCD en las herramientas UBL como desde terminal \(emplearemos el terminal para el ejemplo\)
+Se puede realizar desde el LCD en las herramientas UBL como desde terminal \(emplearemos el terminal para el ejemplo\)
 
 1. **Ajuste manual de la cama 4 esquinas y folio tradicional**
 2. Realizaremos un **G28**
