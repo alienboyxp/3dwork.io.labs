@@ -16,11 +16,11 @@ Para poder realizar este tipo de cambios requerimos un MOSFET externo, aunque no
 
 * MOSFET para la gestión del hotend o cama calientes, estos normalmente ayudan a proteger la electrónica de la placa y mejoran la potencia y estabilidad suministradas a estos componentes. Son muy aconsejables en el caso de uso de camas calientes ya que generan un alto consumo y desgaste sobre la electrónica.
 
-{% embed url="https://www.amazon.es/gp/product/B08LMFC7F9/ref=ppx\_yo\_dt\_b\_asin\_image\_o02\_s00?ie=UTF8&psc=1" %}
+{% embed url="https://s.click.aliexpress.com/e/\_AcsPtD" %}
 
 * MOSFET para la gestión de ventiladores, en este caso suelen ser pequeños MOSFET que nos permitirán gestionar un ventilador ya sea para sustituir alguno dañado de la placa o como extra para usar en otras partes de nuestra impresora
 
-{% embed url="https://www.amazon.es/Innovateking-EU-Superior-IRF520-Arduino-Raspberry/dp/B07MH5C629/ref=sr\_1\_4?\_\_mk\_es\_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=mosfet+arduino&qid=1617207373&s=electronics&sr=1-4" %}
+{% embed url="https://s.click.aliexpress.com/e/\_9HwdFV" %}
 
 ## Conexiónes de un MOSFET externo
 
