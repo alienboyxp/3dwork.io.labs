@@ -62,7 +62,7 @@ El siguiente paso es instalar el software necesario, para ello descargue e insta
 {% hint style="info" %}
 Comprobaciones para verificar que Python esta correctamente instalado \(**depende de version de Python instalada y de sistema operativo**\) ya que es una parte fundamental tanto de la instalación de Platformio y para que funcione:
 
-* Ejecutar desde una linea de comandos
+* Ejecutar desde una linea de comandos \(tecla **Windows + R -&gt; `cmd.exe`**`)`
   * **echo %PATH%** - esto deberia retornar un listado de directorios donde uno de ellos debería de ser el de Python
   * **echo %PYTHONPATH%** - al igual que el anterior deberia retornar el path de Python
   * python --version - en el caso que este correcto lo anterior debería retornar la version de nuestro Python instalado
