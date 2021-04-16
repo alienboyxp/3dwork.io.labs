@@ -1,8 +1,13 @@
+---
+description: >-
+  Marlin es el software que gobierna tu Impresora, a continuación te enseñamos
+  como prepararlo para poder instalar o actualizar en tu Impresora.
+---
+
 # Marlin - Guía Compilación
 
 ![](https://telegra.ph/file/0c5672a9f68d4955fbb13.jpg)
 
-Marlin es el software que gobierna tu Impresora, a continuación te enseñamos como prepararlo para poder instalar o actualizar en tu Impresora.  
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 ## Consigue una copia de Marlin \(última versión estable\)
