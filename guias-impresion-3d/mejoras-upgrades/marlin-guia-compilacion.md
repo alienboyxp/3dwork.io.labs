@@ -36,9 +36,9 @@ Ahora y dispone de los archivos de Marlin en tu ordenador deberemos de descompri
 
 El siguiente paso es instalar el software necesario, para ello descargue e instale los siguientes programas:
 
-* Python: [https://www.python.org/downloads/](https://www.python.org/downloads/) -&gt; _**tambien puedes descargarlo desde la Store de Apps de Windows ya que puede dar problemas en ocasiones si no se hace de una de estas dos formas**_
-* Git: [https://git-scm.com/](https://git-scm.com/)
-* Visual Studio Code: [https://code.visualstudio.com/](https://code.visualstudio.com/)A pesar de que parezca que Python y Git no se usan en ningún paso, son requerimientos de Visual Studio Code para este tutorial
+* **Python**: [https://www.python.org/downloads/](https://www.python.org/downloads/) asegurandote marcar que actualice los PATH de tu sistema -&gt; _**tambien puedes descargarlo desde la Store de Apps de Windows ya que puede dar problemas en ocasiones si no se hace de una de estas dos formas**_
+* **Git**: [https://git-scm.com/](https://git-scm.com/)
+* **Visual Studio Code**: [https://code.visualstudio.com/](https://code.visualstudio.com/)A pesar de que parezca que Python y Git no se usan en ningún paso, son requerimientos de Visual Studio Code para este tutorial
 * Una vez instalados ambos programas, vedemos instalar el plugin PlatformIO en Visual Studio Code, para ello seguiremos los siguientes pasos:
 * Presionamos los cuadrados del menú izquierdo
 * en el buscador escribimos «PlatformIO»
