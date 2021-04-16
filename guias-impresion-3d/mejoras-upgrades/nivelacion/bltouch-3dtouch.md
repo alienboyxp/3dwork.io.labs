@@ -164,23 +164,15 @@ Con esto dispondremos de un nuevo menu en Configuración/Avanzado/Probe Offsets
 
 ## **Ajuste del Z-Offset - Pronterface**
 
-Desde un cliente terminal como Pronterface:  
-  
- 1\) G28 para realizar un home  
-  
- 2\) M851 Z0 ajusta el offset de Z a 0  
-  
- 3\) M211 S0 desactiva los enstop de seguridad, ojo!!! al deshabilitar esto los motores pueden chocar con chasis o cama... ir con cuidado  
-  
- 4\) G1 X150 Y150 Z0 F7000 para ubicar el cabezal de impresión en el centro de la cama \(para una cama de 300x300\)  
-  
- 5\) Desde el Pronterface o LCD ir bajando Z y ajustar con un folio de la forma tradicional  
-  
- 6\) Una vez encontremos la altura adecuada revisar el valor Z en el LCD y ajustarlo como Z-Offset mediante el comando M851 Z "X" \(X es el valor mostrado en la pantalla\)  
-  
- 7\) Hacer un homing de todos los ejes desde el LCD o G28  
-  
- 8\) Realizar el paso 4 de nuevo y verificar que el cabezal queda correctamente ubicado y la posición de Z es la correcta obtenida anteriormente si no volver a realizar el proceso  
-  
- 9\) M500 para guardar los valores en EEPROM y se aconseja guardar este valor en los Offset del Probe en Marlin para futuro
+Desde un cliente terminal como Pronterface:
+
+1. **Ajuste manual de la cama 4 esquinas y folio tradicional**
+2. Realizaremos un **G28**
+3. Realizaremos un **pre-calentado de cama y nozzle** que normalmente usemos
+4. Realizaremos una malla usando **G29 P1** desde el terminal o desde las herramientas UBL de la pantalla
+5. Una vez finalizado podemos usar **G29 T** para visualizar los valores de la malla. Puedes usar estas herramientas web para verlo graficamente: [https://mkdev.co.uk/mesh-visualizer/](https://mkdev.co.uk/mesh-visualizer/) [http://lokspace.eu/3d-printer-auto-bed-leveling-mesh-visualizer/](http://lokspace.eu/3d-printer-auto-bed-leveling-mesh-visualizer/) [https://i.chillrain.com/index.php/3d-printer-auto-bed-leveling-mesh-visualizer/](https://i.chillrain.com/index.php/3d-printer-auto-bed-leveling-mesh-visualizer/)
+6. Por la ubicación del sensor de nivelación en muchas ocasiones Marlin no va a llegar a todos los puntos de la malla con lo que en el paso anterior veremos coordenadas sin valores solamente con un ".". Para realizar el relleno de todos los puntos que no pudieron medirse lanzaremos un **G29 P3** \(**G29 P3 T** mejor ya que calcula todos los puntos que falten\) este comando calcula extrapolando valores que si que se pudieron verificar a los que no pudieron medirse.
+7. Una vez aparezcan todos los puntos de la malla con un valor, fuera medido o extrapolado por el punto anterior, almacenaremos la malla en la posición 1 de la EEPROM con **G29 S1**
+8. Nos aseguramos de que el autonivelado quede activo con **G29 A**
+9. Ahora que ya tenemos todos los valores básicos correctos lanzaremos un **M500** para guardarlos en la EEPROM. **IMPORTANTE!!! cada vez que la EEPROM sea borrada o reseteada se tiene que volver a realizar este proceso!!**!
 
