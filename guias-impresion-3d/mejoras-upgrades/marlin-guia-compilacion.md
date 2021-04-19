@@ -15,17 +15,20 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDW
 * Desde tu navegador favorito ves al GitHub oficial de Marlin: [https://github.com/MarlinFirmware/Marlin](https://github.com/MarlinFirmware/Marlin)
 * Una vez en la página descarga el código de Marlin de la siguiente forma:
 
-![](https://telegra.ph/file/c39cb7e17a03226855085.png)
+![](../../.gitbook/assets/image%20%2851%29.png)
 
 > IMPORTANTE!!! Recuerda bajar la version estable del firmware y solo la bugfix en caso que contenga alguna mejora wue solvente un problema que te suceda en tu máquina
 
-![](https://telegra.ph/file/295556b86680b0b6a3eec.jpg)
+![](../../.gitbook/assets/image%20%2859%29.png)
 
 * El siguiente paso, si tenemos una impresora comercial, descargaremos los pre-configurados de configuración desde [https://github.com/MarlinFirmware/Configurations](https://github.com/MarlinFirmware/Configurations) y siguiendo el mismo proceso que el explicado en el punto anterior
 
-> IMPORTANTE!!! Recuerda bajar la version de preconfiguraciones wue concuerde con la versión de Marlin descargada con release en su nombre
+> **IMPORTANTE!!!** Recuerda bajar la version de preconfiguraciones que concuerde con la versión de Marlin descargada con **release** en su nombre. Como referencia existen las siguientes ramas en los preconfigurados:  
+> - **release** : son las versiones que se usan con las versiones estables de Marlin que compiles  
+> - **bugfix** : en el caso que uses un Marlin bugfix, normalmente no aconsejable, deberás usar los preconfigurados de esta rama  
+> - **import** : esta rama no es aconsejable ya que están integrados cambios que no estan ligados con versiones de Marlin directamente y pueden contener configuraciones erroneas o problemáticas
 
-![](https://telegra.ph/file/c7802d17b18ab8c8255bb.jpg)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 Ahora y dispone de los archivos de Marlin en tu ordenador deberemos de descomprimirlos.
 
