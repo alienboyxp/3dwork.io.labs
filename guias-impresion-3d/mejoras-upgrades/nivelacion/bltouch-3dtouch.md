@@ -1,14 +1,13 @@
 ---
 description: >-
-  By JJR @ https://3dwork.io/ - Invitame a un cafe si te fue de ayuda
-  https://paypal.me/alienboyxp
+  Tener instalado un sensor de Nivelación nos permite asegurar unas primeras
+  capas perfectas sin tener que estar ajustando manualmente nuestra mecánica.
 ---
 
 # Bltouch/3DTouch
 
 ![](https://lh5.googleusercontent.com/UB7xkAUJMNHPbd81QghwDEZIkbHwfGCuRWWrTixvJnYR5bG-s52njZGCR0H1t28X_AP7fldDC6G8D20znRLpzwJaHSZxQZF4hghsL3hr9d0Fd28kalS5gIsNIsXo6jo00urQja4p)
 
-Tener instalado un sensor de Nivelación nos permite asegurar unas primeras capas perfectas sin tener que estar ajustando manualmente nuestra mecánica.  
 En este caso usaremos un BLtouch que es un sensor con mucha precisión y polivalente ya que puede trabajar wn cualquier superficie.
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
