@@ -346,3 +346,6 @@ case 1:
         }
 ```
 
+> Agradecimientos a...  
+> **MAXI** de la [**comunidad Ryper 3D**](https://t.me/RYPER3D) por la recopilación de cambios y tests
+
