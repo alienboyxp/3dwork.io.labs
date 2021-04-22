@@ -22,6 +22,24 @@ Para poder realizar este tipo de cambios requerimos un MOSFET externo, aunque no
 
 {% embed url="https://s.click.aliexpress.com/e/\_9HwdFV" %}
 
+Por otro lado y si estas buscando ventiladores te aconsejamos los siguientes:
+
+* Ventiladores 4010 para hotend o electronica silenciosos \(12v!!!\)
+
+{% embed url="https://www.amazon.es/Noiseblocker-BlackSilentFan-40mm-Ventilador-ordenador/dp/B0083A0BY4/ref=sr\_1\_2?\_\_mk\_es\_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=noiseblocker+4010&qid=1619086367&sr=8-2" %}
+
+{% embed url="https://www.amazon.es/Solutions-Silent-Carcasa-ordenador-Ventilador/dp/B00BF3S83C/ref=sr\_1\_1?\_\_mk\_es\_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=silent+4&qid=1619086404&sr=8-1" %}
+
+{% embed url="https://s.click.aliexpress.com/e/\_A178dF" %}
+
+* Ventiladores 5015 para ventilación de capa \(24v\)
+
+{% embed url="https://s.click.aliexpress.com/e/\_As2Nj7" %}
+
+{% embed url="https://s.click.aliexpress.com/e/\_AYzmq5" %}
+
+
+
 ## Conexiónes de un MOSFET externo
 
 ![](../../../.gitbook/assets/image.png)
