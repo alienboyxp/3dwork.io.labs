@@ -65,6 +65,13 @@
 
 * [PrusaSlicer/SuperSlicer](software/prusaslicer.md)
 
+## MMU2+1S by RYPER
+
+* [Que es MMU2+1S?](mmu2+1s-by-ryper/que-es-mmu2+1s.md)
+* [Material necesario](mmu2+1s-by-ryper/material-necesario.md)
+* [Klipper](mmu2+1s-by-ryper/klipper.md)
+* [Marlin](mmu2+1s-by-ryper/marlin.md)
+
 ## PULSAR Cube
 
 * [Untitled](pulsar-cube/untitled.md)
