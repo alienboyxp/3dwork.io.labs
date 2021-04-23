@@ -24,6 +24,8 @@ También si usas Cura puedes instalar este plugin que te permite generar y perso
 
 {% embed url="https://marketplace.ultimaker.com/app/cura/plugins/5axes/CalibrationShapes" %}
 
+Por otro lado y recientemente han sacado un servicio online [3DOptimizer](https://3doptimizer.com/), de pago pero con posibilidad durante 7 dias para hacer los tests, que con unos tests te permite encontrar los valores y ajustes para tu slicer de forma bastante sencilla... muy aconsejable para hacer unos primeros ajustes a tu maquina.
+
 ## 1. Extrusión
 
 Una parte crítica en una impresora 3D es el control del filamento extruido.  
