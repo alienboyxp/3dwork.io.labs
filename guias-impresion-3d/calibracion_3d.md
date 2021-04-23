@@ -85,6 +85,10 @@ Esta calibración es independiente del resto, dado que no requiere que se hayan 
 
 Antes de meternos en lo que es la calibración en sí, sería bueno entender que es el PID, lo cual básicamente es un algoritmo que ayuda a la máquina a mantener los valores de temperatura deseados tanto en el Nozzle como en la Cama caliente, para ello tiene una serie de valores que ajustan la cantidad de corriente que llega a los calentadores de estos y la varía en función de las lecturas recogidas por los termistores \(sensores de temperatura\).
 
+En el caso de la cama os aconsejamos ver el siguiente video para entender la importancia de usar o no PID en la cama.
+
+{% embed url="https://www.youtube.com/watch?v=9JyydfcOcD0" %}
+
 Para realizar este ajuste podemos realizarlo de dos formas distintas:
 
 * Desde el LCD dentro del menú Temperatura o Configuración/Avanzado
