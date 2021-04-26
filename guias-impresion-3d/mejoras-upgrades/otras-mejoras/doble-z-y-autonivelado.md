@@ -61,6 +61,10 @@ en el caso de versiones de Marlin 2.0.6.x o superiror en configuration\_adv.h
 Si los **motores giran en direcciones contrarias girar el cableado para corregirlo.**
 {% endhint %}
 
+Podemos realizar el autoalineado de dos formas:
+
+#### Usando finales de carrera fisicos
+
 En el caso que sea necesario habilitar doble final de carrera y en que endstop está ubicado  
 **`#define Z_DUAL_ENDSTOPS  
 #if ENABLED(Z_DUAL_ENDSTOPS)  
@@ -72,6 +76,8 @@ Para veriones 2.0.6.x o superiores:
 
 En este caso recordar que el final de carrera a utilizar se tiene que habilitar también.  
 **`#define USE_XMAX_PLUG`**
+
+#### Usando un sensor de nivelación automático \(bltouch, inductivo, etc...\)
 
 Si realizamos el ajuste de doble Z con un ABL, algo más que aconsejable, habilitaremos el comando G34 de la siguiente forma \(recordar que previamente debemos tener configurado un probe y correctamente funcionando \(revisar la parte de nivelación en este documento para más información y habilitado el driver\):  
 **`#define Z_STEPPER_AUTO_ALIGN`**
