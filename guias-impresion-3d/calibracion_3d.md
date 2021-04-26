@@ -28,7 +28,9 @@ Por otro lado y recientemente han sacado un servicio online [3DOptimizer](https:
 
 {% embed url="https://www.youtube.com/watch?v=F31cEHaH4yo" %}
 
-## 1. Extrusión
+## 1. Ajuste vref Motores \(en construcción\)
+
+## 2. Extrusión
 
 Una parte crítica en una impresora 3D es el control del filamento extruido.  
 Este proceso no es en un eje de movimiento si no de extrusión así que se aconseja que el test se realice extruyendo filamento por el nozzle.  
@@ -51,7 +53,7 @@ El ajuste de los pasos los puedes realizar de diferentes formas:
 
 > _**Recuerda, si tienes un Marlin cocinado por ti anotar estos valores, y si modificaste por pantalla ir a Configuración/Salvar EEPROM o si lo hiciste por terminal lanzar un M500.**_
 
-## 2. Ajuste de los pasos de los motores/ejes
+## 3. Ajuste de los pasos de los motores/ejes
 
 Los cubos de calibración son simples objetos geométricos \(cubos normalmente\) que ayudan en la calibracion fina de tu impresora 3D permitiendo conseguir la mayor precisión en tus impresiones.
 
