@@ -75,9 +75,12 @@ Si realizamos el ajuste de doble Z con un ABL, algo más que aconsejable, habili
 Así como los puntos donde se desea posicionar el cabezal para las medidas del offset.  
 **`#define Z_STEPPER_ALIGN_XY { { 50, 150 }, { 210, 150 } }`**
 
-Idealmente para una impresora con formato cartesiano \(motores en ambas columnas Z\) la posicion idónea seria X 1/4 y 3/4 del tamaño y en Y 1/2.  
-Por defecto Marlin incluye tres puntos de medida, depende del numero de motores estos puntos deben coincidir en número, 2 motores Z 2 puntos de control, 3 motores Z 3 puntos de control...  
-  
+Idealmente para una impresora con formato cartesiano \(motores en ambas columnas Z\) la posicion idónea seria X 1/4 y 3/4 del tamaño y en Y 1/2.
+
+{% hint style="info" %}
+**Por defecto Marlin incluye tres puntos de medida, depende del numero de motores estos puntos deben coincidir en número, 2 motores Z 2 puntos de control, 3 motores Z 3 puntos de control...**
+{% endhint %}
+
 También es ideal el número de repeticiones de test para un ajuste fino del offset.  
 **`#define Z_STEPPER_ALIGN_ITERATIONS 10`**
 
