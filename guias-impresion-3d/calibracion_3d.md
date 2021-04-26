@@ -28,8 +28,6 @@ Por otro lado y recientemente han sacado un servicio online [3DOptimizer](https:
 
 {% embed url="https://www.youtube.com/watch?v=F31cEHaH4yo" %}
 
-
-
 ## 1. Extrusión
 
 Una parte crítica en una impresora 3D es el control del filamento extruido.  
