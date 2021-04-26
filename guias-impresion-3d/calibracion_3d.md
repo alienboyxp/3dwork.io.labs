@@ -30,7 +30,62 @@ Por otro lado y recientemente han sacado un servicio online [3DOptimizer](https:
 
 ## 1. Ajuste vref Motores \(en construcción\)
 
+VREF es simplemente el voltaje regulado que entregan nuestros drivers al motor. Un ajuste correcto del VREF nos permitirá una calibración precisa de nuestros motores.
+
+Si nuestro VREF es muy bajo nuestro motor no tendrá suficiente torque y puede causar la temida pérdida de pasos en forma de pérdida de precisión y el efecto de capas desplazadas en nuestras impresiones.  
+Si por el contrario nuestro VREF es muy alto nuestros motores puedes sobrecalentarse ocasionando efectos similares al punto anterior e incluso hacer fallar los motores o dañarlos.
+
+### Cálculo de nuestro VREF óptimo
+
+En el caso que tengamos una maquina comercial y siempre que no modifiquemos sustancialmente su mecánica/cinemática, motores o no tengamos los problemas citados anteriormente \(perdida de pasos o sobrecalentamiento/fallo de los motores\) no es normalmente necesario realizar este ajuste.
+
+El calculo de VREF depende principalmente de dos factores... el tipo de drivers que usemos y los A soportados por nuestros motores. 
+
+{% hint style="info" %}
+Es muy importante que en el caso de cambio de drivers o motores tengamos en cuenta las características de los mismos y las capacidades de los drivers.   
+Como ejemplo revisa la siguiente lista sobre los A soportados por estos tipos de drivers listando algunos a modo de ejemplo:
+
+* A4988 -&gt; 2A
+* DRV8825 -&gt; 2A
+* TMC2208 -&gt; 1.2A
+* TMC2209 -&gt; 1.7A
+
+Debemos intentar tener en concordancia los A de nuestros motores con las capacidades de nuestros drivers para evitar problemas
+{% endhint %}
+
+Con estos datos y para que sea sencillo el cálculo os aconsejamos el uso de una calculadora online donde indicar los A de vuestro motor y el % de seguridad el cual es aconsejable colocar entre 80-90%
+
+{% embed url="https://v6zmvq5nk5.codesandbox.io/" %}
+
+Ajustar el VREF en nuestra impresora
+
+Para el ajuste del VREF tenemos dos opciones dependiendo de como nuestros drivers esten instalados/configurados:
+
+#### En modo STANDALONE... usando potenciómetro y disponible en la mayoria de drivers aunque a día de hoy no tan aconsejable
+
+Para drivers en STANDALONE depende del driver deberemos medir en unos puntos con nuestro tester/multimetro, a modo de ejemplo podéis consultar la siguiente tabla donde se incluye una descripción de diferentes drivers, sus caracteristicas/configuracion y como medir el VREF:
+
+![](../.gitbook/assets/image%20%2869%29.png)
+
+{% hint style="info" %}
+**MUY IMPORTANTE!!! teniendo el tamaño y accesibilidad de los puntos donde medir ir con extremo cuidado, usar un destornillador cerámico para el ajuste del tornillo y girar este en pasos muy muy pequeños.**
+{% endhint %}
+
+#### **En modo UART... ajuste recomendable si nuestros drivers/placa lo soportan**
+
+El modo UART o modo gestionado dinámico de drivers es el más adecuado para poder aprovechar al máximo nuestros drivers siempre que estos y nuestra placa los soporten y estén configurados en nuestro Marlin.
+
+Para ajustar el VREF en este caso es muy sencillo y básicamente tenemos 3 opciones:
+
+* **Usando nuestra pantalla LCD/TFT**, en pantallas LCD modo Marlin dispondremos de un menu Configuracion/Avanzado/TMC donde ajustar la corriente antes calculada o simplemente ajustarla a nuestro gusto. Para pantallas TFT depende de cada fabricante en que parte del interfaz dispongan de esta configuración. En cualquier caso es importante salvar a EEPROM una vez hecho el cambio \(modo Marlin menú Configuracion/Salvar EEPROM\) para evitar que este se pierda al reiniciar la impresora.
+* **Mediante gcode usando un cliente terminal** como Pronterface/Octoprint o algunas pantallas TFT. Para ello enviaremos el comando M906. M906 X5 Y5 Z5 por ejemplo ajustariá la corriente de los ejes X Y Z a 5ma \(500\)... al igual que el punto anterior es importante salvar los cambios en EEPROM con un M500
+* **En los ficheros de Marlin**, en configuration\_adv y dependiendo de nuestros drivers tenemos la configuración... os aconsejamos revisar la documentación de vuestra placa para encontrar donde se ubican exactamente los cambios
+
+En este caso es muy aconsejable realizar un M503 y/o un M122 para verificar que los datos estan correctmente.
+
 ## 2. Extrusión
+
+
 
 Una parte crítica en una impresora 3D es el control del filamento extruido.  
 Este proceso no es en un eje de movimiento si no de extrusión así que se aconseja que el test se realice extruyendo filamento por el nozzle.  
