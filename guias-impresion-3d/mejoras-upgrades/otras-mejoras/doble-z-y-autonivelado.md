@@ -66,6 +66,10 @@ En el caso que sea necesario habilitar doble final de carrera y en que endstop e
 #if ENABLED(Z_DUAL_ENDSTOPS)  
 #define Z2_USE_ENDSTOP _XMAX_`**
 
+Para veriones 2.0.6.x o superiores:
+
+**`#define Z_MULTI_ENDSTOPS`**
+
 En este caso recordar que el final de carrera a utilizar se tiene que habilitar también.  
 **`#define USE_XMAX_PLUG`**
 
