@@ -37,7 +37,7 @@ Si por el contrario nuestro VREF es muy alto nuestros motores puedes sobrecalent
 
 ### Cálculo de nuestro VREF óptimo
 
-En el caso que tengamos una maquina comercial y siempre que no modifiquemos sustancialmente su mecánica/cinemática, motores o no tengamos los problemas citados anteriormente \(perdida de pasos o sobrecalentamiento/fallo de los motores\) no es normalmente necesario realizar este ajuste.
+**En el caso que tengamos una maquina comercial y siempre que no modifiquemos sustancialmente su mecánica/cinemática, motores o no tengamos los problemas citados anteriormente \(perdida de pasos o sobrecalentamiento/fallo de los motores\) no es normalmente necesario realizar este ajuste.**
 
 El calculo de VREF depende principalmente de dos factores... el tipo de drivers que usemos y los A soportados por nuestros motores. 
 
