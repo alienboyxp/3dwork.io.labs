@@ -28,7 +28,7 @@ Por otro lado y recientemente han sacado un servicio online [3DOptimizer](https:
 
 {% embed url="https://www.youtube.com/watch?v=F31cEHaH4yo" %}
 
-## 1. Ajuste vref Motores \(en construcción\)
+## 1. Ajuste vref Motores
 
 VREF es simplemente el voltaje regulado que entregan nuestros drivers al motor. Un ajuste correcto del VREF nos permitirá una calibración precisa de nuestros motores.
 
