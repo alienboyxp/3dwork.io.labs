@@ -78,7 +78,7 @@ El modo UART o modo gestionado dinámico de drivers es el más adecuado para pod
 Para ajustar el VREF en este caso es muy sencillo y básicamente tenemos 3 opciones:
 
 * **Usando nuestra pantalla LCD/TFT**, en pantallas LCD modo Marlin dispondremos de un menu Configuracion/Avanzado/TMC donde ajustar la corriente antes calculada o simplemente ajustarla a nuestro gusto. Para pantallas TFT depende de cada fabricante en que parte del interfaz dispongan de esta configuración. En cualquier caso es importante salvar a EEPROM una vez hecho el cambio \(modo Marlin menú Configuracion/Salvar EEPROM\) para evitar que este se pierda al reiniciar la impresora.
-* **Mediante gcode usando un cliente terminal** como Pronterface/Octoprint o algunas pantallas TFT. Para ello enviaremos el comando M906. M906 X5 Y5 Z5 por ejemplo ajustariá la corriente de los ejes X Y Z a 5ma \(500\)... al igual que el punto anterior es importante salvar los cambios en EEPROM con un M500
+* **Mediante gcode usando un cliente terminal** como Pronterface/Octoprint o algunas pantallas TFT. Para ello enviaremos el comando M906. M906 X5 Y5 Z5 por ejemplo ajustariá la corriente de los ejes X Y Z a 5ma \(500\)... al igual que el punto anterior es importante salvar los cambios en EEPROM con un M500 
 * **En los ficheros de Marlin**, en configuration\_adv y dependiendo de nuestros drivers tenemos la configuración... os aconsejamos revisar la documentación de vuestra placa para encontrar donde se ubican exactamente los cambios
 
 En este caso es muy aconsejable realizar un M503 y/o un M122 para verificar que los datos estan correctmente.

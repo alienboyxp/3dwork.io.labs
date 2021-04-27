@@ -72,7 +72,13 @@ Comprobaciones para verificar que Python esta correctamente instalado \(**depend
   * **pip --version** - pip es un instalador de paquetes de Python y también puede ser necesario para algunas acciones
 {% endhint %}
 
+{% hint style="info" %}
+**Lista de alternativas si no es posible hacer funcionar VSC+Platformio**:
 
+* [Usar Sublime en lugar de VSC](https://marlinfw.org/docs/basics/install_platformio_sublime.html)
+* [Usar cualquier editor de textos y lanzar Platformio desde linea de comandos](https://marlinfw.org/docs/basics/install_platformio_cli.html)
+* [Usar Atom en lugar de VSC](https://marlinfw.org/docs/basics/install_platformio_atom.html)
+{% endhint %}
 
 ## Importación y compilación de Marlin 2.0.x
 
