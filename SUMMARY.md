@@ -69,8 +69,15 @@
 
 * [Que es MMU2+1S?](mmu2+1s-by-ryper/que-es-mmu2+1s.md)
 * [Material necesario](mmu2+1s-by-ryper/material-necesario.md)
-* [Klipper](mmu2+1s-by-ryper/klipper.md)
-* [Marlin](mmu2+1s-by-ryper/marlin.md)
+* [Manual Montaje](mmu2+1s-by-ryper/manual-montaje.md)
+* [Firmware MMU](mmu2+1s-by-ryper/firmware-mmu.md)
+* [Configuración Firmware Impresora](mmu2+1s-by-ryper/klipper/README.md)
+  * [Klipper](mmu2+1s-by-ryper/klipper/klipper.md)
+  * [Marlin](mmu2+1s-by-ryper/klipper/marlin.md)
+
+---
+
+* [Configuración PrusaSlicer](configuracion-prusaslicer.md)
 
 ## PULSAR Cube
 
