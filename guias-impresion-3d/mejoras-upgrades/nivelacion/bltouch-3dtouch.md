@@ -20,41 +20,45 @@ Podéis encontrar como ejemplo el sensor original de AntcLabs y un clónico 3DTo
 
 {% embed url="https://s.click.aliexpress.com/e/\_ATWOTt" %}
 
-
-
 ## Esquemas de conexión
 
-### **Diagrama conexión SKR 1.3**
-
+{% tabs %}
+{% tab title="SKR 1.3" %}
 ![](https://lh6.googleusercontent.com/gq2Q81SUbJyT3lt4qXUBBEhxZjzNPtsXGwE0qJj_9yoIqHkgHH0ImEA_o6wWXGKAcUQ6xew4qvwOW7f23GZF6sJK2LaogIHi6p2ucBBBu_81MvbzGCAifsZelTiXuQNnTMjQw2AY)
+{% endtab %}
 
-### **Diagrama conexión SKR 1.4**
+{% tab title="SKR 1.4" %}
+Este esquema depende de la versión de Marlin cargada en la impresora, normalmente a partir de la 2.0.7.x se puede usar el puerto dedicado PROBE en la placa si no se deberá utilizar el puerto Z-STOP.
 
-Este esquema depende de la versión de Marlin cargada en la impresora, normalmente a partir de la 2.0.7.x se puede usar el puerto dedicado PROBE en la placa si no se deberá utilizar el puerto Z-STOP.![](https://telegra.ph/file/6c54297e6e5edb52cb861.png)
+![](https://telegra.ph/file/6c54297e6e5edb52cb861.png)
+
+
 
 ![](https://lh5.googleusercontent.com/ekyD_A5GbpEMf9xCeeoebOtgNanm5zvrwrMZyJYSCHq4RxghXi49hJC7_tOMDOGmTqSbALRevT1swCRy3Xp5pc9Y79_-CSnkT9Rxzyg1fTn0YnmYa2iMZpLDmrfXxGXwOkQxRsTr)
+{% endtab %}
 
-### **Diagrama conexión SKR Mini E3 1.2**
-
+{% tab title="SKR MINI E3 1.2" %}
 Usando el conector dedicado al PROBE, ojo depende de version de Marlin o configuraciones especiales.
-
-![Usando el conector Z- , ojo depende de version de Marlin o configuraciones especiales.](../../../.gitbook/assets/image%20%2837%29.png)
 
 ![Usando el conector dedicado al PROBE, ojo depende de version de Marlin o configuraciones especiales.](https://lh6.googleusercontent.com/cSevTzP07fQJSNtLIncS2m5-sTJSQoV_-I4M6lehwNUhw0QbX7ebOTCbGZZ248XVKEWJhlvEb9Oq0RBoKobiES8UmkZYpWX5mSISs97zjz_50prJ20aG9iOU7m9kZv2tjtlewviO)
 
-### **Diagrama conexión SKR MINI E3 V2**
+![Usando el conector Z- , ojo depende de version de Marlin o configuraciones especiales.](../../../.gitbook/assets/image%20%2837%29.png)
+{% endtab %}
 
+{% tab title="SKR MINI E3 V2" %}
 ![](https://lh5.googleusercontent.com/S7MWMIPbTX8GcGJmKNy4ZU1vzPm_ToYfc99FVobYYgBq_6hgrw07CXVuYJ2UL4jKCezvOZrHvjTc_3aV3YH0xvM6l5UK5Y5a7z6cvfIba8WZIu5LxpQlGVJMp8Lc4P7H3m21jIGo)
+{% endtab %}
 
-### **Diagrama conexión SUNLU S8**
-
+{% tab title="SUNLU S8" %}
 ![](https://lh4.googleusercontent.com/W5qBvoYdZE9ByeuaLWWr5RCTDIdOCKqhUZO3P9gNYjWLMt2-WxpyN-9D7wET6hSgshalMO8MOHaj9dXHV9cffFkLqZgOj0cVL9A1-L8nVcxmlU0YOYlvnEmM1IYMGAbx6_SqQWZP)
+{% endtab %}
 
-### **Diagrama conexión Artillery X1/Genius**
-
+{% tab title="Artillery X1/Genius" %}
 Importante actualizar el firmware a la última versión o uno custom y actualizar el firmware del TFT que tenga soporte, este es muy aconsejable https://github.com/wgcv/RAWR-TFT-Firmware-Artillery3D. Tambien puedes ver el siguiente video del proceso https://youtu.be/QY0BPCdgkr4
 
 ![](https://telegra.ph/file/4e16399723c1b956acd3e.png)
+{% endtab %}
+{% endtabs %}
 
 ## **Cambios en Marlin**
 
