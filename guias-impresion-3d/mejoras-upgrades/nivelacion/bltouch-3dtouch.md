@@ -65,7 +65,7 @@ Importante actualizar el firmware a la última versión o uno custom y actualiza
 * Indicamos el tipo de sensor de nivelación **`#define BLTOUCH`**
 * Ajustamos los offsets \(localización del sensor de nivelación con respecto a la punta del nozzle\) del sensor de nivelación **`#define NOZZLE_TO_PROBE_OFFSET…`**
 
-> Es muy importante una vez subidos los cambios veríficar que loa offsets esten correctamente cargados en la EEPROM. Esto lo podemos verificar usando el comando **M503** desde Pronterface/Octoprint o desde la propia pantalla \(segun version y opciones habilitadas en Marlin\) en Configuración/Avanzado/Probe Offsets.   
+> Es muy importante una vez subidos los cambios veríficar que los offsets esten correctamente cargados en la EEPROM. Esto lo podemos verificar usando el comando **M503** desde Pronterface/Octoprint o desde la propia pantalla \(segun version y opciones habilitadas en Marlin\) en Configuración/Avanzado/Probe Offsets.   
 > En el caso que no estén cargados correctamente esros valores podemos refrescar los datos desde Pronterface/Octoprint usando **M502** **M500** o desde la pantalla de la impresora **Configuración Reset Load Save Eeprom**.
 
 ### Valores offsets PROBE dependiendo de ubicación del mismo
@@ -137,7 +137,7 @@ Con esto dispondremos de un nuevo menu en Configuración/Avanzado/Probe Offsets
 
 ![](https://lh4.googleusercontent.com/O3_2XDPXKbzpRQQqKDeGKUMzsofDmuDehM0nLqk8-ZGGHqT60aZUAjyVo_kxb89AnmyN5iTYRvd1otIS10OsUpSRmJm-2ChpUUZhRhMTh0XJb-bLyM4E6r1giNzPXfmRlm8IANzV)
 
-* Para verificar que todos los valores anteriores de offset son correctos nos fijaremos que el home se realiza en el centro de la cama con el sensor de nivelado en el centro de la misma
+* Para verificar que todos los valores anteriores de offset son correctos nos fijaremos que el home se realiza en el centro de la cama con el sensor de nivelado en el centro de la misma. En el caso que no quede perfectamente centrado: - asgurate que los offsets de tu sensor estan correctamente cargados en la EEPROM - asegura que tu X0Y0 coincidan exactamente con el inicio de la cama y Xmax Ymax coinciden exactamente con el final de la cama - revisa que no has modificado los valores de SAFE\_HOMING
 
 ![](https://lh6.googleusercontent.com/2JGxz5P78FqGo0iFFUs09BtgyXgWUhlHh-yVS5Werzzsga1U8mGHuNii8xA3K6SI6f66JJXhpaxM1HuhHRSs-kgqC8WYD3qCa8MX-sX9lLJvx59Z0W1I4iYUo09AHEE0ePTk1iPi)
 
