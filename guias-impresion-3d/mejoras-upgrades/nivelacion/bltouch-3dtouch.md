@@ -137,7 +137,18 @@ Con esto dispondremos de un nuevo menu en Configuración/Avanzado/Probe Offsets
 
 ![](https://lh4.googleusercontent.com/O3_2XDPXKbzpRQQqKDeGKUMzsofDmuDehM0nLqk8-ZGGHqT60aZUAjyVo_kxb89AnmyN5iTYRvd1otIS10OsUpSRmJm-2ChpUUZhRhMTh0XJb-bLyM4E6r1giNzPXfmRlm8IANzV)
 
-* Para verificar que todos los valores anteriores de offset son correctos nos fijaremos que el home se realiza en el centro de la cama con el sensor de nivelado en el centro de la misma. En el caso que no quede perfectamente centrado: - asgurate que los offsets de tu sensor estan correctamente cargados en la EEPROM - asegura que tu X0Y0 coincidan exactamente con el inicio de la cama y Xmax Ymax coinciden exactamente con el final de la cama - revisa que no has modificado los valores de SAFE\_HOMING
+* Para verificar que todos los valores anteriores de offset son correctos nos fijaremos que el home se realiza en el centro de la cama con el sensor de nivelado en el centro de la misma.
+
+{% hint style="info" %}
+En el caso que no quede perfectamente centrado:
+
+* verifica que los offsets de tu sensor configurados en**`NOZZLE_TO_PROBE_OFFSET`**
+
+   estan correctamente cargados en la **EEPROM** tal como indicamos en la modificación de Marlin para esa variable
+
+* confirma que tus coordenadas **X0Y0** coincidan exactamente con el **inicio de la cama** y **Xmax Ymax** coinciden exactamente con el **final de la cama**
+* asegurate que **no has modificado** las formulas de la función **SAFE\_HOMING** que por defecto usa el tamaño de tu cama en cada eje /2
+{% endhint %}
 
 ![](https://lh6.googleusercontent.com/2JGxz5P78FqGo0iFFUs09BtgyXgWUhlHh-yVS5Werzzsga1U8mGHuNii8xA3K6SI6f66JJXhpaxM1HuhHRSs-kgqC8WYD3qCa8MX-sX9lLJvx59Z0W1I4iYUo09AHEE0ePTk1iPi)
 
