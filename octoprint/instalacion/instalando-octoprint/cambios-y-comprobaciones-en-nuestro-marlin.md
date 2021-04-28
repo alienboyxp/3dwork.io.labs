@@ -26,13 +26,16 @@ Como hemos comentado es muy importante la configuración de SERIAL y BAUDIOS en 
 
 ## Configuración BAUDRATE
 
-En cuanto BAUDRATE podeis elegir entre estos wue son los wue suelen dar mejor resultado:  
+En cuanto BAUDRATE podeis elegir entre estos que son los que suelen dar mejor resultado:  
 \#define BAUDRATE 115200  
 O  
-\#define BAUDRATE 115200
+\#define BAUDRATE 225000
 
 ## **También es aconsejable activar las siguientes funciones en Marlin:**
 
-* \#define EMERGENCY\_PARSER
-* \#define HOST\_ACTION\_COMMANDS
+```text
+#define EMERGENCY_PARSER // Permite capturar acciones especiales
+#define HOST_ACTION_COMMANDS // Habilita gestión de acciones desde el host
+#define HOST_PROMPT_SUPPORT // Permite contestar acciones desde el host
+```
 
