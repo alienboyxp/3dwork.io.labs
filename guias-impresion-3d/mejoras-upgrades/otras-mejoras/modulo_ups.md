@@ -6,7 +6,11 @@ description: >-
 
 # Módulo UPS - Recuperación ante fallos corriente
 
-El lanzar una impresora de muchas horas y descubrir que esta no finalizó correctamente es una de las grades frustracciones de la impresión 3D. Para solventar este problema hay diferentes alternativas, siempre pensando en el "universo" Marlin, como pueden ser:
+El lanzar una impresora de muchas horas y descubrir que esta no finalizó correctamente es una de las grades frustracciones de la impresión 3D. 
+
+![](../../../.gitbook/assets/image%20%2872%29.png)
+
+Para solventar este problema hay diferentes alternativas, siempre pensando en el "universo" Marlin, como pueden ser:
 
 * Activado de Power Less Recovery \(PLR en adelante\) en Marlin con log en cambio de capa
 * Activado de PLR usando un modulo UPS con detección y control de apagado
@@ -37,11 +41,11 @@ A continuación y para los modelos sugeridos os facilitamos los esquemas de cone
 
 {% tabs %}
 {% tab title="BTT UPS" %}
-![](../../../.gitbook/assets/image%20%2872%29.png)
+![](../../../.gitbook/assets/image%20%2873%29.png)
 {% endtab %}
 
 {% tab title="MKS UPS" %}
-![](../../../.gitbook/assets/image%20%2873%29.png)
+![](../../../.gitbook/assets/image%20%2874%29.png)
 {% endtab %}
 {% endtabs %}
 
