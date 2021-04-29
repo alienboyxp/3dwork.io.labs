@@ -29,7 +29,7 @@
     * [Nivelado UBL](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-ubl-unified-bed-leveling.md)
     * [Sensorless Homing en Marlin](guias-impresion-3d/mejoras-upgrades/nivelacion/sensorless-homing-en-marlin.md)
   * [Otras Mejoras](guias-impresion-3d/mejoras-upgrades/otras-mejoras/README.md)
-    * [Untitled](guias-impresion-3d/mejoras-upgrades/otras-mejoras/untitled.md)
+    * [Módulo UPS - Recuperación ante fallos corriente](guias-impresion-3d/mejoras-upgrades/otras-mejoras/untitled.md)
     * [Doble Z y autonivelado](guias-impresion-3d/mejoras-upgrades/otras-mejoras/doble-z-y-autonivelado.md)
     * [Sensor de filamentos](guias-impresion-3d/mejoras-upgrades/otras-mejoras/sensor-de-filamentos.md)
     * [Leds Neopixel](guias-impresion-3d/mejoras-upgrades/otras-mejoras/leds-neopixel.md)

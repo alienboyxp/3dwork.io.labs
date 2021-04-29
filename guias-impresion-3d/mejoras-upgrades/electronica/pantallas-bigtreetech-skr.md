@@ -104,7 +104,7 @@ Si queremos cambiar del idioma ñor defecto deberemos añadirlo a la SD y acrusl
 > - muestra errores de "Invalid App" o proglema en config.ini, puede solucionarse dejando el config.ini de la nueva version y un fichero reset.txt \(sin contenido\) en la raíz de la SD, endender/reset de la pantalla para que aplique la nueva estructura de EEPROM  
 > - iconos o textos aparezen corruptos, volver a copiar la carpeta TFTXX que coincida con nuestra pantalla debería de solucionar el problema
 
-**Cambios en Marlin**
+## **Cambios en Marlin**
 
 Para habilitar el modo Marlin asegúrate que tienes:
 
@@ -117,6 +117,7 @@ Para un correcto funcionamiento de las funciones en el modo Touch es aconsejable
 
 Opciones Generales:  
 `# EEPROM_SETTINGS (Configuration.h)  
+# BABYSTEPPING (Configuration_adv.h)  
 # AUTO_REPORT_TEMPERATURES (Configuration_adv.h)  
 # M115_GEOMETRY_REPORT (Configuration_adv.h)  
 # M114_DETAIL (Configuration_adv.h)  
@@ -133,8 +134,7 @@ Opciones para soportar HOST ACTIONS:
 `# EMERGENCY_PARSER (Configuration_adv.h)  
 # SERIAL_FLOAT_PRECISION 4 (Configuration_adv.h)  
 # HOST_ACTION_COMMANDS (Configuration_adv.h)  
-# HOST_PROMPT_SUPPORT (Configuration_adv.h)`  
-
+# HOST_PROMPT_SUPPORT (Configuration_adv.h)`
 
 Opciones para soportar menú Carga/Descarga filamentos:  
 `# NOZZLE_PARK_FEATURE (Configuration.h)  
@@ -142,7 +142,7 @@ Opciones para soportar menú Carga/Descarga filamentos:
 # PARK_HEAD_ON_PAUSE (Configuration_adv.h)  
 # FILAMENT_LOAD_UNLOAD_GCODES (Configuration_adv.h)`
 
-Opciones para soportar Babystep:  
+Opciones para soportar Babbystepping:  
 `# BABYSTEPPING (Configuration_adv.h)`
 
 Opciones para soportar el test de precisión de sensor de nivelación \(M48\):  
