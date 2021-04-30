@@ -16,9 +16,19 @@ Para más información visita [https://3dwork.io/configurar-bltouch-en-marlin/](
 
 Podéis encontrar como ejemplo el sensor original de AntcLabs y un clónico 3DTouch:
 
+{% tabs %}
+{% tab title="AliExpress" %}
 {% embed url="https://s.click.aliexpress.com/e/\_ASO4vz" %}
 
 {% embed url="https://s.click.aliexpress.com/e/\_ATWOTt" %}
+{% endtab %}
+
+{% tab title="Amazon" %}
+{% embed url="https://amzn.to/3e56DhE" %}
+
+{% embed url="https://amzn.to/2Rg8cAn" %}
+{% endtab %}
+{% endtabs %}
 
 ## Esquemas de conexión
 
