@@ -213,11 +213,23 @@ Por otro lado podemos crearnos, como buenos makers, nosotros mismos ese cable si
 
 ## Links de Compra
 
+{% tabs %}
+{% tab title="AliExpress" %}
 {% embed url="https://s.click.aliexpress.com/e/\_9fMWsT" %}
 
-{% embed url="https://s.click.aliexpress.com/e/\_APXHkJ" %}
-
 {% embed url="https://s.click.aliexpress.com/e/\_AVRWDl" %}
+
+{% embed url="https://s.click.aliexpress.com/e/\_APXHkJ" %}
+{% endtab %}
+
+{% tab title="Amazon" %}
+{% embed url="https://amzn.to/3eGJ5iu" %}
+
+{% embed url="https://amzn.to/3aRq0Jc" %}
+
+{% embed url="https://amzn.to/3u77T9O" %}
+{% endtab %}
+{% endtabs %}
 
 
 
