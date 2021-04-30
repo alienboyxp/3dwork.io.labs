@@ -92,7 +92,7 @@ El proceso básicamente es calentar el Nozzle a temperatura que aconseja el fabr
 ![](../.gitbook/assets/image%20%281%29.png)
 
 Una vez realizadas estas marcas extruimos 100mm de filamento utilizando los menus de Movimiento en pantalla o mediante Pronterface.  
-Al finalizar la extrusión mediremos desde el ounto de referencia hasta la marca de 120mm y ese valor lo usaremos en la calculadora \(_**pulsa sobre el icono Run Pen**_\):
+Al finalizar la extrusión mediremos desde el punto de referencia hasta la marca de 120mm y ese valor lo usaremos en la calculadora \(_**pulsa sobre el icono Run Pen**_\):
 
 {% embed url="https://codepen.io/alienboyxp/embed/BaQeXPO" %}
 
