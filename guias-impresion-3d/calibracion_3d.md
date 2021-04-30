@@ -100,7 +100,9 @@ Tambien teneis este vídeo del Sr. Ferrete donde explica el proceso de forma sen
 
 {% embed url="https://youtu.be/VA\_jvXyGvhU" %}
 
-
+{% hint style="info" %}
+Si en lugar de realizar el test extruyendo en caliente queréis hacerlo al "aire"/frio sin extruir deberéis desconectar el extrusor del hotend o desmontar este y usar el comando M301 P1 o S0 para poder extruir en frio.
+{% endhint %}
 
 El ajuste de los pasos los puedes realizar de diferentes formas:
 
