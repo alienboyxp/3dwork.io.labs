@@ -14,7 +14,15 @@ Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
+{% tabs %}
+{% tab title="AliExpress" %}
 {% embed url="https://s.click.aliexpress.com/e/\_A6sB9v" %}
+{% endtab %}
+
+{% tab title="Amazon" %}
+{% embed url="https://amzn.to/3e6Yh9e" %}
+{% endtab %}
+{% endtabs %}
 
 
 
