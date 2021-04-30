@@ -20,7 +20,7 @@ PrusaSlicer desde aqui :
 
 {% embed url="https://github.com/prusa3d/PrusaSlicer/releases" %}
 
-También si usas Cura puedes instalar este plugin que te permite generar y personalizar algunoa de los tests de esta guía:
+También si usas Cura puedes instalar este plugin que te permite generar y personalizar algunos de los tests de esta guía:
 
 {% embed url="https://marketplace.ultimaker.com/app/cura/plugins/5axes/CalibrationShapes" %}
 
