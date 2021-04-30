@@ -85,8 +85,6 @@ En este caso es muy aconsejable realizar un M503 y/o un M122 para verificar que 
 
 ## 2. Extrusión
 
-
-
 Una parte crítica en una impresora 3D es el control del filamento extruido.  
 Este proceso no es en un eje de movimiento si no de extrusión así que se aconseja que el test se realice extruyendo filamento por el nozzle.  
 El proceso básicamente es calentar el Nozzle a temperatura que aconseja el fabricante y a partir de un punto de referencia, normalmente a la entrada del filamento en el extrusor, realizar dos marcas... una a 100mm y otra a 120mm.
@@ -98,8 +96,11 @@ Al finalizar la extrusión mediremos desde el ounto de referencia hasta la marca
 
 {% embed url="https://codepen.io/alienboyxp/embed/BaQeXPO" %}
 
-Tambien teneis este vídeo del Sr. Ferrete donde explica el proceso de forma sencilla.  
-https://youtu.be/VA\_jvXyGvhU
+Tambien teneis este vídeo del Sr. Ferrete donde explica el proceso de forma sencilla.
+
+{% embed url="https://youtu.be/VA\_jvXyGvhU" %}
+
+
 
 El ajuste de los pasos los puedes realizar de diferentes formas:
 
