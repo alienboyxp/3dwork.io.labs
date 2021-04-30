@@ -10,13 +10,21 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWo
 
 ## Algunos sensores a modo de referencia
 
+{% tabs %}
+{% tab title="AliExpress" %}
 {% embed url="https://s.click.aliexpress.com/e/\_ACJBgV" %}
-
-{% embed url="https://s.click.aliexpress.com/e/\_AfFxXT" %}
 
 {% embed url="https://s.click.aliexpress.com/e/\_99kqNx" %}
 
+{% embed url="https://s.click.aliexpress.com/e/\_AfFxXT" %}
+{% endtab %}
 
+{% tab title="Amazon" %}
+{% embed url="https://amzn.to/3e3GKyJ" %}
+
+{% embed url="https://amzn.to/3e5D93u" %}
+{% endtab %}
+{% endtabs %}
 
 ## **Cambios en Marlin:**
 

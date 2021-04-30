@@ -25,9 +25,17 @@ En este caso vamos a optar por una solución intermedia entre el primer y el seg
 
 Os sugerimos usar los siguientes módulos UPS que son compatibles con la mayoría de placas y la diferencia principal es el acabado del módulo y el cableado a la placa, es importante recalcar que a la hora de comprarlo tengamos bien presente a que voltaje funciona nuestra placa:
 
+{% tabs %}
+{% tab title="Amazon" %}
+{% embed url="https://amzn.to/3t6l2yC" %}
+{% endtab %}
+
+{% tab title="AliExpress" %}
 {% embed url="https://s.click.aliexpress.com/e/\_9ixLHJ" %}
 
 {% embed url="https://s.click.aliexpress.com/e/\_9jMxSv" %}
+{% endtab %}
+{% endtabs %}
 
 Personalmente en cuanto a calidad recomendamos el módulo de MKS pero si buscamos sencillez y menos complicaciones usemos el que mejor se adapte a la marca de nuestra electrónica.
 
