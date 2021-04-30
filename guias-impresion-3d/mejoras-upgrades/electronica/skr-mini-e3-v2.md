@@ -18,9 +18,15 @@ Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
+{% tabs %}
+{% tab title="AliExpress" %}
 {% embed url="https://s.click.aliexpress.com/e/\_9I0Esb" %}
+{% endtab %}
 
-
+{% tab title="Amazon" %}
+{% embed url="https://amzn.to/3nHpYZK" %}
+{% endtab %}
+{% endtabs %}
 
 ## **Diagramas de la SKR MINI E3 v2**
 
