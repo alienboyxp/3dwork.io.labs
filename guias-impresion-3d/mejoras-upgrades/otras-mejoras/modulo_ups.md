@@ -49,11 +49,11 @@ A continuación y para los modelos sugeridos os facilitamos los esquemas de cone
 
 {% tabs %}
 {% tab title="BTT UPS" %}
-![](../../../.gitbook/assets/image%20%2873%29.png)
+![](../../../.gitbook/assets/image%20%2874%29.png)
 {% endtab %}
 
 {% tab title="MKS UPS" %}
-![](../../../.gitbook/assets/image%20%2874%29.png)
+![](../../../.gitbook/assets/image%20%2875%29.png)
 {% endtab %}
 {% endtabs %}
 

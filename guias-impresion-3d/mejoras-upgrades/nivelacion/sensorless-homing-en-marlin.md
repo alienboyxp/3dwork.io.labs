@@ -16,12 +16,23 @@ Es muy importante recordar/recomendar que esta función se habilite solamente en
 
 En esta guía no vamos a entrar en la configuración hardware para poder habilitar fisicamente la impresora y su electrónica si no la parte de configuración de Marlin. En cualquier caso recordar que es imprescindible que los drivers esten instalados y configurados en modo UART y dependiendo de la placa es necesario habilitar el jumper dedicado para DIAG/Sensorless.
 
-![SKR E3 TURBO - Jumpers para Sensorless](https://telegra.ph/file/4866b596132d65ee54dcb.jpg)
+{% tabs %}
+{% tab title="SKR v2" %}
+![](../../../.gitbook/assets/image%20%2873%29.png)
+{% endtab %}
 
-![SKR MIMI E3 v2 - Jumpers para Sensorless](https://telegra.ph/file/764231febc9c167d4b9d4.jpg)
+{% tab title="SKR 1.3" %}
+![](https://telegra.ph/file/adbac297d5197536c1595.jpg)
+{% endtab %}
 
-  
-![](https://telegra.ph/file/adbac297d5197536c1595.jpg)SKR 1.3 - Jumpers para sensorless
+{% tab title="SKR E3 TURBO" %}
+![](https://telegra.ph/file/4866b596132d65ee54dcb.jpg)
+{% endtab %}
+
+{% tab title="SKR MINI E3 v2" %}
+![](https://telegra.ph/file/764231febc9c167d4b9d4.jpg)
+{% endtab %}
+{% endtabs %}
 
 ## Configuración en Marlin
 
