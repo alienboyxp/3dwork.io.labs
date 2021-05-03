@@ -63,7 +63,7 @@ Marlin dispone de una configuración de velocidades específicas para el Homing 
 
 Valores más bajos hacen que el proceso de Homing sea más lento pero mejoran la detección y precisión si usamos Sensorless
 
-Corriente del driver
+### Corriente del driver
 
 Como comantamos anteriormente esta función de los drivers TMC permiten detectar el choque contra un objeto y esto lo hacen comprobando el consumo de corriente del driver. Durante un movimiento normal del motor el consumo, a una velocidad estable, suele ser siempre el mismo... ahora bien cuando encuentra algún obstáculo el motor aumenta el consumo para continuar su camino y es en ese punto donde los drivers TMC interpretan como un choque y por tanto como un final de carrera/endstop en nuestras impresoras.
 
