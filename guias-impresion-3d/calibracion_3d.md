@@ -55,7 +55,7 @@ Debemos intentar tener en concordancia los A de nuestros motores con las capacid
 
 Con estos datos y para que sea sencillo el cálculo os aconsejamos el uso de una calculadora online donde indicar los A de vuestro motor y el % de seguridad el cual es aconsejable colocar entre 80-90%
 
-{% embed url="https://v6zmvq5nk5.codesandbox.io/" %}
+{% embed url="https://mvo46.csb.app/" %}
 
 Ajustar el VREF en nuestra impresora
 
