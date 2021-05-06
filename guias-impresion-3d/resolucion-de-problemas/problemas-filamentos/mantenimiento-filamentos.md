@@ -58,9 +58,12 @@ Las temperaturas y tiempos de secado son especialmente importantes y estas últi
 
 | Filamento | Temperatura | Deshidratadora | Secadora | Horno/HotBed |
 | :--- | :--- | :--- | :--- | :--- |
-| PLA | 40-45º | 4-6h | 12-24h | 4-6h |
-| ABS | 80º | 5-7h | 48h | 4-6h |
-| Nailon | 80º | 5-7h | 48h | 4-6h |
+| PLA | 40-45º | &gt;4h | 12-24h | &gt;4h |
+| PETG | 65º | &gt;2h | 12-24h | &gt;2h |
+| ABS | 60º | &gt;2h | 12-24h | &gt;2h |
+| Nylon | 70º | &gt;12h | 48h | - |
+| TPU | 50º | &gt;4h | 12-24h | &gt;4h |
+| ASA | 60º | &gt;4h | 12-24h | &gt;4h |
 
 ## Como almaceno mis filamentos?
 
