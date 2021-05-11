@@ -1,12 +1,12 @@
+---
+description: No estropees tus impresiones por falta o atasco de filamentos!!!
+---
+
 # Sensor de filamentos
-
-![](https://lh3.googleusercontent.com/rsgUdGYSo92gzCE-gvaKe0uAfB7fogEPZNoI11ZOv9USIngT57U2nIQx0SpkBZOciT3ErnSHfNqbvXAMaszOHTWUCeGHTR2Rlo5nmpLz28tVL49mSqs69YYVxqj8_V5KyYM73zUO)
-
-{% embed url="https://3dwork.io/sensor-de-filamento/" %}
 
 El uso de un sensor de filamentos puede salvarnos más de una impresión, además si aplicaste la configuración SensorLess/stallGuard explicada en este documento probablemente dispongas de varios finales de carrera que puedes usar para este propósito sin gastarte nada, en Thingiverse dispones de varios adaptadores para ello.
 
-Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 ## Algunos sensores a modo de referencia
 
@@ -25,6 +25,111 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWo
 {% embed url="https://amzn.to/3e5D93u" %}
 {% endtab %}
 {% endtabs %}
+
+## Instalación del sensor
+
+Dependiendo del tipo de sensor contaremos con 2 normalmente simples endstops o 3 conexiones dependiendo de si este dispone de cierta electrónica o led de control.
+
+En cualquier caso las tres conexiones normalmente hacen referencia a V\(voltaje\), S \(señal\) y G \(negativo\).
+
+![Conector BTT Smart Filament Sensor](../../../.gitbook/assets/image%20%2882%29.png)
+
+### Conectando sensor a nuestra placa
+
+Es la opción recomendada dado que el sensor estará controlado directamente por la maquina y no por un ente externo como pueda ser una pantalla TFT o una Raspberry Pi.
+
+Es importante que revisemos el orden de pines tanto en la parte del sensor como en el de la placa para que coincidan perfectamente para evitar cualquier posible corto y que podamos estropear placa o sensor.
+
+Para la conexión en la placa si estas disponen de un conector dedicado suele llamarse E0-STOP, FT-STOP y en caso de no llevar suele usar el del final de carrera + que, tal como explicamos más adelante en los cambios Marlin, deberemos de verificar en el fichero pins de nuestra placa. En cualquier caso tenéis a continuación una tabla con algunos de las placas más representativas:
+
+{% tabs %}
+{% tab title="SKR" %}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Electr&#xF3;nica</th>
+      <th style="text-align:left">Localizaci&#xF3;n E0-STOP</th>
+      <th style="text-align:left">Pineado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">BTT SKR 1.4/Turbo</td>
+      <td style="text-align:left">Dispone de E0-STOP</td>
+      <td style="text-align:left">
+        <p>V</p>
+        <p>G</p>
+        <p>S</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">BTT SKR 1.3</td>
+      <td style="text-align:left">Utilizaremos endstop X+ ya que esta predefinido en nuestro fichero pins
+        para esta funci&#xF3;n</td>
+      <td style="text-align:left">
+        <p>V</p>
+        <p>G</p>
+        <p>S</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">BTT SKR PRO</td>
+      <td style="text-align:left">Dispone de E0-STOP</td>
+      <td style="text-align:left">
+        <p>V</p>
+        <p>G</p>
+        <p>S</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">BTT SKR E3 DIP</td>
+      <td style="text-align:left">Dispone de E0-STOP</td>
+      <td style="text-align:left">G S V</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">BTT SKR MINI E3 v1.2</td>
+      <td style="text-align:left">Dispone de E0-STOP pero no tiene toma de voltaje, mejor usar PT-DET si
+        nuestro sensor necesita voltaje</td>
+      <td style="text-align:left">S G V</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">BTT SKR MINI E3 v2</td>
+      <td style="text-align:left">Dispone de E0-STOP</td>
+      <td style="text-align:left">S G V</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">BTT SKR E3 Turbo</td>
+      <td style="text-align:left">Dispone de E0-STOP</td>
+      <td style="text-align:left">S G V</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">BTT SKR E3 RRF</td>
+      <td style="text-align:left">Dispone de E0-STOP</td>
+      <td style="text-align:left">S G V</td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
+{% endtabs %}
+
+### Conectando sensor a nuestra pantalla TFT
+
+Otra forma de instalar nuestro sensor, y siempre que esta lo soporte, es usando nuestra pantalla TFT que tiene como ventaja que no es necesario tocar Marlin pero por otro su funcionamiento suele estar restringido a usar la TFT para gestionar tus impresiones.
+
+Es importante comentar que en estos casos es muy aconsejable que nuestro Marlin, además de las opciones requeridas por nuestra pantalla \([para pantallas SKR revisa esta guía](../electronica/pantallas-bigtreetech-skr.md#cambios-en-marlin)\), tener habilitado
+
+```cpp
+ #define EMERGENCY_PARSER
+ #define M114_DETAIL
+```
+
+A continuación tienes un listado de pantallas con esta opción:
+
+| TFT | Conector | Pineado |
+| :--- | :--- | :--- |
+| BTT TFT35 v3 | Dispone de FIL-DET | S G V |
+| TFT35 v2 | Dispone de DLJC | V G S |
+| TFT35 E3 v3 | Dispone de FIL-DET | S G V |
 
 ## **Cambios en Marlin:**
 
@@ -86,6 +191,7 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWo
 > \#define FILAMENT\_RUNOUT\_DISTANCE\_MM**  
 > **También aconsejan en el caso de usar Sensorless/stallGuard doblar/desoldar/cortar el pin DIAG del driver para evitar falsos positivos.**
 
+* En el caso de disponer de un sensor como el **BTT Smart Filament Sensor** que tiene función de detección de atascos deberemos asegurarnos de activar **`#define FILAMENT_MOTION_SENSOR // habilita sensores detección de atascos con encoder #define FILAMENT_RUNOUT_DISTANCE_MM 7 // 7mm es lo aconsejado por el fabricante y podemos ajustarlo en el caso de falsos positivos o dependiendo de nuestra máquina`**
 * Algunos finales de carrera requieren de eliminar el PULLUP de la configuración de Marlin para operar correctamente. Si es tu caso, debes editar esta linea y eliminar los comentarios: \#define FIL\_RUNOUT\_PULLUP o viceversa dependiendo del tipo de placa \#define FIL\_RUNOUT\_PULLDOWN. Recuerda que solamente una de ellas debe estar habilitada.
 * Activación y el parking del cabezal para el cambio de filamentos necesario para habilitar el sensor de filamentos y las opciones en pantalla para realizar el pausado y cambio de filamento **`#define ADVANCED_PAUSE_FEATURE - en configuration_adv.h #define NOZZLE_PARK_FEATURE - en configuration.h`**
 

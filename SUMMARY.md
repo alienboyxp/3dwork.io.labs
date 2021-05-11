@@ -18,6 +18,8 @@
 * [Mejoras/Upgrades](guias-impresion-3d/mejoras-upgrades/README.md)
   * [Marlin - Guía Compilación](guias-impresion-3d/mejoras-upgrades/marlin-guia-compilacion.md)
   * [Electrónica](guias-impresion-3d/mejoras-upgrades/electronica/README.md)
+    * [FYSETC](guias-impresion-3d/mejoras-upgrades/electronica/fysetc/README.md)
+      * [FYSETC SPIDER](guias-impresion-3d/mejoras-upgrades/electronica/fysetc/fysetc-spider.md)
     * [SKR MINI E3 Turbo](guias-impresion-3d/mejoras-upgrades/electronica/skr_mini_e3_turbo.md)
     * [SKR E3 RRF \(EN PROCESO\)](guias-impresion-3d/mejoras-upgrades/electronica/skr-e3-rrf.md)
     * [SKR MINI E3 V2](guias-impresion-3d/mejoras-upgrades/electronica/skr-mini-e3-v2.md)
