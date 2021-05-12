@@ -1,7 +1,7 @@
 ---
 description: >-
-  By JJR @ https://3dwork.io/ - Invitame a un cafe si te fue de ayuda
-  paypal.me/alienboyxp
+  La SKR Mini E3 V2 incorpora grandes mejoras en comparación a su hermana SKR
+  Mini E3 V1.2
 ---
 
 # SKR MINI E3 V2
