@@ -8,7 +8,9 @@ description: >-
 
 Aunque añadir unas tiras de led en nuestra impresora pueda parecer algo más estético puede aportar algunas mejoras útiles que podemos usar como, por ejemplo, iluminar nuestra impresora para supervisarla, mostrar el estado de la misma, etc....
 
-Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram @ThreeDWorkHelpBot
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
+
+{% embed url="https://www.buymeacoffee.com/jjr3d" %}
 
 Importante antes de comenzar, es importante identificar el voltaje de trabajo de la tira led a usar. Es aconsejable, por simplicidad, el uso de tiras de 5v que podamos alimentar directamente desde la placa y siempre contemplando el consumo de la tira y la corriente que pueda entregar el conector de tu placa. En el caso de otros voltajes o un número excesivo de leds deberemos usar una alimentacion externa.
 
