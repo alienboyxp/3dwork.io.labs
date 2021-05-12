@@ -18,6 +18,8 @@ Si necesitas más información o ayuda no dudes a unirte al grupo de Telegram de
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
+{% embed url="https://www.buymeacoffee.com/jjr3d" %}
+
 ## **Modo Marlin**
 
 * Para pantallas SKR “normales”,normalmente estas pantallas se conectan usando los conectores EXP1 y EXP2 entre la placa y la pantalla

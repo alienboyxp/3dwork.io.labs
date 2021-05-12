@@ -10,6 +10,10 @@ Nuestras impresoras funcionan mediante la deposición fundidade material \(FDM\)
 
 En el caso que tus filamentos tengan mucha humedad van a ocasionar numerosos problemas durante la impresion pero es algo fácilmente "reversible" mediante alguna de las siguientes soluciones que te explicaremos.
 
+Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
+
+{% embed url="https://www.buymeacoffee.com/jjr3d" %}
+
 ## Mi filamento tiene humedad?
 
 Podremos detectar en los siguientes indicadores que tu filamento puede tener humedad:

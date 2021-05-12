@@ -10,6 +10,8 @@ description: >-
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
+{% embed url="https://www.buymeacoffee.com/jjr3d" %}
+
 ## Consigue una copia de Marlin \(última versión estable\)
 
 * Desde tu navegador favorito ves al GitHub oficial de Marlin: [https://github.com/MarlinFirmware/Marlin](https://github.com/MarlinFirmware/Marlin)

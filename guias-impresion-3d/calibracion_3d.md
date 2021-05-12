@@ -10,6 +10,8 @@ description: >-
 
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
+{% embed url="https://www.buymeacoffee.com/jjr3d" %}
+
 Aconsejamos el uso de SuperSlicer \(un fork de PrusaSlicer donde integran opciones avanzadas antes de incorporarlas\) ya que tiene unas estupendas opciones para generar los tests de calibración.
 
 Puedes descargar SuperSlicer desde aqui:
