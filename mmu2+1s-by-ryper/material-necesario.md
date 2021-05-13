@@ -14,6 +14,10 @@ Como parte del extrusor y tal como hemos comentado es aconsejable imprimir el mi
 
 {% embed url="https://www.prusaprinters.org/prints/62928" %}
 
+El extrusor rediseñado del equipo Ryper se basa en el de TZB MK3S+ así que algunas partes como el trontal y el soporte del ventilador asi como el conducto de ventilacion lo podemos sacar de aquí...
+
+{% embed url="https://www.prusaprinters.org/prints/66215-tzb-mk3smk25smmu2s-extruder-mmu2s-no-tower-v3" %}
+
 Otro aspecto importante es disponer del fusor 6 diseñado para Prusa o al menos tener el barrel térmico de Prusa y su PTFE.
 
 {% embed url="https://www.3djake.es/e3d/prusa-v6-hot-end" %}

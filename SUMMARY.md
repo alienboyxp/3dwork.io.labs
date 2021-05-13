@@ -62,6 +62,7 @@
 
 * [Klipper?](klipper/klipper-1.md)
 * [Instalación](klipper/instalacion.md)
+* [Empezamos](klipper/empezamos.md)
 * [Bibliografia](klipper/klipper.md)
 
 ## Software
