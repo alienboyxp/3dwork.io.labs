@@ -38,6 +38,10 @@ Para la conexión de ambos motores dependiendo de tu placa disponemos de dos opc
 
 En el caso que nuestros motores no sean soportados por un solo driver o que nos interese separarlos por disponer de otras funcionalidades para sincronización automática de nivelado en Z deberemos de usar un puerto de driver libre de nuestra placa para instalar un nuevo driver y configurarlo en Marlin
 
+{% embed url="https://www.youtube.com/watch?v=d7EFw\_1PDlk" %}
+
+{% embed url="https://www.youtube.com/watch?v=fOtm0V7h0Oo" %}
+
 Instalación del nuevo driver, para este ejemplo utilizaremos una SKR 1.4 y el módulo del driver E1. 
 
 {% hint style="info" %}
