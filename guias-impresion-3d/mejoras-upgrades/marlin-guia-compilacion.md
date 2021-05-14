@@ -8,6 +8,8 @@ description: >-
 
 ![](https://telegra.ph/file/0c5672a9f68d4955fbb13.jpg)
 
+Pásate por nuestro grupo en español de Telegram para cualquier duda relacionada con Marlin, [https://t.me/marlin\_es](https://t.me/marlin_es) .
+
 Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 {% embed url="https://www.buymeacoffee.com/jjr3d" %}
