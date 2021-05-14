@@ -145,6 +145,8 @@ Desde la version 2.0.7.2 Marlin incluye un nuevo asistente para encontrar el val
 
 Con esto dispondremos de un nuevo menu en Configuración/Avanzado/Probe Offsets
 
+{% embed url="https://www.youtube.com/watch?v=2gRfU26aTDs" %}
+
 ## **Ajuste del Z-Offset - LCD**
 
 * Realizaremos un Auto Home
