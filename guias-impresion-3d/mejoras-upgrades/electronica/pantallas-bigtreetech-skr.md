@@ -33,35 +33,62 @@ Este cable es un cable de 5 pines Dupont que se conecta al conector TFT de la pl
 
 ![Ejemplo de conexi&#xF3;n SKR 1.4](https://telegra.ph/file/bce3c24f2743531f19802.jpg)
 
+{% tabs %}
+{% tab title="SKR TFT35" %}
 ![Esquema conexi&#xF3;n SKR TFT35 V3](https://telegra.ph/file/aa9510b4e90f7d7856099.png)
+{% endtab %}
 
+{% tab title="SKR TFT35 v3" %}
 ![Esquema conexi&#xF3;n SKR TFT35 E3 V3](https://telegra.ph/file/aa7a856f23c17cb924f54.png)
+{% endtab %}
 
+{% tab title="SKR TFT24" %}
 ![Esquema conexi&#xF3;n SKR TFT24](https://telegra.ph/file/da039bfe8737627a23503.png)
+{% endtab %}
+{% endtabs %}
 
 ![Resumen de conexiones para todas las pantallas SKR y sus definiciones en Marlin](https://telegra.ph/file/477a3f6afee20f7260a6c.jpg)
 
-Como hemos comentado es muy importante la configuración de SERIAL y BAUDIOS en Marlin \(configuration.h\), os ponemos como ejemplo algunas configuraciones para placas SKR:
+Como hemos comentado es muy importante la configuración de SERIAL y BAUDIOS en Marlin \(configuration.h\), os ponemos como ejemplo algunas configuraciones para placas:
 
-**SKR 1.3**  
+### Bigtreetech/SKR
+
+{% tabs %}
+{% tab title="SKR 1.3" %}
 \#define SERIAL\_PORT 0  
 \#define SERIAL\_PORT\_2 -1
+{% endtab %}
 
-**SKR 1.4**  
+{% tab title="SKR 1.4" %}
 \#define SERIAL\_PORT -1  
 \#define SERIAL\_PORT\_2 0
+{% endtab %}
 
-SKR PRO 1.1  
+{% tab title="SKR PRO 1.1" %}
 \#define SERIAL\_PORT -1  
 \#define SERIAL\_PORT\_2 1
+{% endtab %}
 
-**SKR MINI E3 V1.2**  
-**\#define SERIAL\_PORT 2**  
-**\#define SERIAL\_PORT\_2 -1**
+{% tab title="SKR MINI E3 TURBO" %}
+\#define SERIAL\_PORT -1 // USB  
+\#define SERIAL\_PORT\_2 0 // TFT
+{% endtab %}
 
-SKR E3 DIP  
+{% tab title="SKR MINI E3 v2" %}
+\#define SERIAL\_PORT 2 //TFT  
+\#define SERIAL\_PORT\_2 -1 //USB
+{% endtab %}
+
+{% tab title="SKR MINI E3 V1.2" %}
 \#define SERIAL\_PORT 2  
 \#define SERIAL\_PORT\_2 -1
+{% endtab %}
+
+{% tab title="SKR E3 DIP" %}
+\#define SERIAL\_PORT 2  
+\#define SERIAL\_PORT\_2 -1
+{% endtab %}
+{% endtabs %}
 
 En cuanto BAUDRATE podeis elegir entre estos wue son los wue suelen dar mejor resultado:  
 \#define BAUDRATE 115200  
