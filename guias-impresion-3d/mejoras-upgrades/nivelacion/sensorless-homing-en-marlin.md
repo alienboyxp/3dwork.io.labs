@@ -77,6 +77,18 @@ Esta opción nos permite ajustar la corriente en ese punto crítico para Sensorl
 > \#define X\_CURRENT\_HOME \(X\_CURRENT - 20\)  
 > \#define Y\_CURRENT\_HOME \(Y\_CURRENT - 20\)
 
+{% hint style="info" %}
+En el caso de usar **TMC2130 en modo SPI** es aconsejable en caso de problemas habilitar:
+
+**\#define SPI\_ENDSTOPS**
+{% endhint %}
+
+{% hint style="info" %}
+Para **impresoras CoreXY** o similares \(el movimiento de los ejes X e Y se realice mediante el uso de dos motores\) es aconsejable habilitar la siguiente función de Marlin para que los movimientos del homing no realicen movimientos diagonales que hagan funcionan ambos motores a la vez
+
+**\#define QUICK\_HOME**
+{% endhint %}
+
 ### **Sensibilidad**
 
 Dependiendo de la mecánica, motores, etc de nuestra impresora los valores para detectar esos obstáculos no es siempre la misma, es por eso que en Marlin permiten configurar unos umbrales llamados comunmente sensibilidad
