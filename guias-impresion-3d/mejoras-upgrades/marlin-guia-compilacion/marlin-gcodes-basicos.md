@@ -14,7 +14,7 @@ En esta guía vamos a intentar mostraros los más básicos/comunes.
 
 ### Sintaxis
 
-![](../../../.gitbook/assets/image%20%2885%29.png)
+![](../../../.gitbook/assets/image%20%2891%29.png)
 
 Cada código G-code tiene una sintaxis y cada línea de código es un comando.
 
@@ -30,7 +30,7 @@ G1 X25 Y5 ; Esto es un comentario!
 
 ### G0 y G1 : Movimientos lineales
 
-![](../../../.gitbook/assets/image%20%2883%29.png)
+![](../../../.gitbook/assets/image%20%2886%29.png)
 
 Estos comandos se usan para indicar movimientos lineales siendo G0 para movimientos sin extrusion y G1 para movimientos de extrusion normalmente.
 
@@ -39,5 +39,5 @@ G1 X90 Y50 Z0.5 F3000 E1 le dice a la impresora que se mueva \(G1\) 90 mm en el 
 
 ### G28  y G29 : Auto Home y Nivelación de cama
 
-![](../../../.gitbook/assets/image%20%2884%29.png)
+![](../../../.gitbook/assets/image%20%2889%29.png)
 

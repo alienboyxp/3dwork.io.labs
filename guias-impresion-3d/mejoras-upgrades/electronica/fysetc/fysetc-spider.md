@@ -20,9 +20,13 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDW
 
 ## Diagramas Fysetc Spider
 
-En los siguientes diagramas de cableado y de pines podréis encontrar las inmensas posibilidades y potencia de esta placa.
+En los siguientes diagramas de placa, cableado y de pines podréis encontrar las inmensas posibilidades y potencia de esta placa.
 
 {% tabs %}
+{% tab title="Placa" %}
+![](../../../../.gitbook/assets/image%20%2887%29.png)
+{% endtab %}
+
 {% tab title="Cableado" %}
 ![](../../../../.gitbook/assets/image%20%2880%29.png)
 {% endtab %}
@@ -73,7 +77,53 @@ Disponemos de las siguientes conexiones de alimentación de componentes o de la 
 
 ### Thermistores
 
+![](../../../../.gitbook/assets/image%20%2890%29.png)
 
+La orientación de los **thermistores** normalmente no es importante ya que estos no suelen tener polaridad. En este caso para esta placa contamos para un conector para la cama caliente \(TB\) y tres para  calentadores de hotend \(TE0, TE1 y T2\).
+
+Estos pines cuentan con resistencias PULL-UP de 4k7 que permiten el uso de sondas PT1000 de forma directa.
+
+Es aconsejable usar conectores JST-XH 2.54mm ya que evitan que se produzcan desconexiones y se minimizan los falsos contactos.
+
+### Drivers
+
+Como ya hemos comentado esta placa cuenta con 8 zócalos para drivers lo cual nos ofrece un abanico de posibilidades de ampliación increibles.
+
+![](../../../../.gitbook/assets/image%20%2895%29.png)
+
+Es importante resaltar que para el eje Z disponemos de dos salidas de motor para poder poner doble Z a nuestra máquina usando un solo driver. 
+
+{% hint style="info" %}
+En el caso que no lo usemos es importante colocar jumpers en Z1-MOT para que funcionen correctamente dado que el splitter interno es serie.
+{% endhint %}
+
+![](../../../../.gitbook/assets/image%20%2883%29.png)
+
+#### Configuración de diferentes drivers
+
+Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes" SPI/UART la placa dispone de configuraciones para usar drivers en modo standalone.
+
+{% tabs %}
+{% tab title="UART" %}
+![](../../../../.gitbook/assets/image%20%2888%29.png)
+
+**Para drivers que usen UART como TMC2208/TMC2209 o similares**. En el caso que usemos Sensorless \(homing sin finales de carreras físicos\), o no,  no es necesario cortar el pin DIAG ya que la placa cuenta con jumpers para ser habilitada esta función.
+
+![](../../../../.gitbook/assets/image%20%2885%29.png)
+{% endtab %}
+
+{% tab title="SPI" %}
+![](../../../../.gitbook/assets/image%20%2884%29.png)
+
+**Para drivers que usen SPI como TMC2130/TMC5160-1 o similares**. En el caso que usemos Sensorless \(homing sin finales de carreras físicos\), o no,  no es necesario cortar el pin DIAG ya que la placa cuenta con jumpers para ser habilitada esta función.
+
+![](../../../../.gitbook/assets/image%20%2885%29.png)
+{% endtab %}
+
+{% tab title="STANDALONE" %}
+![](../../../../.gitbook/assets/image%20%2894%29.png)
+{% endtab %}
+{% endtabs %}
 
 ## Firmware
 
