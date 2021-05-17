@@ -61,7 +61,7 @@ Básicamente un módulo MOSFET dispone de 3 entradas/salidas:
 * Entrada de alimentación externa, es la fuente de corriente que mediante la activación del MOSFET entregará a la salida. En nuestro caso normalmente esta entrada irá conectada a nuestra fuente de alimentación. En la foto anterior serían los pines VIN/GND
 * Salida alimentación hotend/cama/ventilador, es donde conectaremos el componente a controlar. En la foto anterior serían los pines V+/V-
 
-![Esquema de conexi&#xF3;n MOSFET](../../../.gitbook/assets/image%20%2893%29.png)
+![Esquema de conexi&#xF3;n MOSFET](../../../.gitbook/assets/image%20%2894%29.png)
 
 ## Reasignar pins en Marlin
 

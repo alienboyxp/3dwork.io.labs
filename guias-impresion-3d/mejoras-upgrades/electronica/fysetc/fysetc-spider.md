@@ -89,7 +89,7 @@ Es aconsejable usar conectores JST-XH 2.54mm ya que evitan que se produzcan desc
 
 Como ya hemos comentado esta placa cuenta con 8 zócalos para drivers lo cual nos ofrece un abanico de posibilidades de ampliación increibles.
 
-![](../../../../.gitbook/assets/image%20%2895%29.png)
+![](../../../../.gitbook/assets/image%20%2896%29.png)
 
 Es importante resaltar que para el eje Z disponemos de dos salidas de motor para poder poner doble Z a nuestra máquina usando un solo driver. 
 
@@ -121,9 +121,19 @@ Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes
 {% endtab %}
 
 {% tab title="STANDALONE" %}
-![](../../../../.gitbook/assets/image%20%2894%29.png)
+![](../../../../.gitbook/assets/image%20%2895%29.png)
 {% endtab %}
 {% endtabs %}
+
+### Endstops
+
+En la Spider disponemos de 6 conectores para finales de carrera de 3 pines.
+
+![](../../../../.gitbook/assets/image%20%2893%29.png)
+
+#### Sensores de nivelación
+
+
 
 ## Firmware
 
