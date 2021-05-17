@@ -22,6 +22,8 @@ UBL es el sistema más avanzado de nivelación existente para Marlin. Incorpora 
 
 `#define GRID_MAX_POINTS_X 3 // permite especificar los puntos a usar por eje, si ponemos 3 puntos creará una malla de 3 x 3 puntos (9) de nuestra cama, siempre y cuando no modifiquemos la fórmula en #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X. El límite de puntos son 15.`
 
+`#define UBL_MESH_WIZARD // a partir de Marlin 2.0.8.1 habilita un asistente para la generación de la malla`
+
 ## **2.a Ajuste del Z-Offset a partir de 2.0.7 \(método rápido\)**
 
 Con esto dispondremos de un nuevo menu en Configuración/Avanzado/Probe OffsetsDesde la version 2.0.7.2 Marlin incluye un nuevo asistente para encontrar el valor Z Offset de una forma sencilla. Para activarlo iremos a configuration\_adv y habilitaremos:  
@@ -46,7 +48,17 @@ Desde el terminal pero se puede realizar de otras formas
 
 ## **3. Generación de malla UBL**
 
-### Usando un sensor de nivalación
+### Usando el asistente UBL \(a partir de Marlin &gt;2.0.8\)
+
+Desde la versión 2.0.8.1 de Marlin ha sido incluido un asistente para la creación de malla donde solamente tenemos que configurar desde la propia pantalla desde Motion/UBL Mesh Wizard la temperatura de la cama, nozzle y el slot de memoria donde guardar la malla.
+
+Podéis ver el proceso en el siguiente video:
+
+{% embed url="https://www.youtube.com/watch?v=Mbi7NPE7z1Q" %}
+
+
+
+### Usando un sensor de nivelación
 
 Se puede realizar desde el LCD en las herramientas UBL como desde terminal \(emplearemos el terminal para el ejemplo\)
 
