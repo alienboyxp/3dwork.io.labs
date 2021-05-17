@@ -114,7 +114,7 @@ Importante actualizar el firmware a la última versión o uno custom y actualiza
 
 * Es aconsejable aumentar el tiempo de respuesta para evitar problemas de comunicaciones **`#define BLTOUCH_DELAY 500`**
 * Otra funcion interesante a activar para prevenir problemas de comunicación en el caso de cables no apantallados o muy largos es forzar el modo SW que permite el enviar pulsos más largos mejorando ruido en las señales **`#define BLTOUCH_FORCE_SW_MODE`**
-* Es aconsejable activar reintentos en el proceso de generacion de malla G29 para prevenir problemas durante el proceso **`# define G29_RETRY_AND_RECOVER`**
+* Es aconsejable activar reintentos en el proceso de generacion de malla G29 para prevenir problemas durante el proceso \(**esta función puede no ser compatible con todos los sistemas de nivelación como por ejemplo UBL**\) **`# define G29_RETRY_AND_RECOVER`**
 
 ### **Activar Babystepping**
 
