@@ -59,7 +59,7 @@ Con estos datos y para que sea sencillo el cálculo os aconsejamos el uso de una
 
 {% embed url="https://mvo46.csb.app/" %}
 
-Ajustar el VREF en nuestra impresora
+### Ajustar el VREF en nuestra impresora
 
 Para el ajuste del VREF tenemos dos opciones dependiendo de como nuestros drivers esten instalados/configurados:
 
