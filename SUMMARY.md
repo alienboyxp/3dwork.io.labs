@@ -20,6 +20,7 @@
     * [Marlin - Gcodes Básicos](guias-impresion-3d/mejoras-upgrades/marlin-guia-compilacion/marlin-gcodes-basicos.md)
   * [Electrónica](guias-impresion-3d/mejoras-upgrades/electronica/README.md)
     * [FYSETC](guias-impresion-3d/mejoras-upgrades/electronica/fysetc/README.md)
+      * [FYSETC S6](guias-impresion-3d/mejoras-upgrades/electronica/fysetc/fysetc-s6.md)
       * [FYSETC SPIDER](guias-impresion-3d/mejoras-upgrades/electronica/fysetc/fysetc-spider.md)
     * [SKR MINI E3 Turbo](guias-impresion-3d/mejoras-upgrades/electronica/skr_mini_e3_turbo.md)
     * [SKR E3 RRF \(EN PROCESO\)](guias-impresion-3d/mejoras-upgrades/electronica/skr-e3-rrf.md)
