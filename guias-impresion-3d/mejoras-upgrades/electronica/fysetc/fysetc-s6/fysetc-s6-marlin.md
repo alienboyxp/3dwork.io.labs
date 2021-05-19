@@ -10,6 +10,12 @@
 
 ## configuration.h modificaciones
 
+## Actualizar firmware
+
+### Usando una SD
+
+copiar firmware.bin -&gt; OLD.BIN
+
 ## LCD Fysetc MINI 12864 2.1 \(Neopixel\)
 
 ![](../../../../../.gitbook/assets/image%20%28103%29.png)
