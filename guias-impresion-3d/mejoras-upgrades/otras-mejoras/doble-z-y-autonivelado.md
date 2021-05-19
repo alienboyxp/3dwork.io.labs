@@ -62,7 +62,13 @@ en el caso de versiones de Marlin 2.0.6.x o superiror en configuration\_adv.h
 **`#define NUM_Z_STEPPER_DRIVERS 2`**
 
 {% hint style="info" %}
-Si los **motores giran en direcciones contrarias girar el cableado para corregirlo.**
+**Para versiones de Marlin &lt;2.0.8 si los** **motores giran en direcciones contrarias girar el cableado para corregirlo.**
+
+**Para versiones &gt;= 2.0.8.x ya puedes cambiar el giro del motor desde configuration\_adv.h en las siguientes lineas:**
+
+**`// Enable if Z motor direction signals are the opposite of Z1 //#define INVERT_Z2_VS_Z_DIR`   
+`//#define INVERT_Z3_VS_Z_DIR   
+//#define INVERT_Z4_VS_Z_DIR`**
 {% endhint %}
 
 Podemos realizar el autoalineado de dos formas:
