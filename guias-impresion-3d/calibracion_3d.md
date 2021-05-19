@@ -55,7 +55,7 @@ Como ejemplo revisa la siguiente lista sobre los A soportados por estos tipos de
 Debemos intentar tener en concordancia los A de nuestros motores con las capacidades de nuestros drivers para evitar problemas
 {% endhint %}
 
-Con estos datos y para que sea sencillo el cálculo os aconsejamos el uso de una calculadora online donde indicar los A de vuestro motor y el % de seguridad el cual es aconsejable colocar entre 80-90%
+Con estos datos y para que sea sencillo el cálculo os aconsejamos el uso de una calculadora online donde indicar los A de vuestro motor y el % de seguridad el cual es aconsejable colocar entre 80-90%, tenéis una buena explicacion en este [documento de E3D](https://e3d-online.dozuki.com/Guide/05+-+E3D+Hemera+Current+Adjustments+%28VREF%29/143) 
 
 {% embed url="https://mvo46.csb.app/" %}
 
