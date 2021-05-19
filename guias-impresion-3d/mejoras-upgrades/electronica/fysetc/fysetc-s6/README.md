@@ -6,7 +6,7 @@ description: >-
 
 # FYSETC S6
 
-![](../../../../.gitbook/assets/image%20%28100%29.png)
+![](../../../../../.gitbook/assets/image%20%28100%29.png)
 
 La **Fysetc S6** es una controladora para nuestras impresoras 3D o CNC que nos añadirá opciones de ampliación y funcionalidad increíbles. 
 
@@ -22,7 +22,7 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDW
 
 {% tabs %}
 {% tab title="Amazon" %}
-![](../../../../.gitbook/assets/image%20%28102%29.png)
+![](../../../../../.gitbook/assets/image%20%28102%29.png)
 {% endtab %}
 
 {% tab title="AliExpress" %}
@@ -36,7 +36,7 @@ En los siguientes diagramas de cableado y de pines podréis encontrar las inmens
 
 {% tabs %}
 {% tab title="Hardware" %}
-![](../../../../.gitbook/assets/image%20%28104%29.png)
+![](../../../../../.gitbook/assets/image%20%28104%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -64,9 +64,11 @@ En los siguientes diagramas de cableado y de pines podréis encontrar las inmens
 
 La Spider dispone de un jumper para seleccionar la alimentación a usar entre USB o adaptador interno 5V \(requiere la fuente de alimentación conectada\) que evita desagradables problemas que pueden ocurrir al mezclar alimentaciones diferentes.
 
-![](../../../../.gitbook/assets/image%20%2898%29.png)
+![](../../../../../.gitbook/assets/image%20%2898%29.png)
 
 ### Conectores de alimentación
 
 Tal como hemos comentado anteriormente esta placa dispone de un arsenal de conexiones y opciones así que la parte de alimentación no podría ser menos.
+
+
 
