@@ -36,7 +36,7 @@ En los siguientes diagramas de cableado y de pines podréis encontrar las inmens
 
 {% tabs %}
 {% tab title="Hardware" %}
-![](../../../../../.gitbook/assets/image%20%28104%29.png)
+![](../../../../../.gitbook/assets/image%20%28105%29.png)
 {% endtab %}
 {% endtabs %}
 
