@@ -47,10 +47,19 @@ debug_tool        = stlink
 
 ![](../../../../../.gitbook/assets/image%20%28110%29.png)
 
+Os aconsejamos añadir un comentario a cualquier linea que modifiquemos ya que después  nos será mucho más sencillo encontrar nuestras modificaciones. Para ello podemos añadir: 
+
+```cpp
+En el caso que no tenga un comentario ya la linea
+... // 3DWORK 
+En el caso que ya tenga un comentario
+... // 3DWORK ...
+```
+
 Comenzaremos por configurar correctamente los **SERIAL** para esta máquina algo clave para el correcto funcionamiento de nuestra conexión TFT, USB o WIFI.
 
 ```cpp
-#define SERIAL_PORT_2 -1
+#define SERIAL_PORT_2 -1 // 3DWORK FYSETC
 ```
 
 **BAUDRATE** nos ayuda a definir la velocidad de la comunicación por el puerto **SERIAL** lo normal es usar 115200 o 250000.
@@ -62,7 +71,7 @@ Comenzaremos por configurar correctamente los **SERIAL** para esta máquina algo
 Ahora definiremos nuestro **MOTHERBOARD** el cual al igual que hicimos el platformio.ini nos indica el tipo de chipset que lleva nuestra placa y que permite a Marlin usar una configuración de pines u otra.
 
 ```cpp
-#define MOTHERBOARD BOARD_FYSETC_S6_V2_0
+#define MOTHERBOARD BOARD_FYSETC_S6_V2_0 // 3DWORK FYSETC
 ```
 
 Definiremos el **número de extrusores** y **diámetro del filamento** que usa nuestra impresora que básicamente indica el diámetro del mismo. Normalmente impresoras usan filamento del 1.75 aunque otra medida más o menos estándard es 3.
@@ -108,8 +117,8 @@ En nuestro ejemplo y para esta placa usaremos un hotend y una cama caliente con 
 Básicamente el PID ayuda a que Marlin controle de forma adecuada la temperatura sin tener grandes fluctuaciones.
 
 ```cpp
-#define PIDTEMP
-#define PIDTEMPBED
+#define PIDTEMP // 3DWORK PID
+#define PIDTEMPBED // 3DWORK PID
 ```
 
 **ENDSTOPS o finales de carrera**, es importante verificar cuando realizamos un cambio de electrónica y encendemos por primera vez que la lógica de los finales de carrera es la correcta usando el comando M119 desde un terminal como Pronterface... esto es OPEN en estado normal y TRIGGERED cuando están pulsados. Podremos invertir esta lógica cambiando:
@@ -135,21 +144,20 @@ Por otro lado y aunque lo normal es que las máquinas realicen el home en MIN \(
 //#define USE_ZMAX_PLUG
 ```
 
-**Drivers**, como ya hemos comentado esta placa cuenta con 6 zócalos para drivers soportando diferente tipos de drivers y sus configuraciones.
+**Drivers**, como ya hemos comentado esta placa cuenta con 6 zócalos para drivers soportando diferente tipos de drivers y sus configuraciones. Podéis encontrar como realizar la instalación de los mismos en la[ primera parte de la guia](./).
 
-
+En nuestro ejemplo utilizaremos unos TMC2209 en modo UART \(inteligente\), con doble Z independiente y un solo extrusor:
 
 ```cpp
-#define X_DRIVER_TYPE TMC2209
-#define Y_DRIVER_TYPE TMC2209
-#define Z_DRIVER_TYPE TMC2209
-//#define X2_DRIVER_TYPE TMC2209
+#define X_DRIVER_TYPE  TMC2209 // 3DWORK DRIVERS
+#define Y_DRIVER_TYPE  TMC2209 // 3DWORK DRIVERS
+#define Z_DRIVER_TYPE  TMC2209 // 3DWORK DRIVERS
+//#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
-//#define Z2_DRIVER_TYPE A4988
+#define Z2_DRIVER_TYPE TMC2209 // 3DWORK DRIVERS
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
-#define E0_DRIVER_TYPE TMC2209
-//#define E1_DRIVER_TYPE A4988
+#define E0_DRIVER_TYPE TMC2209 // 3DWORK DRIVERS
 ```
 
 ## Actualizar firmware
