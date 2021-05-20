@@ -4,13 +4,13 @@ description: Configurando nuestro Marlin para sacar todo el provecho de nuestra 
 
 # FYSETC S6 - Marlin
 
-![](../../../../../.gitbook/assets/image%20%28113%29.png)
+![](../../../../../.gitbook/assets/image%20%28114%29.png)
 
 Os aconsejamos seguir nuestra [guía para "cocinar" vuestro propio Marlin](../../../marlin-guia-compilacion/) que tenemos en la seccion /Marlin de nuestro bot de ayuda en Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 ## platformio.ini 
 
-![](../../../../../.gitbook/assets/image%20%28112%29.png)
+![](../../../../../.gitbook/assets/image%20%28113%29.png)
 
 En este fichero deberemos indicar el chipset que tiene nuestra placa por lo que deveremos buscar en el inicio del fichero el valor "env\_default" y cambiarlo por el siguiente:
 
@@ -45,7 +45,7 @@ debug_tool        = stlink
 
 ## configuration.h 
 
-![](../../../../../.gitbook/assets/image%20%28124%29.png)
+![](../../../../../.gitbook/assets/image%20%28130%29.png)
 
 Os aconsejamos añadir un comentario a cualquier linea que modifiquemos ya que después  nos será mucho más sencillo encontrar nuestras modificaciones. Para ello podemos añadir: 
 
@@ -162,11 +162,41 @@ En nuestro ejemplo utilizaremos unos TMC2209 en modo UART \(inteligente\), con d
 
 ## Actualizar firmware
 
+La Fysetc S6 cuenta con varias opciones para poder actualizar su firmware.
+
 ### Usando SD 
 
-copiar firmware.bin -&gt; OLD.BIN
+La opción más sencilla es la de usar una SD para la actualización que es el método por defecto que usa el bootloader de la placa.
+
+{% hint style="info" %}
+**Es importante recordar que esta placa no cuenta con una ranura de SD integrada así que necesitaremos una pantalla LCD \(use EXP1/2 para su conexión\) o un módulo de SD conectado en EXP2.**
+{% endhint %}
+
+En este caso es muy sencillo y tan solo tenemos que copiar nuestro firmware.bin en la raíz de la **SD formateada en FAT32**, insertar la SD en la ranura del módulo y esperar unos 30seg a que finalice el proceso. Una vez finalizado **el fichero firmware.bin debe quedar renombrado a OLD.BIN** el cual podemos guardar a modo de copia de seguridad \(recordar que un firmware compilado no se puede modificar, ese proceso solamente se puede hacer con los ficheros fuentes de vuestro firmware y vuelto a compilar\).
 
 ### Usando modo DFU/USB
+
+Otra forma de actualizar nuestra placa, sobretodo en el caso de no disponer de un módulo o pantalla LCD con SD, es usando el modo DFU.
+
+* [Descargaremos STM32 Cube Programmer](https://www.st.com/zh/development-tools/stm32cubeprog.html) \(Windows, Mac y Linux\) desde su sitio web 
+* Abriremos la aplicación
+
+![](../../../../../.gitbook/assets/image%20%28120%29.png)
+
+* Pondremos nuestra placa Fysetc S6 en modo DFU
+  * **S6 v1.2**, con la placa completamente apagada **dejaremos pulsado el botón BOOT0 y con el botón pulsado conectaremos mediante el cable USB la placa a nuestro ordenador**, esto hará que entre en el modo DFU. Una vez conectado y en modo DFU soltaremos el botón. 
+  * **S6 v2**, con la placa completamente apagada **pondremos el jumper del conector BOOT0 a 3.3v y conectaremos mediante el cable USB la placa a nuestro ordenador**, esto hará que entre en el modo DFU. **RECORDAR!!! una vez finalizado el proceso de actualización de firmware quitar el jumper de BOOT0**
+
+![](../../../../../.gitbook/assets/image%20%28118%29.png)
+
+* Una vez en modo DFU volveremos a la aplicación y realizaremos los siguientes pasos:
+  * Pulsaremos el **botón refrescar para que detecte el puerto DFU**
+  * Pulsaremos el botón **CONNECT**
+  * Seleccionaremos el **firmware.bin** creado
+  * En **START ADDRESS** pondremos **0x8010000**
+  * Pulsaremos **START PROGRAMMING**
+
+**Si todo ha funcionado correctamente ya tendremos nuestro nuevo firmware en nuestra Fysetc S6!!!**
 
 ## LCD Fysetc MINI 12864 2.1 \(Neopixel\)
 
