@@ -21,12 +21,12 @@ Os recordamos que tienes mas guias de ayuda en nuestro bot de Telegram [@ThreeDW
 ## Donde comprarla?
 
 {% tabs %}
-{% tab title="Amazon" %}
-![](../../../../../.gitbook/assets/image%20%28102%29.png)
-{% endtab %}
-
 {% tab title="AliExpress" %}
 {% embed url="https://s.click.aliexpress.com/e/\_9jiDPf" %}
+{% endtab %}
+
+{% tab title="Amazon" %}
+![](../../../../../.gitbook/assets/image%20%28102%29.png)
 {% endtab %}
 {% endtabs %}
 
