@@ -59,6 +59,10 @@ Usando el conector dedicado al PROBE, ojo depende de version de Marlin o configu
 ![](https://lh5.googleusercontent.com/S7MWMIPbTX8GcGJmKNy4ZU1vzPm_ToYfc99FVobYYgBq_6hgrw07CXVuYJ2UL4jKCezvOZrHvjTc_3aV3YH0xvM6l5UK5Y5a7z6cvfIba8WZIu5LxpQlGVJMp8Lc4P7H3m21jIGo)
 {% endtab %}
 
+{% tab title="FYSETC S6" %}
+![](../../../.gitbook/assets/image%20%28115%29.png)
+{% endtab %}
+
 {% tab title="SUNLU S8" %}
 ![](https://lh4.googleusercontent.com/W5qBvoYdZE9ByeuaLWWr5RCTDIdOCKqhUZO3P9gNYjWLMt2-WxpyN-9D7wET6hSgshalMO8MOHaj9dXHV9cffFkLqZgOj0cVL9A1-L8nVcxmlU0YOYlvnEmM1IYMGAbx6_SqQWZP)
 {% endtab %}
