@@ -4,13 +4,13 @@ description: Configurando nuestro Marlin para sacar todo el provecho de nuestra 
 
 # FYSETC S6 - Marlin
 
-![](../../../../../.gitbook/assets/image%20%28109%29.png)
+![](../../../../../.gitbook/assets/image%20%28111%29.png)
 
 Os aconsejamos seguir nuestra [guía para "cocinar" vuestro propio Marlin](../../../marlin-guia-compilacion/) que tenemos en la seccion /Marlin de nuestro bot de ayuda en Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 ## platformio.ini 
 
-![](../../../../../.gitbook/assets/image%20%28108%29.png)
+![](../../../../../.gitbook/assets/image%20%28110%29.png)
 
 En este fichero deberemos indicar el chipset que tiene nuestra placa por lo que deveremos buscar en el inicio del fichero el valor "env\_default" y cambiarlo por el siguiente:
 
@@ -45,7 +45,7 @@ debug_tool        = stlink
 
 ## configuration.h 
 
-![](../../../../../.gitbook/assets/image%20%28117%29.png)
+![](../../../../../.gitbook/assets/image%20%28119%29.png)
 
 Os aconsejamos añadir un comentario a cualquier linea que modifiquemos ya que después  nos será mucho más sencillo encontrar nuestras modificaciones. Para ello podemos añadir: 
 
