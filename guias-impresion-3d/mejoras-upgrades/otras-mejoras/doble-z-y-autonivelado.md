@@ -36,7 +36,7 @@ Para la conexión de ambos motores dependiendo de tu placa disponemos de dos opc
 
 ## Usar drivers separados en Z
 
-En el caso que nuestros motores no sean soportados por un solo driver o que nos interese separarlos por disponer de otras funcionalidades para sincronización automática de nivelado en Z deberemos de usar un puerto de driver libre de nuestra placa para instalar un nuevo driver y configurarlo en Marlin
+En el caso que nuestros motores no sean soportados por un solo driver o que nos interese separarlos por disponer de otras funcionalidades para sincronización automática de nivelado en Z deberemos de usar un puerto de driver libre de nuestra placa para instalar el nuevo driver y configurarlo en Marlin.
 
 {% embed url="https://www.youtube.com/watch?v=d7EFw\_1PDlk" %}
 
@@ -55,6 +55,11 @@ Instalación del nuevo driver, para este ejemplo utilizaremos una SKR 1.4 y el m
 Habilitaremos en Marlin \(configuration.h\) un nuevo driver en Z2, en este caso como ejemplo un TMC2209 en modo UART.  
 Recuerda que en configuration\_adv deberías de configurar del mismo modo que el eje Z original los valores de microsteps y vref \(revisa el apartado de UART del documento para más detalle\)  
 **`#define Z2_DRIVER_TYPE TMC2209`**
+
+{% hint style="info" %}
+**`Al definir Z2 Marlin usará como Z2 el siguiente driver que no este en uso. En el ejemplo E1 ya que no tiene definida ninguna función directamente.   
+En el caso de tener una placa con tres extrusores (E0,E1 y E2) y tener definidos dos extrusores en Marlin (E0 y E1) se le asignará el rol de Z2 al siguiente driver libre, en este caso E2.`**
+{% endhint %}
 
 Habilitaremos también \(configuration.h\) el doble Z  
 **`#define Z_DUAL_STEPPER_DRIVERS`**  
