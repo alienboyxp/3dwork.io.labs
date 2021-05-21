@@ -417,6 +417,57 @@ En el ejemplo siguiente podremos ver como tenemos 16 micropasos para nuestro eje
 
 Otro valor importante de los valores anteriores es el de **CURRENT** donde ajustaremos la corriente de nuestros motores. También puedes ajustarlos **desde el LCD desde Configuración/Avanzado/TMC** junto con otras opciones que explicaremos a continuación.
 
+**STEALTHCHOP**, es importante habilitarlo si queremos que nuestros motores sean "silenciosos" ya que si no estarán funcionando en modo **SpreadCycle** que es el modo pontencia.
+
+```cpp
+#define STEALTHCHOP_XY // 3DWORK DRIVERS
+#define STEALTHCHOP_Z // 3DWORK DRIVERS
+#define STEALTHCHOP_E // 3DWORK DRIVERS
+```
+
+Aunque es raro algunos extrusores pueden trabajar mejor con el modo **StealthChop** desabilitado. Si es nuestro caso comentaremos la siguiente linea.
+
+```cpp
+//#define STEALTHCHOP_E // 3DWORK DRIVERS
+```
+
+**CHOPPER TIMMING**, es usado por StealthChop para la sincronización de señales a los motores. Este tiene que coincidir con el voltaje usado en nuestra impresora, en el caso de Ender 3 y normalemente en todas las impresoras a 24v.
+
+```cpp
+#define CHOPPER_TIMING CHOPPER_DEFAULT_24V // 3DWORK DRIVERS
+```
+
+**Monitor Status**, esta función nos permite que Marlin pueda controlar en detalle todos los parámetros de los drives para poder ajustar por ejemplo la temperatura de los mismos para evitar problemas más graves.
+
+```cpp
+#define MONITOR_DRIVER_STATUS // 3DWORK DRIVERS
+```
+
+**Hybrid Thresold**, otra interesante función es Hybrid Thresold que nos permite que Marlin cambie entre **StealthChop** \(silencio\) o **SpreadCycle** \(potencia\) dinámicamente en base a la velocidad de movimientos.
+
+```cpp
+#define HYBRID_THRESHOLD // 3DWORK DRIVERS
+#define X_HYBRID_THRESHOLD 100 // [mm/s]
+#define Y_HYBRID_THRESHOLD 100
+#define Z_HYBRID_THRESHOLD 15
+```
+
+En nuestro caso usamos los valores indicados para una Ender que son 100mm/s para X Y y de 15 para Z aunque lo podemos ajustar a nuestras necesidades.
+
+**TMC Debug**, en este caso es un requerimiento de **MONITOR\_DRIVER\_STATUS** que deberemos de habilitar y nos permitirá tener accesible el comando **M122** muy útil para obtener información avanzada del estado y configuración de nuestros drivers.
+
+```cpp
+#define TMC_DEBUG // 3DWORK DRIVERS
+```
+
+## Fiochero pins de nuestra FYSETC S6
+
+A continuación tienes los ficheros pins que contienen las referencias para esta placa.
+
+```cpp
+.../Marlin/src/pins/stm32f4/pins_FYSETC_S6.h
+```
+
 ## Actualizar firmware
 
 La Fysetc S6 cuenta con varias opciones para poder actualizar su firmware.
@@ -470,8 +521,4 @@ Esta pantalla es muy adecuada para usar junto con esta electrónica ya que tiene
 {% embed url="https://s.click.aliexpress.com/e/\_AWJJoh" %}
 {% endtab %}
 {% endtabs %}
-
-## Definición pines FYSETC S6
-
-Marlin/src/pins/stm32f4/pins\_FYSETC\_S6.h 
 
