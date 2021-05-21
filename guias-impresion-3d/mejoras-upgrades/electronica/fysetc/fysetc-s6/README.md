@@ -82,17 +82,17 @@ Tal como hemos comentado anteriormente esta placa dispone de un arsenal de conex
 
 También contamos con otras salidas de alimentación de 24v para la alimentación de periféricos u otros componentes:
 
-![](../../../../../.gitbook/assets/image%20%28125%29.png)
+![](../../../../../.gitbook/assets/image%20%28129%29.png)
 
 ### Endstops \(finales de carrera\)
 
 En esta ocasión contamos con los típicos conexiones para endstops.
 
-![](../../../../../.gitbook/assets/image%20%28116%29.png)
+![](../../../../../.gitbook/assets/image%20%28118%29.png)
 
 De nuevo Fysetc ha implementado mejoras muy interesantes en los conectores de final de carrera donde con mucha frecuencia conectamos sensores de nivelación que pueden requerir de diferentes voltajes así que se han incluido unos jumpers \(mediante puente de soldadura\) para que podamos escoger el voltaje que entregará cada conexión.
 
-![](../../../../../.gitbook/assets/image%20%28130%29.png)
+![](../../../../../.gitbook/assets/image%20%28136%29.png)
 
 Donde tenemos dos bloques de conectores que pueden usar dos tipos de voltajes:
 
@@ -101,7 +101,7 @@ Donde tenemos dos bloques de conectores que pueden usar dos tipos de voltajes:
 
 Otro aspecto importante sobre los conectores endstops es que disponemos de varios con funciones ADC \(punto morado\) y PWM \(punto rojo\) muy útiles para el uso de servos, leds o similares. En el siguiente esquema podremos ver el tipo de cada uno:
 
-![](../../../../../.gitbook/assets/image%20%28129%29.png)
+![](../../../../../.gitbook/assets/image%20%28135%29.png)
 
 #### Bltouch
 
@@ -117,19 +117,19 @@ La Fysetc S6 cuenta con conexiones para 3 ventiladores gestionables. Además de 
 
 Para ello deberemos poner el jumper correspondiente entre FAN0/1/2 Voltage y el voltaje que queramos usar. En el siguiete diagrama podremos verlo fácilmente.
 
-![](../../../../../.gitbook/assets/image%20%28118%29.png)
+![](../../../../../.gitbook/assets/image%20%28120%29.png)
 
 ### Drivers
 
 La Fysetc S6 dispone de una extensa configuración de jumpers/pins \(JP1 y JP6\) para poder soportar una gran variedad de drivers.
 
-![](../../../../../.gitbook/assets/image%20%28128%29.png)
+![](../../../../../.gitbook/assets/image%20%28134%29.png)
 
 {% tabs %}
 {% tab title="UART" %}
 Para el uso de **drivers TMC2208/2225 o TMC2209/2226 en modo UART** \(inteligente\) solamente necesitaremos colocar un jumper en **JP1** el resto de configuración ser realizará directamente mediante nuestro firmware \(microsteps, vref, modo, etc...\).
 
-![](../../../../../.gitbook/assets/image%20%28120%29.png)
+![](../../../../../.gitbook/assets/image%20%28122%29.png)
 {% endtab %}
 
 {% tab title="SPI" %}
@@ -141,13 +141,13 @@ Para **drivers TMC2130/5160/5161 en modo SPI** necesitamos colocar **4 jumpers e
 {% tab title="STANDALONE" %}
 Para la configuración de drivers en modo STANDALONE \(simple\) necesitamos usar los pines del conector JP6 \(1234-5678\) para configuración de microsteps y alguna funcionalidad en drivers TMC según se muestra en el esquema anterior.
 
-![](../../../../../.gitbook/assets/image%20%28127%29.png)
+![](../../../../../.gitbook/assets/image%20%28132%29.png)
 {% endtab %}
 {% endtabs %}
 
 Una funcionalidad muy interesante para drivers UART/SPI inteligentes, que lo soporten, es **SensorLess** que permite usar el propio motor como final de carrera ahorrando en componentes, puntos extra de fallo y cableado. Podéis tener más información y detalle en nuestra [guía de Sensorless](../../../nivelacion/sensorless-homing-en-marlin.md) para Marlin.
 
-![](../../../../../.gitbook/assets/image%20%28124%29.png)
+![](../../../../../.gitbook/assets/image%20%28128%29.png)
 
 En el caso de la Fysetc S6 disponemos de unos pines que colocando el correspondiente jumper nos permiten enviar la señal DIAG del driver al endstop. Recordar que al activar este jumper deberemos tener correctamente configurado nuestro firmware.
 
@@ -159,14 +159,54 @@ En el caso de la Fysetc S6 disponemos de unos pines que colocando el correspondi
 
 Contamos con dos conectores EXP compatibles con la inmensa totalidad de pantallas de este tipo. En el siguiente esquema podremos ver el esquema de pines disponibles:
 
-![](../../../../../.gitbook/assets/image%20%28126%29.png)
+![](../../../../../.gitbook/assets/image%20%28131%29.png)
 
 ### Conector UART/Serial
 
-Contamos con dos puertos UART/Serial para la conexión de dispositivos serial como pantallas TFT, módulos Wifi, adaptador USB para actualización de firmware o similares.
+Contamos con **hasta seis puertos USART/Serial** para la conexión de dispositivos serial como pantallas TFT, módulos Wifi, adaptador USB para actualización de firmware o similares.
 
-* USART1-RX1 y -TX1 \(PA10 y PA9 en UART\)
-* USART5-RX5 y -TX5 \(PC11 y PC10 en EXP1\)
+* USART1 -RX1 y TX1- \(PA10 y PA9 en UART\)
+* USART2 -RX2 y TX2- \(PA3 y PA2 en Z-MAX y Y-MAX\)
+* USART3 -RX3 y TX3- \(PC11 y PC10 en EXP1 y conector FPC\)
+* USART4 -RX4 y TX4- \(PA1 y PA0 en X-MAX y Z-MIN\)
+* USART5 -RX5 y TX5- \(PD2 y SDA2 en EXP1\)
+* USART6 -RX6 y TX6- \(PC7 y PC6 en EXP2\)
+
+![Esquema de posibles conexiones UART para Fysetc S6](../../../../../.gitbook/assets/image%20%28115%29.png)
+
+Para definir estos USART/Serial en Marlin, recordar que a partir de Marlin 2.0.8 podemos usar hasta 3 puertos USART/Serial:
+
+```cpp
+#define SERIAL_PORT -1 // 3DWORK USART USB
+#define SERIAL_PORT_2 1 // 3DWORK USART1
+#define SERIAL_PORT_3 3 // 3DWORK USART3 Example
+```
+
+Puedes tener mas detalle en la siguiente tabla:
+
+{% tabs %}
+{% tab title="USART1 " %}
+![](../../../../../.gitbook/assets/image%20%28127%29.png)
+{% endtab %}
+
+{% tab title="USART2" %}
+![](../../../../../.gitbook/assets/image%20%28125%29.png)
+{% endtab %}
+
+{% tab title="USART3" %}
+![](../../../../../.gitbook/assets/image%20%28130%29.png)
+{% endtab %}
+
+{% tab title="USART4" %}
+![](../../../../../.gitbook/assets/image%20%28138%29.png)
+{% endtab %}
+
+{% tab title="USART5&6" %}
+![](../../../../../.gitbook/assets/image%20%28133%29.png)
+
+![](../../../../../.gitbook/assets/image%20%28114%29.png)
+{% endtab %}
+{% endtabs %}
 
 ![Ejemplo de conexi&#xF3;n de m&#xF3;dulo USB para actualizaci&#xF3;n de firmware. ](../../../../../.gitbook/assets/image%20%28108%29.png)
 

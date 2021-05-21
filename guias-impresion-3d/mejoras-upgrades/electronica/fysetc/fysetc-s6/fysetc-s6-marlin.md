@@ -4,13 +4,13 @@ description: Configurando nuestro Marlin para sacar todo el provecho de nuestra 
 
 # FYSETC S6 - Marlin
 
-![](../../../../../.gitbook/assets/image%20%28115%29.png)
+![](../../../../../.gitbook/assets/image%20%28117%29.png)
 
 Os aconsejamos seguir nuestra [guía para "cocinar" vuestro propio Marlin](../../../marlin-guia-compilacion/) que tenemos en la seccion /Marlin de nuestro bot de ayuda en Telegram [@ThreeDWorkHelpBot](https://t.me/ThreeDWorkHelpBot)
 
 ## platformio.ini 
 
-![](../../../../../.gitbook/assets/image%20%28114%29.png)
+![](../../../../../.gitbook/assets/image%20%28116%29.png)
 
 En este fichero deberemos indicar el chipset que tiene nuestra placa por lo que deveremos buscar en el inicio del fichero el valor "env\_default" y cambiarlo por el siguiente:
 
@@ -45,7 +45,7 @@ debug_tool        = stlink
 
 ## configuration.h 
 
-![](../../../../../.gitbook/assets/image%20%28131%29.png)
+![](../../../../../.gitbook/assets/image%20%28137%29.png)
 
 Os aconsejamos añadir un comentario a cualquier linea que modifiquemos ya que después  nos será mucho más sencillo encontrar nuestras modificaciones. Para ello podemos añadir: 
 
@@ -489,13 +489,13 @@ Otra forma de actualizar nuestra placa, sobretodo en el caso de no disponer de u
 * [Descargaremos STM32 Cube Programmer](https://www.st.com/zh/development-tools/stm32cubeprog.html) \(Windows, Mac y Linux\) desde su sitio web 
 * Abriremos la aplicación
 
-![](../../../../../.gitbook/assets/image%20%28121%29.png)
+![](../../../../../.gitbook/assets/image%20%28123%29.png)
 
 * Pondremos nuestra placa Fysetc S6 en modo DFU
   * **S6 v1.2**, con la placa completamente apagada **dejaremos pulsado el botón BOOT0 y con el botón pulsado conectaremos mediante el cable USB la placa a nuestro ordenador**, esto hará que entre en el modo DFU. Una vez conectado y en modo DFU soltaremos el botón. 
   * **S6 v2**, con la placa completamente apagada **pondremos el jumper del conector BOOT0 a 3.3v y conectaremos mediante el cable USB la placa a nuestro ordenador**, esto hará que entre en el modo DFU. **RECORDAR!!! una vez finalizado el proceso de actualización de firmware quitar el jumper de BOOT0**
 
-![](../../../../../.gitbook/assets/image%20%28119%29.png)
+![](../../../../../.gitbook/assets/image%20%28121%29.png)
 
 * Una vez en modo DFU volveremos a la aplicación y realizaremos los siguientes pasos:
   * Pulsaremos el **botón refrescar para que detecte el puerto DFU**
