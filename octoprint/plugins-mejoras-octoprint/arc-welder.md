@@ -6,6 +6,8 @@ description: >-
 
 # Arc-Welder
 
+
+
 {% embed url="https://plugins.octoprint.org/plugins/arc\_welder/" %}
 
 Este potentísimo plugin promete mejorar la calidad de tus impresiones además de ser muy muy adecuado para el uso de tu impresora desde Octoprint.  

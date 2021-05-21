@@ -60,7 +60,7 @@ Usando el conector dedicado al PROBE, ojo depende de version de Marlin o configu
 {% endtab %}
 
 {% tab title="FYSETC S6" %}
-![](../../../.gitbook/assets/image%20%28116%29.png)
+![](../../../.gitbook/assets/image%20%28117%29.png)
 {% endtab %}
 
 {% tab title="SUNLU S8" %}
