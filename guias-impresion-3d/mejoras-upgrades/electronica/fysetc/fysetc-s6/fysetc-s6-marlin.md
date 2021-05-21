@@ -522,3 +522,13 @@ Esta pantalla es muy adecuada para usar junto con esta electrónica ya que tiene
 {% endtab %}
 {% endtabs %}
 
+#### Pues ya hemos terminado!!! ahora solamente queda compilar, ajustar cualquier error que nos reporte el compilado y meterlo en nuestra placa!!! <a id="Pues-ya-hemos-terminado!!!-ahora-solamente-queda-compilar,-ajustar-cualquier-error-que-nos-reporte-el-compilado-y-meterlo-en-nuestra-placa!!!"></a>
+
+Como siempre os aconsejamos verificar inicialemente la impresora de la siguiente manera:
+
+* revisar los finales de carrera siempre que sea posible usando un terminal \(Pronterface por ejemplo\) con el comando M119
+* revisar individualmente el homing de cada uno de los ejes de movimiento en el siguiente orden X Y Z E y en caso necesario invertir el giro del motor
+* revisar que nuestros thermistores reportan correctamente la temperatura
+* revisar que nuestros calentadores de cama y de hotend funcionan correctamente
+* realizar la guia de Calibración Inicial que podéis encontrar en nuestro bot en el apartado /Calibracion
+
