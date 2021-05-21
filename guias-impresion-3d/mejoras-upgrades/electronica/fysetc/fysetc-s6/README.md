@@ -216,3 +216,7 @@ Fysetc S6 es compatible con los firmwares más importantes, a continuación os d
 
 {% page-ref page="fysetc-s6-marlin.md" %}
 
+{% page-ref page="fysetc-s6-klipper.md" %}
+
+
+
