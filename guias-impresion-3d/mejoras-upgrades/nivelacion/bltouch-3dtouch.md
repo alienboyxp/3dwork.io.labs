@@ -84,7 +84,15 @@ Importante actualizar el firmware a la última versión o uno custom y actualiza
 * Ajustamos los offsets \(localización del sensor de nivelación con respecto a la punta del nozzle\) del sensor de nivelación **`#define NOZZLE_TO_PROBE_OFFSET…`**
 
 > Es muy importante una vez subidos los cambios veríficar que los offsets esten correctamente cargados en la EEPROM. Esto lo podemos verificar usando el comando **M503** desde Pronterface/Octoprint o desde la propia pantalla \(segun version y opciones habilitadas en Marlin\) en Configuración/Avanzado/Probe Offsets.   
+>
+>
 > En el caso que no estén cargados correctamente esros valores podemos refrescar los datos desde Pronterface/Octoprint usando **M502** **M500** o desde la pantalla de la impresora **Configuración Reset Load Save Eeprom**.
+>
+> Si deseamos **cambiarlos sin tener que compilar Marlin podemos desde Pronterface/Octoprint** usar el comando **M851** y despues un **M500** \(guardarlos en EEPROM\) y un **M503** para verificar que se guardaron correctamente. Por ejemplo para un desfase X de -1.7 e Y -1.3 de nuestro PROBE usariamos el siguiente comando
+>
+> ```text
+> M851 X-1.70 Y-1.30
+> ```
 
 ### Valores offsets PROBE dependiendo de ubicación del mismo
 
