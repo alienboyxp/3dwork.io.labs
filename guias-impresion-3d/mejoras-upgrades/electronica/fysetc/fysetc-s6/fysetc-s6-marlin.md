@@ -522,7 +522,55 @@ Esta pantalla es muy adecuada para usar junto con esta electrónica ya que tiene
 {% endtab %}
 {% endtabs %}
 
-#### Pues ya hemos terminado!!! ahora solamente queda compilar, ajustar cualquier error que nos reporte el compilado y meterlo en nuestra placa!!! <a id="Pues-ya-hemos-terminado!!!-ahora-solamente-queda-compilar,-ajustar-cualquier-error-que-nos-reporte-el-compilado-y-meterlo-en-nuestra-placa!!!"></a>
+### configuration.h Fysetc MINI 12864
+
+```cpp
+# Definición de pantalla
+#define FYSETC_MINI_12864_2_1 // Type A/B. Neopixel RGB Backlight
+...
+# Definición Neopixel de pantalla
+// Support for Adafruit Neopixel LED driver
+#define NEOPIXEL_LED
+#if ENABLED(NEOPIXEL_LED)
+#define NEOPIXEL_TYPE NEO_GRBW // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
+//#define NEOPIXEL_PIN 4 // LED driving pin
+//#define NEOPIXEL_PIXELS 30 // Number of LEDs in the strip
+//#define NEOPIXEL_IS_SEQUENTIAL // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
+//#define NEOPIXEL_BRIGHTNESS 127 // Initial brightness (0-255)
+#define NEOPIXEL_STARTUP_TEST // Cycle through colors at startup
+// Use a single Neopixel LED for static (background) lighting
+// #define NEOPIXEL_BKGD_LED_INDEX 0 // Index of the LED to use - Do not 
+...
+// Use a single Neopixel LED for static (background) lighting
+#define NEOPIXEL_BKGD_LED_INDEX 0 // Index of the LED to use - Do not change this setting
+#define NEOPIXEL_BKGD_COLOR { 0, 255, 0, 0 } // R, G, B, W - We have set green background color as standard
+#endif
+```
+
+### configuration\_adv.h Fysetc MINI 12864
+
+```cpp
+ # Habilitar menus de control LED
+ #define LED_CONTROL_MENU
+```
+
+### conditionals\_post.h Fysetc MINI 12864
+
+Estas modificaciones se deben realizar si tu pantalla no aparecen letras de una forma clara/definica \(puedes intuirlas viendo en diagonal\)
+
+```cpp
+#elif ENABLED(FYSETC_MINI_12864)
+#define _LCD_CONTRAST_MIN 255
+#define _LCD_CONTRAST_INIT 255
+
+.../Marlin/src/inc/Conditionals_post.h
+```
+
+
+
+## Pues ya hemos terminado!!! 
+
+ahora solamente queda compilar, ajustar cualquier error que nos reporte el compilado y meterlo en nuestra placa!!!
 
 Como siempre os aconsejamos verificar inicialemente la impresora de la siguiente manera:
 
