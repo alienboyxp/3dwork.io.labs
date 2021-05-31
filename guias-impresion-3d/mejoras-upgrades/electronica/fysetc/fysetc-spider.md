@@ -25,6 +25,8 @@ En los siguientes diagramas de placa, cableado y de pines podréis encontrar las
 {% tabs %}
 {% tab title="Placa" %}
 ![](../../../../.gitbook/assets/image%20%2887%29.png)
+
+![](../../../../.gitbook/assets/image%20%28143%29.png)
 {% endtab %}
 
 {% tab title="Cableado" %}
@@ -107,9 +109,11 @@ Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes
 {% tab title="UART" %}
 ![](../../../../.gitbook/assets/image%20%2888%29.png)
 
-**Para drivers que usen UART como TMC2208/TMC2209 o similares**. En el caso que usemos Sensorless \(homing sin finales de carreras físicos\), o no,  no es necesario cortar el pin DIAG ya que la placa cuenta con jumpers para ser habilitada esta función.
+![](../../../../.gitbook/assets/image%20%28142%29.png)
 
-![](../../../../.gitbook/assets/image%20%2885%29.png)
+**Para drivers Bigtreetech deberemos asegurarnos que esten en UART mediante el jumper soldado en la parte de abajo del propio driver.**
+
+![](../../../../.gitbook/assets/telegram-cloud-photo-size-4-5877201890746415314-x.jpg)
 {% endtab %}
 
 {% tab title="SPI" %}
@@ -125,15 +129,65 @@ Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes
 {% endtab %}
 {% endtabs %}
 
+#### Dual X y Dual Z... Marlin
+
+En el caso que queramos usar doble driver para los ejes de X y Z es importante que \(actualmente en versiones 2.0.8.x\) deberemos de colocar el segundo driver en los zócalos siguientes:
+
+![](../../../../.gitbook/assets/image%20%28139%29.png)
+
+#### Sensorless drivers TMC
+
+Si queremos utilizar esta funcionalidad de los drivers TMC que usa los motores como finales de carrera lo tendremos muy sencillo ya que la placa dispone de unos jumpers específicos para habilitar esta función, de todas formas os aconsejamos revisar nuestra [guía sensorless](../../nivelacion/sensorless-homing-en-marlin.md) para conocer más de esta gran funcionalidad. 
+
+![](../../../../.gitbook/assets/image%20%2885%29.png)
+
+{% hint style="info" %}
+**El uso de Sensorless es aconsejable únicamente para ejes X e Y**
+{% endhint %}
+
 ### Endstops
 
 En la Spider disponemos de 6 conectores para finales de carrera de 3 pines.
 
 ![](../../../../.gitbook/assets/image%20%2893%29.png)
 
+De nuevo Fysetc ha implementado mejoras muy interesantes en los conectores de final de carrera donde con mucha frecuencia conectamos sensores de nivelación que pueden requerir de diferentes voltajes así que se han incluido unos jumpers \(mediante puente de soldadura\) para que podamos escoger el voltaje que entregará cada conexión.
+
+![](../../../../.gitbook/assets/image%20%28141%29.png)
+
+Podemos encontrar los siguientes bloques de conectores que pueden usar dos tipos de voltajes:
+
+* Conectores **X+/Y+**, podremos escoger **5v o 3.3v \(defecto\)**... indicado por ejemplo para sensores bltouch de 5v
+* Conectores **X-/Y-/Z-,** podremos escoger **24v o 3.3v \(defecto\)**... estos conectores están especialmente indicados para conectar sensores de nivelación inductivos/capacitativos
+* Conector **Z+**, esta preparado para la conexión de un sensor de nivelación con servo al contar con el pin PA3 PWM podremos escoger mediante un numper al lado de Z- el voltaje de placa 24v o 5v en el caso que usemos un sensor estilo Bltouch.
+
 #### Sensores de nivelación
 
 
+
+### Conexión Raspberry Pi \(Octoprint\)
+
+Nuestra Fysetc Spider cuenta con un conector dedicado para la conexión de una Raspberry Pi normalmente para controlar nuestra impresora con [Octoprint](../../../../octoprint/que_es_octoprint.md) o [Klipper](../../../../klipper/klipper-1.md).
+
+![](../../../../.gitbook/assets/image%20%28140%29.png)
+
+Este conector permite alimentar y conectar por UART nuestra Raspberry Pi, es interesante que la alimentación mediante el conector puede proveer hasta 8A.
+
+Para habilitar el puerto UART en nuestra Raspberry Pi deberemos reconfigurarla mediante raspi-config desde una linea de comandos SSH por ejemplo. 
+
+```bash
+sudo raspi-config
+=> Interfacing Option
+=> Serial
+=> NO=> YES
+sudo nano /boot/config.txt
+=> add this line :dtoverlay=pi3-disable-bt
+=> then
+sudo rebootsudo 
+nano /boot/cmdline.txt
+=> remove the word phase "console=serial0,115200" or "console=ttyAMA0,115200"
+sudo reboot
+```
 
 ## Firmware
 
