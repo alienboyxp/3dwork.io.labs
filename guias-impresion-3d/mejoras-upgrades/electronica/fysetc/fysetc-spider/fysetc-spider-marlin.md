@@ -208,6 +208,10 @@ En el caso de un sensor tipo BLTouch:
 #define BLTOUCH // 3DWORK PROBE
 ```
 
+{% hint style="warning" %}
+En el caso de usar un sensor tipo Bltouch con servo es aconsejable cambiar el pin dedicado al servo para adaptarlo al siguiente esquema:
+{% endhint %}
+
 **Offsets del sensor**, es muy importante decirle a Marlin donde se encuentra exactamente instalado nuestro sensor de nivelación... esto lo haremos definiendo los PROBE OFFSET.
 
 El Offset es la distancia entre la punta del nozzle y la punta del sensor de nivelación que dependiendo de donde esté deberán ser valores positivos o negativos, puedes usar el siguiente gráfico como ejemplo de que valor poner en cada caso.
