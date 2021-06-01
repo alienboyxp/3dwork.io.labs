@@ -306,7 +306,7 @@ La Fysetc Spider es una placa muy versátil como ya hemos comentado a nivel de h
 
 La Spider es compatible con Marlin y Klipper aunque además dispone de una edición especial con más memoria para poder usarse con RRF \(Duet\).
 
-### Marlin
+{% page-ref page="fysetc-spider-marlin.md" %}
 
 
 
