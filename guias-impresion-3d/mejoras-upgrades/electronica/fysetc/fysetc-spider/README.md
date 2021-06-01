@@ -6,7 +6,7 @@ description: >-
 
 # FYSETC SPIDER
 
-![](../../../../.gitbook/assets/image%20%2879%29.png)
+![](../../../../../.gitbook/assets/image%20%2879%29.png)
 
 La Fysetc Spider ha sido diseñada teniendo en mente su uso en impresoras VORON 2.4 o similares, el equipo de VORON ha cooperado estrechamente durante el diseño y desarrollo de la misma.
 
@@ -24,17 +24,17 @@ En los siguientes diagramas de placa, cableado y de pines podréis encontrar las
 
 {% tabs %}
 {% tab title="Placa" %}
-![](../../../../.gitbook/assets/image%20%2887%29.png)
+![](../../../../../.gitbook/assets/image%20%2887%29.png)
 
-![](../../../../.gitbook/assets/image%20%28143%29.png)
+![](../../../../../.gitbook/assets/image%20%28146%29.png)
 {% endtab %}
 
 {% tab title="Cableado" %}
-![](../../../../.gitbook/assets/image%20%2880%29.png)
+![](../../../../../.gitbook/assets/image%20%2880%29.png)
 {% endtab %}
 
 {% tab title="Pins" %}
-![](../../../../.gitbook/assets/image%20%2881%29.png)
+![](../../../../../.gitbook/assets/image%20%2881%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -62,13 +62,13 @@ En los siguientes diagramas de placa, cableado y de pines podréis encontrar las
 
 La Spider dispone de un jumper para seleccionar la alimentación a usar entre USB o adaptador interno 5V \(requiere la fuente de alimentación conectada\) que evita desagradables problemas que pueden ocurrir al mezclar alimentaciones diferentes.
 
-![En el caso de conectar a nuestro ordenador por USB colocar el jumper en la posici&#xF3;n U5V, en el caso de conectar a nuestra fuente de alimentaci&#xF3;n de la impresora dejarlo como en la foto.](../../../../.gitbook/assets/image%20%2877%29.png)
+![En el caso de conectar a nuestro ordenador por USB colocar el jumper en la posici&#xF3;n U5V, en el caso de conectar a nuestra fuente de alimentaci&#xF3;n de la impresora dejarlo como en la foto.](../../../../../.gitbook/assets/image%20%2877%29.png)
 
 ### Conectores de alimentación
 
 Tal como hemos comentado anteriormente esta placa dispone de un arsenal de conexiones y opciones así que la parte de alimentación no podría ser menos.
 
-![](../../../../.gitbook/assets/image%20%2878%29.png)
+![](../../../../../.gitbook/assets/image%20%2878%29.png)
 
 Disponemos de las siguientes conexiones de alimentación de componentes o de la propia placa las cuales están bien indicadas en la serigrafía así como la polaridad en ellas:
 
@@ -79,7 +79,7 @@ Disponemos de las siguientes conexiones de alimentación de componentes o de la 
 
 ### Thermistores
 
-![](../../../../.gitbook/assets/image%20%2890%29.png)
+![](../../../../../.gitbook/assets/image%20%2890%29.png)
 
 La orientación de los **thermistores** normalmente no es importante ya que estos no suelen tener polaridad. En este caso para esta placa contamos para un conector para la cama caliente \(TB\) y tres para  calentadores de hotend \(TE0, TE1 y T2\).
 
@@ -91,15 +91,15 @@ Es aconsejable usar conectores JST-XH 2.54mm ya que evitan que se produzcan desc
 
 Como ya hemos comentado esta placa cuenta con 8 zócalos para drivers lo cual nos ofrece un abanico de posibilidades de ampliación increibles.
 
-![](../../../../.gitbook/assets/image%20%2896%29.png)
+![](../../../../../.gitbook/assets/image%20%2896%29.png)
 
 Es importante resaltar que para el eje Z disponemos de dos salidas de motor para poder poner doble Z a nuestra máquina usando un solo driver. 
 
-{% hint style="info" %}
+{% hint style="warning" %}
 En el caso que no lo usemos es importante colocar jumpers en Z1-MOT para que funcionen correctamente dado que el splitter interno es serie.
 {% endhint %}
 
-![](../../../../.gitbook/assets/image%20%2883%29.png)
+![](../../../../../.gitbook/assets/image%20%2883%29.png)
 
 #### Configuración de diferentes drivers
 
@@ -107,25 +107,25 @@ Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes
 
 {% tabs %}
 {% tab title="UART" %}
-![](../../../../.gitbook/assets/image%20%2888%29.png)
+![](../../../../../.gitbook/assets/image%20%2888%29.png)
 
-![](../../../../.gitbook/assets/image%20%28142%29.png)
+![](../../../../../.gitbook/assets/image%20%28143%29.png)
 
 **Para drivers Bigtreetech deberemos asegurarnos que esten en UART mediante el jumper soldado en la parte de abajo del propio driver.**
 
-![](../../../../.gitbook/assets/telegram-cloud-photo-size-4-5877201890746415314-x.jpg)
+![](../../../../../.gitbook/assets/telegram-cloud-photo-size-4-5877201890746415314-x.jpg)
 {% endtab %}
 
 {% tab title="SPI" %}
-![](../../../../.gitbook/assets/image%20%2884%29.png)
+![](../../../../../.gitbook/assets/image%20%2884%29.png)
 
 **Para drivers que usen SPI como TMC2130/TMC5160-1 o similares**. En el caso que usemos Sensorless \(homing sin finales de carreras físicos\), o no,  no es necesario cortar el pin DIAG ya que la placa cuenta con jumpers para ser habilitada esta función.
 
-![](../../../../.gitbook/assets/image%20%2885%29.png)
+![](../../../../../.gitbook/assets/image%20%2885%29.png)
 {% endtab %}
 
 {% tab title="STANDALONE" %}
-![](../../../../.gitbook/assets/image%20%2895%29.png)
+![](../../../../../.gitbook/assets/image%20%2895%29.png)
 {% endtab %}
 {% endtabs %}
 
@@ -133,15 +133,15 @@ Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes
 
 En el caso que queramos usar doble driver para los ejes de X y Z es importante que \(actualmente en versiones 2.0.8.x\) deberemos de colocar el segundo driver en los zócalos siguientes:
 
-![](../../../../.gitbook/assets/image%20%28139%29.png)
+![](../../../../../.gitbook/assets/image%20%28139%29.png)
 
 #### Sensorless drivers TMC
 
-Si queremos utilizar esta funcionalidad de los drivers TMC que usa los motores como finales de carrera lo tendremos muy sencillo ya que la placa dispone de unos jumpers específicos para habilitar esta función, de todas formas os aconsejamos revisar nuestra [guía sensorless](../../nivelacion/sensorless-homing-en-marlin.md) para conocer más de esta gran funcionalidad. 
+Si queremos utilizar esta funcionalidad de los drivers TMC que usa los motores como finales de carrera lo tendremos muy sencillo ya que la placa dispone de unos jumpers específicos para habilitar esta función, de todas formas os aconsejamos revisar nuestra [guía sensorless](../../../nivelacion/sensorless-homing-en-marlin.md) para conocer más de esta gran funcionalidad. 
 
-![](../../../../.gitbook/assets/image%20%2885%29.png)
+![](../../../../../.gitbook/assets/image%20%2885%29.png)
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **El uso de Sensorless es aconsejable únicamente para ejes X e Y**
 {% endhint %}
 
@@ -149,11 +149,11 @@ Si queremos utilizar esta funcionalidad de los drivers TMC que usa los motores c
 
 En la Spider disponemos de 6 conectores para finales de carrera de 3 pines.
 
-![](../../../../.gitbook/assets/image%20%2893%29.png)
+![](../../../../../.gitbook/assets/image%20%2893%29.png)
 
 De nuevo Fysetc ha implementado mejoras muy interesantes en los conectores de final de carrera donde con mucha frecuencia conectamos sensores de nivelación que pueden requerir de diferentes voltajes así que se han incluido unos jumpers \(mediante puente de soldadura\) para que podamos escoger el voltaje que entregará cada conexión.
 
-![](../../../../.gitbook/assets/image%20%28141%29.png)
+![](../../../../../.gitbook/assets/image%20%28142%29.png)
 
 Podemos encontrar los siguientes bloques de conectores que pueden usar dos tipos de voltajes:
 
@@ -161,17 +161,78 @@ Podemos encontrar los siguientes bloques de conectores que pueden usar dos tipos
 * Conectores **X-/Y-/Z-,** podremos escoger **24v o 3.3v \(defecto\)**... estos conectores están especialmente indicados para conectar sensores de nivelación inductivos/capacitativos
 * Conector **Z+**, esta preparado para la conexión de un sensor de nivelación con servo al contar con el pin PA3 PWM podremos escoger mediante un numper al lado de Z- el voltaje de placa 24v o 5v en el caso que usemos un sensor estilo Bltouch.
 
-#### Sensores de nivelación
+### Sensores de nivelación
 
 
+
+### Neopixel/RGB
+
+La Fysetc Spider cuenta con varias opciones para el uso de iluminación en nuestra impresora que siempre es útil ya sea para iluminar la zona de impresión, mostrar eventos de la impresora o porqué no darle un toque personalizado.
+
+#### Tiras Neopixel/WS280x
+
+Las tiras de led Neopixel son una excelente elección ya que con tan solo 3 cables podemos tener hasta 50 leds con iluminación inteligente.
+
+![](../../../../../.gitbook/assets/image%20%28144%29.png)
+
+{% hint style="danger" %}
+**IMPORTANTE!!! la placa cuenta con una fuente de 5v que puede entregar un máximo de 8A \(si superamos 6A deberemos añadir un cooler al conversor de corriente\).   
+Si usamos nuestra Raspberry Pi 3A se necesitan para ella, sumamos 1A para el uso del sistema con lo que nos quedan 4A para el sistema de iluminación.  
+Aunque 4A nos darían para unos 66 leds se aconseja no sobrepasar de 3A, unos 50 leds, para dejar al menos 1A de margen.**
+{% endhint %}
+
+Cambios en Marlin en todo caso os aconsejamos revisar nuestra [guía para Neopixel](../../../otras-mejoras/leds-neopixel.md):
+
+```cpp
+// configuration.h
+#define NEOPIXEL_LED // 3DWORK NEOPIXEL
+  #define NEOPIXEL_PIN     PD3 // 3DWORK NEOPIXEL PIN CONTROL
+  #define NEOPIXEL_PIXELS      20 // 3DWORK NEOPIXEL NUMERO LEDS
+
+// configuration_adv.h
+#define LED_CONTROL_MENU // 3DWORK NEOPIXEL MENU CONTROL LEDS
+```
+
+#### Tiras RGB
+
+También podemos conectar nuestras tiras RGB aunque en este caso además de necesitar un mayor cableado estaremos limitados en el formato de los efectos dado que estas tiras no son gestionables por led individuales al contrario que las Neopixel.
+
+![](../../../../../.gitbook/assets/image%20%28145%29.png)
+
+Como viene siendo habitual Fysetc nos permite poder elegir el voltaje de trabajo, en este caso entre 24/12v así que ubicaremos un jumper seleccionando el que más nos convenga siguiendo las especificaciones de nuestra tira RGB.
+
+Cambios en Marlin:
+
+```cpp
+// configuration.h
+#define RGB_LED // 3DWORK RGB
+
+// configuration_adv.h
+#define LED_CONTROL_MENU // 3DWORK RGB MENU CONTROL LEDS
+
+// Definición de pines incluidos en Marlin/src/pins/stm32f4/pins_FYSETC_S6.h
+// SOLAMENTE INCLUIDOS A MODO DE REFERENCIA NO HAY QUE TOCAR NADA
+#ifndef RGB_LED_R_PIN
+  #define RGB_LED_R_PIN                     PB6
+#endif
+#ifndef RGB_LED_G_PIN
+  #define RGB_LED_G_PIN                     PB5
+#endif
+#ifndef RGB_LED_B_PIN
+  #define RGB_LED_B_PIN                     PB7
+#endif
+#ifndef RGB_LED_W_PIN
+  #define RGB_LED_W_PIN                     -1
+#endif
+```
 
 ### Conexión Raspberry Pi \(Octoprint\)
 
-Nuestra Fysetc Spider cuenta con un conector dedicado para la conexión de una Raspberry Pi normalmente para controlar nuestra impresora con [Octoprint](../../../../octoprint/que_es_octoprint.md) o [Klipper](../../../../klipper/klipper-1.md).
+Nuestra Fysetc Spider cuenta con un conector dedicado para la conexión de una Raspberry Pi normalmente para controlar nuestra impresora con [Octoprint](../../../../../octoprint/que_es_octoprint.md) o [Klipper](../../../../../klipper/klipper-1.md).
 
-![](../../../../.gitbook/assets/image%20%28140%29.png)
+![](../../../../../.gitbook/assets/image%20%28141%29.png)
 
-Este conector permite alimentar y conectar por UART nuestra Raspberry Pi, es interesante que la alimentación mediante el conector puede proveer hasta 8A.
+Este conector permite alimentar y conectar por UART nuestra Raspberry Pi, es interesante que la alimentación mediante el conector puede proveer hasta 8A. 
 
 Para habilitar el puerto UART en nuestra Raspberry Pi deberemos reconfigurarla mediante raspi-config desde una linea de comandos SSH por ejemplo. 
 
@@ -188,6 +249,10 @@ nano /boot/cmdline.txt
 => remove the word phase "console=serial0,115200" or "console=ttyAMA0,115200"
 sudo reboot
 ```
+
+En cualquier caso podemos conectar mediante USB normal nuestra Raspberry por el puerto USB-C de la placa y además contamos con un conector JST para poder conectar internamente al USB de la Pi.
+
+![Conector USB interno usando nuestro cable USB adaptado para este conector JST.](../../../../../.gitbook/assets/image%20%28140%29.png)
 
 ## Firmware
 

@@ -148,6 +148,7 @@ Opciones Generales:
 `# EEPROM_SETTINGS (Configuration.h)  
 # BABYSTEPPING (Configuration_adv.h)  
 # AUTO_REPORT_TEMPERATURES (Configuration_adv.h)  
+# AUTO_REPORT_POSITION (Configuration_adv.h)  
 # M115_GEOMETRY_REPORT (Configuration_adv.h)  
 # M114_DETAIL (Configuration_adv.h)  
 # REPORT_FAN_CHANGE (Configuration_adv.h)  
