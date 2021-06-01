@@ -208,9 +208,20 @@ En el caso de un sensor tipo BLTouch:
 #define BLTOUCH // 3DWORK PROBE
 ```
 
-{% hint style="warning" %}
-En el caso de usar un sensor tipo Bltouch con servo es aconsejable cambiar el pin dedicado al servo para adaptarlo al siguiente esquema:
-{% endhint %}
+En el caso de usar un sensor tipo Bltouch, que usan un servo para el proceso de sondeo, es aconsejable cambiar el pin del servo para adaptarlo al esquema de conexión.
+
+![](../../../../../.gitbook/assets/image%20%28143%29.png)
+
+Para ello modificaremos el fichero pins .../Marlin/src/pins/stm32f4/pins\_FYSETC\_S6.h 
+
+```cpp
+//.../Marlin/src/pins/stm32f4/pins_FYSETC_S6.h 
+
+// Servos
+//
+//#define SERVO0_PIN                          PA3 // U1JO SPIDER BLTOUCH - Original PA3
+#define SERVO0_PIN                          PA2 // U1JO SPIDER BLTOUCH - Original PA3
+```
 
 **Offsets del sensor**, es muy importante decirle a Marlin donde se encuentra exactamente instalado nuestro sensor de nivelación... esto lo haremos definiendo los PROBE OFFSET.
 
