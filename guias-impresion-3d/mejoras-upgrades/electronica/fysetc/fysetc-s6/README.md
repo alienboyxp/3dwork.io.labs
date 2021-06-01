@@ -151,7 +151,7 @@ Una funcionalidad muy interesante para drivers UART/SPI inteligentes, que lo sop
 
 En el caso de la Fysetc S6 disponemos de unos pines que colocando el correspondiente jumper nos permiten enviar la señal DIAG del driver al endstop. Recordar que al activar este jumper deberemos tener correctamente configurado nuestro firmware.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **El uso de Sensorless es aconsejable únicamente para ejes X e Y**
 {% endhint %}
 
