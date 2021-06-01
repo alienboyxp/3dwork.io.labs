@@ -26,11 +26,13 @@ En los siguientes diagramas de placa, cableado y de pines podréis encontrar las
 {% tab title="Placa" %}
 ![](../../../../../.gitbook/assets/image%20%2887%29.png)
 
-![](../../../../../.gitbook/assets/image%20%28147%29.png)
+![](../../../../../.gitbook/assets/image%20%28150%29.png)
 {% endtab %}
 
 {% tab title="Cableado" %}
 ![](../../../../../.gitbook/assets/image%20%2880%29.png)
+
+![](../../../../../.gitbook/assets/telegram-cloud-photo-size-4-5884086530048374282-y.jpg)
 {% endtab %}
 
 {% tab title="Pins" %}
@@ -109,7 +111,7 @@ Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes
 {% tab title="UART" %}
 ![](../../../../../.gitbook/assets/image%20%2888%29.png)
 
-![](../../../../../.gitbook/assets/image%20%28144%29.png)
+![](../../../../../.gitbook/assets/image%20%28145%29.png)
 
 **Para drivers Bigtreetech deberemos asegurarnos que esten en UART mediante el jumper soldado en la parte de abajo del propio driver.**
 
@@ -163,7 +165,27 @@ Podemos encontrar los siguientes bloques de conectores que pueden usar dos tipos
 
 ### Sensores de nivelación
 
+En la Fysetc Spider contamos con diferentes formas de poner algo imprescindible o de gran ayuda actualmente para un ajuste perfecto de nuestras primeras capas... un sensor de nivelación. Vamos a explicar como conectar los dos tipos más usados.
 
+#### Bltouch/3Dtouch
+
+Para nosotros el mejor sensor de nivelación por precisión y por funcionar en practicamente cualquier impresora, por contra son más delicados además y aunque tenga un coste superior siempre aconsejamos por calidad general y precision el oringinal de Antclabs.
+
+Os aconsejamos revisar la [guía de instalación en Marlin](../../../nivelacion/bltouch-3dtouch.md) aunque a continuación tenéis el esquema de conexión sugerido.
+
+![](../../../../../.gitbook/assets/image%20%28147%29.png)
+
+{% hint style="warning" %}
+**Es importante colocar el jumper rojo en la posición de 5v para alimentar correctamente nuestro sensor.**
+{% endhint %}
+
+### Inductivo/Capacitativo
+
+Son otros sensores todoterreno aunque tienen configuracion similares a otros estilo piezo o infrarrojos. Suelen ser más robusto y no actúan por contacto, por contra suelen tener menos precisión además de no ser compatible con según que superficies de cama como cristales.
+
+A continuación podéis encontrar el esquema de conexión es muy importante ajustar el pin de alimentación al voltaje adecuado para el sensor.
+
+![](../../../../../.gitbook/assets/image%20%28144%29.png)
 
 ### Neopixel/RGB
 
@@ -173,7 +195,7 @@ La Fysetc Spider cuenta con varias opciones para el uso de iluminación en nuest
 
 Las tiras de led Neopixel son una excelente elección ya que con tan solo 3 cables podemos tener hasta 50 leds con iluminación inteligente.
 
-![](../../../../../.gitbook/assets/image%20%28145%29.png)
+![](../../../../../.gitbook/assets/image%20%28148%29.png)
 
 {% hint style="danger" %}
 **IMPORTANTE!!! la placa cuenta con una fuente de 5v que puede entregar un máximo de 8A \(si superamos 6A deberemos añadir un cooler al conversor de corriente\).   
@@ -197,7 +219,7 @@ Cambios en Marlin en todo caso os aconsejamos revisar nuestra [guía para Neopix
 
 También podemos conectar nuestras tiras RGB aunque en este caso además de necesitar un mayor cableado estaremos limitados en el formato de los efectos dado que estas tiras no son gestionables por led individuales al contrario que las Neopixel.
 
-![](../../../../../.gitbook/assets/image%20%28146%29.png)
+![](../../../../../.gitbook/assets/image%20%28149%29.png)
 
 Como viene siendo habitual Fysetc nos permite poder elegir el voltaje de trabajo, en este caso entre 24/12v así que ubicaremos un jumper seleccionando el que más nos convenga siguiendo las especificaciones de nuestra tira RGB.
 
