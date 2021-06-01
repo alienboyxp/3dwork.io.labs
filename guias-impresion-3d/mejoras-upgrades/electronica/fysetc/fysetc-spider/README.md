@@ -179,6 +179,20 @@ Os aconsejamos revisar la [guía de instalación en Marlin](../../../nivelacion/
 **Es importante colocar el jumper rojo en la posición de 5v para alimentar correctamente nuestro sensor.**
 {% endhint %}
 
+{% tabs %}
+{% tab title="Amazon" %}
+{% embed url="https://amzn.to/3e56DhE" %}
+
+{% embed url="https://amzn.to/2Rg8cAn" %}
+{% endtab %}
+
+{% tab title="AliExpress" %}
+{% embed url="https://s.click.aliexpress.com/e/\_ASO4vz" %}
+
+{% embed url="https://s.click.aliexpress.com/e/\_ATWOTt" %}
+{% endtab %}
+{% endtabs %}
+
 #### Inductivo/Capacitativo
 
 Son otros sensores todoterreno aunque tienen configuracion similares a otros estilo piezo o infrarrojos. Suelen ser más robusto y no actúan por contacto, por contra suelen tener menos precisión además de no ser compatible con según que superficies de cama como cristales.
@@ -186,6 +200,16 @@ Son otros sensores todoterreno aunque tienen configuracion similares a otros est
 A continuación podéis encontrar el esquema de conexión **es muy importante ajustar el pin de alimentación al voltaje adecuado para el sensor**.
 
 ![](../../../../../.gitbook/assets/image%20%28145%29.png)
+
+{% tabs %}
+{% tab title="Amazon" %}
+{% embed url="https://amzn.to/3yRvSwu" %}
+{% endtab %}
+
+{% tab title="AliExpress" %}
+{% embed url="https://s.click.aliexpress.com/e/\_At8ATR" %}
+{% endtab %}
+{% endtabs %}
 
 ### Neopixel/RGB
 
