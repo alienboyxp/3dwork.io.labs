@@ -535,7 +535,7 @@ Otra forma de actualizar nuestra placa, sobretodo en el caso de no disponer de u
 
 ![](../../../../../.gitbook/assets/image%20%28103%29.png)
 
-Esta pantalla es muy adecuada para usar junto con esta electrónica ya que tiene un formato muy compacto fácilmente integrable y una estética muy buena así como la inclusión de SD, perfecta para la actualización del firmware, así como unos leds controlables desde Marlin que siempre dan mucho juego. 
+Esta pantalla es muy adecuada para usar junto con esta electrónica ya que tiene un formato muy compacto fácilmente integrable y una estética muy buena además cuenta con unos leds controlables desde Marlin que siempre dan mucho juego. 
 
 {% tabs %}
 {% tab title="Amazon" %}
@@ -590,8 +590,6 @@ Estas modificaciones se deben realizar si tu pantalla no aparecen letras de una 
 
 .../Marlin/src/inc/Conditionals_post.h
 ```
-
-
 
 ## Pues ya hemos terminado!!! 
 

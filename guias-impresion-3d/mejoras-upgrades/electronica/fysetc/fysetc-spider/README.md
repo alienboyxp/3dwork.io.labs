@@ -161,7 +161,7 @@ Podemos encontrar los siguientes bloques de conectores que pueden usar dos tipos
 
 * Conectores **X+/Y+**, podremos escoger **5v o 3.3v \(defecto\)**... indicado por ejemplo para sensores bltouch de 5v
 * Conectores **X-/Y-/Z-,** podremos escoger **24v o 3.3v \(defecto\)**... estos conectores están especialmente indicados para conectar sensores de nivelación inductivos/capacitativos
-* Conector **Z+**, esta preparado para la conexión de un sensor de nivelación con servo al contar con el pin PA3 PWM podremos escoger mediante un numper al lado de Z- el voltaje de placa 24v o 5v en el caso que usemos un sensor estilo Bltouch.
+* Conector **Z+**, esta preparado para la conexión de un sensor de nivelación con servo al contar con el pin PA3 PWM podremos escoger mediante un jumper al lado de Z- el voltaje de placa 24v o 5v en el caso que usemos un sensor estilo Bltouch.
 
 ### Sensores de nivelación
 
