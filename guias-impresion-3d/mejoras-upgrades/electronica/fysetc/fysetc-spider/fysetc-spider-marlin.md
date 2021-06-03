@@ -539,6 +539,8 @@ Esta pantalla es muy adecuada para usar junto con esta electrónica ya que tiene
 
 {% hint style="danger" %}
 **Recuerda que según el esquema del fabricante esta pantalla requiere de conectar el EXP1 de nuestra placa con el EXP2 de la pantalla y el EXP2 de nuestra placa con el EXP1 de la pantalla!!!**
+
+**Conectarlo de forma incorrecta puede dañar nuestra pantalla e incluso nuestra placa.**
 {% endhint %}
 
 {% tabs %}
