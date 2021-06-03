@@ -32,6 +32,7 @@
     * [Pantallas BigtreeTech/SKR](guias-impresion-3d/mejoras-upgrades/electronica/pantallas-bigtreetech-skr.md)
   * [Extrusión](guias-impresion-3d/mejoras-upgrades/extrusion.md)
   * [Nivelación/Homing](guias-impresion-3d/mejoras-upgrades/nivelacion/README.md)
+    * [PINDAv2](guias-impresion-3d/mejoras-upgrades/nivelacion/pindav2.md)
     * [Bltouch/3DTouch](guias-impresion-3d/mejoras-upgrades/nivelacion/bltouch-3dtouch.md)
     * [Nivelado manual MESH](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-manual-mesh.md)
     * [Nivelado UBL](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-ubl-unified-bed-leveling.md)
