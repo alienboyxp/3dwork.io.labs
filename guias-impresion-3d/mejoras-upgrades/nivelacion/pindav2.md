@@ -4,7 +4,7 @@ description: >-
   capas perfectas sin tener que estar ajustando manualmente nuestra mecánica.
 ---
 
-# PINDAv2
+# PINDAv2/Inductivos
 
 En este caso usaremos un PINDAv2 que es un sensor que incluye un thermistor que nos permite compensar uno de los puntos débiles de este tipo de dispositivos, la precisión en las lecturas con temperatura.
 
@@ -99,7 +99,7 @@ Esta placa cuenta con un arsenal de conexiones aunque podemos conectar en sus m�
 Para nuestro ejemplo usaremos una placa Fysetc Spider conectando el sensor en el conector Z+ tal como sugiere el fabricante quedando nuestra configuración de la siguiente forma:
 
 ```cpp
-// cambios en configuration.h
+// cambios en Marlin/configuration.h
 #define USE_PROBE_FOR_Z_HOMING // 3DWORK PINDAv2 - usar sensor para homing
 ...
 #define Z_MIN_PROBE_PIN PA3 // 3DWORK PINDAv2 - definir en que pin esta el probe
@@ -128,10 +128,18 @@ Para nuestro ejemplo usaremos una placa Fysetc Spider conectando el sensor en el
 ...
 #define TEMP_SENSOR_PROBE 1 //3DWORK PINDAv2 - habilitar el tipo de thermistor del probe, hay que asegurarse que existe el pin en el fichero pins de la placa
 
-// cambios en configuration_adv.h
+// cambios en Marlin/configuration_adv.h
 # define G29_RETRY_AND_RECOVER //3DWORK PINDAv2 - permite reintentar el G29 de nivelacion ante un fallo
 ...
 #define PROBE_TEMP_COMPENSATION //3DWORK PINDAv2 - habilita el proceso de calibracion del probe por temperatura
+
+// cambios en Marlin/src/pins/stm32f4/pins_FYSETC_SPIDER.h
+// añadiremos lo siguiente debajo del bloque Heaters para indicar que usaremos el thermistor del TH2 de nuestra spider
+
+//
+// Temperature Sensors
+//
+#define TEMP_PROBE_PIN                   TEMP_2_PIN // U1JO PINDAv2 
 ```
 
 ### **Activar Babystepping**

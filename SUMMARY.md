@@ -33,7 +33,7 @@
   * [Extrusión](guias-impresion-3d/mejoras-upgrades/extrusion.md)
   * [Nivelación/Homing](guias-impresion-3d/mejoras-upgrades/nivelacion/README.md)
     * [Bltouch/3DTouch](guias-impresion-3d/mejoras-upgrades/nivelacion/bltouch-3dtouch.md)
-    * [PINDAv2](guias-impresion-3d/mejoras-upgrades/nivelacion/pindav2.md)
+    * [PINDAv2/Inductivos](guias-impresion-3d/mejoras-upgrades/nivelacion/pindav2.md)
     * [Nivelado manual MESH](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-manual-mesh.md)
     * [Nivelado UBL](guias-impresion-3d/mejoras-upgrades/nivelacion/nivelado-ubl-unified-bed-leveling.md)
     * [Sensorless Homing en Marlin](guias-impresion-3d/mejoras-upgrades/nivelacion/sensorless-homing-en-marlin.md)
