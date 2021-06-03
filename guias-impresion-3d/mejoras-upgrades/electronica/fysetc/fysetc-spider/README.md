@@ -26,7 +26,7 @@ En los siguientes diagramas de placa, cableado y de pines podréis encontrar las
 {% tab title="Placa" %}
 ![](../../../../../.gitbook/assets/image%20%2887%29.png)
 
-![](../../../../../.gitbook/assets/image%20%28152%29.png)
+![](../../../../../.gitbook/assets/image%20%28153%29.png)
 {% endtab %}
 
 {% tab title="Cableado" %}
@@ -243,7 +243,7 @@ Cambios en Marlin en todo caso os aconsejamos revisar nuestra [guía para Neopix
 
 También podemos conectar nuestras tiras RGB aunque en este caso además de necesitar un mayor cableado estaremos limitados en el formato de los efectos dado que estas tiras no son gestionables por led individuales al contrario que las Neopixel.
 
-![](../../../../../.gitbook/assets/image%20%28151%29.png)
+![](../../../../../.gitbook/assets/image%20%28152%29.png)
 
 Como viene siendo habitual Fysetc nos permite poder elegir el voltaje de trabajo, en este caso entre 24/12v así que ubicaremos un jumper seleccionando el que más nos convenga siguiendo las especificaciones de nuestra tira RGB.
 
