@@ -80,6 +80,13 @@ Esta placa cuenta con un arsenal de conexiones aunque podemos conectar en sus m�
 * Habilitar el homing por eje, muy útil para ver que cada eje funciona correctamente en el proceso de homing **`#define INDIVIDUAL_AXIS_HOMING_MENU`**
 * En el caso que nuestro sensor disponga de sonda de temperatura para compensación lo habilitaremos de la siguiente forma **`#define TEMP_SENSOR_PROBE 1`** Tenemos que tener en cuenta que deberemos conectar el pin del thermistor de nuestra sonda a un pin PWM para poder obtener dichas lecturas en el caso que nuestro fichero pins no disponga de el deberemos de crearlo y asignarlo a un pin libre.
 
+| Pin | Función |
+| :--- | :--- |
+| Blanco | Pin del thermistor a conectar en un pin PWM |
+| Negro | Pin de señal del endstop normalmente en Z- |
+| Azul | GND |
+| Marrón | 5v |
+
 ![](../../../.gitbook/assets/image%20%28152%29.png)
 
 ### **Otros cambios en configuration\_adv.h**
@@ -91,8 +98,40 @@ Esta placa cuenta con un arsenal de conexiones aunque podemos conectar en sus m�
 
 Para nuestro ejemplo usaremos una placa Fysetc Spider conectando el sensor en el conector Z+ tal como sugiere el fabricante quedando nuestra configuración de la siguiente forma:
 
-```text
+```cpp
+// cambios en configuration.h
+#define USE_PROBE_FOR_Z_HOMING // 3DWORK PINDAv2 - usar sensor para homing
+...
+#define Z_MIN_PROBE_PIN PA3 // 3DWORK PINDAv2 - definir en que pin esta el probe
+...
+#define FIX_MOUNTED_PROBE // 3DWORK PINDAv2 - usamos sensor fijo
+...
+#define NOZZLE_TO_PROBE_OFFSET { 0, -50, -2.90 } //3DWORK PINDAv2 - offsets
+...
+#define AUTO_BED_LEVELING_BILINEAR //3DWORK PINDAv2 - sistema nivelacion
+...
+#define PROBING_MARGIN 20 //3DWORK PINDAv2 - margen de seguridad bordes cama
+...
+#define MULTIPLE_PROBING 3 //3DWORK PINDAv2 - tests por punto
+...
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true //3DWORK PINDAv2 - ajuste de logica deteccion sensor
+...
+#define Z_SAFE_HOMING //3DWORK PINDAv2 - realizar homing en el centro de la cama
+...
+#define RESTORE_LEVELING_AFTER_G28 //3DWORK PINDAv2 - habilitar nivelacion automatica despues del homing
+...
+#define LCD_BED_LEVELING //3DWORK PINDAv2 - habilitar menu avanzado de nivelacion
+...
+#define ENABLE_LEVELING_FADE_HEIGHT //3DWORK PINDAv2 - aplicar limites en correccion de nivelacion
+...
+#define INDIVIDUAL_AXIS_HOMING_MENU //3DWORK PINDAv2 - añadir home por eje en el menu
+...
+#define TEMP_SENSOR_PROBE 1 //3DWORK PINDAv2 - habilitar el tipo de thermistor del probe, hay que asegurarse que existe el pin en el fichero pins de la placa
 
+// cambios en configuration_adv.h
+# define G29_RETRY_AND_RECOVER //3DWORK PINDAv2 - permite reintentar el G29 de nivelacion ante un fallo
+...
+#define PROBE_TEMP_COMPENSATION //3DWORK PINDAv2 - habilita el proceso de calibracion del probe por temperatura
 ```
 
 ### **Activar Babystepping**
