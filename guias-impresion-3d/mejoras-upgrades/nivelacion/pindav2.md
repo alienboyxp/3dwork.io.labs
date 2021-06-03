@@ -30,7 +30,7 @@ Este tipo de sensores dada su simplicidad se conectan de forma normal en el cone
 
 {% tabs %}
 {% tab title="Fysetc Spider" %}
-![](../../../.gitbook/assets/image%20%28150%29.png)
+![](../../../.gitbook/assets/image%20%28151%29.png)
 
 {% hint style="success" %}
 Esta placa cuenta con un arsenal de conexiones aunque podemos conectar en sus múltiples pines es aconsejable realizarlo en Z+ dado que dispone de la posibilidad de alimentación con diferentes voltajes de forma sencilla y además de disponer de un conversor en la entrada de señal para su pin que traduce las señales de cualquier voltaje al 3.3v requerido internamente.
@@ -44,7 +44,7 @@ Esta placa cuenta con un arsenal de conexiones aunque podemos conectar en sus m�
 * Indicamos el tipo de sensor de nivelación **`#define FIX_MOUNTED_PROBE // U1JO PINDAv2`**
 * Ajustamos los offsets \(localización del sensor de nivelación con respecto a la punta del nozzle\) del sensor de nivelación **`#define NOZZLE_TO_PROBE_OFFSET…`**
 
-![Se aconseja dejar 1-2mm entre el punto Z0 y el sensor PINDAv2](../../../.gitbook/assets/image%20%28155%29.png)
+![Se aconseja dejar 1-2mm entre el punto Z0 y el sensor PINDAv2](../../../.gitbook/assets/image%20%28156%29.png)
 
 ![](https://lh6.googleusercontent.com/MIzOshOTC8vslx7nFkpDWoTm5BKDquaQ_hJwKyiYPGruNr0namQnSjOnOyM8Je0da4-NwVCrvlhtlb4eoG0aHlpLdhnQwWLP0tRkS8zFHY32IVg6mupLJPvBN9IkwKY_fgUOdDQO)
 
@@ -80,7 +80,7 @@ Esta placa cuenta con un arsenal de conexiones aunque podemos conectar en sus m�
 * Habilitar el homing por eje, muy útil para ver que cada eje funciona correctamente en el proceso de homing **`#define INDIVIDUAL_AXIS_HOMING_MENU`**
 * En el caso que nuestro sensor disponga de sonda de temperatura para compensación lo habilitaremos de la siguiente forma **`#define TEMP_SENSOR_PROBE 1`** Tenemos que tener en cuenta que deberemos conectar el pin del thermistor de nuestra sonda a un pin PWM para poder obtener dichas lecturas en el caso que nuestro fichero pins no disponga de el deberemos de crearlo y asignarlo a un pin libre.
 
-![](../../../.gitbook/assets/image%20%28151%29.png)
+![](../../../.gitbook/assets/image%20%28152%29.png)
 
 ### **Otros cambios en configuration\_adv.h**
 

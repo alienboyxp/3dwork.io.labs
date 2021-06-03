@@ -210,7 +210,7 @@ En el caso de un sensor tipo BLTouch:
 
 En el caso de usar un sensor tipo Bltouch, que usan un servo para el proceso de sondeo, es aconsejable cambiar el pin del servo para adaptarlo al esquema de conexión.
 
-![](../../../../../.gitbook/assets/image%20%28143%29.png)
+![](../../../../../.gitbook/assets/image%20%28144%29.png)
 
 Para ello modificaremos el fichero pins .../Marlin/src/pins/stm32f4/pins\_FYSETC\_S6.h 
 
@@ -536,6 +536,10 @@ Otra forma de actualizar nuestra placa, sobretodo en el caso de no disponer de u
 ![](../../../../../.gitbook/assets/image%20%28103%29.png)
 
 Esta pantalla es muy adecuada para usar junto con esta electrónica ya que tiene un formato muy compacto fácilmente integrable y una estética muy buena además cuenta con unos leds controlables desde Marlin que siempre dan mucho juego. 
+
+{% hint style="danger" %}
+**Recuerda que según el esquema del fabricante esta pantalla requiere de conectar el EXP1 de nuestra placa con el EXP2 de la pantalla y el EXP2 de nuestra placa con el EXP1 de la pantalla!!!**
+{% endhint %}
 
 {% tabs %}
 {% tab title="Amazon" %}

@@ -26,7 +26,7 @@ En los siguientes diagramas de placa, cableado y de pines podréis encontrar las
 {% tab title="Placa" %}
 ![](../../../../../.gitbook/assets/image%20%2887%29.png)
 
-![](../../../../../.gitbook/assets/image%20%28153%29.png)
+![](../../../../../.gitbook/assets/image%20%28154%29.png)
 {% endtab %}
 
 {% tab title="Cableado" %}
@@ -111,7 +111,7 @@ Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes
 {% tab title="UART" %}
 ![](../../../../../.gitbook/assets/image%20%2888%29.png)
 
-![](../../../../../.gitbook/assets/image%20%28146%29.png)
+![](../../../../../.gitbook/assets/image%20%28147%29.png)
 
 **Para drivers Bigtreetech deberemos asegurarnos que esten en UART mediante el jumper soldado en la parte de abajo del propio driver.**
 
@@ -135,7 +135,7 @@ Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes
 
 En el caso que queramos usar doble driver para los ejes de X y Z es importante que \(actualmente en versiones 2.0.8.x\) deberemos de colocar el segundo driver en los zócalos siguientes:
 
-![](../../../../../.gitbook/assets/image%20%28140%29.png)
+![](../../../../../.gitbook/assets/image%20%28141%29.png)
 
 #### Sensorless drivers TMC
 
@@ -155,7 +155,7 @@ En la Spider disponemos de 6 conectores para finales de carrera de 3 pines.
 
 De nuevo Fysetc ha implementado mejoras muy interesantes en los conectores de final de carrera donde con mucha frecuencia conectamos sensores de nivelación que pueden requerir de diferentes voltajes así que se han incluido unos jumpers \(mediante puente de soldadura\) para que podamos escoger el voltaje que entregará cada conexión.
 
-![](../../../../../.gitbook/assets/image%20%28144%29.png)
+![](../../../../../.gitbook/assets/image%20%28145%29.png)
 
 Podemos encontrar los siguientes bloques de conectores que pueden usar dos tipos de voltajes:
 
@@ -173,7 +173,7 @@ Para nosotros el mejor sensor de nivelación por precisión y por funcionar en p
 
 Os aconsejamos revisar la [guía de instalación en Marlin](../../../nivelacion/bltouch-3dtouch.md) aunque a continuación tenéis el esquema de conexión sugerido.
 
-![](../../../../../.gitbook/assets/image%20%28148%29.png)
+![](../../../../../.gitbook/assets/image%20%28149%29.png)
 
 {% hint style="warning" %}
 **Es importante colocar el jumper rojo en la posición de 5v para alimentar correctamente nuestro sensor.**
@@ -199,7 +199,7 @@ Son otros sensores todoterreno aunque tienen configuracion similares a otros est
 
 A continuación podéis encontrar el esquema de conexión **es muy importante ajustar el pin de alimentación al voltaje adecuado para el sensor**.
 
-![](../../../../../.gitbook/assets/image%20%28145%29.png)
+![](../../../../../.gitbook/assets/image%20%28146%29.png)
 
 {% tabs %}
 {% tab title="Amazon" %}
@@ -219,7 +219,7 @@ La Fysetc Spider cuenta con varias opciones para el uso de iluminación en nuest
 
 Las tiras de led Neopixel son una excelente elección ya que con tan solo 3 cables podemos tener hasta 50 leds con iluminación inteligente.
 
-![](../../../../../.gitbook/assets/image%20%28149%29.png)
+![](../../../../../.gitbook/assets/image%20%28150%29.png)
 
 {% hint style="danger" %}
 **IMPORTANTE!!! la placa cuenta con una fuente de 5v que puede entregar un máximo de 8A \(si superamos 6A deberemos añadir un cooler al conversor de corriente\).   
@@ -243,7 +243,7 @@ Cambios en Marlin en todo caso os aconsejamos revisar nuestra [guía para Neopix
 
 También podemos conectar nuestras tiras RGB aunque en este caso además de necesitar un mayor cableado estaremos limitados en el formato de los efectos dado que estas tiras no son gestionables por led individuales al contrario que las Neopixel.
 
-![](../../../../../.gitbook/assets/image%20%28152%29.png)
+![](../../../../../.gitbook/assets/image%20%28153%29.png)
 
 Como viene siendo habitual Fysetc nos permite poder elegir el voltaje de trabajo, en este caso entre 24/12v así que ubicaremos un jumper seleccionando el que más nos convenga siguiendo las especificaciones de nuestra tira RGB.
 
@@ -276,7 +276,7 @@ Cambios en Marlin:
 
 Nuestra Fysetc Spider cuenta con un conector dedicado para la conexión de una Raspberry Pi normalmente para controlar nuestra impresora con [Octoprint](../../../../../octoprint/que_es_octoprint.md) o [Klipper](../../../../../klipper/klipper-1.md).
 
-![](../../../../../.gitbook/assets/image%20%28142%29.png)
+![](../../../../../.gitbook/assets/image%20%28143%29.png)
 
 Este conector permite alimentar y conectar por UART nuestra Raspberry Pi, es interesante que la alimentación mediante el conector puede proveer hasta 8A. 
 
@@ -298,7 +298,7 @@ sudo reboot
 
 En cualquier caso podemos conectar mediante USB normal nuestra Raspberry por el puerto USB-C de la placa y además contamos con un conector JST para poder conectar internamente al USB de la Pi.
 
-![Conector USB interno usando nuestro cable USB adaptado para este conector JST.](../../../../../.gitbook/assets/image%20%28141%29.png)
+![Conector USB interno usando nuestro cable USB adaptado para este conector JST.](../../../../../.gitbook/assets/image%20%28142%29.png)
 
 ## Firmware
 
