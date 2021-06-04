@@ -488,7 +488,7 @@ En nuestro caso usamos los valores indicados para una Ender que son 100mm/s para
 #define TMC_DEBUG // 3DWORK DRIVERS
 ```
 
-## Fiochero pins de nuestra FYSETC Spider
+## Fichero pins de nuestra FYSETC Spider
 
 A continuación tienes los ficheros pins que contienen las referencias para esta placa.
 

@@ -197,9 +197,15 @@ Os aconsejamos revisar la [guía de instalación en Marlin](../../../nivelacion/
 
 Son otros sensores todoterreno aunque tienen configuracion similares a otros estilo piezo o infrarrojos. Suelen ser más robusto y no actúan por contacto, por contra suelen tener menos precisión además de no ser compatible con según que superficies de cama como cristales.
 
-A continuación podéis encontrar el esquema de conexión **es muy importante ajustar el pin de alimentación al voltaje adecuado para el sensor**.
+A continuación podéis encontrar el esquema de conexión .
 
 ![](../../../../../.gitbook/assets/image%20%28147%29.png)
+
+{% hint style="danger" %}
+**Es muy importante ajustar el pin de alimentación al voltaje adecuado para el sensor.**
+
+**Por otro lado y en esta placa es también importante usar el pin PA3 para la conexión de la señal de endstop ya que este tiene un conversor de señal de entrada para adaptarlo a las señales 3.3v de la placa y evitar necesitar octoacopladores externos.**
+{% endhint %}
 
 {% tabs %}
 {% tab title="Amazon" %}
