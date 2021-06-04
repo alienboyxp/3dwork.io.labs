@@ -353,7 +353,5 @@ La Spider es compatible con Marlin y Klipper aunque además dispone de una edici
 
 {% page-ref page="fysetc-spider-marlin.md" %}
 
-
-
-{% file src="../../../../../.gitbook/assets/3dwork\_fysetcspider.pptx" caption="Fysetc Spider Diagrams by 3DWork" %}
+{% file src="../../../../../.gitbook/assets/3dwork\_fysetcspider.pptx" caption="Fysetc Diagrams by 3DWorok" %}
 
