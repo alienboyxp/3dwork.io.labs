@@ -1,5 +1,5 @@
 ---
-description: Añadiendo una pantalla a nuestro Octoprint
+description: Añadiendo una pantalla y un interfaz bonito para manejar nuestro Octoprint
 ---
 
 # OctoDash - UI
