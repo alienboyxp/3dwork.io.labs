@@ -26,7 +26,7 @@ En los siguientes diagramas de placa, cableado y de pines podréis encontrar las
 {% tab title="Placa" %}
 ![](../../../../../.gitbook/assets/image%20%2887%29.png)
 
-![](../../../../../.gitbook/assets/image%20%28154%29.png)
+![](../../../../../.gitbook/assets/image%20%28158%29.png)
 {% endtab %}
 
 {% tab title="Cableado" %}
@@ -111,7 +111,7 @@ Aunque siempre es aconsejable configurar nuestros drivers en modos "inteligentes
 {% tab title="UART" %}
 ![](../../../../../.gitbook/assets/image%20%2888%29.png)
 
-![](../../../../../.gitbook/assets/image%20%28147%29.png)
+![](../../../../../.gitbook/assets/image%20%28149%29.png)
 
 **Para drivers Bigtreetech deberemos asegurarnos que esten en UART mediante el jumper soldado en la parte de abajo del propio driver.**
 
@@ -173,7 +173,7 @@ Para nosotros el mejor sensor de nivelación por precisión y por funcionar en p
 
 Os aconsejamos revisar la [guía de instalación en Marlin](../../../nivelacion/bltouch-3dtouch.md) aunque a continuación tenéis el esquema de conexión sugerido.
 
-![](../../../../../.gitbook/assets/image%20%28149%29.png)
+![](../../../../../.gitbook/assets/image%20%28152%29.png)
 
 {% hint style="warning" %}
 **Es importante colocar el jumper rojo en la posición de 5v para alimentar correctamente nuestro sensor.**
@@ -199,7 +199,7 @@ Son otros sensores todoterreno aunque tienen configuracion similares a otros est
 
 A continuación podéis encontrar el esquema de conexión **es muy importante ajustar el pin de alimentación al voltaje adecuado para el sensor**.
 
-![](../../../../../.gitbook/assets/image%20%28146%29.png)
+![](../../../../../.gitbook/assets/image%20%28147%29.png)
 
 {% tabs %}
 {% tab title="Amazon" %}
@@ -210,6 +210,51 @@ A continuación podéis encontrar el esquema de conexión **es muy importante aj
 {% embed url="https://s.click.aliexpress.com/e/\_At8ATR" %}
 {% endtab %}
 {% endtabs %}
+
+### Conectores para LCD
+
+Contamos con dos conectores EXP compatibles con la inmensa totalidad de pantallas de este tipo. En el siguiente esquema podremos ver el esquema de pines disponibles:
+
+![](../../../../../.gitbook/assets/image%20%28151%29.png)
+
+Ejemplo de conexiones para algunos modelos:
+
+{% tabs %}
+{% tab title="FYSETC MINI12864" %}
+Una pequeña pero funcional pantalla para el modo emulación Marlin que con sus leds da mucho juego para personalizar tu impresora.
+
+{% hint style="danger" %}
+**IMPORTANTE!!! el conector EXP1 de la pantalla tiene que ir al conector EXP2 de la placa, el conector EXP2 de la pantalla tiene que ir al conector EXP1 de la placa.**
+{% endhint %}
+
+![](../../../../../.gitbook/assets/image%20%28146%29.png)
+{% endtab %}
+
+{% tab title="SKR TFT" %}
+Unas de las pantallas más populares por su estupendo modo dual donde podemos disfrutar del modo emulación Marlin y su modo avanzado táctil, puedes encontrar más información en nuestra [guía](../../pantallas-bigtreetech-skr.md).
+
+{% hint style="danger" %}
+**IMPORTANTE!!! el conector EXP1 de la pantalla tiene que ir al conector EXP2 de la placa, el conector EXP2 de la pantalla tiene que ir al conector EXP1 de la placa.  
+Ademñas de este cruce tiene que girarse en uno de los extremos 180º para ambos cables.**
+{% endhint %}
+
+![](../../../../../.gitbook/assets/image%20%28162%29.png)
+{% endtab %}
+
+{% tab title="CR10 STOCK DISPLAY" %}
+Las pantallas usadas por muchas impresoras de Creality y derivadas. Estas normalmente cuentan con 3 conectores EXP \(EXP1/2/3\) donde uno de ellos \(EXP3\) es un tipo de conexión simplificado de los otros dos que normalmente solo se encuentra en placas Creality o similares.
+
+En el caso de nuestra Fysetc deberemos usar los conectores EXP1 y EXP2 conectando directamente al correspondiente de la placa:
+
+![](../../../../../.gitbook/assets/image%20%28163%29.png)
+
+{% hint style="danger" %}
+**IMPORTANTE!!! el conector EXP1 de la pantalla tiene que ir al conector EXP2 de la placa, el conector EXP2 de la pantalla tiene que ir al conector EXP1 de la placa.**
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### 
 
 ### Neopixel/RGB
 
@@ -243,7 +288,7 @@ Cambios en Marlin en todo caso os aconsejamos revisar nuestra [guía para Neopix
 
 También podemos conectar nuestras tiras RGB aunque en este caso además de necesitar un mayor cableado estaremos limitados en el formato de los efectos dado que estas tiras no son gestionables por led individuales al contrario que las Neopixel.
 
-![](../../../../../.gitbook/assets/image%20%28153%29.png)
+![](../../../../../.gitbook/assets/image%20%28156%29.png)
 
 Como viene siendo habitual Fysetc nos permite poder elegir el voltaje de trabajo, en este caso entre 24/12v así que ubicaremos un jumper seleccionando el que más nos convenga siguiendo las especificaciones de nuestra tira RGB.
 

@@ -161,6 +161,34 @@ Contamos con dos conectores EXP compatibles con la inmensa totalidad de pantalla
 
 ![](../../../../../.gitbook/assets/image%20%28131%29.png)
 
+Ejemplo de conexiones para algunos modelos:
+
+{% tabs %}
+{% tab title="FYSETC MINI12864" %}
+Una pequeña pero funcional pantalla para el modo emulación Marlin que con sus leds da mucho juego para personalizar tu impresora. En este caso su conexión no podría ser más simple.
+
+![](../../../../../.gitbook/assets/image%20%28153%29.png)
+{% endtab %}
+
+{% tab title="SKR TFT" %}
+Unas de las pantallas más populares por su estupendo modo dual donde podemos disfrutar del modo emulación Marlin y su modo avanzado táctil, puedes encontrar más información en nuestra [guía](../../pantallas-bigtreetech-skr.md).
+
+{% hint style="danger" %}
+**En este caso la conexión si bien es entre EXP1 y EXP2 al correspondiente de la placa este tiene que girarse en uno de los extremos 180º para ambos cables**
+{% endhint %}
+
+![](../../../../../.gitbook/assets/image%20%28159%29.png)
+{% endtab %}
+
+{% tab title="CR10 STOCK DISPLAY" %}
+Las pantallas usadas por muchas impresoras de Creality y derivadas. Estas normalmente cuentan con 3 conectores EXP \(EXP1/2/3\) donde uno de ellos \(EXP3\) es un tipo de conexión simplificado de los otros dos que normalmente solo se encuentra en placas Creality o similares.
+
+En el caso de nuestra Fysetc deberemos usar los conectores EXP1 y EXP2 conectando directamente al correspondiente de la placa:
+
+![](../../../../../.gitbook/assets/image%20%28157%29.png)
+{% endtab %}
+{% endtabs %}
+
 ### Conector UART/Serial
 
 Contamos con **hasta seis puertos USART/Serial** para la conexión de dispositivos serial como pantallas TFT, módulos Wifi, adaptador USB para actualización de firmware o similares.
