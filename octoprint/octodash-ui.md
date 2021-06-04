@@ -22,15 +22,19 @@ Preparar Octoprint instalando los siguientes plugins:
 
 Acceder por SSH \(puedes usar [PuTTY](https://www.putty.org/) o [Terminus](https://termius.com/) para conectar ambos son multiplataforma o sea Windows MAC Linux\) el usuario por defecto es pi y el password raspberry.
 
-Preparando el sistema Raspbian para hscer autologin:  
+Preparando el sistema Raspbian para hacer autologin:  
 sudo raspi-config  
 "3 Boot Options"  
 "B1 Desktop / CLI"  
 "B2 Console Autologin"  
-Finslizar y reiniciar la Pi.
+Finalizar y reiniciar la Pi.
 
-Lanza el siguiente comando:  
-bash &lt;\(wget -qO- [https://github.com/UnchartedBull/OctoDash/raw/master/scripts/install.sh](https://github.com/UnchartedBull/OctoDash/raw/master/scripts/install.sh)\)  
+Lanza el siguiente comando:
+
+```text
+bash <(wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/install.sh)
+```
+
 Tardará un rato ya que actualizará bastantes partes del sistema y añadirá funciones al mismo además de instalar OctoDash.
 
 > Aconsejable poner un teclado en el caso que la versión de Octoprint o OctoDash no permitan el auto-enlazado \(ver siguiente punto\).
@@ -40,14 +44,14 @@ Al arrancar OctoDash intentará detectará instancias de Octoprint en la red sel
 ![](https://lh4.googleusercontent.com/ugNgFLwbFaXCvhC0XG6lpiJLcjXMKarRDXRQie6Wtpnh2ixjYPF81oQjy01SbZnZnzA4Y9LdJ0ruoujRTwmvdjxNOQwdQHc6jyzDm2TCwqJeXJdgidn97a9ZT2ChmFaYqjt-EmNs)
 
 > Si no tenemos teclado o problemas con el proceso de permisos del botón verde y la parte de permitir en Octoprint podemos editar el fichero de configuración desde SSH  
-> sudo nano ~/.config/octodash/config.json  
+> **`sudo nano ~/.config/octodash/config.json`**  
 > el formato es bastante sencillo de leer aunque de la parte superior tan solo necesitamos poner la IP de Octoprint y la API KEY.
 
 > Si deseas actualizar OctoDash desde SSH por si falla desde el interfaz podéis ejecutar el siguiente comando desde el terminal SSH:  
-> sudo wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/update.sh \| bash
+> **`sudo wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/update.sh | bash`**
 
 > Si deseas desinstalar OctoDash podéis ejecutar el siguiente comando desde el terminal SSH:  
-> wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/remove.sh
+> **`wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/remove.sh`**
 
 ## Sugerimos las siguientes pantalla para disfrutar de OctoDash:
 
