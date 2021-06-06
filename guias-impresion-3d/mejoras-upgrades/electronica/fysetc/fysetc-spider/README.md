@@ -245,6 +245,10 @@ Ademñas de este cruce tiene que girarse en uno de los extremos 180º para ambos
 {% endhint %}
 
 ![](../../../../../.gitbook/assets/image%20%28162%29.png)
+
+{% hint style="danger" %}
+**Algunas pantallas BTT añaden un condensador y una resistencia pull-down en el pin RESET que puede hacer que nuestra placa no inicie.  Estamos en contacto con el fabricante para una posible solución que pasaría por elminar estos componentes o cortar el cable reset de los EXP para evitar este problema.**
+{% endhint %}
 {% endtab %}
 
 {% tab title="CR10 STOCK DISPLAY" %}
