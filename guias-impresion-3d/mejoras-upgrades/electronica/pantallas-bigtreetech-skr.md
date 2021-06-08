@@ -186,7 +186,21 @@ También revisa el config.ini para que coincida con las características de tu i
 
 https://raw.githubusercontent.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/master/Copy%20to%20SD%20Card%20root%20directory%20to%20update/config.ini
 
-## **Como poder ver una previsualización de los archivos desde la pantalla en modo Touch**
+## Funciones
+
+### Asistente Z-Offset
+
+Una gran funcion de la pantalla es el asistente para ajustar el ZOffset en el caso que usemos un sensor de nivelación. A continuación os detallamos los pasos para ello:
+
+1. Calentaremos nuestra cama y nozzle a la temperatura normal de impresión
+2. Click en Menu
+3. Vamos a Movimiento - ABL - Z Offset
+4. Seleccionamos el icono OFF para ponerlo en ON
+5. Bamos bajando el eje hasta que lleguemos a rozar el papel, puedes cambiar el rango de movimiento 0.1, 1, 10...
+6. Una vez tengamos la distancia que nos guste guardaremos en SAVE
+7. Volvemos a la pantalla principal
+
+### **Previsualización STLs**
 
 Os explicamos en unos sencillos pasos como poder previsualizar los gcodes que tenéis en vuestras SD desde las pantallas SKR.
 
@@ -194,7 +208,7 @@ Esto es muy útil cuando acumulas muchos y no recuerdas ni si quiera que tenías
 
 ![](../../../.gitbook/assets/image%20%2848%29.png)
 
-### **Cura**
+#### **Cura**
 
 1. Actualiza el firmware de tu pantalla con la última versión disponible, la compatibilidad con este se añadió a partir de Vx.x.27.
 2. Asegúrate de habilitar la previsualización **desactivando el modo List Mode**, puedes hacerlo desde **Menu -&gt; Settings -&gt; Feature -&gt; Files viewer - List Mode**
@@ -209,7 +223,7 @@ Esto es muy útil cuando acumulas muchos y no recuerdas ni si quiera que tenías
 
 ![](../../../.gitbook/assets/image%20%2843%29%20%281%29.png)
 
-### **PrusaSlicer/SuperSlicer**:
+#### **PrusaSlicer/SuperSlicer**:
 
 - **Windows**, Primero descargaremos la última versión del conversor desde [https://github.com/effgarces/Biqu-Thumbnail-Generator/releases/](https://github.com/effgarces/Biqu-Thumbnail-Generator/releases/) \(recuerda al final de cada release hay un apartado Assets y desde ahí puedes descargar el .zip necesario biqu\_convert\_new.zip descomprimimos y el ejecutable que contiene lo colocaremos en la carpeta donde se encuentra el laminador PrusaSlicer
 
