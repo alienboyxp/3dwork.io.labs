@@ -84,9 +84,9 @@ En el caso de usar **TMC2130 en modo SPI** es aconsejable en caso de problemas h
 {% endhint %}
 
 {% hint style="info" %}
-Para **impresoras CoreXY** o similares \(el movimiento de los ejes X e Y se realice mediante el uso de dos motores\) es aconsejable habilitar la siguiente función de Marlin para que los movimientos del homing no realicen movimientos diagonales que hagan funcionan ambos motores a la vez
+Para **impresoras CoreXY** o similares \(el movimiento de los ejes X e Y se realice mediante el uso de dos motores\) es aconsejable deshabilitar la siguiente función de Marlin para que los movimientos del homing no realicen movimientos diagonales que hagan funcionan ambos motores a la vez
 
-**\#define QUICK\_HOME**
+**// \#define QUICK\_HOME // 3DWORK sensorless CoreXY**
 {% endhint %}
 
 ### **Sensibilidad**
