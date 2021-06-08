@@ -219,8 +219,8 @@ Para ello modificaremos el fichero pins .../Marlin/src/pins/stm32f4/pins\_FYSETC
 
 // Servos
 //
-//#define SERVO0_PIN                          PA3 // U1JO SPIDER BLTOUCH - Original PA3
-#define SERVO0_PIN                          PA2 // U1JO SPIDER BLTOUCH - Original PA3
+//#define SERVO0_PIN                          PA3 // 3DWORK PINDAv2
+#define SERVO0_PIN                          PA2 // 3DWORK BLTOUCH
 ```
 
 **Offsets del sensor**, es muy importante decirle a Marlin donde se encuentra exactamente instalado nuestro sensor de nivelación... esto lo haremos definiendo los PROBE OFFSET.
