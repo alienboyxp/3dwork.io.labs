@@ -379,6 +379,33 @@ En nuestro caso usaremos la de la pantalla dado que la Fysetc S6 no cuenta con c
 #define SDCARD_CONNECTION LCD // 3DWORK SD
 ```
 
+**Ventiladores,** un gran acierto por parte de Fysetc es la inclusión de 3 ventiladores gestionables además de poder alimentarlos con diferentes voltajes desde la propia placa sin necesidad de convertidores, en el caso de la Spider contamos con 24/12/5v disponibles.
+
+La definición del pin de cada FAN la podemos encontrar en .../Marlin/src/pins/stm32f4/pins\_FYSETC\_S6.h que es usado por Marlin como fichero pins común para la Spider y la S6 tal como explicamos aquí.
+
+**FAN0**, en este caso no vamos a realizar ningún cambio en su rol ya que es el ventilador de capa y este lo gestiona el propio slicer/fileteador para enfriar el filamento.
+
+**FAN1**, en nuestro ejemplo lo vamos a asignar al hotend para que de forma dinámica solamente se active cuando el hotend este en funcionamiento evitando desgastes del ventilador y ruido innecesario:
+
+```cpp
+#define E0_AUTO_FAN_PIN FAN1_PIN // 3DWORK FAN1 asignado hotend
+...
+#define EXTRUDER_AUTO_FAN_TEMPERATURE 50 // 3DWORK FAN1 activacion a temperatura
+#define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
+```
+
+**FAN2**, para aprovechar este arsenal de ventiladores gestionables \(podemos disponer de más reutilizando pines de otras funciones como RGB por ejemplo\) para asignar FAN2 como ventilador de la electrónica dinámico para que este se active cuando los drivers esten en uso minimizando de nuevo desgaste y ruido por parte del ventilador:
+
+```cpp
+#define USE_CONTROLLER_FAN // 3DWORK FAN2 habilitada ventilacion gestionada de electronica
+...
+#define CONTROLLER_FAN_PIN FAN2_PIN // 3DWORK FAN2 asignado a electronica
+...
+#define CONTROLLER_FAN_EDITABLE // 3DWORK FAN2 gestionable gcode M710
+...
+#define CONTROLLER_FAN_MENU  // 3DWORK FAN2 habilitar menu gestion pantalla
+```
+
 **Babystepping**, una función casi imprescindible tener es baby stepping. Babystepping nos permite ajustar la altura de Z durante una impresión para ajustar de forma manual esta altura a nuestro gusto.
 
 En nuestro ejemplo habilitaremos que se pueda activar con un doble click en el botón/encoder, que siempre este disponible y nos muestre mejoras gráficas en el ajuste para entender la dirección del ajuste desde la pantalla.

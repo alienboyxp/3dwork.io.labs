@@ -74,10 +74,10 @@ Tal como hemos comentado anteriormente esta placa dispone de un arsenal de conex
 
 Disponemos de las siguientes conexiones de alimentación de componentes o de la propia placa las cuales están bien indicadas en la serigrafía así como la polaridad en ellas:
 
-* Alimentación HotEnd, como ya comentamos esta placa puede controlar hasta 3 HotEnd independientes con lo que disponemos de 3 salidas de alimentación para estos \(E0/E1/E2 OUT\)
-* Alimentación de nuestra cama caliente \(BED OUT\), si revisamos el esquema en puntos anteriores podremos conectar directamente nuestra cama 24v \(aunque siempre por protección es aconsejable el uso de un MOSFET externo\) o una cama 220v usando un relé SSR
-* Alimentación dedicada para cama caliente \(BED IN\), normalmente conectado a nuestra fuente de alimentación en casos especiales con camas con mucho consumo podemos conectar ahí una fuente diferente dedicada para la cama exclusivamente
-* Alimentación de la placa \(PWR IN\), no tiene mucho misterio... la alimentación proporcionada por nuestra fuente de alimentación para que toda la electrónica funcione
+* Alimentación HotEnd, como ya comentamos esta placa puede controlar hasta 3 HotEnd independientes con lo que disponemos de 3 salidas de alimentación para estos \(**E0/E1/E2 OUT**\)
+* Alimentación de nuestra cama caliente \(**BED OUT**\), si revisamos el esquema en puntos anteriores podremos conectar directamente nuestra cama \(aunque siempre por protección es aconsejable el uso de un MOSFET externo\) o una cama 220v usando un relé SSR
+* Alimentación dedicada para cama caliente \(**BED IN**\), **normalmente conectado a nuestra fuente de alimentación**  pero podriamos, en casos especiales con camas con mucho consumo, conectar ahí otra fuente dedicada para la cama exclusivamente
+* Alimentación de la placa \(**PWR IN**\), no tiene mucho misterio... la alimentación proporcionada por nuestra fuente de alimentación para que toda la electrónica funcione
 
 ### Thermistores
 
@@ -162,6 +162,14 @@ Podemos encontrar los siguientes bloques de conectores que pueden usar dos tipos
 * Conectores **X+/Y+**, podremos escoger **5v o 3.3v \(defecto\)**... indicado por ejemplo para sensores bltouch de 5v
 * Conectores **X-/Y-/Z-,** podremos escoger **24v o 3.3v \(defecto\)**... estos conectores están especialmente indicados para conectar sensores de nivelación inductivos/capacitativos
 * Conector **Z+**, esta preparado para la conexión de un sensor de nivelación con servo al contar con el pin PA3 PWM podremos escoger mediante un jumper al lado de Z- el voltaje de placa 24v o 5v en el caso que usemos un sensor estilo Bltouch.
+
+### Ventiladores
+
+La Fysetc Spider cuenta con conexiones para 3 ventiladores gestionables. Además de esta gran mejora al poder gestionar estos 3 ventiladores y tal como comentábamos en las características de esta placa podemos, sin necesidad de ningún convertidor de corriente, configurar para que las salidas del ventilador sean de 24v o 12v para aquellos casos que usemos ventiladores silenciosos para nuestra electrónica o hotend. 
+
+Para ello deberemos poner el jumper correspondiente entre FAN0/1/2 Voltage y el voltaje que queramos usar. En el siguiete diagrama podremos verlo fácilmente.
+
+![](../../../../../.gitbook/assets/image%20%28165%29.png)
 
 ### Sensores de nivelación
 
