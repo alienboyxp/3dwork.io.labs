@@ -25,6 +25,7 @@
         * [FYSETC S6 - Marlin](guias-impresion-3d/mejoras-upgrades/electronica/fysetc/fysetc-s6/fysetc-s6-marlin.md)
       * [FYSETC SPIDER](guias-impresion-3d/mejoras-upgrades/electronica/fysetc/fysetc-spider/README.md)
         * [FYSETC SPIDER - Marlin](guias-impresion-3d/mejoras-upgrades/electronica/fysetc/fysetc-spider/fysetc-spider-marlin.md)
+        * [Fysetc SPIDER - Klipper](guias-impresion-3d/mejoras-upgrades/electronica/fysetc/fysetc-spider/fysetc-spider-klipper.md)
     * [SKR MINI E3 Turbo](guias-impresion-3d/mejoras-upgrades/electronica/skr_mini_e3_turbo.md)
     * [SKR E3 RRF \(EN PROCESO\)](guias-impresion-3d/mejoras-upgrades/electronica/skr-e3-rrf.md)
     * [SKR MINI E3 V2](guias-impresion-3d/mejoras-upgrades/electronica/skr-mini-e3-v2.md)
