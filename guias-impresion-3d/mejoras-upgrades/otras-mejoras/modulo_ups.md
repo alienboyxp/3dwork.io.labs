@@ -18,8 +18,10 @@ Para solventar este problema hay diferentes alternativas, siempre pensando en el
 
 En este caso vamos a optar por una solución intermedia entre el primer y el segundo caso mejorando y solucionando los fallos del primero \(la maquina no se apaga correctamente dañando la impresion en un alto porcentaje de veces\) y evitando el alto gasto de tener un SAI/UPS dedicado aunque sin duda es de las mejores opciones.
 
-> **IMPORTANTE**!!!  
-> **La función PLR gestionada por Marlin solamente funciona al imprimir desde la SD de la placa no desde un componente externo como pantallas TFT \(que pueden tener ya su propio sistema PLR\) o Octoprint/Pronterface o similares.**
+{% hint style="danger" %}
+IMPORTANTE!!!  
+**La función PLR gestionada por Marlin solamente funciona al imprimir desde la SD de la placa no desde un componente externo como pantallas TFT \(que pueden tener su propio sistema PLR\) o Octoprint, Pronterface o similares**
+{% endhint %}
 
 ## Módulo UPS
 
@@ -39,9 +41,11 @@ Os sugerimos usar los siguientes módulos UPS que son compatibles con la mayorí
 
 Personalmente en cuanto a calidad recomendamos el módulo de MKS pero si buscamos sencillez y menos complicaciones usemos el que mejor se adapte a la marca de nuestra electrónica.
 
-> **IMPORTANTE**!!!  
-> Estos módulos se conectan a la alimentación de nuestra fuente y/o a 220 así que es muy importante manipular y tomar todas las medidas de seguridad para evitar descargas eléctricas.  
-> También es aconsejable que se coloquen en sitios que eviten contacto o manipulación fácil además de intentar protegerlos con alguna cubierta
+{% hint style="danger" %}
+**IMPORTANTE!!!**  
+Estos módulos se conectan a la alimentación de nuestra fuente y/o a 220/110v así que es muy importante al manipular tomar todas las medidas de seguridad necesarias para evitar descargas eléctricas, si no estas seguro de lo que haces lleva tu impresora a un técnico.  
+También es aconsejable que se coloquen en sitios que eviten el contacto o manipulación fácil además de intentar dejarlos protegidos con algún tipo de cubierta/protección.
+{% endhint %}
 
 ## Cableado del módulo
 
