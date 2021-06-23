@@ -121,6 +121,7 @@ Importante actualizar el firmware a la última versión o uno custom y actualiza
 ![](https://lh6.googleusercontent.com/k9AzQIyVbu4dEixRRkGHPK8oXlUlGAeaGC9VFd4Fv1tUQCS2Zb2g_Pv0n59xujlY1gp6OVjyjJM7DX9rtSJhmdP7dsvES1l9cZtH9WCgEFo9iiWWEdlNmWrm-VwPTAx9OQy0XUdB)
 
 * Habilitar el homing por eje, muy útil para ver que cada eje funciona correctamente en el proceso de homing **`#define INDIVIDUAL_AXIS_HOMING_MENU`**
+* Otro cambio muy interesante e útil es la activación del nivelado mediante sensor/probe en el asistente de nivelación de cama de 4 esquinas que nos ayudará a dejar nuestra cama de una forma sencilla y fiable lo más recta posible **`#define LEVEL_BED_CORNERS ... #define LEVEL_CORNERS_USE_PROBE`**
 
 ### **Otros cambios en configuration\_adv.h**
 

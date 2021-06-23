@@ -70,6 +70,7 @@ Esta placa cuenta con un arsenal de conexiones aunque podemos conectar en sus m�
 * Es importante habilitar esta linea dado que un G28 desactiva el autonivelado, de esta forma no lo hará **`#define RESTORE_LEVELING_AFTER_G28`**
 * Podemos habilitar el comando G26 que nos permite lanzar un test de nivelación directamente sin necesidad de generar ninguno desde nuestro slicer, algo muy útil para un test rápido. Dentro de las opciones del G26 podrás ajustar los parámetros básicos de impresión **`#define G26_MESH_VALIDATION`**
 * Es muy útil y necesario habilitar las opciones de nivelación en el LCD **`#define LCD_BED_LEVELING`**
+* Otro cambio muy interesante e útil es la activación del nivelado mediante sensor/probe en el asistente de nivelación de cama de 4 esquinas que nos ayudará a dejar nuestra cama de una forma sencilla y fiable lo más recta posible **`#define LEVEL_BED_CORNERS ... #define LEVEL_CORNERS_USE_PROBE`**
 * Seleccionar el método de nivelado a usar, descomentar una de las líneas solamente, en este mismo documento está descrito como realizar el tipo UBL aconsejable para camas de gran tamaño o con problemas: **`//#define AUTO_BED_LEVELING_3POINT //#define AUTO_BED_LEVELING_LINEAR //#define AUTO_BED_LEVELING_BILINEAR // Aconsejable camas menores 235x235 //#define AUTO_BED_LEVELING_UBL // Aconsejable resto de tamaños o con problemas nivelacion //#define MESH_BED_LEVELING`**
 * Otro valor interesante es el de ajustar hasta que punto de la impresión se realizarán las correcciones, por defecto Marlin aplica estas correcciones en los primeros 10mm pero dependiendo de las necesidades se puede ajustar asegurando que habilitamos **`#define ENABLE_LEVELING_FADE_HEIGHT`**
 
@@ -121,6 +122,8 @@ Para nuestro ejemplo usaremos una placa Fysetc Spider conectando el sensor en el
 #define RESTORE_LEVELING_AFTER_G28 //3DWORK PINDAv2 - habilitar nivelacion automatica despues del homing
 ...
 #define LCD_BED_LEVELING //3DWORK PINDAv2 - habilitar menu avanzado de nivelacion
+...
+#define LEVEL_CORNERS_USE_PROBE // 3DWORK PINDAv2 - habilitar asistente de nivelacion 4 esquinas con sensor
 ...
 #define ENABLE_LEVELING_FADE_HEIGHT //3DWORK PINDAv2 - aplicar limites en correccion de nivelacion
 ...
