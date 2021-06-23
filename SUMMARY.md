@@ -1,6 +1,7 @@
 # Table of contents
 
 * [3DWork.io LABS](README.md)
+* [Invitame a un cafe :D](https://paypal.me/alienboyxp)
 
 ## Guías Impresión 3D
 
@@ -89,12 +90,4 @@
 ---
 
 * [Configuración PrusaSlicer](configuracion-prusaslicer.md)
-
-## PULSAR Cube
-
-* [Untitled](pulsar-cube/untitled.md)
-
----
-
-* [Invitame a un cafe :D](https://paypal.me/alienboyxp)
 
