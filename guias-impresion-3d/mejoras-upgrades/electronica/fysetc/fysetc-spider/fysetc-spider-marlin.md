@@ -45,8 +45,8 @@ build_flags       = ${common_stm32.build_flags}
 extra_scripts     = ${common.extra_scripts}
   pre:buildroot/share/PlatformIO/scripts/generic_create_variant.py
 debug_tool        = stlink
-# U1JO upload_protocol   = dfu
-# U1JO upload_command    = dfu-util -a 0 -s 0x08010000:leave -D "$SOURCE"
+# 3DWORK upload_protocol   = dfu
+# 3DWORK upload_command    = dfu-util -a 0 -s 0x08010000:leave -D "$SOURCE"
 ```
 
 ## configuration.h 
@@ -332,6 +332,18 @@ Otra función que por seguridad debemos de habilitar es la de que realice un hom
 ```cpp
 #define EEPROM_SETTINGS // 3DWORK EEPROM
 #define EEPROM_CHITCHAT // 3DWORK EEPROM
+```
+
+La EEPROM de nuestra Spider es de 4Kb pero hay un problema en los ficheros pins en las versiones &lt;= 2.0.9 \(estable de Marlin a la hora de realizar esta guía\) que pueden generar warnings durante la compilación relacionados con funciones de EEPROM e incluso durante el uso o actualizaciones Marlin.
+
+Para poder solventarlo temporalmente es aconsejable comentar la siguiente linea en el fichero pins de la Fysetc S6 que es usada como base para nuestra Spider:
+
+```cpp
+..Marlin/src/pins/stm32f4/pins_FYSETC_S6.h
+
+#elif ENABLED(I2C_EEPROM)
+ // #define MARLIN_EEPROM_SIZE              0x0800  // 3DWORK SPIDER EEPROM ERROR FIX 2KB
+#endif
 ```
 
 **Nozzle Park**, en el ejemplo que estamos explicando hemos añadido un sensor de filamentos. Para que este funcione deberemos activar **NOZZLE\_PARK\_FEATURE** que básicamente nos permite "aparcar" el cabezal de impresión en una zona segura para realizar este cambio de filamentos aunque si no tenemos sensor de filamentos es muy aconsejable tenerlo activo ya que nos permite mejorar las funciones de pausado.
