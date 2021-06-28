@@ -119,6 +119,14 @@ Para ello deberemos poner el jumper correspondiente entre FAN0/1/2 Voltage y el 
 
 ![](../../../../../.gitbook/assets/image%20%28120%29.png)
 
+En el caso que necesitemos más ventiladores controlables o para sustituir los actuales podemos usar los siguientes pines en el caso de no usar leds RGB.
+
+![](../../../../../.gitbook/assets/image%20%28167%29.png)
+
+{% hint style="info" %}
+Recuerda que el pin PWM de señal es el que se conecta a GND en los ventiladores.
+{% endhint %}
+
 ### Drivers
 
 La Fysetc S6 dispone de una extensa configuración de jumpers/pins \(JP1 y JP6\) para poder soportar una gran variedad de drivers.
