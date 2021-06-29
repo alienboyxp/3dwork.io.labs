@@ -67,8 +67,20 @@ Una parte clave para que el funcionamiento de Sensorless sea óptimo es tener en
 
 Marlin dispone de una configuración de velocidades específicas para el Homing que se pueden encontrar dentro de configuration.h:
 
-> `#define HOMING_FEEDRATE_XY (15*60)  
-> #define HOMING_FEEDRATE_Z (4*60)`
+Para versiones &lt;= Marlin 2.0.7.x
+
+```cpp
+// Homing speeds (mm/min)
+#define HOMING_FEEDRATE_XY (50*60)
+#define HOMING_FEEDRATE_Z  (4*60)
+```
+
+Para versiones &gt;= Marlin 2.0.8.x
+
+```cpp
+// Homing speeds (mm/min)
+#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
+```
 
 Valores más bajos hacen que el proceso de Homing sea más lento pero mejoran la detección y precisión si usamos Sensorless
 
