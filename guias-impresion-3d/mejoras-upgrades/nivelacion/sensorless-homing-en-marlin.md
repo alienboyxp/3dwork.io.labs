@@ -16,6 +16,15 @@ Es muy importante recordar/recomendar que esta función se habilite solamente en
 
 En esta guía no vamos a entrar en la configuración hardware para poder habilitar fisicamente la impresora y su electrónica si no la parte de configuración de Marlin. En cualquier caso recordar que es imprescindible que los drivers esten instalados y configurados en modo UART y dependiendo de la placa es necesario habilitar el jumper dedicado para DIAG/Sensorless.
 
+{% hint style="warning" %}
+**Recordad que si vuestra placa no dispone de jumpers para habilitar/deshabilitar sensorless:**
+
+* **en drivers que se use sensorless \(X e Y\) el pin DIAG debe de estar conectado a la placa**
+* **en drivers que no se use sensorless el ping DIAG debe doblarse/cortarse/desoldarse para que no este conectado a la placa**
+
+**En cualquier caso revisar el manual del fabricante de vuestra placa para más detalle.**
+{% endhint %}
+
 {% tabs %}
 {% tab title="SKR v2" %}
 ![](../../../.gitbook/assets/image%20%2873%29.png)
