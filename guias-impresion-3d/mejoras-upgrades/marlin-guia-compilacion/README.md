@@ -57,9 +57,9 @@ Algo muy importante, es dejar marcada la casilla «**Agregar a PATH**» en el cu
 {% endhint %}
 
 * Una vez instalados ambos programas, vedemos instalar el plugin PlatformIO en Visual Studio Code, para ello seguiremos los siguientes pasos:
-* Presionamos los cuadrados del menú izquierdo
-* en el buscador escribimos «PlatformIO»
-* presionamos sobre le rectángulo verde de instalar
+  * Presionamos los cuadrados del menú izquierdo
+  * en el buscador escribimos «PlatformIO»
+  * presionamos sobre le rectángulo verde de instalar
 
 ![](https://wiki.eurek.org/wp-content/uploads/2019/12/image-18-1024x769.png)
 
