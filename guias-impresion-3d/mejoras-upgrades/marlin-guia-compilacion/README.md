@@ -68,6 +68,7 @@ Algo muy importante, es dejar marcada la casilla «**Agregar a PATH**» en el cu
 
 * **Instala Python antes**, tal como se sugiere en esta guía, desde su web o la App Store de Windows
 * **Ejecuta VSC como administrador**, al menos durante la instalación de las extensiones necesarias, así evitaras que en determinadas configuraciones de Windows ciertas acciones esten restringidas o bloqueadas
+* Ves a "**Aplicaciones y características**" en caso de Windows, eligiremos la opción de "**Alias de ejecución de aplicaciones**" **desactivando el instalador de aplicaciones python.exe y python3.exe**
 * **Asegúrate que tú antivirus/firewall no está bloqueando** el proceso de VSC/instalación Platformio ya que partes del proceso requieren descargar módulos desde Internet.
 * Si no ha funcionado... empieza de cero y en el orden correcto de instalación:
   * **Desinsta completamente VSC** y cualquier otro componente relacionado que instalaste
