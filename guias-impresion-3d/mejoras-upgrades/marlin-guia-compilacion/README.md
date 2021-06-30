@@ -68,7 +68,7 @@ Algo muy importante, es dejar marcada la casilla «**Agregar a PATH**» en el cu
 
 * **Instala Python antes**, tal como se sugiere en esta guía, desde su web o la App Store de Windows
 * **Ejecuta VSC como administrador**, al menos durante la instalación de las extensiones necesarias, así evitaras que en determinadas configuraciones de Windows ciertas acciones esten restringidas o bloqueadas
-* Ves a "**Aplicaciones y características**" en caso de Windows, eligiremos la opción de "**Alias de ejecución de aplicaciones**" **desactivando el instalador de aplicaciones python.exe y python3.exe**
+* Ves a "**Aplicaciones y características**" en caso de Windows, eligiremos la opción de "**Alias de ejecución de aplicaciones**" **desactivando el instalador de aplicaciones python.exe y python3.exe.** Una vez realizado este paso reiniciaremos VSC y volveremos a intentar la instalación.
 * **Asegúrate que tú antivirus/firewall no está bloqueando** el proceso de VSC/instalación Platformio ya que partes del proceso requieren descargar módulos desde Internet.
 * Si no ha funcionado... empieza de cero y en el orden correcto de instalación:
   * **Desinsta completamente VSC** y cualquier otro componente relacionado que instalaste
@@ -76,6 +76,8 @@ Algo muy importante, es dejar marcada la casilla «**Agregar a PATH**» en el cu
   * **Borrar cualquier directorio que quede** relacionado con estas tareas de compilado de Marlin
   *  **Instalar todo de cero** siguiendo los pasos de la guía de esta guía
 {% endhint %}
+
+![Ejemplo de error en la instalaci&#xF3;n de Platformio](../../../.gitbook/assets/image%20%28168%29.png)
 
 {% hint style="info" %}
 Comprobaciones para verificar que Python esta correctamente instalado \(**depende de version de Python instalada y de sistema operativo**\) ya que es una parte fundamental tanto de la instalación de Platformio y para que funcione:
