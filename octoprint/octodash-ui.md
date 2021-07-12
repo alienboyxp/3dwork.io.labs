@@ -53,6 +53,30 @@ Al arrancar OctoDash intentará detectará instancias de Octoprint en la red sel
 > Si deseas desinstalar OctoDash podéis ejecutar el siguiente comando desde el terminal SSH:  
 > **`wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/remove.sh`**
 
+## Resolución de errores
+
+### Fallo al iniciar entorno gráfico por fallo en fbturbo
+
+En el caso que tengamos un error al iniciar OctoDash que indique un fallo en la libreria fbturbo 
+
+![](../.gitbook/assets/image%20%28169%29.png)
+
+Podemos seguir los siguientes pasos para solucionarlo:
+
+```text
+sudo apt-get install libgtk-3-0 xserver-xorg xinit x11-xserver-utils
+sudo apt-get install git build-essential xorg-dev xutils-dev x11proto-dri2-dev
+sudo apt-get install libltdl-dev libtool automake libdrm-dev
+git clone https://github.com/ssvb/xf86-video-fbturbo.git
+
+cd xf86-video-fbturbo
+autoreconf -vi
+./configure --prefix=/usr
+make
+sudo make install
+sudo cp xorg.conf /etc/X11/xorg.conf
+```
+
 ## Sugerimos las siguientes pantalla para disfrutar de OctoDash:
 
 ### Waveshare 7" HDMI Touch
