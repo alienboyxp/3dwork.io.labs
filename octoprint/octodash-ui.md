@@ -22,20 +22,18 @@ Preparar Octoprint instalando los siguientes plugins:
 
 Acceder por SSH \(puedes usar [PuTTY](https://www.putty.org/) o [Terminus](https://termius.com/) para conectar ambos son multiplataforma o sea Windows MAC Linux\) el usuario por defecto es pi y el password raspberry.
 
-Preparando el sistema Raspbian para hacer autologin:  
-sudo raspi-config  
+Preparando el sistema Raspbian para hacer autologin \(dependiendo de la versión pueden variar los menus\):  
+`sudo raspi-config  
 "3 Boot Options"  
 "B1 Desktop / CLI"  
-"B2 Console Autologin"  
+"B2 Console Autologin"`  
 Finalizar y reiniciar la Pi.
 
 Lanza el siguiente comando:
 
-```text
-bash <(wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/install.sh)
+```bash
+bash <(wget -qO- https://github.com/UnchartedBull/OctoDash/raw/main/scripts/install.sh)
 ```
-
-Tardará un rato ya que actualizará bastantes partes del sistema y añadirá funciones al mismo además de instalar OctoDash.
 
 > Aconsejable poner un teclado en el caso que la versión de Octoprint o OctoDash no permitan el auto-enlazado \(ver siguiente punto\).
 
@@ -48,10 +46,10 @@ Al arrancar OctoDash intentará detectará instancias de Octoprint en la red sel
 > el formato es bastante sencillo de leer aunque de la parte superior tan solo necesitamos poner la IP de Octoprint y la API KEY.
 
 > Si deseas actualizar OctoDash desde SSH por si falla desde el interfaz podéis ejecutar el siguiente comando desde el terminal SSH:  
-> **`sudo wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/update.sh | bash`**
+> **`sudo wget -qO- https://github.com/UnchartedBull/OctoDash/raw/main/scripts/update.sh | bash`**
 
 > Si deseas desinstalar OctoDash podéis ejecutar el siguiente comando desde el terminal SSH:  
-> **`wget -qO- https://github.com/UnchartedBull/OctoDash/raw/master/scripts/remove.sh`**
+> **`wget -qO- https://github.com/UnchartedBull/OctoDash/raw/main/scripts/remove.sh | bash`**
 
 ## Resolución de errores
 
@@ -79,30 +77,83 @@ sudo cp xorg.conf /etc/X11/xorg.conf
 
 ## Sugerimos las siguientes pantalla para disfrutar de OctoDash:
 
-### Waveshare 7" HDMI Touch
+### Waveshare 7" HDMI Touch \(HDMI
 
-https://www.amazon.es/dp/B07PKLGMSY/ref=cm\_sw\_r\_cp\_apa\_fabc\_jm77FbPWNZKBZ?\_encoding=UTF8&psc=1  
-Cambios a realizar para su funcionamiento \(añadir al final del fichero\):  
-suso nano /boot/config.txt  
-max\_usb\_current=1
+{% embed url="https://www.amazon.es/dp/B07PKLGMSY/ref=cm\_sw\_r\_cp\_apa\_fabc\_jm77FbPWNZKBZ?\_encoding=UTF8&psc=1" %}
 
-hdmi\_force\_hotplug=1  
-config\_hdmi\_boost=7  
-hdmi\_group=2  
-hdmi\_mode=87  
-hdmi\_drive=1  
-display\_rotate=0 \# 0 conectores a la derecha, 1 a 90 grados, 2 connectores a la izquierda, 3 270 grados  
-hdmi\_cvt 1024 600 60 6 0 0 0
+Cambios a realizar para su funcionamiento \(añadir al final del fichero\):
+
+```text
+sudo nano /boot/config.txt
+```
+
+Y modificaremos/añadiremos lo siguiente
+
+```bash
+max_usb_current=1
+
+hdmi_force_hotplug=1
+config_hdmi_boost=7
+hdmi_group=2
+hdmi_mode=87
+hdmi_drive=1
+display_rotate=0 # 0 conectores a la derecha, 1 a 90 grados, 2 connectores a la izquierda, 3 270 grados
+hdmi_cvt 1024 600 60 6 0 0 0
+```
+
+### LongRunner 5" XPT2046 \(HDMI GPIO Táctil\)
+
+{% embed url="https://www.amazon.es/gp/product/B07QC6G6S9/ref=ppx\_yo\_dt\_b\_asin\_image\_o00\_s00?ie=UTF8&psc=1" %}
+
+Cambios a realizar para su funcionamiento \(añadir al final del fichero\):
+
+```text
+sudo nano /boot/config.txt
+```
+
+Y modificaremos/añadiremos lo siguiente:
+
+```bash
+# uncomment if you get no picture on HDMI for a default "safe" mode
+#hdmi_safe=1
+
+# uncomment this if your display has a black border of unused pixels visible
+# and your display can output without overscan
+disable_overscan=0
+
+# uncomment if hdmi display is not detected and composite is being output
+#hdmi_force_hotplug=1
+
+# uncomment to force a specific HDMI mode (this will force VGA)
+hdmi_group=2
+hdmi_mode=1
+hdmi_mode=87
+hdmi_cvt=800 480 60 6 0 0 0
+
+# Enable touchscreen on Elecrow HDMI interface.
+dtparam=spi=on
+dtparam=i2c_arm=on
+dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=200,xmax=3900,ymin=200,ymax=3900
+dtoverlay=w1-gpio-pullup,gpiopin=4,extpullup=1
+```
 
 ### **FYSECT CTP40 \(GPIO\)**
 
-Para esta pantalla asegurarse de instslar los drivers siguiendo las instrucciones https://github.com/FYSETC/FYSETC-CTP40/tree/main/Pi3
+Para esta pantalla asegurarse de instslar los drivers siguiendo las instrucciones 
 
-## Artículos de Referncia
+{% embed url="https://github.com/FYSETC/FYSETC-CTP40/tree/main/Pi3" %}
 
-{% embed url="https://3dprintbeginner.com/install-octodash-on-raspberry-pi/" %}
 
-{% embed url="https://github.com/UnchartedBull/OctoDash/blob/master/README.md" %}
+
+## Soporte/Ayuda
+
+{% embed url="https://discord.com/invite/PeFgKUuZ?utm\_source=Discord%20Widget&utm\_medium=Connect" caption="Discord OctoDash" %}
+
+{% embed url="https://github.com/UnchartedBull/OctoDash/blob/master/README.md" caption="OctoDash Github" %}
+
+{% embed url="https://unchartedbull.github.io/OctoDash/index.html" caption="OctoDash Website" %}
+
+
 
 
 
